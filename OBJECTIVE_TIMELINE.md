@@ -918,7 +918,7 @@ Minh **không phải member network**. Betrayal chỉ có logic vì cậu tưở
 
 ---
 
-# 12. NAM KNOWLEDGE TIMELINE
+# NAM KNOWLEDGE TIMELINE
 
 | Mốc | Nam biết gì về Bắc | Nam nghĩ Bắc là ai | Có để ý Bắc không? | Đánh giá | Phản ứng |
 |---|---|---|---|---|---|
@@ -950,7 +950,7 @@ Nam chỉ **xác nhận** sau D+1 khi Khải có cross-report cho thấy cùng m
 
 ---
 
-# 13. POLICE KNOWLEDGE TIMELINE
+# POLICE KNOWLEDGE TIMELINE
 
 | Mốc | Cảnh sát biết gì | Đang điều tra gì | Vì sao chưa thể hành động rộng | Bắc bổ sung gì nếu có |
 |---|---|---|---|---|
@@ -985,7 +985,7 @@ Vũ phải phản ứng **nhanh hơn khi evidence mạnh hơn**. Nếu A+B+C đ�
 
 ---
 
-# 14. IF BẮC DOES NOTHING
+# IF BẮC DOES NOTHING
 
 Đây là timeline baseline nếu Bắc:
 
@@ -1085,7 +1085,7 @@ Bad Ending — Avoidance **không** có nghĩa “chỉ nhận một job là ch�
 
 ---
 
-# 15. PLAYER INTERVENTION POINTS
+# PLAYER INTERVENTION POINTS
 
 Chỉ liệt kê event có thể thay đổi bởi hành động player; không thiết kế gameplay chi tiết.
 
