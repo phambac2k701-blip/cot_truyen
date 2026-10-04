@@ -62,14 +62,16 @@ Không cần giữ hàng chục boolean clue ở ending layer.
 Mỗi slot A, B, C có ba trạng thái:
 
 - **0 — MISSING:** chưa có source đủ.
-- **1 — ASSEMBLED:** player có đủ source để proposition có cơ sở, nhưng chưa được Vũ bảo toàn đầy đủ.
+- **1 — ASSEMBLED:** đã có đủ nội dung và nguồn để proposition có cơ sở, nhưng chưa được Vũ bảo toàn đầy đủ; người giữ có thể là player hoặc investigation đã có.
 - **2 — PRESERVED:** source cốt lõi đã được Vũ/police tiếp nhận hoặc được giữ trong một chain hợp lý ngoài quyền xóa của network.
 
 Các slot:
 
-- **A:** Phúc rút trước rồi mới bị gây sức ép.
-- **B:** Minh Trạch có pattern và có internal knowledge/intervention.
-- **C:** Tân Lộ leadership chủ ý tham gia, không phải lỗi worker/dispatch.
+- **A:** thỏa thuận môi giới trả tiền để cung cấp nội tạng, trình bày như hiến tự nguyện; Phúc muốn rút rồi bị ép tiếp tục, được xác thực ngoài lời Phúc.
+- **B:** cell hospital biết phần tiền và withdrawal nhưng vẫn hỗ trợ hồ sơ có vẻ consent hợp lệ.
+- **C:** Hùng đã nhận mục đích trả tiền cho người hiến, vẫn approve xử lý/hạ luồng cùng nhóm hồ sơ, được corroborate độc lập.
+
+CASE đo đủ proof/custody của investigation, không đo Bắc đã xem bao nhiêu. E12 chỉ có phần trình báo/liên lạc; E28 bổ sung exact core-agreement/withdrawal messages Phúc còn giấu, so exact content từng fact với original broker counterpart thread giữ trước intake; hospital request xác nhận visit, metadata xác nhận exchange/order, hai phần sau không authenticate money/pressure text. Từ E28, baseline CASE.A=2 trước S09. A_PLAYER_SEEN/A_PLAYER_UNDERSTOOD là scene flags riêng; Bắc không phải giao lại chronology của Vũ. Không hạ A vì player xem muộn hoặc miss C09. Fixture thiếu A chỉ hợp lệ khi ghi rõ exact fact/source nào thực sự chưa được nhận/xác thực, không reset custody đã có.
 
 Không tạo score 0–100.
 
@@ -79,12 +81,12 @@ Không tạo score 0–100.
 
 Boolean:
 
-- FALSE: A/B/C vẫn có thể bị đọc như các scandal riêng.
-- TRUE: player đã đưa được bridge hợp lệ để Vũ xác minh rằng các box không độc lập.
+- FALSE: common current risk/escalation context chưa được verify, dù quan hệ cùng giao dịch có thể đã rõ từ A/B/C.
+- TRUE: Vũ đã verify common current risk/escalation relation từ các raw sources/context có provenance đã tiếp nhận.
 
 X không tự bật chỉ vì player sở hữu nhiều clue.
 
-Nó bật khi relation được **đưa vào một hành động điều tra có thể kiểm chứng**: ví dụ C24+C25/C26, hoặc bridge tương đương được Vũ xác minh.
+Nó bật khi nguồn chứng minh hospital và logistics cùng escalates crisis Phúc tới một đầu mối có vai trò quản trị rủi ro hiện tại: C24+C25/C26 được Vũ verify đúng Khải endpoint, scope request/response và crisis context, hoặc reconstruction tương đương có cùng fact/provenance. Quan hệ cùng giao dịch mà A/B/C đã chứng minh chưa tự xác nhận common risk authority. C03/same group/account là transaction bridge lead, không auto X. ABC=PRESERVED/X=false hợp lệ nếu raw risk context chưa được nhận/xác thực; cảnh sát vẫn xử lý các case đã giữ. Nếu đầy đủ raw risk sources/context đã vào custody, Vũ verify độc lập dù private inference Bắc sai; player understanding riêng. Để full D bao trùm cả ba nhánh theo BACKSTAGE §53.D, còn phải verify/preserve C10_SOURCE_LINK tại §11.1, không dùng X hai institution tự cấp quyền Nam ở môi giới.
 
 ---
 
@@ -95,8 +97,8 @@ Một enum duy nhất thay cho nhiều cờ nhỏ:
 - **C0 — NONE:** Nam chỉ là hàng xóm.
 - **C1 — HYPOTHESIS:** C27/C28/C30 khiến Nam đáng nghi nhưng chỉ chứng minh background/relationship.
 - **C2 — CURRENT LINK:** có current-crisis relation tới Nam, nhưng chưa đủ command.
-- **C3 — CORROBORATED COMMAND:** D1+D2 đủ từ các nguồn độc lập.
-- **C4 — PRESERVED COMMAND:** D1+D2 đã được Vũ/police bảo toàn trước cleanup lock.
+- **C3 — CORROBORATED COMMAND:** D1 manager firsthand + D2 authenticated decision ở branch khác, hai quyết định/origins độc lập; source-branch link đã verify để đủ phạm vi cả ba nhánh.
+- **C4 — PRESERVED COMMAND:** các nguồn D1+D2 và source-branch verification context đã được Vũ/police bảo toàn trước cleanup lock.
 
 True ending yêu cầu C4.
 
@@ -159,12 +161,13 @@ Các biến sau vẫn có thể tồn tại ở scene scripting, nhưng không p
 - C03_SAVED;
 - C04_SEEN;
 - TUAN_FALSE_THEORY;
-- TUAN_CORE_EXONERATED;
+- TUAN_NOT_RECLASSIFIER;
+- TUAN_CORE_SCOPE_VERIFIED;
 - từng interaction nhỏ;
 - từng optional lore clue;
 - từng lần Bắc nói dối phòng vệ.
 
-Chúng chỉ thay đổi cách player đi tới CASE/X/COMMAND/LEAK/CLEANUP.
+Chúng chỉ thay đổi cách player đi tới CASE/X/COMMAND/LEAK/CLEANUP. TUAN_NOT_RECLASSIFIER chỉ sửa attribution của E22. TUAN_CORE_SCOPE_VERIFIED là đánh giá từ assignment/permissions và lời Tuấn giới hạn đã được Vũ kiểm trong hồ sơ này; không có nghĩa chứng minh anh chưa từng biết bất cứ bí mật nào. Private suspicion không tự đổi CASE hoặc tạo penalty.
 
 Không tạo một state chỉ vì một scene cần nhớ rằng player đã bấm một câu thoại.
 
@@ -212,7 +215,8 @@ C42 là consequence của việc player đưa source đúng cho Vũ.
 
 Khi Vũ tiếp nhận đủ source:
 
-- A/B/C tương ứng chuyển từ ASSEMBLED → PRESERVED.
+- B/C hoặc nguồn còn thiếu tương ứng chuyển từ ASSEMBLED → PRESERVED; A đã PRESERVED từ E28 vẫn giữ nguyên.
+- C42 ghi custody đang có cùng provenance của các source bổ sung, không bắt Bắc giao lại A.
 - organization không thể đơn giản thu hồi phần đã sang hồ sơ điều tra.
 - mất access về sau vẫn có thể ảnh hưởng COMMAND, nhưng không xóa ngược A/B/C.
 
@@ -424,8 +428,8 @@ Ví dụ:
 - miss C11 và cả C12/C15 route hospital;
 - miss C17/equivalent reconstruction và không còn Đức/Yến + C22 đủ để dựng lại C;
 - đến Đức sau E32 window;
-- giữ false theory Tuấn quá lâu và bỏ qua authority chain C20/C22;
-- có C08 nhưng không đưa chronology sang Vũ kịp để A được preserve.
+- tiếp tục một hành động truy Tuấn sau scope correction/cảnh báo, khiến bỏ lỡ nguồn C22/corroborator còn thiếu; còn nghi trong đầu không gây closure;
+- trong fixture thật sự thiếu một source A, cửa nhận/xác thực exact fact còn thiếu đóng; baseline A đã được giữ ở E28 không thể mất vì Bắc chưa chuyển chronology.
 
 ## Điểm thực sự khóa route
 
@@ -722,8 +726,10 @@ Có thể COMMAND đang ở C1, C2 hoặc C3 nhưng chưa được preserve đ�
 - Dừng ở Hùng như apex.
 - Dừng ở Khải như apex.
 - Coi C27/C30 là đủ để accuse Nam.
-- Lấy được C31 nhưng không có corroboration độc lập.
-- Có C32 nhưng không kịp bảo toàn source thứ hai.
+- Lấy được C31 contact lead nhưng không có manager D1 và authenticated D2.
+- Có C32H nhưng thiếu C33_AUTH, hoặc có C32K nhưng thiếu C34_AUTH trước lock.
+- Có hai-branch command pair nhưng chưa verify/preserve C10_SOURCE_LINK để gắn nhánh môi giới với cùng actual Nam-authorized directive.
+- Mất Hùng C32H và không dùng recovery Khoa C32K + authenticated logistics record; pure C33+C34 không thay manager D1.
 - Investigate Nam trực tiếp quá lâu thay vì chuyển D sang Vũ.
 
 ## Điểm thực sự khóa route
@@ -735,7 +741,7 @@ Khi command-source window đóng và CLEANUP = LOCKED trong khi A+B+C đã nằm
 - Nhiều branch đồng thời đổi trạng thái.
 - Vũ chuyển từ hỏi “có chuyện gì” sang hỏi “ai có quyền ra quyết định”.
 - C27/C30 được framing rõ là history/relationship, không phải command proof.
-- C31/C32/C33/C34 xuất hiện dưới áp lực thời gian tự nhiên.
+- C31 là lead; C32H/C32K là manager direct intake; C33_AUTH/C34_AUTH cùng C10_SOURCE_LINK là record/context có provenance cần preserve trong window hiện tại.
 
 ## Tình trạng Bắc
 
@@ -767,7 +773,7 @@ Khi command-source window đóng và CLEANUP = LOCKED trong khi A+B+C đã nằm
 
 - Phúc: lời khai có giá trị.
 - Huyền: review trở thành phần của case.
-- Tuấn: nếu C20/C22 đã có, được loại khỏi core-network hypothesis.
+- Tuấn: C20 sửa attribution E22; nếu Vũ đã verify assignment, permissions và lời giới hạn, không còn cơ sở xếp anh vào core trong hồ sơ này. C20/C22 đơn lẻ không chứng minh một universal negative về knowledge.
 - Minh: hậu quả tùy player có leak hay không nhưng không quyết định ending.
 - Thảo/Đức/Yến: có thể trở thành source trong case mà không ai thành exposition machine.
 
@@ -907,98 +913,83 @@ True Ending khó nhưng hoàn toàn đạt được ở run đầu.
 
 ## 11.1. Evidence requirement chính thức
 
-### SLOT A — withdrawal before pressure
+### SLOT A — paid-organ agreement, withdrawal and pressure
 
-Canonical route:
+Canonical route: **C08 + C10**.
 
-- **C08** — record Phúc yêu cầu rút;
-- **C10** — police chronology độc lập.
+C08 phải có nội dung thỏa thuận trả tiền gắn trực tiếp với việc cung cấp nội tạng dưới mô tả hiến tự nguyện, yêu cầu rút của Phúc, rồi sức ép tiếp tục viện tiền đã ứng. C10 so exact message content với original thread môi giới trực tiếp phía counterpart giữ trước police intake: broker promise tiền đổi cung cấp nội tạng/cách gọi hiến tự nguyện; Phúc agreement/withdrawal; broker pressure viện tiền đã ứng. Vũ thu từ đầu mối Phúc đã chỉ trong E12/C08 và so original phía Phúc tại E28 cho từng fact. Chronology hoặc bản sao lời Phúc lần hai không tạo authentication origin mới. Hospital timestamp chỉ xác nhận visit; counterpart metadata chỉ exchange/order; hai phần này không authenticate money/withdrawal/pressure text.
 
-Equivalent chỉ hợp lệ nếu vẫn có:
-
-- một source trực tiếp từ phía Phúc;
-- một source độc lập đã được ghi nhận/xác minh ngoài Phúc.
-
-C09 tăng fairness nhưng không bắt buộc.
+Origin C08 là những người thực sự viết từng message; Phúc giữ original. Vũ giữ phần E12 và nhận phần từng bị giấu ở E28, so bản gốc/counterpart rồi ghi provenance từng fact. Baseline A=PRESERVED từ E28 trước S09, dù Bắc xem muộn. C09 tăng fairness nhưng không bắt buộc. Equivalent phải giữ cùng nội dung crime và authentication độc lập, không chỉ withdrawal-before-pressure.
 
 ---
 
-### SLOT B — hospital pattern
+### SLOT B — knowing hospital assistance
 
-Bắt buộc:
+Bắt buộc **C11 + C12 hoặc C15** có cùng fact:
 
-- **C11** — Huyền review pattern;
-- cộng **C12 hoặc C15**.
+- C11: review của Huyền đối chiếu yêu cầu kiểm tra của Phúc có tiền/withdrawal với hồ sơ vẫn mang nghĩa consent tự nguyện/không có trao đổi tiền.
+- C12: receipt/approval history có trước intake cho thấy Khoa đã nhận và xác nhận thấy hai fact đó; version sau vẫn giữ vẻ consent hợp lệ và thu hẹp review.
+- C15: Thảo xác nhận phần case mình trực tiếp xử lý có tiền bên ngoài và muốn rút nhưng hồ sơ bà tham gia vẫn giữ nghĩa tự nguyện; Vũ so đúng case/field với C11.
 
-C12 = institutional history.  
-C15 = insider acknowledgment.
-
-Player không cần cả hai.
+No-Thảo route C12 phải chứng minh knowledge **và** assistance, không chỉ Khoa đổi scope. Thảo không biết Nam/logistics/toàn mạng. C14 framing/C16 timing chỉ hỗ trợ, không thay fact knowledge. Hospital giữ original review/history, Vũ nhận và so với A đã authenticate. Player không cần cả C12 lẫn C15.
 
 ---
 
-### SLOT C — intentional logistics leadership involvement
+### SLOT C — informed logistics leadership involvement
 
-Canonical route:
+Canonical route **C17 + C22 + C18 hoặc C19**:
 
-- **C17** — reclassification fact;
-- cộng **C18 hoặc C19** hay source tương đương đã được Vũ verify;
-- **C22** — leadership override đặt quyết định ở Hùng-level, không ở Tuấn/worker.
+- C17 chứng minh luồng bị đổi, chưa tự nói organ crime.
+- C22 đặt approve/hạ luồng ở Hùng và có phần mục đích trả tiền cho người hiến mà ông đã nhận **trước** quyết định.
+- C18 operational snapshot của Đức hoặc C19 đối soát finance của Yến độc lập match cùng nhóm bàn giao/đầu nhận/đợt thanh toán; Vũ so với A/B và C22 có provenance.
 
-Nếu C17 trực tiếp bị miss, một police reconstruction chỉ được thay nó khi reconstruction chứng minh **cùng fact** bằng source có provenance rõ; không được cho Vũ “đoán hộ”.
+Đức chỉ biết record vận hành; Yến chỉ biết dòng tiền. Họ không thay knowledge payload C22 bằng pattern, không biết toàn mạng. Nếu miss C17 trực tiếp, police reconstruction chỉ thay đúng reclassification fact bằng source thật đã verify; C20 hoặc Đức đoán ai được secret briefing không thay C22.
 
----
-
-### SLOT X — cross-cell relation
-
-Bắt buộc X_VERIFIED = TRUE.
-
-Canonical strongest route:
-
-- **C24 + C25 → C26.**
-
-C03 có thể là early bridge rất tốt nhưng không tự chứng minh network.
-
-Điều player phải tự hiểu:
-
-- hospital issue và Tân Lộ issue không chỉ cùng có chữ “y tế”;
-- hai nhánh có cùng risk endpoint/timing;
-- vụ Phúc là nhánh người bị tác động chứ không phải một scandal riêng.
-
-Vũ có thể verify relation, nhưng game không auto-link notebook thay player.
+C18/C19 có execution/settlement origin độc lập xác nhận handling thực tế cùng nhóm công việc; C17/C22 riêng ghi đổi luồng và approve, chưa thay fact đã thực hiện. Equivalent chỉ hợp lệ với cùng fact/origin/authentication theo BACKSTAGE §0.1, không thêm một copy approval.
 
 ---
 
-### SLOT D1 — current command authority
+### SLOT X — sourced cross-cell relation
 
-Cần một source hiện tại cho thấy Nam có quyền quyết định trên nhiều branch.
+Bắt buộc **X_VERIFIED=TRUE**. Canonical **C24+C25→C26** phải match Khải endpoint, current risk role, scope request/response và crisis context; không link chỉ vì same case/group hoặc cùng thời điểm. C03 là transaction bridge lead; equivalent phải reconstruct cùng current risk relation từ nguồn có provenance. Vũ verify từ đầy đủ raw sources/context đã tiếp nhận dù player inference sai; notebook không tự cấp understanding cho Bắc. X không đòi Nam authorize hoặc proof Khải là apex; đó là câu hỏi command tiếp theo của D.
 
-Canonical route:
+**Source-branch verification cho full D:** C10_SOURCE_LINK là annex late S16 của case Phúc, không phải record hiện tại đã nằm ở E28. Lead là chính đầu mối môi giới trực tiếp phía counterpart Phúc đã chỉ trong E12/C08; Vũ đã thu original exchange A của đầu mối này ở E28. Custodian của annex là đầu mối đó, giữ original thread nhận từ Hạnh và reply mình gửi, không phải Phúc giữ liên lạc Hạnh–Khải. Sau E38 xảy ra thực tế trong run, tại S16 trong window 15:00–17:00 và trước E40 closure/cleanup lock, Vũ quay lại direct case intake để thu/giữ thread mới.
 
-- **C32** — manager-level source xác nhận pause/cleanup toàn nhánh cần Nam approve/định hướng.
+Acquisition dùng kênh riêng và động cơ tự phân định trách nhiệm của broker counterpart tại BACKSTAGE §0.1. Actual original intake phải xảy ra khi timely cooperation/contact còn mở; refusal/contact loss cần causal event và pre-loss warning, không random roll hoặc tự grant annex. Refusal late không xóa A đã preserve.
 
-Một source manager tương đương chỉ hợp lệ nếu họ trực tiếp biết decision chain của branch mình.
+Payload annex phải cho đúng ba fact: (1) request Hạnh chuyển tới Khải nêu case Phúc và crisis đang xử lý, nằm trong phần forward chain broker thực sự đã nhận; (2) reply/forward Hạnh truyền quyết định Nam-authorized về ngừng case mới, giảm liên hệ và báo lại Phúc đã nói với ai, có case/scope khớp exact directive D2; (3) receipt của broker ghi đã nhận và áp dụng các giới hạn này trong nhánh nguồn. Vũ so original nội dung request/forward/receipt, endpoints gửi–nhận và scope case với original request/authorization/forward context C33_AUTH hoặc C34_AUTH đã authenticate tới Nam. Display name, lời Hạnh nói Nam duyệt, metadata hoặc broker tự kể lại đều chưa đủ. Nếu thiếu nguồn gốc forward chain hoặc không match đúng directive được Nam authorize, annex vẫn là lead, không full scope.
 
-C27/C28/C30 không thay được D1.
+Annex chứng minh nhánh môi giới nhận/thực hiện cùng actual current directive D2; không cấp cho broker/Hạnh knowledge toàn mạng. Bản forward cùng order không được count thêm một independent D2. D1 vẫn phải là manager firsthand về một quyết định hiện tại khác; D2 là quyết định khác ở branch khác. Thiếu C10_SOURCE_LINK verified/preserved, pair chỉ support hai-branch hospital/logistics authority, chưa đủ BACKSTAGE §53.D **cả ba nhánh**, chưa nâng COMMAND=C3/C4. Police có thể verify/preserve annex dù Bắc chưa được xem toàn bộ, rồi chỉ chia kết luận/fields được phép; player không phải tự lấy thread từ Hạnh.
 
 ---
 
-### SLOT D2 — independent corroboration
+### SLOT D1 — firsthand current manager command
 
-Cần một nguồn độc lập với D1:
+Chỉ **C32H hoặc C32K**:
 
-- **C31** — current crisis Khải → Nam contact metadata;
-- hoặc route **C33/C34** đủ mạnh để police xác minh command pattern cross-cell.
+- C32H: Hùng trực tiếp xin/nhận quyết định hiện tại từ Nam về pause/tiếp tục logistics, trong branch của ông.
+- C32K: Khoa trực tiếp nhận quyết định hiện tại từ Nam về cell hospital, trong branch của ông.
 
-Canonical clean route:
+Vũ intake manager trực tiếp tại S16, không Bắc ép confession. C17/C22 + record thu hẹp quyền Hùng đã nhận, hoặc C12 receipt/approval + record thu hẹp cell Khoa đã nhận, làm nguy cơ bị hy sinh cụ thể; họ tự chọn bảo vệ mình bằng đúng scope biết, không được miễn culpability. Thảo không thay Khoa vì không biết Nam. C27/C28/C30 lịch sử, C31 contact và record pattern không thay D1.
 
-- C31 + C32.
+---
 
-Alternative clean route:
+### SLOT D2 — authenticated other-branch decision and execution
 
-- C32 + C33/C34.
+Một kiến trúc, hai acquisition routes:
 
-Không cho một manager statement đứng một mình quyết định boss.
+| D1 | D2 bắt buộc | Fact và origin độc lập |
+|---|---|---|
+| C32H logistics | C33_AUTH hospital | Original Nam authorization/approval chain qua Khải, có nội dung, quyền pause/tiếp tục/approve lại, nhận và thực hiện tại hospital; record có trước lời Hùng, hospital custody |
+| C32K hospital | C34_AUTH logistics | Original Nam authorization/approval chain qua Khải với nội dung/scope và receipt/execution Tân Lộ; record có trước lời Khoa, logistics custody |
+
+**Authentication D2 cụ thể:** Khải trình yêu cầu trong kênh approve đã có; institution custodian giữ bản trao đổi gốc nhận reply authorize từ chính endpoint của Nam, rồi Khải chuyển scope triển khai và institution ghi receipt/execution. Vũ thu trực tiếp original receiver-side reply đó trong hồ sơ hospital/logistics, so exact nội dung quyết định với request/forward/execution và kiểm endpoint tác giả qua nguồn quan hệ/đầu mối nghề nghiệp đã verify. Không chấp nhận chỉ một screenshot/forward do Khải tự gõ mang tên Nam, không suy tác giả từ display name hoặc timestamps. Receipt/execution xác nhận lệnh đã áp vào branch; original reply có tác giả/source xác thực mới xác nhận Nam authorize. Operational custodian chỉ xác nhận record mình giữ, không tự suy Nam là boss hoặc biết crime. Đây là record ở branch khác về quyết định khác với firsthand decision D1, không copy order D1 rồi đếm thêm nguồn.
+
+Vũ thu bản gốc qua institution intake và đối chiếu endpoint identity bằng contact/relationship records đã có, kiểm lời authorize Nam, forward Khải và execution. C31 chỉ hỗ trợ lead/identity; tên display Nam, cuộc gọi tới số Nam hoặc Khải nói Nam duyệt chưa đủ. C34 generic simultaneous closures chỉ hỗ trợ timing; chỉ subset C34_AUTH có payload/authentication trên được dùng làm D2.
+
+D1 phải là manager firsthand về một quyết định hiện tại; D2 là record **một quyết định hiện tại khác ở branch khác**, origin có trước intake. Hai copies cùng một forwarded Nam order không được count hai nguồn dù khác custodian. C10_SOURCE_LINK đối chiếu việc thực hiện ở nhánh môi giới với đúng directive D2, không được count lại chính forward đó làm một independent command proof.
+
+Accepted full D: **(C32H + C33_AUTH) hoặc (C32K + C34_AUTH)**, với source-branch context C10_SOURCE_LINK đã verify/preserve và X đã sourced. Mất Hùng còn Khoa + authenticated TL record; không có pure C33+C34 recovery, không có C31+C32 route, không có manager đứng một mình. Mất cả hai manager routes thì D1 chưa đủ.
 
 ---
 
@@ -1022,18 +1013,20 @@ True Ending không yêu cầu accusation quiz, nhưng player phải thể hiện
 
 ### I1 — E22 là reclassification, không phải “Tuấn chọn Bắc”
 
-Player phải dùng C17/C20/C22 hoặc equivalent để thoát false theory.
+C17/C20 hoặc nguồn equivalent sửa fact người đổi luồng và scope Tuấn; C22 mới đặt leadership/purpose ở Hùng. Chỉ action truy sai tiếp sau correction/cảnh báo có thể tốn source window; private belief không phải ending predicate. Đánh giá Tuấn không là core participant trong hồ sơ này phải qua Vũ verify assignment/permissions và lời giới hạn, không Đức biết secret briefing.
 
-### I2 — ba box là cùng structure
+### I2 — ngoài giao dịch chung, có một tầng current risk/escalation chung
 
-Player phải nhận ra relation đủ để đưa đúng sources cho Vũ kiểm chứng, không chỉ thu thập chúng như collectibles.
+Hành động đặt relation đúng có thể mở yêu cầu source có scope cụ thể; giao đầy đủ raw sources/context để Vũ verify độc lập cũng hợp lệ. Không bắt Vũ bỏ qua dữ kiện đã giữ vì Bắc suy luận sai. X_PLAYER_CONNECTED/N3_UNDERSTANDING chỉ phản ánh Bắc đã hiểu, không thay X_VERIFIED hoặc là accusation quiz.
 
 ### I3 — relationship không phải command
 
 Player phải hiểu:
 
 - C27/C28/C30 = Nam có lịch sử phù hợp;
-- C31/C32/C33/C34 = Nam có quyền hiện tại.
+- C31 = current contact/identity lead, chưa nói authority;
+- C32H/C32K + authenticated other-branch D2 = current authority trên hospital/logistics;
+- C10_SOURCE_LINK verified với cùng D2 directive mới hoàn tất phạm vi cả ba nhánh.
 
 Confront Nam ở C1/C2 là premature.
 
@@ -1055,7 +1048,7 @@ Player phải tin **đúng phạm vi knowledge**.
 
 - **Vũ:** phải tin đủ để chuyển source có provenance cho police.
 - **Huyền:** tin rằng review của bà là compliance source thật, dù bà không biết conspiracy.
-- **Phúc:** tin phần chronology/coercion đã được corroborate, không tin suy đoán vượt knowledge.
+- **Phúc:** tin exact paid-organ agreement, withdrawal và pressure messages đã authenticate; không count chronology kể lại thành nguồn độc lập hoặc tin suy đoán vượt knowledge.
 - **Đức/Yến/Thảo:** chỉ tin phần họ trực tiếp biết nếu route dùng họ.
 
 ### Không được dùng như secure channel
@@ -1076,11 +1069,12 @@ Player phải tin **đúng phạm vi knowledge**.
 
 Canonical timing:
 
-- D+1 sáng: mở các source A/B/C khi window còn sống.
-- Khoảng 12:00–14:00: player có thể đạt cross-cell understanding N3.
-- Khoảng 14:00–16:00: Vũ đạt E38 nếu có đủ independent sources; A/B/C bắt đầu được preserve.
-- Khoảng 15:00–18:00: command investigation mở.
-- Trước khoảng late D+1 cleanup lock: D1+D2 phải được corroborate và preserve.
+- D0 tối E28 (20:00–21:30): Vũ hoàn tất A custody/authentication độc lập với Bắc.
+- D+1 sáng: player có thể xem phần A đã được giữ; B/C vẫn theo các source windows riêng.
+- Khoảng 12:00–14:00: player có thể đạt cross-cell understanding N3 qua relation được nguồn support.
+- Khoảng 14:00–16:00: Vũ đạt E38 nếu có đủ B/C và sourced X bổ sung vào A đã giữ.
+- Trong S16 15:00–17:00 sau actual E38 của run và trước E40 closure/lock: Vũ direct intake C32H/C32K, other-branch original record và current C10_SOURCE_LINK từ broker counterpart đã có lead E12/E28; không retroactive E28 future record, không buộc Bắc giao lại nguồn Vũ đã giữ.
+- Trước cleanup lock: accepted pair và source-branch context phải được verify/preserve; bare contact/timestamps không đủ.
 
 Không biến các giờ trên thành countdown tuyệt đối ở UI.
 
@@ -1092,12 +1086,12 @@ Chúng là objective pacing windows, có thể co giãn nhẹ theo scene impleme
 
 True route cần giữ được:
 
-- source chronology A;
-- Huyền review trail + một corroborator B;
-- reclassification/leadership trail C;
-- cross-cell connector;
-- current command source;
-- independent command corroborator;
+- exact paid-organ agreement/withdrawal/pressure A + authentication ngoài Phúc đã giữ từ E28;
+- Huyền review + knowledge/assistance C12 hoặc C15;
+- reclassification + C22 purpose đã nhận trước approve + matched C18 hoặc C19;
+- sourced cross-cell connector và current source-branch execution context C10_SOURCE_LINK;
+- C32H/C32K firsthand current manager;
+- C33_AUTH/C34_AUTH đúng other-branch pair có independent origin;
 - police intake/preservation record.
 
 Không yêu cầu:
@@ -1116,11 +1110,11 @@ Trước E38, Vũ có các hộp rời.
 
 Ở true route, anh có:
 
-- A: human/coercion chronology;
-- B: institutional hospital pattern + corroboration;
-- C: leadership logistics involvement + corroboration;
-- X: verified relation giữa các boxes;
-- D: command chain tới Nam bằng ít nhất hai nguồn;
+- A: paid-organ agreement, withdrawal và pressure content được authenticate ngoài Phúc;
+- B: hospital biết tiền/withdrawal nhưng tiếp tục hỗ trợ vẻ consent hợp lệ;
+- C: Hùng đã nhận mục đích trả tiền cho người hiến vẫn approve/hạ luồng, được operational/finance match độc lập;
+- X: sourced current shared risk/escalation role/context, ngoài relation cùng giao dịch ABC và không chỉ timing;
+- D: firsthand manager + authenticated decision khác tại institution khác, cùng source-branch execution link đủ phạm vi cả ba nhánh;
 - source provenance đủ để biết đâu là fact, đâu là theory.
 
 Đây là điểm qualitatively khác.
@@ -1137,7 +1131,7 @@ Vì true route phá đúng cơ chế bảo vệ của Nam: compartmentalization.
 
 Khi C42 đã xảy ra:
 
-- Phúc/Vũ có chronology độc lập;
+- Vũ giữ original Phúc và original broker counterpart thread so exact A content tại E28; chronology ghi kiểm chứng, không origin crime độc lập thứ hai;
 - Huyền/institution giữ review history;
 - Tân Lộ có operation/finance/authority traces;
 - command relation đã được preserve ngoài quyền của network;
@@ -1229,7 +1223,7 @@ Bắc sống vì player hiểu lúc nào phải ngừng làm người duy nhất
 
 ### Tuấn
 
-- được loại khỏi core-network hypothesis nếu player đã theo C20/C22;
+- C20 chỉ sửa attribution E22; sau Vũ verify assignment/permissions và lời giới hạn, không có cơ sở xếp anh vào core trong hồ sơ này; không universal negative về mọi knowledge;
 - vẫn chịu trách nhiệm cho việc làm ngơ với ngoại lệ nghề nghiệp.
 
 ### Minh
@@ -1374,7 +1368,7 @@ S08–S13 — xây A/B/C và bridge
             │  └─ COMMAND C1 — hypothesis, chưa đủ
             ├─ có current link nhưng thiếu corroboration
             │  └─ COMMAND C2/C3 — vẫn chưa đủ
-            └─ D1 + D2 được corroborate
+            └─ accepted D1 + other-branch D2 và source-branch link verified
                ↓
                race với CLEANUP
                ├─ CLEANUP LOCKED trước COMMAND C4
@@ -1394,7 +1388,7 @@ S08–S13 — xây A/B/C và bridge
 | Avoidance | Bắc nói muốn dừng | player bỏ contact sau N3 + police chưa đủ preservation + source windows đóng |
 | Cleanup | player chưa có D ngay | A+B+C đã safe nhưng D không đạt C4 trước cleanup lock |
 | Exposure | confront một câu | direct leak làm unique source/chain thực sự gãy trước preservation |
-| True | nghi đúng Nam | A+B+C preserved + X verified + D1+D2 preserved trước cleanup lock |
+| True | nghi đúng Nam | A+B+C preserved + sourced X + accepted D pair và C10_SOURCE_LINK verified/preserved trước cleanup lock |
 
 ---
 
@@ -1478,18 +1472,18 @@ PASS.
 
 Không.
 
-- A cần hai nguồn.
-- B cần C11 + C12/C15.
-- C cần reclassification fact + corroborator + leadership.
-- D cần current command + independent corroboration.
-- X cần relation được verify.
+- A cần crime content C08 + C10 authentication origin ngoài Phúc; E28 custody không phụ thuộc player xem lại.
+- B cần C11 + C12/C15 chứng minh knowledge và assistance, không chỉ scope/timing.
+- C cần reclassification + C22 known paid-donor purpose + independent matched C18/C19.
+- D cần C32H+C33_AUTH hoặc C32K+C34_AUTH, distinct current decisions/origins, cùng verified source-branch context cho đủ cả ba nhánh.
+- X cần actual relation và endpoint/context được verify; C03 alone là lead.
 - C42 là event preservation, không phải pixel clue.
 
 C28 không bắt buộc.
 
-C31 không đứng một mình.
+C31 không là D1/D2 dù đi cạnh manager.
 
-C32 không đứng một mình.
+C32H/C32K không đứng một mình; generic C34 và pure C33+C34 không thay required pair. Hai copies cùng order không independent.
 
 PASS.
 
@@ -1513,11 +1507,11 @@ Sở hữu C27/C30 không tự biến Nam thành boss.
 
 Sở hữu nhiều record không tự bật X_VERIFIED.
 
-D chỉ mở khi player đi từ relationship → current command → corroboration.
+Full D chỉ mở khi player đưa sourced relation để Vũ intake manager firsthand, authenticate quyết định khác ở branch khác và verify source-branch context của cùng directive; không mở từ contact/closures pattern.
 
 ### Ba — sai interpretation tốn thời gian/thay đổi consequence
 
-Nếu player dừng ở Tuấn/Hùng, hoặc chia theory cho Minh, world reacts.
+Nếu player tiếp tục observable probing theo Tuấn/Hùng sau scope correction/cảnh báo, hoặc chia source/theory cho Minh, world reacts. Private suspicion không tự tốn window hay tạo penalty.
 
 Không có accusation quiz để brute-force tất cả tên.
 
@@ -1535,17 +1529,17 @@ Một tester không biết hierarchy trước khi chơi phải có khả năng:
 
 1. thấy E22 mismatch mà không kết luận crime;
 2. nhận C17 rồi hiểu reclassification;
-3. dùng C20/C22 để rời false theory Tuấn;
-4. lấy A từ Phúc/Vũ;
-5. lấy B từ Huyền + C12/C15;
-6. lấy C từ C17 + corroborator + C22;
-7. thấy C24+C25 cùng endpoint và đưa relation cho Vũ verify;
+3. dùng C20 để sửa attribution E22; chỉ Vũ verify assignment/permissions và lời Tuấn giới hạn mới cho đánh giá core scope trong hồ sơ;
+4. xem đủ nội dung A từ Phúc/Vũ đã authenticate/giữ ở E28, không phải giao lại A;
+5. lấy B từ Huyền + C12/C15 có fact knowledge/assistance tương đương;
+6. lấy C từ C17 + C22 purpose trước approve + C18 hoặc C19 matched độc lập;
+7. thấy C24+C25 có actual endpoint/context và đưa relation cho Vũ verify, không C03 alone;
 8. không leak source quan trọng qua Minh;
-9. đưa A/B/C sang Vũ trước khi access closure hoàn tất;
-10. coi C27/C30 là history chứ chưa phải proof;
-11. lấy current command evidence;
-12. corroborate Nam bằng hai nguồn;
-13. chuyển D cho Vũ trước cleanup lock.
+9. đưa B/C và sourced X còn thiếu sang Vũ trước access closure, ghi custody A đang có;
+10. coi C27/C30 là history, C31 là contact lead, chưa phải authority;
+11. mở direct police intake C32H hoặc C32K bằng cooperation trigger thuộc scope manager;
+12. authenticate other-branch C33_AUTH hoặc C34_AUTH đúng pair, distinct decision/origin; verify C10_SOURCE_LINK cùng D2 directive cho đủ cả ba nhánh;
+13. preserve accepted D pair và source-branch context trước cleanup lock.
 
 Nếu tester phải biết trước “C31 quan trọng vì guide nói vậy”, implementation chưa đạt.
 
@@ -1605,7 +1599,7 @@ Toàn bộ Stage 6 có thể rút thành:
 → A/B/C được preserve thì police route trở nên thật  
 → late game chuyển câu hỏi từ “ai đáng ngờ?” sang “ai có quyền command?”  
 → history của Nam không đủ  
-→ current command + independent corroboration mới đủ D  
+→ accepted manager + authenticated other-branch decision khác, cùng verified source-branch execution context mới đủ D cả ba nhánh  
 → nếu D được preserve trước cleanup lock, True Ending  
 → nếu command đến muộn, Cleanup  
 → nếu source chết vì miss, Delay  
