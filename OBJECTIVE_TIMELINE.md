@@ -42,6 +42,8 @@ Nguyên tắc bằng chứng:
 4. Organization chỉ xóa/thu hồi thứ họ **biết tồn tại và có quyền chạm tới**.
 5. Xóa một institutional record có thể tạo audit anomaly; vì vậy Khoa/Hùng thường **thu hẹp, đổi cách trình bày, khóa access** trước khi nghĩ tới xóa.
 6. Sau khi evidence được Vũ tiếp nhận/bảo toàn chính thức, Hành Lang không còn quyền đơn giản làm nó biến mất.
+7. Mỗi source tách RECORD_EXISTS, SOURCE_ACCESS, SOURCE_WILLINGNESS và COPY_CUSTODY; có original/private copy không tự nghĩa đã authenticate, khóa account không xóa copy. Receipt/authentication ghi custodian và thời điểm riêng.
+8. Tri thức Bắc (facts observed + explicit inference), police verification/custody và BARC (report đã nhận) riêng. Report lưu người gửi, exact payload, người nhận, thời điểm nhận; Nam không tự nhận mọi report tới Khải. Cùng report received cho cùng BARC dù private theory khác. Cleanup baseline không tạo awareness về Bắc.
 
 ---
 
@@ -235,12 +237,12 @@ Nguyên tắc bằng chứng:
 - **Những người có mặt:** Phúc, Đại úy Nguyễn Minh Vũ và nhân sự liên quan.
 - **Chuyện khách quan xảy ra:** Phúc trình báo việc tham gia thỏa thuận, muốn rút và bị gây sức ép; anh kể thiếu một số chi tiết về mức tự nguyện ban đầu vì xấu hổ.
 - **Nguyên nhân:** Sức ép vượt mức Phúc có thể tự xử lý.
-- **Hậu quả:** Một investigation thật tồn tại trước khi Bắc can thiệp.
+- **Hậu quả:** Một investigation thật tồn tại trước khi Bắc can thiệp. Vũ gửi yêu cầu hẹp kiểm ngày Phúc tới Minh Trạch/yêu cầu kiểm tra; luồng tiếp nhận/compliance thường trả xác nhận cá nhân, timestamp và bộ phận nhận. Response đúng scope, không chứa multi-case review hay nội dung y tế người khác. Phúc chưa biết review-group/Tân Lộ account-family/routing key; Vũ vẫn theo đuổi nhánh môi giới và verification độc lập. C03/C17 về sau cho group bridge cụ thể để mở câu hỏi khác, không phải cảnh sát chờ Bắc mới hỏi.
 - **Ai biết chuyện này:** Vũ biết có dấu hiệu môi giới, cưỡng ép và tiền bất thường.
 - **Ai chỉ biết một phần:** Vũ biết Minh Trạch xuất hiện trong câu chuyện nhưng chưa có cơ sở coi bệnh viện là tổ chức phạm tội.
 - **Ai hiểu sai:** Giả thuyết hợp lý ban đầu của Vũ là một nhóm môi giới nhỏ hơn thực tế.
-- **Bằng chứng được tạo ra:** Biên bản trình báo, chronology, bản sao một phần liên lạc Phúc cung cấp.
-- **Bằng chứng tồn tại ở đâu:** Hồ sơ cảnh sát; thiết bị/giấy tờ Phúc.
+- **Bằng chứng được tạo ra:** Biên bản, chronology và copies subset liên lạc Phúc đã giao, có receipt/custodian tại E12. Exact core-agreement/withdrawal messages Phúc còn giấu vì xấu hổ về mức đồng ý/tiền ban đầu chưa nằm trong subset này; partial record custody đã giữ không đồng nghĩa A đủ proof. Đầu mối broker counterpart đã được Phúc chỉ tên/kênh, không là NPC mới.
+- **Bằng chứng tồn tại ở đâu:** Copies đã intake nằm trong hồ sơ cảnh sát, không phụ thuộc player-seen. Original subset và phần chưa giao ở Phúc; counterpart giữ original thread trên điện thoại mình để phân định việc mình làm với yêu cầu Hạnh. Xác nhận hospital request riêng vào hồ sơ trước E28.
 - **Bằng chứng có thể biến mất lúc nào:** Hồ sơ cảnh sát không nằm trong quyền xóa của Hành Lang.
 - **Event tiếp theo mà nó gây ra:** E13 và E18.
 
@@ -315,13 +317,13 @@ Nguyên tắc bằng chứng:
 - **Những người có mặt:** Khải ở tầng giám sát; Hùng, Tuấn, Đức, Yến trong công ty.
 - **Chuyện khách quan xảy ra:** Khải yêu cầu rà hoạt động y tế. Hùng nhận ra ngoại lệ riêng sẽ lộ. Khi dữ liệu bị rà và cách trình bày bị sửa, Đức nhận ra các bất thường liên hệ nhau; Yến thấy dòng tiền đáng ngại hơn gian lận doanh nghiệp thường.
 - **Nguyên nhân:** Lệnh cleanup E15.
-- **Hậu quả:** Hùng chuyển sang tự cứu; Đức giữ lại thông tin để tự bảo hiểm; Yến im lặng nhưng tăng mức nghi.
+- **Hậu quả:** Hùng tự cứu; Đức export phần log vận hành mình có quyền thấy, giữ cục bộ trong thư mục điện thoại cá nhân, không đồng bộ account Tân Lộ, để tự bảo hiểm; Yến im lặng nhưng tăng nghi. Copy không chứa toàn mạng/Nam hay secret briefing của ai.
 - **Ai biết chuyện này:** Hùng biết core crime và lỗi riêng; Đức/Yến chỉ biết vector của họ.
 - **Ai chỉ biết một phần:** Tuấn biết có audit và ngoại lệ nhưng không biết organ network.
 - **Ai hiểu sai:** Đức có thể nghi Hùng là đỉnh; Tuấn vẫn nghĩ đây chủ yếu là sai phạm doanh nghiệp.
 - **Bằng chứng được tạo ra:** Log rà soát/sửa dữ liệu, phần thông tin Đức giữ, đối chiếu tài chính của Yến.
-- **Bằng chứng tồn tại ở đâu:** Tân Lộ; bản Đức giữ; hệ thống tài chính.
-- **Bằng chứng có thể biến mất lúc nào:** Bản Đức có thể bị lấy/mất nếu Khải xác định anh trước khi nó được chuyển ra ngoài; dữ liệu lõi công ty không thể xóa sạch mà không tạo gap.
+- **Bằng chứng tồn tại ở đâu:** Originals vận hành/tài chính ở Tân Lộ; C18 private export ở điện thoại cá nhân Đức. SOURCE_ACCESS tới originals, SOURCE_WILLINGNESS của Đức và COPY_CUSTODY riêng.
+- **Bằng chứng có thể biến mất lúc nào:** Khải chỉ biết access anomaly, chưa biết copy ở đâu/chứa gì. Account/badge revocation không xóa private export. Có thể mất timely cooperation/context; một seizure/deletion thật phải có event discovery và quyền chạm copy được ghi riêng, không default. Bản Vũ đã intake còn; originals công ty không thể xóa sạch mà không tạo gap.
 - **Event tiếp theo mà nó gây ra:** E18.
 
 ## E18 — Khải phát hiện dấu hiệu leak
@@ -489,20 +491,20 @@ Nguyên tắc bằng chứng:
 - **Bằng chứng có thể biến mất lúc nào:** Quyền truy cập có thể bị thu hẹp D+1; audit trail nền vẫn còn.
 - **Event tiếp theo mà nó gây ra:** E32.
 
-## E28 — Vũ tiếp tục kiểm chứng lời Phúc
+## E28 — Vũ hoàn tất A độc lập với Bắc
 
 - **Thời điểm:** D0, 20:00–21:30.
-- **Địa điểm:** Cơ quan cảnh sát/qua liên lạc nghiệp vụ.
-- **Những người có mặt:** Vũ, Phúc.
-- **Chuyện khách quan xảy ra:** Vũ làm rõ timeline và tách điều Phúc trực tiếp biết khỏi suy đoán. Phúc cung cấp thêm khi thấy mình không bị phán xét.
-- **Nguyên nhân:** Investigation E12 vẫn tiến độc lập với Bắc.
-- **Hậu quả:** Hồ sơ nguồn người/sức ép mạnh hơn nhưng vẫn thiếu cầu tới Tân Lộ/cell bệnh viện.
-- **Ai biết chuyện này:** Vũ biết thêm về nhánh Phúc.
-- **Ai chỉ biết một phần:** Vũ biết Minh Trạch có liên quan trong câu chuyện nhưng chưa biết Khoa/Thảo.
-- **Ai hiểu sai:** Giả thuyết nhóm môi giới nhỏ vẫn chưa bị loại hoàn toàn.
-- **Bằng chứng được tạo ra:** Lời khai bổ sung và chronology contacts.
-- **Bằng chứng tồn tại ở đâu:** Hồ sơ cảnh sát.
-- **Bằng chứng có thể biến mất lúc nào:** Không.
+- **Địa điểm:** Cơ quan cảnh sát/qua kênh intake nghiệp vụ riêng.
+- **Những người có mặt:** Vũ, Phúc; broker counterpart cung cấp original riêng, không cần cùng phòng.
+- **Chuyện khách quan xảy ra:** Phúc bổ sung exact original core-agreement/withdrawal messages từng giấu vì xấu hổ. Vũ liên hệ riêng broker counterpart đã được chỉ từ E12, thu original gửi/nhận: promise tiền gắn cung cấp nội tạng/cách gọi hiến tự nguyện; agreement/withdrawal của Phúc; pressure viện tiền đã ứng. Broker giữ thread để không gánh hết quyết định Hạnh, giao bounded case exchange để phân định trách nhiệm, không được hứa miễn trách nhiệm; việc cung cấp qua kênh riêng không tự báo Hạnh.
+- **Nguyên nhân:** Investigation E12 vẫn tiến độc lập; Phúc kể rõ hơn, counterpart tự bảo vệ bằng đúng original mình giữ.
+- **Hậu quả:** Vũ so exact content từng fact từ hai phía và ghi authentication C10; independent hospital response xác nhận visit/request D−14, endpoint/timestamps xác nhận exchange/order. Hospital/metadata không authenticate money/pressure text thay counterpart originals. CASE.A=2 từ E28 trước S09, không chờ Bắc giao lại chronology.
+- **Ai biết chuyện này:** Vũ/police biết và giữ paid-organ agreement → withdrawal → pressure đã authenticate; Phúc/counterpart chỉ biết case/phần mình.
+- **Ai chỉ biết một phần:** Vũ chưa có multi-case review group/Tân Lộ bridge, common current risk context X hoặc Nam D. A_PLAYER_SEEN/A_PLAYER_UNDERSTOOD của Bắc chưa tự tăng.
+- **Ai hiểu sai:** Nhánh môi giới nhỏ còn là giả thuyết giới hạn; đã có A không tự biết architecture.
+- **Bằng chứng được tạo ra:** C08 originals bổ sung, C10 record so exact content từng fact, hospital-request confirmation và receipt/authentication từng source; copy của một lời khai không được đếm là origin độc lập.
+- **Bằng chứng tồn tại ở đâu:** Originals ở hai custodians; authenticated copies/chronology ở police ngoài quyền xóa network. C10_SOURCE_LINK là future actual intake S16 sau E38, chưa được tạo/nhận tại E28.
+- **Bằng chứng có thể biến mất lúc nào:** Police records không mất trong run và không lùi vì Bắc miss encounter. T07 partial-subset fixture chỉ đặt trước E28, ghi đúng record/fact chưa được nhận.
 - **Event tiếp theo mà nó gây ra:** E33 nếu Bắc tạo bridge; nếu không, baseline E31.
 
 ## E29 — Bắc có thể chuyển N1 → N2
@@ -512,11 +514,11 @@ Nguyên tắc bằng chứng:
 - **Những người có mặt:** Bắc và nguồn cậu tiếp cận; Khải chỉ nhận hậu quả/báo cáo.
 - **Chuyện khách quan xảy ra:** Bắc làm nhiều hơn phản ứng bình thường của một worker: hỏi sâu, giữ/so dữ kiện hoặc xuất hiện quanh một nguồn thứ hai.
 - **Nguyên nhân:** Player intervention.
-- **Hậu quả:** Khải có cơ sở phân loại Bắc là người đang tìm hiểu, không chỉ accidental worker.
-- **Ai biết chuyện này:** Bắc biết mình đang nối dữ kiện; Khải biết các dấu hiệu có thể quan sát.
+- **Hậu quả:** Chỉ khi một nguồn thực sự gửi report và Khải nhận được exact hành vi/payload, có cơ sở phân loại PROBING. Giữ/so dữ kiện kín trong notebook không tự nâng BARC; hiểu đúng hay sai riêng không thay report.
+- **Ai biết chuyện này:** Bắc biết phần mình đã quan sát/suy; Khải chỉ biết exact reports đã nhận. Nam chỉ nhận phần Khải thực sự báo, với thời điểm nhận riêng.
 - **Ai chỉ biết một phần:** Nam chỉ biết điều Khải có thể báo, không biết suy nghĩ Bắc.
 - **Ai hiểu sai:** Khải chưa biết Bắc đã hiểu đúng tới đâu.
-- **Bằng chứng được tạo ra:** Các câu hỏi/contact reports/logs tương ứng; không một dấu riêng đủ kết luận.
+- **Bằng chứng được tạo ra:** Report ledger người gửi, recipient, received_at và payload Bắc thực sự disclose/hành vi được witness. Không tự sinh report từ notebook; không một dấu riêng đủ kết luận cross-cell.
 - **Bằng chứng tồn tại ở đâu:** Nguồn tương ứng.
 - **Bằng chứng có thể biến mất lúc nào:** Một số log ngắn hạn; trong game window còn tồn tại.
 - **Event tiếp theo mà nó gây ra:** E30.
@@ -563,15 +565,15 @@ Nguyên tắc bằng chứng:
 - **Thời điểm:** D+1, 09:30–11:00.
 - **Địa điểm:** Tân Lộ hoặc điểm gặp hợp lý nếu có contact; không yêu cầu Khải xuất hiện trực tiếp.
 - **Những người có mặt:** Đức; Bắc/Vũ chỉ nếu có route tiếp cận.
-- **Chuyện khách quan xảy ra:** Đức biết mình nằm trong nhóm bị nghi leak và cân nhắc tự bảo vệ. Nếu được tiếp cận đúng, anh có thể xác nhận bất thường vận hành trong giới hạn mình biết.
+- **Chuyện khách quan xảy ra:** Đức biết bị nghi leak và cân nhắc hợp tác để tự bảo vệ. C18 là private export đã tồn tại từ E17 trên điện thoại cá nhân; tiếp cận hợp lệ cho testimony/copy giới hạn, không tạo file mới hoặc cấp knowledge toàn mạng.
 - **Nguyên nhân:** E17–E18.
 - **Hậu quả:** Logistics có thể trở thành nguồn corroboration độc lập; nếu không, Đức bị tước dần quyền truy cập.
 - **Ai biết chuyện này:** Đức biết phần logistics và nghi liên hệ y tế.
 - **Ai chỉ biết một phần:** Đức không biết Nam/cấu trúc bệnh viện.
 - **Ai hiểu sai:** Đức có thể vẫn nghĩ Hùng là đỉnh.
-- **Bằng chứng được tạo ra:** Testimony + phần thông tin Đức đã giữ.
+- **Bằng chứng được tạo ra:** Testimony giới hạn và receipt của private copy C18 vốn có; authentication so originals/fields vận hành riêng, không coi một screenshot là proof tự xác thực.
 - **Bằng chứng tồn tại ở đâu:** Phía Đức; nếu chuyển hợp pháp thì sang Vũ.
-- **Bằng chứng có thể biến mất lúc nào:** Khoảng trưa D+1 quyền truy cập công việc có thể bị khóa; bản đã giao cảnh sát không thể bị network thu hồi.
+- **Bằng chứng có thể mất timely access lúc nào:** Cửa tiếp cận E32 là willingness/contact để nhận copy/lời Đức trong run. Thu hẹp leak/buổi review có thể khiến anh ngừng hợp tác; khoảng trưa account công việc có thể khóa. Private copy vẫn ở điện thoại nếu chưa có discovery/seizure event; police copy đã nhận không bị thu hồi. P3 phải chốt warning/request/receipt trước last-route closure, không dùng badge lock để despawn copy.
 - **Event tiếp theo mà nó gây ra:** E36.
 
 ## E33 — Cửa sổ Huyền/Thảo
@@ -595,7 +597,7 @@ Nguyên tắc bằng chứng:
 - **Thời điểm:** D+1, 10:00–12:00.
 - **Địa điểm:** Tuyến cảnh sát.
 - **Những người có mặt:** Vũ, Phúc; Bắc chỉ nếu chủ động liên hệ.
-- **Chuyện khách quan xảy ra:** Nếu Bắc mang dữ kiện có nguồn rõ, Vũ so chúng với timeline Phúc. Anh không chấp nhận suy đoán không nguồn.
+- **Chuyện khách quan xảy ra:** Vũ đã có A=2 từ E28. Nếu Bắc mang sourced logistics/group bridge, anh so với A đang giữ và mở targeted review-group verification; không yêu cầu chronology thuộc police được giao lại. Suy đoán không nguồn không mở proof mới.
 - **Nguyên nhân:** Hồ sơ Phúc cần một bridge ngoài nhánh môi giới.
 - **Hậu quả:** Một chi tiết logistics/bệnh viện có thể chuyển từ coincidence thành corroboration.
 - **Ai biết chuyện này:** Vũ chỉ nâng knowledge theo evidence xác minh được.
@@ -622,31 +624,31 @@ Nguyên tắc bằng chứng:
 - **Bằng chứng có thể biến mất lúc nào:** Hùng có thể khóa quyền truy cập trong D+1; nền dữ liệu doanh nghiệp không biến mất hoàn toàn.
 - **Event tiếp theo mà nó gây ra:** E38.
 
-## E36 — Ngưỡng N3: Bắc nối được nhiều cell
+## E36 — N3_UNDERSTANDING của Bắc: nối đúng facts và current risk context
 
 - **Thời điểm:** D+1, khoảng 12:00–14:00, chỉ nếu player có đủ nguồn độc lập.
 - **Địa điểm:** Event knowledge; không bắt buộc là một cuộc gặp.
 - **Những người có mặt:** Bắc; dữ kiện đến từ các nguồn đã gặp ở thời điểm khác nhau.
-- **Chuyện khách quan xảy ra:** Bắc nhận ra vụ Phúc, pattern Minh Trạch và hoạt động bất thường Tân Lộ không phải ba chuyện riêng.
-- **Nguyên nhân:** Corroboration giữa ít nhất hai nguồn ngoài gói E22, cộng bridge logistics ban đầu.
-- **Hậu quả:** Bắc trở thành threat nghiêm trọng N3 nếu organization phát hiện hậu quả của việc nối các nhánh.
+- **Chuyện khách quan xảy ra:** Nếu Bắc đã quan sát đủ content A/B/C và thực hiện inference đúng, cậu nhận ra quan hệ nhiều nhánh; C24/C25 phải cung cấp actual Khải endpoint, scope request/response và crisis context để cậu nối current shared risk role, không chỉ same account/giao dịch. Thiếu/sai inference giữ hypothesis, không award N3_UNDERSTANDING/KHẢI_LAYER.
+- **Nguyên nhân:** Facts observed từ các nguồn độc lập, cộng successful explicit inference X_PLAYER_CONNECTED về current risk context. C03/C17 transaction/group match là lead, không thay risk context hay current command.
+- **Hậu quả:** N3_UNDERSTANDING chỉ phản ánh Bắc. BARC không đổi tại event inference; E37 derive threat từ reports đã nhận, kể cả khi private theory sai. Vũ verify đủ raw risk sources trong custody dù inference Bắc sai; X_VERIFIED riêng.
 - **Ai biết chuyện này:** Bắc biết cấu trúc nhiều nhánh ở mức chưa hoàn chỉnh.
-- **Ai chỉ biết một phần:** Vũ chỉ biết phần Bắc đã đưa và được xác minh; Nam/Khải chỉ biết các dấu vết hành vi.
+- **Ai chỉ biết một phần:** Vũ biết custody/xác minh độc lập từ E12/E28 và các source đã tiếp nhận, kể cả phần Bắc chưa quan sát; private inference của Bắc không tự tới police. Nam/Khải chỉ biết exact reports đã nhận, với receipt riêng.
 - **Ai hiểu sai:** Bắc vẫn có thể nghi Hùng/Tuấn là đỉnh vì chưa chứng minh Nam.
 - **Bằng chứng được tạo ra:** Không có evidence mới chỉ vì suy luận; evidence gốc vẫn nằm ở các nguồn độc lập.
 - **Bằng chứng tồn tại ở đâu:** Notebook của Bắc chỉ là bản tổng hợp; source evidence ở Tân Lộ/Minh Trạch/Phúc/police.
 - **Bằng chứng có thể biến mất lúc nào:** Suy luận không thể bị xóa khỏi đầu Bắc; từng source có cửa sổ riêng.
-- **Event tiếp theo mà nó gây ra:** E37 và E38.
+- **Event tiếp theo:** E37 có thể xảy ra từ actual contact/disclosure reports dù inference E36 sai; E38 từ đủ raw source intake/authentication, không phải private certainty.
 
 ## E37 — Khải xác nhận Bắc đang can thiệp
 
-- **Thời điểm:** D+1, khoảng 13:00–15:00, nếu hành vi N3 để lại dấu ở từ hai nhánh.
+- **Thời điểm:** D+1, khoảng 13:00–15:00, nếu received reports từ ít nhất hai nhánh có cùng Bắc và hành vi chạm/nối nguồn; không yêu cầu private N3_UNDERSTANDING đúng.
 - **Địa điểm:** Kênh risk management.
-- **Những người có mặt:** Khải; Nam nhận báo cáo; các manager cung cấp từng mảnh.
-- **Chuyện khách quan xảy ra:** Cùng một người xuất hiện trong báo cáo từ Tân Lộ và ít nhất một nhánh khác, cho Khải cơ sở xác nhận Bắc không còn là accidental worker.
-- **Nguyên nhân:** Observable consequences của E36, không phải đọc suy nghĩ.
-- **Hậu quả:** Nam chuyển sang trực tiếp quan tâm Bắc; strategy tùy việc evidence đã rời khỏi tay Bắc hay chưa.
-- **Ai biết chuyện này:** Khải biết Bắc đang nối cell; Nam biết risk tăng.
+- **Những người có mặt:** Khải; các manager thực sự gửi từng mảnh; Nam chỉ tham gia knowledge event nếu actual report được forward tới ông.
+- **Chuyện khách quan xảy ra:** Khải so actual reports từ Tân Lộ và ít nhất một nhánh khác: cùng Bắc, exact hành vi/contact và scope/payload được witness. Ledger có sender/recipient/received_at; chỉ appearance tình cờ không đủ. Report chứng minh cross-cell probing cho BARC N3, không chứng minh đọc được inference. Nam chỉ tăng knowledge sau khi nhận nội dung Khải báo; cùng received reports luôn cùng awareness dù private theory khác.
+- **Nguyên nhân:** Actual reports về authored contacts/disclosures Bắc đã thực hiện ở các cell, có payload/recipient/received_at; độc lập với thành công hay thất bại của private inference E36.
+- **Hậu quả:** Khải tăng awareness từ reports đã nhận. Nam chỉ chuyển sang trực tiếp quan tâm Bắc sau actual forwarding/receipt đủ scope; strategy dựa thông tin evidence đã rời Bắc mà họ thực sự nhận.
+- **Ai biết chuyện này:** Khải biết report chứng minh cross-cell probing; Nam chỉ biết exact scope nhận từ Khải, không tự thừa hưởng toàn ledger.
 - **Ai chỉ biết một phần:** Họ không biết nguồn nào Bắc chưa chia sẻ.
 - **Ai hiểu sai:** Khải có thể đánh giá thiếu các nguồn ngoài organization như Huyền/Vũ.
 - **Bằng chứng được tạo ra:** Cross-report nội bộ về Bắc.
@@ -659,7 +661,7 @@ Nguyên tắc bằng chứng:
 - **Thời điểm:** D+1, 14:00–16:00.
 - **Địa điểm:** Cơ quan điều tra và các nguồn xác minh.
 - **Những người có mặt:** Vũ; tùy route có Phúc, Huyền, Đức/Yến/Thảo hoặc record chính thức.
-- **Chuyện khách quan xảy ra:** Nếu Vũ nhận ít nhất hai nguồn độc lập nối đúng các nhánh, anh chuyển từ 'vụ Phúc' sang điều tra cấu trúc nhiều tổ chức và chủ động bảo toàn evidence.
+- **Chuyện khách quan xảy ra:** Vũ giữ A từ E28; khi đủ sourced B/C corroboration, anh mở điều tra nhiều institution và chủ động bảo toàn các nguồn còn thiếu. X_VERIFIED chỉ khi actual current risk/escalation sources Khải endpoint + request/response scope + crisis context đã intake/authenticate, ngoài relation giao dịch ABC. Nếu raw context đủ, Vũ tự verify dù teen inference sai; nếu context chưa nhận, ABC có thể PRESERVED/X=false mà Vũ vẫn xử lý các case đã rõ.
 - **Nguyên nhân:** Evidence có nguồn, không phải kết luận của Bắc.
 - **Hậu quả:** Police knowledge tăng nhanh; network mất khả năng xóa sạch các dấu đã được bảo toàn.
 - **Ai biết chuyện này:** Vũ và đội điều tra biết giả thuyết mạng lưới đã có cơ sở.
@@ -723,7 +725,7 @@ Nguyên tắc bằng chứng:
 - **Thời điểm:** D0 tối đến D+1 chiều, tùy thời điểm leak.
 - **Địa điểm:** Kênh Minh→Tân Lộ và risk management.
 - **Những người có mặt:** Minh, Tuấn/Hùng/Khải; Nam chỉ biết khi report đủ mạnh.
-- **Chuyện khách quan xảy ra:** Nếu Bắc chia quá nhiều cho Minh hoặc một đầu mối không an toàn trước khi evidence được bảo toàn, organization biết sớm chính xác Bắc đang chạm những nhánh nào. Họ đẩy cleanup nhanh hơn và cô lập các source access. Nếu Bắc đã N3/N4 mà vẫn giữ evidence chủ yếu một mình, cậu có thể bị đặt vào tình huống nguy hiểm và mất khả năng tiếp tục điều tra.
+- **Chuyện khách quan xảy ra:** Nếu Bắc chia quá nhiều cho Minh hoặc một đầu mối không an toàn trước khi evidence được bảo toàn, organization biết sớm chính xác Bắc đang chạm những nhánh nào. Họ đẩy cleanup nhanh hơn và cô lập các source access. Nếu received reports đã đưa BARC tới N3/N4 và evidence còn chưa đủ được bảo toàn, cậu có thể bị đặt vào tình huống nguy hiểm và mất khả năng tiếp tục điều tra; private theory không tự truyền tới organization.
 - **Nguyên nhân:** Player chia thông tin sai người + Minh ưu tiên người có quyền lực hơn khi sợ.
 - **Hậu quả:** Có thể dẫn tới Bad Ending — Wrong Trust, Exposure hoặc Cleanup tùy police đã giữ được gì. Minh không phải villain và leak không tự động game-over.
 - **Ai biết chuyện này:** Minh chỉ biết lời Bắc nói; Khải suy ra risk từ hậu quả; Nam chỉ nhận mức đã được báo.
@@ -774,11 +776,11 @@ Nguyên tắc bằng chứng:
 | Evidence | Vì sao tồn tại | Ai kiểm soát ban đầu | Giá trị thật | Khi nào có thể mất/giảm giá trị | Vì sao organization chưa xóa sạch |
 |---|---|---|---|---|---|
 | Liên lạc Phúc–môi giới | cần để sắp case và vì Phúc giữ bản của mình | hai phía | chứng minh A ở mức nạn nhân/sức ép | phía môi giới có thể xóa; bản Phúc vẫn còn | organization không kiểm soát thiết bị Phúc và trước crisis không có lý do dọn mọi contact |
-| Hồ sơ trình báo Phúc | Phúc chủ động báo cảnh sát | cảnh sát | nguồn độc lập về A | không mất trong game window | Hành Lang không kiểm soát cảnh sát |
+| Hồ sơ Phúc/C10 | E12 partial intake; E28 exact originals hai phía được so text/authenticate cùng independent visit record | police + originals Phúc/counterpart | A=2 từ E28; tách origin/verification/custody | police custody không mất nếu player chưa xem; annex C10_SOURCE_LINK chỉ tới S16 sau E38 | Hành Lang không kiểm soát police; không bắt Bắc giao lại A |
 | Review Huyền | compliance mở review vì anomaly thật | Minh Trạch | chứng minh pattern B khi corroborate | access có thể bị Khoa thu hẹp | xóa thẳng review nhiều hồ sơ sẽ tạo anomaly và chạm nhiều người vô tội |
 | Version/scope chênh lệch review | Khoa cố thu hẹp | Minh Trạch | cho thấy có can thiệp quản trị | khó đọc hơn khi access bị khóa | chính hành vi thu hẹp tạo lịch sử thay đổi |
 | Dispatch/reclassification E19–E22 | job phải chạy qua hệ thống công ty | Tân Lộ | bridge C giữa việc Bắc chạm và thao tác quản lý | có thể bị hạn chế quyền xem; metadata vẫn có gap nếu sửa mạnh | Tân Lộ là công ty thật; xóa bừa phá hoạt động hợp pháp và tạo audit trail |
-| Bản thông tin Đức giữ | Đức tự bảo hiểm | Đức | corroboration logistics C | có thể mất nếu Đức bị kiểm soát trước khi chuyển ra ngoài | Khải chỉ phát hiện leak, ban đầu chưa biết chắc Đức giữ gì/ở đâu |
+| Bản thông tin Đức giữ | private export vận hành từ E17 để tự bảo hiểm | điện thoại cá nhân Đức, không sync account Tân Lộ; police giữ copy nếu intake | corroboration logistics C, chỉ scope trực tiếp | willingness/contact/context có thể đóng; badge loss không xóa private copy; actual seizure cần discovery/quyền/custody event | Khải chưa biết copy gì/ở đâu; bản police không thu hồi được |
 | Records tài chính Yến thấy | công ty thật phải hạch toán nhiều khoản | Tân Lộ | corroboration C, không đủ A/B/D | access của Yến có thể khóa | dữ liệu doanh nghiệp không thể xóa toàn bộ mà không làm công ty thật bất thường |
 | Communication Minh→Tân Lộ | Minh tự báo vấn đề nhân sự | Minh/Tân Lộ | evidence về betrayal/exposure, không phải core crime | có thể bị xóa | không phải thứ network ưu tiên bảo toàn; hậu quả đã xảy ra |
 | Cross-report về Bắc | Khải so báo cáo từ nhiều nhánh | risk management | cho biết network đã nhận diện threat | có thể dọn trong cleanup | không cần cho police conviction; chủ yếu giải thích phản ứng Nam |
@@ -796,8 +798,8 @@ Nguyên tắc bằng chứng:
 | D0 12:30–14:10 | làm job E22 | chỉ thấy một số chi tiết có thể không khớp | N1 sau khi audit phát hiện |
 | D0 tối, nếu bỏ qua | quay về đời sống bình thường | không nối được gì | N1 → exposure thấp |
 | D0 tối, nếu hỏi sâu | bắt đầu kiểm tra Tân Lộ/job | có một anomaly logistics | N2 nếu để lại dấu |
-| D+1 sáng | có thể gặp nguồn thứ hai/ba | nhận ra các nguồn không hoàn toàn độc lập | N2→N3 |
-| D+1 trưa | nếu nối Phúc + Minh Trạch + Tân Lộ | hiểu một network nhiều cell | N3 |
+| D+1 sáng | có thể gặp nguồn thứ hai/ba | hypothesis theo facts đã thấy | BARC N2/N3 chỉ theo actual received reports, không theo hiểu riêng |
+| D+1 trưa | facts đủ + successful inference current shared risk context | N3_UNDERSTANDING riêng | BARC N3 chỉ khi E37 report đủ; private route có thể giữ prior BARC |
 | D+1 chiều | nếu chuyển evidence có nguồn cho Vũ | giúp police corroborate | N4 nếu organization nhận ra |
 | True state | evidence rời khỏi tay Bắc và được preserve | hiểu phần lớn truth | organization không thể giải bằng cách chỉ chặn Bắc |
 | Bad state | hiểu đúng nhưng giữ evidence rời rạc hoặc leak quá sớm | knowledge > legal proof | cleanup/exposure có thể thắng |
@@ -926,9 +928,9 @@ Minh **không phải member network**. Betrayal chỉ có logic vì cậu tưở
 | D0 07:30 | sinh viên mới ở trọ, mới lên Hà Nội | hàng xóm trẻ | mức đời thường | vô hại | cư xử bình thường, có thể giúp thật |
 | D0 16:00 | worker của job bị hạ sai luồng chính là Bắc | hàng xóm vô tình chạm exposure | có | N1 / exposure hành chính | yêu cầu quan sát, không làm lớn chuyện |
 | D0 tối nếu Bắc không đào | không có hành vi tiếp nối | một sinh viên làm xong việc | giảm chú ý | vô hại/low risk | để yên |
-| D0 tối nếu E29 | Bắc hỏi sâu hoặc tạo dấu ở source thứ hai | người tò mò vượt mức worker | tăng | N2 / nguy cơ | Khải theo dõi hậu quả, tránh tạo vụ việc |
+| D0 tối nếu nhận report E29/E30 | Khải đã báo exact probing tới Nam, ghi receiver/time/payload | người tò mò vượt mức worker | tăng theo report | N2 / nguy cơ | theo dõi hậu quả; private read/keep source không tự báo |
 | D+1 sau cross-report | Bắc xuất hiện ở từ hai cell trở lên | người đang chủ động nối cấu trúc | cao | N3 / nguy cơ nghiêm trọng | Nam trực tiếp xem report và cân cleanup |
-| Khi police bắt đầu preserve A+B+C | Bắc có thể đã đưa bridge ra khỏi tay mình | không còn là risk cá nhân đơn lẻ; là vector dẫn police tới structure | rất cao | N4 / khủng hoảng tổ chức | ưu tiên rút/đóng nhánh, bảo toàn lõi |
+| Khi có observable police-facing consequence được report | Nam nhận thông tin case nhiều nhánh đang được police giữ; A đã safe từ E28 | vector dẫn police tới structure | rất cao | N4 / khủng hoảng tổ chức | protect core theo report; không tự biết nội dung police custody kín |
 | True route | D đã được corroborate | Bắc là người ngoài đã làm compartmentalization thất bại | không còn xử lý bằng quan sát | system failure | Nam mất khả năng giải quyết chỉ bằng cắt một nguồn |
 | Cleanup route | police chưa đủ D | Bắc hiểu nhiều nhưng proof chain chưa đủ | cao | threat còn kiểm soát được | cắt access/contact, hy sinh nhánh đã lộ |
 
@@ -955,8 +957,8 @@ Nam chỉ **xác nhận** sau D+1 khi Khải có cross-report cho thấy cùng m
 | Mốc | Cảnh sát biết gì | Đang điều tra gì | Vì sao chưa thể hành động rộng | Bắc bổ sung gì nếu có |
 |---|---|---|---|---|
 | D−14→D−12 | Phúc từng đồng ý một thỏa thuận, muốn rút, bị gây sức ép; có tiền và yếu tố y tế | cưỡng ép/môi giới/tài chính quanh Phúc | Phúc chỉ biết tầng dưới; chưa có link logistics; bệnh viện mới là tên trong câu chuyện | chưa có Bắc |
-| D−12→D0 | lời khai được kiểm chứng dần | cùng vụ Phúc | chưa có hospital review trong hồ sơ police; chưa có Tân Lộ | chưa có Bắc |
-| D0 tối | Phúc cung cấp timeline rõ hơn | vẫn là vụ Phúc nhưng nguồn mạnh hơn | vẫn thiếu bridge giữa ba hộp | nếu Bắc chưa liên hệ: không gì |
+| D−12→D0 | lời khai + narrow hospital query nhận confirmation visit/request cá nhân đúng scope | vụ Phúc tiến độc lập | chưa có multi-case group/account/routing bridge tới Tân Lộ; response không chứa toàn review | chưa có Bắc |
+| D0 tối E28 | exact originals Phúc/counterpart so content paid-organ agreement/withdrawal/pressure; hospital xác nhận visit riêng | A=2 đã authenticate/preserve | thiếu group bridge, B/C, common current risk context X và D | không cần Bắc để giữ A |
 | D+1 sáng | có thể nhận một bridge logistics hoặc hospital từ Bắc | kiểm chứng source mới | một source đơn không đủ để suy ra network | Bắc giúp đưa **địa chỉ của cầu**, không đưa kết luận thay police |
 | D+1 trưa | nếu Huyền/Đức/Thảo/Yến corroborate độc lập | cấu trúc nhiều tổ chức | cần phân biệt institution hợp pháp với cell và xác định command | Bắc giúp nối timing/source |
 | D+1 chiều | A+B+C đủ mạnh | network có môi giới + cell hospital + logistics biết việc | vẫn có thể thiếu D để chứng minh Nam | Bắc có thể chỉ ra pattern quan hệ để Vũ xác minh |
@@ -1020,11 +1022,7 @@ Nam tiếp tục cư xử đời thường nếu gặp Bắc.
 
 Khải thu hẹp leak tới Đức với độ tin cậy cao hơn.
 
-Đức bị tước dần access và buộc phải chọn:
-
-- giao phần mình giữ lại;
-- tiếp tục giấu và tự đứng một mình;
-- hoặc sau này tự tìm kênh hợp pháp.
+Đức bị tước dần work access; private export trên điện thoại vẫn tồn tại và không bị account revocation xóa. Anh phải chọn hợp tác với nguồn giới hạn mình giữ, rút willingness/contact trong cửa sổ run để tự bảo vệ, hoặc sau này tự tìm kênh hợp pháp. Mọi lấy/xóa thật cần một event discovery/custody riêng; không mặc định giao private copy cho công ty.
 
 Không có Bắc để giúp Đức nhận ra source ngoài Tân Lộ xác nhận nghi ngờ của mình.
 
@@ -1154,7 +1152,7 @@ Audit được chạy theo hướng **event sau phải truy ngược được t�
 
 **Rủi ro phát hiện:** cảnh sát có năng lực mà không phá ra có thể trông bị nerf.
 
-**Sửa đã áp dụng:** trước D0 hồ sơ police có Phúc + tên hospital, nhưng review Huyền là internal và Tân Lộ chưa xuất hiện trong evidence police. Ba hộp tồn tại ở ba institution khác nhau. Không có bridge trong hồ sơ của Vũ.
+**Sửa đã áp dụng:** Vũ đã kiểm chứng narrow visit/request cá nhân và nhận response reception/compliance đúng scope trước E28; không có lý do dừng hỏi hoặc chờ Bắc. Phúc không biết review-group/Tân Lộ account-family/routing key; initial inquiry không chứa multi-case context. C03/C17 về sau cung cấp group bridge để targeted review verification khác. E28 giữ A từ originals hai phía, không đồng nghĩa đã có B/C hoặc common current risk X. Không thêm luật/corrupt gatekeeping.
 
 **Kết quả:** PASS.
 

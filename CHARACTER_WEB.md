@@ -228,7 +228,7 @@ Các nạn nhân cũ, nhân viên bệnh viện bình thường, shipper, tài x
 15. **Điều che giấu:** đã kể cho phía công ty rằng Bắc đang hỏi những gì và lo lắng điều gì; có thể che mức độ chi tiết mình đã nói.
 16. **Có nói dối không:** có; chủ yếu nói dối Bắc về việc mình “không nói gì với ai” hoặc giảm nhẹ lượng thông tin đã chia sẻ.
 17. **Lý do người chơi tin:** Minh thật sự là bạn học bình thường, từng giúp Bắc và không có lợi ích trong conspiracy.
-18. **Lý do người chơi nghi:** trở nên phòng thủ khi nhắc Tân Lộ; biết những câu hỏi của Bắc sớm hơn lẽ ra phải biết; lời kể có chỗ giảm nhẹ.
+18. **Lý do người chơi nghi:** Minh phòng thủ khi nhắc Tân Lộ và giảm nhẹ lượng thông tin đã chuyển tiếp. Dấu leak cụ thể là Tuấn/đầu mối công ty nhắc được một chi tiết Bắc chỉ chia với Minh, vượt phần Bắc từng nói trực tiếp với công ty. Minh biết câu hỏi trong chính cuộc trò chuyện của mình không phải dấu bất thường.
 19. **Hành vi đời thường:** săn ca làm thêm, hỏi ai có mã giảm giá, gửi meme, vay sạc, nói chuyện với người lạ dễ hơn Bắc.
 20. **Thay đổi:** từ người né trách nhiệm thành người phải đối diện việc “chỉ muốn tránh rắc rối” cũng có thể gây hậu quả; phản bội của Minh phải có khả năng được hiểu về mặt con người nhưng không được miễn trách nhiệm.
 
@@ -275,7 +275,7 @@ Các nạn nhân cũ, nhân viên bệnh viện bình thường, shipper, tài x
 12. **Biết gì về mạng lưới:** biết Tân Lộ có các việc không sạch; sau khủng hoảng nghi mạnh rằng có liên hệ y tế nghiêm trọng.
 13. **Không biết gì:** toàn bộ môi giới, Nam, cấu trúc bệnh viện, sự thật đầy đủ về Phúc.
 14. **Điều tin nhưng sai:** có lúc tin Hùng có thể là đỉnh của mọi chuyện vì không thấy tầng Nam.
-15. **Điều che giấu:** việc giữ lại một phần thông tin để chứng minh mình không phải người tạo ra sai phạm.
+15. **Điều che giấu:** một bản export giới hạn của log vận hành giữ cục bộ trên điện thoại cá nhân từ E17 để tự bảo hiểm; không đồng bộ với account Tân Lộ. Khải chưa biết vị trí/nội dung copy. Mất account chỉ mất access; copy còn, khả năng nhận testimony phụ thuộc Đức còn hợp tác và copy có được intake/xác thực hay chưa.
 16. **Có nói dối không:** nói dối bằng omission về thứ mình giữ và thời điểm bắt đầu nghi.
 17. **Lý do người chơi tin:** nỗi sợ của Đức khiến anh thừa nhận những giới hạn gây bất lợi cho chính mình; không cố kể một câu chuyện quá sạch.
 18. **Lý do người chơi nghi:** giữ thông tin, biết nhiều về vận hành, né Hùng, có hành vi giống người đang xóa dấu dù thực tế là tự bảo hiểm.
@@ -546,11 +546,11 @@ Một lời kể từ Đức chỉ mở phần logistics mà Đức thật sự 
 
 Một dữ kiện từ Huyền chỉ nói về pattern bệnh viện.
 
-Một thông tin từ Vũ chỉ phản ánh hồ sơ cảnh sát đã xác minh.
+Một thông tin từ Vũ chỉ phản ánh hồ sơ cảnh sát đã xác minh. E12 giữ subset trình báo/liên lạc; E28 nhận exact originals từ Phúc và broker counterpart rồi xác thực C10, nên CASE.A=2 trước S09. A_PLAYER_SEEN/A_PLAYER_UNDERSTOOD riêng; Bắc không phải trả lại chronology cho Vũ. X_VERIFIED cần common current risk/escalation context, không chỉ cùng giao dịch. Vũ có thể verify đủ raw sources đã tiếp nhận dù Bắc nối sai.
 
 Một lời thú nhận của Thảo không tự động chứng minh Nam.
 
-True understanding chỉ xuất hiện khi Bắc hoặc cảnh sát corroborate các nguồn độc lập.
+Tri thức Bắc chỉ tăng khi có facts đã quan sát và hành động inference đúng; N3_UNDERSTANDING/KHẢI_LAYER không được award vì hoàn tất scene. Police verification/custody là state riêng, không phụ thuộc private theory của Bắc. BARC chỉ derive từ report có payload, người gửi, người nhận và thời điểm nhận thực; cùng reports tới Nam/Khải cho cùng BARC dù private theory khác. Baseline closure không tự sinh report về Bắc. Minh chỉ biết/disclose phần Bắc thực sự chia; Nam chỉ biết phần Khải đã báo tới ông. True understanding và legal/source verification được giữ riêng thay vì một flag dùng cho cả hai.
 
 ---
 

@@ -391,7 +391,7 @@ Nam có thể xuất hiện lần hai trong một việc rất nhỏ: trả Bắ
 ### State có thể thay đổi
 
 - E23 → E24 xảy ra ngoài màn hình.
-- Nam knowledge: N0 → N1 về Bắc.
+- Nam knowledge: N0 → N1 chỉ sau actual E24 report nhận diện Bắc từ E23 audit được gửi tới ông.
 - Player không được thông báo state này.
 
 ### Mức căng thẳng
@@ -514,12 +514,12 @@ Sau đó game cho một khoảng yên: Bắc ngồi trong phòng, nghe hành lan
 
 - **C07**.
 - **C35/C36** chỉ được seed nếu player overshare.
-- C02/C03/C04 có thể được đọc lại nếu player đã lưu.
+- C02/C03 có thể được inspect trong live worker history còn access, kể cả chưa lưu ở S04; C03 cho same raw fields/original time với observed_at mới. C04 đọc từ direct observation đã giữ hoặc authored label-visible photo; default seal-only photo không có nhãn.
 
 ### Clue missable
 
 - C35 nếu không kích betrayal; đây là đúng thiết kế, không phải nội dung bắt buộc.
-- C03/C04 nếu đã bỏ qua từ S04 thì không magically quay lại.
+- C03 chưa inspect ở S04 vẫn quan sát hợp lệ nếu receipt history còn. C04 trực tiếp mất sau handover, chỉ recover từ retained ảnh thật có nhãn rõ; không tự tạo fact từ seal-only photo.
 
 ### NPC tham gia
 
@@ -528,7 +528,7 @@ Sau đó game cho một khoảng yên: Bắc ngồi trong phòng, nghe hành lan
 
 ### State có thể thay đổi
 
-- Nếu player đào sâu: N1 → N2 observable risk.
+- N1 → N2 chỉ nếu exact hành vi probing được witness/disclose rồi report tới Khải, có sender/payload/recipient/received_at. Private inspect, giữ copy và inference không tự tăng BARC.
 - MINH_LEAK_POSSIBLE = true nếu overshare.
 - Nếu player bỏ qua hoàn toàn: mở cửa **Neutral Ending — Một Ca Làm Thêm** sau một nhịp đời thường ngắn, phù hợp baseline Stage 3.
 
@@ -821,13 +821,13 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 ### Clue khả dụng
 
 - **C08**, **C09**, **C10**, **C11A**.
-- C03 delayed-value payoff nếu đã giữ.
+- C03 payoff từ receipt đã inspect sớm hoặc intentional later history inspect khi còn access; không early-save gate.
 - C11 timestamp payoff.
 
 ### Clue missable
 
 - C08 nếu không mở source direct.
-- C03 nếu đã miss ở S04.
+- C03 chỉ mất khả năng quan sát khi live history thật sự hạn chế và chưa có retained observation; miss early click không làm mất receipt.
 - Story vẫn tiến qua police chronology và hospital/logistics sources.
 
 ### NPC tham gia
@@ -838,7 +838,7 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 
 ### State có thể thay đổi
 
-- A_COERCION có thể được chứng minh.
+- A_PLAYER_SEEN/A_PLAYER_UNDERSTOOD tăng theo nội dung được chia và explicit correct chronology/content inference. CASE.A=2 đã từ E28; encounter không cấp/reset police A.
 - Player hypothesis NETWORK_POSSIBLE mở, nhưng notebook không tự ghi conclusion.
 - Bắc tiến gần N3 nếu tiếp tục nối source.
 
@@ -896,7 +896,7 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 
 ### Player có thể biết sau đoạn
 
-- **R5**: Tuấn không biết core crime.
+- **R5** theo scope nguồn Vũ đã verify: Tuấn không phải reclassifier; không có cơ sở xếp anh vào core trong case này. Trách nhiệm làm ngơ ngoại lệ vẫn giữ; không từ permission suy anh chưa từng biết bí mật.
 - **R4**: Tân Lộ leadership ở mức Hùng có chủ ý tham gia.
 - Hùng vẫn chưa giải thích hospital/source branch.
 
@@ -918,7 +918,7 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 
 ### State có thể thay đổi
 
-- TUAN_EXONERATED_CORE = true nếu player hiểu permission chain.
+- TUAN_NOT_RECLASSIFIER từ actual C20; TUAN_CORE_SCOPE_VERIFIED chỉ khi Vũ so assignment/permissions, câu hỏi chưa được giải đáp và lời Tuấn giới hạn, nghĩa không có cơ sở xếp anh vào core trong hồ sơ này. Permission chain hoặc private innocence answer không cấp blanket exoneration.
 - C_LOGISTICS_LEADERSHIP = true nếu C17 + corroborator + C22.
 - Nếu player fixation Tuấn: timing penalty / source access closures.
 
@@ -951,14 +951,14 @@ Hai nhánh có thể song song:
 
 **Logistics route**
 - Đức xác nhận các ngoại lệ y tế không phải một lỗi đơn.
-- Snapshot/records anh giữ tạo C18.
+- C18 private export đã tồn tại ở điện thoại Đức từ E17; actual receipt/testimony và authentication riêng, chỉ tiếp nhận nếu willingness/contact còn mở. Account lock không tạo/xóa copy.
 - Yến có thể được Vũ xác minh như corroborator tài chính C19.
 
 **Hospital route**
 - Huyền + C12 hoặc Thảo C15 củng cố B.
-- Timing Khoa intervention dẫn tới C24.
+- C24 cần actual Khoa→Khải incident request/response, endpoint, current role/scope và crisis Phúc context; timing intervention chỉ lead.
 
-Khi Tân Lộ sau breach cũng escalates tới cùng một endpoint quản trị, C25 xuất hiện.
+C25 từ original logistics incident/escalation request và response cùng crisis, có scope/role Khải được giao. Same transaction/account ABC hay call timestamp đơn lẻ không chứng minh common current risk authority.
 
 Player có thể tự nối C24 + C25:
 
@@ -1005,9 +1005,11 @@ Player có thể tự nối C24 + C25:
 
 ### State có thể thay đổi
 
-- N3_UNDERSTANDING = true khi A+B+C + bridge đủ.
-- Nếu observable behavior xuất hiện ở hai cell: E37 có thể được kích.
-- KHẢI_LAYER = true nếu C26.
+- X_PLAYER_CONNECTED chỉ khi player có đủ observed C24/C25 role/scope/crisis context và inference đúng; sai/thiếu giữ hypothesis.
+- N3_UNDERSTANDING chỉ khi enough observed A/B/C facts + explicit correct risk-structure inference; CASE/X police đã verify không tự cấp player certainty.
+- KHẢI_LAYER chỉ khi actual endpoint identity/role đã quan sát và nối đúng.
+- X_VERIFIED: Vũ verify complete raw sources/context đã intake dù teen inference sai; không chỉ same account/transaction.
+- E37/BARC chỉ từ received reports đủ về observable cross-cell behavior, không private flags.
 
 ### Mức căng thẳng
 
@@ -1015,7 +1017,7 @@ Player có thể tự nối C24 + C25:
 
 ### Hậu trường đang xảy ra đồng thời
 
-- Khải cross-report và xác nhận cùng một Bắc đang chạm nhiều cell.
+- Nếu actual received reports đủ, Khải cross-report xác nhận cùng Bắc probing nhiều cell; thiếu reports giữ awareness trước đó, không đọc notebook.
 - Nam chuyển từ “thằng sinh viên tò mò” sang “nguy cơ nghiêm trọng” nếu dấu đủ.
 
 ---
@@ -1052,9 +1054,8 @@ Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc
 
 ### Player biết trước đoạn
 
-- Có network nhiều cell.
-- Khải nằm ở giao điểm.
-- Organization có thể bắt đầu để ý Bắc.
+- Route mạnh có thể đã hiểu network/current risk role Khải; partial giữ facts/hypothesis chưa đủ.
+- Organization chỉ có mức awareness từ actual received reports; closure không tự chứng minh họ biết private inference.
 
 ### Player có thể biết sau đoạn
 
@@ -1090,9 +1091,9 @@ Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc
 
 ### Hậu trường đang xảy ra đồng thời
 
-- E37.
-- Nam bắt đầu trực tiếp xem report về Bắc.
-- Khải đề xuất cắt thêm các điểm nối.
+- E37 chỉ nếu reports đủ, ghi payload/recipient/received_at.
+- Nam chỉ xem phần actual Khải forward tới ông; baseline closures không tự sinh report Bắc/N3.
+- Khải vẫn có thể co access theo baseline crisis, giữ prior BARC nếu không nhận dấu mới.
 - Nam vẫn ưu tiên giảm dấu hơn là tạo một vụ việc công khai mới.
 
 ---
@@ -1107,10 +1108,9 @@ Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc
 
 Point of no return không phải lúc Bắc nhận E22.
 
-Nó xảy ra khi hai điều cùng đúng:
+S15 mở từ sourced case/intake hiện tại và raw sources/context cần receipt, verification hoặc preservation. Bắc có thể đưa nguồn dù chưa nối đúng network; Vũ tiếp nhận và verify phần đủ nguồn độc lập với N3_UNDERSTANDING.
 
-1. Bắc đã nối đủ nhiều cell để đạt N3 về nhận thức.
-2. Organization có dấu observable cho thấy cùng một Bắc đang xuất hiện trong hậu quả của nhiều nhánh.
+Nguy cơ không thể đơn giản quay về đời thường được kiểm riêng: actual received cross-cell reports đã đưa BARC≥N3 và police preservation còn thiếu. Private understanding không mở/đóng police intake hoặc thay report tới organization.
 
 Vũ nói rõ ở mức chức năng: nếu Bắc có source, lúc này giữ tất cả một mình là rủi ro; evidence cần được tiếp nhận đúng cách.
 
@@ -1118,11 +1118,11 @@ Player có ba kiểu lựa chọn:
 
 - **đưa source đủ mạnh cho Vũ** → mở preservation route;
 - **giữ lại vì muốn tự tìm boss trước** → tăng cleanup/exposure risk;
-- **cố bỏ hết sau khi đã N3** → mở Avoidance route, vì lúc này organization không thể coi Bắc như một worker vô hại nữa.
+- **cố bỏ hết khi BARC≥N3 và police chưa đủ preservation** → mở Avoidance route vì received cross-cell reports đã khiến organization coi Bắc là unresolved risk; private N3_UNDERSTANDING một mình không đủ.
 
 ### Mục đích narrative
 
-- Định nghĩa “không thể quay về bình thường” bằng knowledge state, không bằng cutscene cưỡng ép.
+- Định nghĩa “không thể quay về bình thường” bằng received organization awareness và custody thực; private understanding không là điều kiện tiếp nhận nguồn.
 - Trả lời canon Avoidance: bỏ từ N1 có thể an toàn; bỏ sau N3 là chuyện khác.
 
 ### Player biết trước đoạn
@@ -1153,10 +1153,10 @@ Player có ba kiểu lựa chọn:
 
 ### State có thể thay đổi
 
-- A/B/C_PRESERVED từng phần.
-- N3 confirmed.
+- A_PRESERVED đã đúng từ E28 và không lùi; B/C/source còn thiếu tăng custody chỉ theo actual receipt/authentication.
+- N3_UNDERSTANDING không auto confirm tại intake; BARC derive reports riêng; Vũ verify complete raw risk context độc lập.
 - Nếu police preservation đủ: E38 có thể mở.
-- Nếu bỏ cuộc lúc N3: AVOIDANCE_BAD_ROUTE_ARMED.
+- AVOIDANCE_BAD_ROUTE_ARMED chỉ theo received-report BARC≥N3, police preservation còn thiếu và actual abandonment; private N3_UNDERSTANDING không tự arm route.
 
 ### Mức căng thẳng
 
@@ -1164,8 +1164,8 @@ Player có ba kiểu lựa chọn:
 
 ### Hậu trường đang xảy ra đồng thời
 
-- Khải/Nam đánh giá Bắc là threat nghiêm trọng.
-- Strategy chuyển dần từ observe sang protect core.
+- Khải đánh giá Bắc theo exact received reports; Nam chỉ nhận scope Khải actual forward.
+- Protect-core theo baseline crisis vẫn có thể xảy ra với prior BARC, không tự chứng minh Bắc là threat mới.
 
 ---
 
@@ -1635,11 +1635,11 @@ Các state narrative cần đủ để script consequence:
 - C04_SEEN.
 - MINH_LEAK.
 - TUAN_FALSE_THEORY.
-- TUAN_CORE_EXONERATED.
-- A_PROVEN.
+- TUAN_NOT_RECLASSIFIER / TUAN_CORE_SCOPE_VERIFIED (professional case-scope, không private innocence quiz).
+- A_PROVEN (institutional authentication từ E28); A_PLAYER_SEEN/A_PLAYER_UNDERSTOOD riêng.
 - B_PROVEN.
 - C_PROVEN.
-- X_CONNECTED.
+- X_PLAYER_CONNECTED / X_VERIFIED (private inference khác police verification).
 - KHẢI_LAYER.
 - D1_COMMAND.
 - D2_CORROBORATED.
@@ -1774,7 +1774,7 @@ Không có bước “tự nhiên muốn phá tổ chức”.
 - N0: không quan tâm đặc biệt.
 - N1: quan sát, vì hành động mạnh tạo rủi ro lớn hơn.
 - N2: Khải theo dõi consequences.
-- N3: Nam trực tiếp quan tâm.
+- BARC N3: Nam trực tiếp quan tâm sau actual cross-cell report được forward tới ông; private N3_UNDERSTANDING không báo tới Nam.
 - N4: ưu tiên cleanup/protect core.
 
 Thiện cảm cá nhân với Bắc có thể tồn tại nhưng không override system.
@@ -1882,9 +1882,9 @@ Curiosity vẫn chưa bằng proof. Khải theo dõi và cắt access là rẻ, 
 
 ## N3
 
-Bắc đã nối cell.
+BARC N3 nghĩa organization đã nhận đủ reports Bắc chạm/nối nguồn ở nhiều cell; private inference đúng/sai riêng. Nam biết mức actual Khải forward.
 
-Organization bắt đầu phản ứng mạnh hơn, nhưng ưu tiên:
+Organization bắt đầu phản ứng mạnh hơn theo nhận thức đó, nhưng ưu tiên:
 
 - source isolation;
 - access lock;
@@ -1929,7 +1929,7 @@ Khi replay, các điểm sau đổi nghĩa mà không đổi fact:
 3. Không cho Bắc gặp mọi source D+1. Vũ gánh phần xác minh chuyên nghiệp.
 4. Không biến C28 thành clue bắt buộc cho Nam.
 5. Thêm neutral route nếu Bắc thật sự bỏ qua từ N1, giữ đúng baseline Stage 3.
-6. Chỉ dùng Avoidance bad ending nếu Bắc đã đi tới N3/N4 rồi mới cố bỏ.
+6. Chỉ dùng Avoidance bad ending theo received-report BARC N3/N4, preservation còn thiếu và actual abandonment; không lấy private N3_UNDERSTANDING thay awareness.
 7. Không cho confrontation với Nam là điều kiện true ending; thực tế confrontation sớm còn làm route xấu hơn.
 8. Climax được chuyển từ physical danger sang preservation race.
 9. Minh betrayal được giữ hoàn toàn conditional.

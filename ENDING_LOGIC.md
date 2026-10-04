@@ -51,7 +51,7 @@ Giữ nguyên logic objective truth:
 
 BARC đo **organization biết gì về Bắc**, không đo player biết gì.
 
-Không tăng BARC chỉ vì player suy luận trong đầu.
+Không tăng BARC vì private inference, giữ copy kín, scene completion hoặc baseline closure. Report ledger ghi sender, exact disclosed/witnessed payload, recipient và received_at; Minh không biết phần Bắc chưa chia, Nam không nhận report tới Khải cho đến khi actual forward. Cùng received reports cho cùng BARC dù private theory khác. N3_UNDERSTANDING/KHẢI_LAYER/X_PLAYER_CONNECTED riêng; raw sources đầy đủ cho Vũ verify X độc lập.
 
 ---
 
@@ -145,7 +145,7 @@ Boolean duy nhất cho Avoidance route.
 
 Chỉ có giá trị nếu:
 
-- Bắc đã tới N3;
+- BARC≥N3: organization thực sự có received reports coi Bắc là unresolved cross-cell threat. N3_UNDERSTANDING riêng, không dùng private understanding làm report hoặc thay ngưỡng awareness;
 - CASE chưa được bảo toàn đủ;
 - player chủ động cắt liên lạc và cố quay lại đời thường.
 
@@ -158,8 +158,9 @@ Bỏ cuộc ở N1 không dùng state này; đó là Neutral Ending hợp logic.
 Các biến sau vẫn có thể tồn tại ở scene scripting, nhưng không phải root state của ending:
 
 - JOB_E22_SEEN;
-- C03_SAVED;
-- C04_SEEN;
+- C03_SAVED/OBSERVED_AT từ intentional live-history inspect sớm hoặc muộn;
+- C04_SEEN từ actual direct observation/label-visible media; default seal-only media không có label fact;
+- source existence/access/willingness/copy custodian/receipt/authentication riêng;
 - TUAN_FALSE_THEORY;
 - TUAN_NOT_RECLASSIFIER;
 - TUAN_CORE_SCOPE_VERIFIED;
@@ -179,8 +180,8 @@ Không tạo một state chỉ vì một scene cần nhớ rằng player đã b�
 
 E22 hoàn tất:
 
-- BARC: N0 → N1.
-- CASE chưa tự tăng.
+- BARC N0 → N1 chỉ khi E23 audit xác định worker và report tới Khải; knowledge Nam tăng sau actual E24 forwarding/receipt. E22 completion một mình không phải received report.
+- E22 không tự tăng CASE; partial records đã police giữ từ E12 vẫn giữ. E28 độc lập hoàn tất A=2, không một clue Bắc xem tạo/reset institutional custody.
 
 Player hoàn toàn có thể dừng ở đây.
 
@@ -194,16 +195,13 @@ Nếu Bắc không đào sâu, không leak, không chạm cell thứ hai:
 
 ## 3.2. Curiosity
 
-Khi Bắc chủ động hỏi, giữ source hoặc xuất hiện quanh một nhánh thứ hai:
+Khi hành vi Bắc hỏi hoặc contact một nhánh được witness/disclose và exact report đã tới Khải:
 
-- BARC có thể N1 → N2.
+- BARC có thể N1 → N2 theo payload đã nhận. Giữ source kín hoặc private inspect/inference không tự nâng awareness.
 
 Không được nhảy thẳng N3 chỉ vì player tìm được một clue.
 
-N3 chỉ xảy ra khi:
-
-- player thực sự có cross-cell understanding;
-- và hành vi đó để lại consequence observable ở nhiều nhánh.
+BARC N3 chỉ xảy ra khi Khải/organization đã nhận reports đủ từ ít nhất hai cell về cùng Bắc và hành vi chạm/nối nguồn, có payload/recipient/time. Không cần Bắc privately hiểu đúng. Nam tăng knowledge chỉ sau actual report tới ông. N3_UNDERSTANDING riêng: facts observed đủ và explicit inference đúng current shared risk role/context; sai/thiếu thì giữ hypothesis. Baseline S14 giữ prior BARC nếu chưa có new reports.
 
 ---
 
@@ -429,7 +427,7 @@ Ví dụ:
 - miss C17/equivalent reconstruction và không còn Đức/Yến + C22 đủ để dựng lại C;
 - đến Đức sau E32 window;
 - tiếp tục một hành động truy Tuấn sau scope correction/cảnh báo, khiến bỏ lỡ nguồn C22/corroborator còn thiếu; còn nghi trong đầu không gây closure;
-- trong fixture thật sự thiếu một source A, cửa nhận/xác thực exact fact còn thiếu đóng; baseline A đã được giữ ở E28 không thể mất vì Bắc chưa chuyển chronology.
+- pre-E28 subset fixture thiếu exact core-agreement/withdrawal originals/authentication phải nêu record/fact chưa nhận; E28 hoàn tất độc lập. Đây không phải D+1 route mất A vì Bắc chưa xem/chuyển chronology; baseline A=2 không lùi.
 
 ## Điểm thực sự khóa route
 

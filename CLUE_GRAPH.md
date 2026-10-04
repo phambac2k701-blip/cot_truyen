@@ -84,8 +84,8 @@ Nguyên tắc notebook:
 |---|---|---|---|---|---|---|
 | C01 | F, H | Tin tuyển việc part-time Tân Lộ, ca ngắn, điều khoản bình thường; Minh từng dùng kênh này | D0 sáng, E21 | Công việc sinh viên hợp pháp | Chứng minh Tân Lộ thật sự có lao động part-time; Bắc không ngu khi nhận việc | Auto |
 | C02 | A, D, H, J | Assignment E22 hiện như job thường nhưng có một trường “nhóm khách hàng y tế/ưu tiên” và thời điểm tạo bất thường sát D−1 | D0 trưa, E22 | Một nhãn vận hành khó hiểu | Sau C17, player nhận ra job đã bị hạ classification | Auto, fact thô |
-| C03 | A, D, I, J | Proof-of-handover/biên nhận ở đầu nhận dùng cùng client/account family mà player về sau gặp trong review Minh Trạch | D0 trưa, E22 | Biên nhận bình thường | Bridge sớm giữa logistics và hospital; không tự chứng minh tội phạm | Nếu inspect |
-| C04 | B, D, I | Bao/gói có dấu đã được dán lại nhãn vận hành hoặc thay lớp routing ngoài; không có nội dung “bí mật” lộ ra | D0 trưa | Có thể chỉ là xử lý kho | Sau C17 cho thấy classification thực sự đã đổi | Nếu inspect |
+| C03 | A, D, I, J | Receipt điện tử trong worker history: client/account family, đầu nhận, original handover time; intentional inspect muộn khi history còn cho cùng raw fields với observed_at mới | D0 E22 hoặc later live-history inspect | Biên nhận bình thường | Transaction/group bridge lead giữa logistics/hospital; không tự X current risk authority | Nếu inspect sớm hoặc muộn hợp lệ; C03_SAVED tương đương quan sát, không early-click gate |
+| C04 | B, D, I | Lớp nhãn routing đổi; trực tiếp trước bàn giao hoặc ảnh authored nhãn rõ. Default proof photo chỉ seal, không đọc nhãn; optional chụp thêm nhãn chứa đúng fields để later inspect | D0 hoặc inspect valid retained photo | Có thể chỉ là xử lý kho | Delayed reclassification seed, không crime proof | Nếu inspect actual content; cùng ảnh/replay luôn cùng facts, không cần pixel aim |
 | C05 | E, G | Tuấn phản ứng khó chịu khi Bắc hỏi vì job đang bị audit; nhấn mạnh quy trình và trách nhiệm nhân viên | D0 chiều/tối nếu hỏi | Tuấn trông như người che việc | Sau C20/C22, hành vi được hiểu là tự bảo vệ nghề nghiệp, không phải biết organ network | Có nếu interaction |
 | C06 | F | Nhiều job Tân Lộ khác tới phòng khám/doanh nghiệp y tế hoàn toàn bình thường | D0 và D+1 | Background | Ngăn suy luận “xe Tân Lộ ở bệnh viện = tội phạm” | Không |
 | C07 | B, E, H | Lịch sử việc làm/trao đổi cũ cho thấy Minh thực sự từng nhận ca Tân Lộ như sinh viên bình thường | D0 sáng/tối | Minh có vẻ có “connection” | Về sau giải thích Minh không phải plant/member; betrayal vẫn là thật | Nếu xem chat |
@@ -117,7 +117,7 @@ Nguyên tắc notebook:
 | ID | Loại | Dữ kiện | Xuất hiện | Ý nghĩa tức thời | Giá trị về sau | Notebook |
 |---|---|---|---|---|---|---|
 | C17 | A, C, H, J | Reclassification log cho thấy job E22 từng ở luồng hạn chế rồi được chuyển xuống pool thường D−1 | D+1 sáng | Chứng minh job không “tự nhiên” là thường | Core C bridge; đúng objective E19 | Auto nếu mở được source |
-| C18 | C, H, J | Snapshot Đức giữ nhận diện cùng nhóm bàn giao/đầu nhận của C22, ngoại lệ lặp và thay đổi lúc audit; chỉ fields/interactions vận hành anh trực tiếp thấy | D+1 E32 | Insider tự bảo hiểm | Corroboration vận hành độc lập với approval C22; không cho Đức biết purpose đầy đủ hoặc ai được secret core briefing | Auto khi nhận |
+| C18 | C, H, J | Private export giới hạn giữ cục bộ trên điện thoại Đức từ E17, không sync work account; nhóm bàn giao/đầu nhận C22 và ngoại lệ vận hành trực tiếp thấy | D+1 E32, file đã có | Insider tự bảo hiểm | Matched execution origin độc lập approval; badge lock không xóa copy; willingness/access/custody riêng, không secret briefing knowledge | Auto khi actual receipt; authentication/custodian/time riêng |
 | C19 | B, C, H | Đối soát Yến nhận diện cùng nhóm bàn giao/đợt thanh toán của C22, giá trị khác dịch vụ tương ứng và pattern lặp | D+1 E35 hoặc police verify | Finance anomaly có match cụ thể | Yến-only corroboration C hợp lệ cùng C17+C22 có knowledge; finance không tự nói crime hoặc Nam | Auto nếu được verify |
 | C20 | B, E, H, J | Authority chain đặt thay classification trước phần việc Tuấn; records cho fields anh nhận và câu hỏi mục đích chưa được cấp trên giải đáp | D+1 | Tuấn không phải người reclassify | S08 chỉ TUAN_NOT_RECLASSIFIER; Vũ xác minh scope từ nguồn giao việc/records ở S12 mới có TUAN_CORE_SCOPE_VERIFIED, không suy innocence chỉ từ thiếu quyền | Auto |
 | C21 | B, G, H | Một record đời thường cho thấy Tuấn từng phản đối job thiếu chứng từ/đòi checklist ở vụ không liên quan | D0/D+1 | Chi tiết nghề nghiệp | Sau C20, củng cố rằng procedural defensiveness của anh là thật | Optional |
@@ -256,7 +256,7 @@ Các reveal dưới đây là những lần player phải thay đổi mô hình 
 4. **Hiểu:** không clue nào tự nói “network”; player phải nối source độc lập.
 5. **Sai hợp lý:** Phúc gặp môi giới nhỏ; hospital có compliance issue riêng; Tân Lộ có corporate fraud riêng.
 6. **Xác nhận:** sourced C24/C25 có endpoint, risk role, scope request/response và crisis context để Vũ verify; không chỉ same group/case hoặc cùng consultant. C03 là transaction bridge lead; equivalent X phải reconstruct cùng current risk relation, không chỉ match đầu nhận.
-7. **Nếu miss:** N3 không đạt; police vẫn xử lý từng hộp nhưng không mở rộng đủ trong game window.
+7. **Nếu miss:** thiếu/sai private inference không cấp N3_UNDERSTANDING. Nếu full raw risk sources/context đã được intake, Vũ vẫn verify X độc lập và mở rộng từ custody hiện có; chỉ thiếu source/context thật mới chặn X trong game window.
 8. **Notebook:** lưu ba timeline riêng, không auto draw arrow.
 9. **Mandatory:** Đây là core inference của main mystery.
 10. **True ending:** Có. A+B+C phải được police-preserved, không chỉ nằm trong notebook.
@@ -763,11 +763,11 @@ Proposition A
 + Proposition C  
 + sourced C26 hoặc reconstruction cùng current risk role/context (C03 chỉ lead), không same group là đủ  
       ↓  
-Inference I7 — ba scandal là các cell của cùng một structure  
+Inference I7 — player nối đúng current shared risk role/context từ facts đã quan sát
       ↓  
-N3 understanding  
-      ↓  
-Vũ có thể mở điều tra cấu trúc nếu sources được preserve
+N3_UNDERSTANDING chỉ khi explicit inference đúng; thiếu/sai giữ hypothesis
+
+Police track riêng: Vũ verify X và mở điều tra cấu trúc từ full raw sources/context đã preserve, dù private inference Bắc sai
 
 ## 9.7. Khải layer
 
@@ -823,14 +823,14 @@ Wrong Trust / Exposure / Cleanup E42
 
 | Clue | Xuất hiện | Biến mất/khó lấy | Lý do | Hậu quả nếu miss | Ending bị ảnh hưởng |
 |---|---|---|---|---|---|
-| C03 handover receipt | D0 E22 | Sau bàn giao / cuối D0 bản vật lý không còn với Bắc | job hoàn tất, chứng từ đi theo hệ thống | mất một early bridge; vẫn recover qua C17/C11 nhưng tốn timing | True/Delay |
-| C04 routing layer | D0 E22 | Khi gói được thu hồi | Bắc không sở hữu gói | mất delayed-value; không khóa main story | chủ yếu True understanding |
+| C03 digital handover receipt | D0 E22; later inspect còn live history hợp lệ | Chỉ khó lấy khi một actor thực sự hạn chế history access; bàn giao pouch không xóa receipt điện tử | Worker history/original receipt tồn tại; notebook observation riêng | Late inspect cùng fields/original time với observed_at mới; không auto-award hoặc early-click requirement | knowledge/bridge discovery |
+| C04 routing layer | D0 E22; later photo nếu có nhãn rõ | Sau 13:52 không inspect pouch; default seal-only photo không recover nhãn | Item custody đổi; authored label-visible photo/media riêng | Mất trực tiếp nếu chưa inspect và không có ảnh nhãn rõ; valid later media inspect cho same facts | chủ yếu understanding |
 | C08/C10 A content/authentication | Police hoàn tất E28; player D+1 | player có thể miss encounter, không mất bản Vũ đã giữ | knowledge và custody riêng | A_PLAYER_SEEN thiếu; CASE.A=2 không lùi, bridge X vẫn cần | knowledge/route discovery, không A deletion |
 | C11 Huyền review | D+1 09:30–11:30 | access thu hẹp trưa/chiều | Khoa thu hẹp quyền/scope | B khó đạt trong game window | True/Delay |
 | C12 review version history | D+1 sáng | khó lấy sau scope lock | quyền truy cập bị siết | phải dựa C15 làm corroborator B | True nếu C15 cũng miss |
 | C15 Thảo acknowledgment | D+1 sáng | Thảo tự đóng lại/hospital lock | self-protection + Khoa control | B vẫn possible qua C12 | True nếu C12 miss |
 | C17 reclassification | D+1 sáng | access vận hành khóa dần | cleanup Tân Lộ | mất core C record; cần Đức/Yến + police reconstruction | True/Delay |
-| C18 Đức retained snapshot | D+1 09:30–11:00 | khoảng trưa khi Đức mất access/bị kiểm soát | Khải thu hẹp leak | C yếu và mất operational scope corroboration; không mất một lời Đức chứng minh secret core briefing | True/Delay |
+| C18 Đức private snapshot | D+1 E32 09:30–11:00 | Timely willingness/contact có thể đóng; account khóa trưa chỉ mất original work access | Đức tự bảo vệ trong review; private phone copy còn nếu chưa có actual discovery/seizure | C có thể thiếu intake/authentication trong run, không despawn copy; police copy/received provenance không lùi | True/Delay |
 | C19 Yến finance | D+1 10:30–12:30 | khi Hùng khóa access | cleanup/self-protection | mất alternative corroborator C | True nếu Đức miss |
 | C20 Tuấn authority chain | D+1 | records khó tiếp cận sau cleanup | Tân Lộ khóa quyền | player dễ giữ false theory Tuấn, tốn timing | Delay/Cleanup |
 | C22 Hùng override | D+1 | khó hơn sau cleanup; police có thể vẫn reconstruct nếu đã có C17 | access + manager self-protection | C leadership khó chứng minh | True/Cleanup |
@@ -892,7 +892,7 @@ Mỗi evidence entry có:
 - source;
 - timestamp;
 - institution;
-- trạng thái: observed / copy exists / source still accessible / handed to police.
+- trạng thái riêng: record exists / observed (observed_at) / source access / source willingness / copy custodian / police receipt (received_at) / authenticated; original event timestamp không bị later inspect thay. Access lock không tự sửa existence/custody. Police A giữ từ E28 dù player chưa được xem.
 
 Không có:
 

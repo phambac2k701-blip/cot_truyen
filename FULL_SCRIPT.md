@@ -1221,6 +1221,8 @@ Chụp trước khi đi. Có chuyện gì thì ảnh còn đó.
 
 Câu này là quy trình bình thường.
 
+[PHONE / MEDIA — PROOF PHOTO] Ảnh proof mặc định authored chỉ chụp dải niêm phong và mặt túi trống; routing label nằm ngoài khung nên không đọc được. Ảnh này không recover C04. Optional action **Chụp thêm nhãn vận hành** tạo ảnh authored rõ nhãn CTV và phần nhãn Nội bộ bên dưới, không cần pixel aim; giữ content cố định trong Media. Direct inspect hoặc intentional later mở ảnh nhãn này cho cùng C04 raw fact/observed_at; chỉ save ảnh mà chưa đọc không tự cấp inference. Cùng ảnh trên replay luôn cùng facts.
+
 ### Beat 3 — C06 noise
 
 Trước khi rời, player có thể nhìn bảng job gần quầy:
@@ -1304,7 +1306,7 @@ Tình trạng: **Niêm phong nguyên vẹn**
 
 Player có thể mở “Chi tiết” để C03 vào notebook. Không bắt chụp màn hình pixel-perfect.
 
-Nếu không mở chi tiết, app vẫn giữ receipt trong history nhưng C03_SAVED = false theo clue architecture; player chưa chủ động ghi nhận account family.
+Nếu chưa mở Chi tiết, C03_SAVED còn false vì chưa intentional inspect; receipt vẫn tồn tại trong worker history. Later mở cùng live receipt khi access còn đặt C03_SAVED/OBSERVED_AT với cùng raw client/account/recipient và original handover time 13:52, chỉ thời điểm quan sát mới. Không auto-award khi mở app, không early-click gate.
 
 ### Beat 7 — Hoàn tất
 
@@ -1386,8 +1388,8 @@ Nội dung Beat 6 là canonical.
 - **Clue ID:** C04.
 - **Clue value:** Delayed-value; chỉ có ý nghĩa mạnh sau C17.
 - **Missable:** Có.
-- **Mất lúc:** 13:52 khi pouch được bàn giao.
-- **Revisit:** Không.
+- **Mất trực tiếp lúc:** 13:52 khi pouch bàn giao; không inspect lại item trên tay.
+- **Revisit:** Retained authored ảnh nhãn rõ có thể inspect muộn cho same fact; default seal-only photo không chứa nhãn và không recover C04.
 
 ### O-S04-03 — Proof-of-handover, C03
 
@@ -1401,7 +1403,7 @@ Nội dung Beat 6 là canonical.
 - **Clue value:** Early bridge; không tự chứng minh wrongdoing.
 - **Missable:** Có nếu player không mở chi tiết trước khi history UI về sau bị hạn chế; main route có alternate.
 - **Mất lúc:** Bản vật lý không có; digital history tồn tại hiện tại. Context/access có thể giảm về sau.
-- **Revisit S05:** Nếu saved, notebook giữ raw fields. Không auto-link.
+- **Revisit S05/later:** Notebook giữ raw fields nếu đã inspect. Intentional mở live receipt history còn access cho same fields/time với observed_at mới nếu chưa inspect sớm; không auto-link.
 
 ### O-S04-04 — Bảng job bình thường, C06
 
@@ -1455,7 +1457,7 @@ Receiving-point mismatch vẫn xảy ra. Player chỉ có C02 + lời “nhóm n
 
 ### BV-S04-B — C03 not saved
 
-Không notebook entry. Later player có thể nhớ “Minh Trạch” qua assignment/history nếu main route cần bridge, nhưng C03-specific early bridge không được tự bật.
+Chưa có notebook entry khi chưa intentional inspect. Later mở Chi tiết của receipt còn live history nhận cùng C03 raw fields và đặt observed_at mới; không thụ động auto-award. Chỉ actual history-access restriction mới đóng quan sát nếu chưa có retained copy; handover không xóa receipt.
 
 ### BV-S04-C — Player nghi Tuấn sớm
 
@@ -1473,18 +1475,18 @@ Không set TUAN_FALSE_THEORY chỉ vì một câu hỏi. Scene chỉ ghi behavio
 
 ### C03
 
-- **Lúc nhận:** Beat 6 if inspect.
-- **Notebook:** Raw receipt.
-- **Missable:** Có.
-- **Mất lúc:** Physical handover immediate; digital context can later be harder.
-- **Giá trị:** Early X bridge only.
+- **Lúc nhận:** Beat 6 hoặc intentional later live-history inspect còn access.
+- **Notebook:** Same raw receipt/original time, observed_at mới nếu đọc muộn.
+- **Missable:** Chỉ khi actual history access đóng trước observation/copy.
+- **Mất lúc:** Handover không xóa digital receipt; restriction phải có actor/event.
+- **Giá trị:** Transaction/group bridge lead, không tự X current risk authority.
 
 ### C04
 
-- **Lúc nhận:** Beat 2 if inspect.
-- **Notebook:** Raw label observation.
-- **Missable:** Có.
-- **Mất lúc:** 13:52 after handover.
+- **Lúc nhận:** Beat 2 direct inspect hoặc later intentional inspect ảnh authored nhãn rõ.
+- **Notebook:** Raw label fact/source; default seal-only photo không cho label.
+- **Missable:** Nếu chưa quan sát và không có retained ảnh nhãn rõ.
+- **Mất trực tiếp lúc:** 13:52 after handover; ảnh thật có content vẫn còn.
 - **Giá trị:** Delayed reclassification seed.
 
 ### C06
@@ -1958,7 +1960,7 @@ Màn hình không fade sang thriller. Player vẫn ở phòng. S06 bắt đầu 
 ## CONTINUITY CHECK
 
 - Package vẫn ở điểm nhận; Bắc không thể inspect lại.
-- C03/C04 chỉ tồn tại nếu player đã lưu/quan sát đúng lúc.
+- C03 record vẫn trong history; intentional later inspect còn access cho same fields/time. C04 direct item access đã hết, retained label-visible photo/observation còn; default seal-only photo không recover nhãn. Existence, access, observation/copy riêng; replay cùng content cho cùng facts.
 - Nam biết Bắc = worker E22 từ E24, nhưng chỉ ở N1.
 - Nam không biết Bắc đã thấy nhãn/receipt cụ thể, không biết notebook.
 - Lan/Linh không biết plot.
