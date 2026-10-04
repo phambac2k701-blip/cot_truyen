@@ -1,0 +1,2414 @@
+# SCENE BREAKDOWN
+
+> **Status:** STORY DESIGN — STAGE 7 / PRODUCTION BLUEPRINT  
+> **Parent canon:** MASTER_GAME_BIBLE.md  
+> **Stage 1:** BACKSTAGE_CRIME_TRUTH.md  
+> **Stage 2:** CHARACTER_WEB.md  
+> **Stage 3:** OBJECTIVE_TIMELINE.md  
+> **Stage 4:** CLUE_GRAPH.md  
+> **Stage 5:** PLAYER_STORY.md  
+> **Stage 6:** ENDING_LOGIC.md  
+> **Repository:** phambac2k701-blip/cot_truyen  
+> **Setting:** Hà Nội, 2026  
+> **Target focused run:** ~93 phút main route; ~95–105 phút strong/true route tùy mức inspect  
+> **Design rule:** file này chia story đã khóa thành production scenes. Không thay objective truth, không thêm magic evidence, không viết full dialogue.
+
+---
+
+# 0. PRODUCTION PRINCIPLES
+
+## 0.1. Scene identity
+
+Giữ nguyên scene IDs S01–S18 từ PLAYER_STORY.md để tránh tạo hai hệ ID cho cùng một beat.
+
+Mỗi scene là một đơn vị production có thể:
+
+- load/reuse một hub;
+- kích một nhóm authored events;
+- cập nhật state;
+- mở/đóng source window;
+- lưu checkpoint;
+- chuyển sang scene kế tiếp bằng travel/time transition.
+
+Scene không đồng nghĩa một map riêng.
+
+## 0.2. Hub / level plan
+
+### HUB A — Trường và khu lân cận
+Dùng cho S02, S03 và các đoạn đời thường ngắn về sau.
+
+Core reusable spaces:
+- lớp học;
+- hành lang;
+- bãi xe;
+- quán ăn/điểm sinh viên;
+- đầu đường/điểm đón xe.
+
+### HUB B — Dãy trọ
+Dùng cho S01, S05, S07, S17 và epilogue.
+
+Core reusable spaces:
+- phòng Bắc;
+- hành lang;
+- không gian chung;
+- góc sửa đồ của Nam;
+- khu bà Lan;
+- lối ra ngõ.
+
+Mục tiêu visual progression:
+- S01: mới, bình thường;
+- S05: quen thuộc;
+- S07: nơi nghỉ và suy nghĩ;
+- S17: cùng geometry nhưng tension hoàn toàn đổi do knowledge của player;
+- epilogue: trở lại đời thường nhưng không còn vô nghĩa.
+
+### SITE C — Tân Lộ
+Không cần xây thành hub khổng lồ.
+
+Dùng lại ở S04, S06, S08, S12, S13/S14 qua các phần khác nhau:
+- quầy/dispatch;
+- khu chờ worker;
+- hành lang/văn phòng vận hành;
+- một góc records/workstation có access hợp lệ.
+
+Phần lớn Tân Lộ phải trông như công ty logistics thật.
+
+### HUB C — Minh Trạch
+Dùng cho S04 ở đầu nhận nếu phù hợp, S10, S13/S14.
+
+Reusable spaces:
+- sảnh;
+- khu hành chính;
+- hành lang;
+- phòng compliance/meeting;
+- không cần “dungeon bệnh viện”.
+
+### POLICE MICRO-SET — tuyến của Vũ
+Dùng cho S09, S11, S15, S18 bằng cùng một phòng tiếp nhận/phòng làm việc + phone calls.
+Không cần xây sở cảnh sát lớn.
+
+### HUB D / cơ sở bí mật
+Không bắt buộc player phải vào trong run 90 phút.
+Nếu dùng ở consequence cinematic, chỉ thể hiện qua exterior/brief authored shots.
+Không biến climax thành raid do Bắc thực hiện.
+
+## 0.3. Fast travel
+
+- Lần đầu tới một nơi quan trọng: phải có một đoạn travel/arrival đủ để location có cảm giác địa lý.
+- Sau khi route đã được established: cho phép chuyển hub bằng điện thoại/bản đồ/điểm đón xe.
+- Fast travel là time compression có authored arrival; không teleport vô nghĩa.
+- Travel không dùng như đồng hồ trừng phạt từng phút. Time windows đóng theo scene progression + player decisions.
+- Trong S13–S18, khi Vũ đã tham gia mạnh, một phần xác minh diễn ra off-screen qua police để Bắc không phải chạy tới mọi source.
+
+## 0.4. Puzzle policy
+
+Puzzle chính là reasoning interaction, không phải mật mã arcade.
+
+Các pattern được phép:
+- đối chiếu timestamp;
+- so version history;
+- xếp authority chain;
+- chọn source có provenance để bàn giao;
+- xác định fact nào là direct observation và fact nào là interpretation.
+
+Không có:
+- hack database kiểu hacker;
+- code dài;
+- câu đố vô lý chặn evidence;
+- một puzzle duy nhất khóa true ending.
+
+Hint theo 3 cấp:
+1. nhắc fact;
+2. gợi vùng cần đối chiếu;
+3. chỉ bước kế tiếp.
+
+## 0.5. Dream sequence
+
+Chỉ dùng **một micro-dream transition** cuối S07, khoảng 30–40 giây, nằm trong budget scene.
+
+Chức năng:
+- chuyển D0 → D+1;
+- cho thấy anxiety của Bắc về việc bị đổ lỗi;
+- remix những hình/âm thanh player đã thực sự thấy: field assignment, nhãn routing, tiếng scan, hành lang trọ.
+
+Cấm:
+- thêm fact mới;
+- cho Nam xuất hiện như quỷ/villain;
+- tiết lộ organ network;
+- biến dream thành prophecy.
+
+Nếu pacing test cho thấy dream làm nhịp quá “ma”, có thể bỏ mà không ảnh hưởng clue graph.
+
+## 0.6. Cinematic policy
+
+Cinematic ngắn và có chức năng:
+- arrival/transition;
+- đóng một beat tâm lý;
+- thể hiện access closure;
+- climax consequence.
+
+Không dùng cutscene dài để NPC giải thích mystery.
+Chase/physical danger nếu có chỉ là scripted beat ngắn ở late route xấu; không thay reasoning bằng action.
+
+## 0.7. Fail-forward
+
+Không scene nào game-over vì player suy luận sai một lần.
+
+Sai lầm tạo:
+- tốn narrative time;
+- access đóng;
+- source rút;
+- leak path;
+- route ending khác.
+
+Permanent route loss chỉ xảy ra sau soft warning và causal consequence.
+
+---
+
+# ACT I — ĐỜI SỐNG TRƯỚC KHI CÓ VỤ ÁN
+
+## CHAPTER 1 — NGƯỜI MỚI
+
+---
+
+# S01 — PHÒNG TRỌ MỚI
+
+## VỊ TRÍ TRONG STORY
+Opening / normal life. Production entry point của game.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+HUB B — dãy trọ; phòng Bắc, hành lang, không gian chung, góc sửa đồ Nam.
+
+## TIME / STATE
+D0, 07:30–09:00.  
+BARC: N0.  
+E20.
+
+## CHARACTERS PRESENT
+Bắc, Trần Thị Lan, Vũ Đức Nam, 1–2 NPC nền không cần tên riêng.
+
+## PLAYER ENTRY CONDITION
+New Game.
+
+## PRIMARY OBJECTIVE
+Mang đồ vào phòng, nghe hướng dẫn sinh hoạt, xử lý một lỗi điện nhỏ, chuẩn bị đi học.
+
+## NARRATIVE PURPOSE
+- Cho player sống như Bắc trước khi điều tra.
+- Establish khu trọ là “nhà”.
+- Cho Nam xuất hiện tự nhiên trước khi ông biết gì về E22.
+- Seed C27/C28/C29 mà không villain-code.
+
+## PLAYER ACTIONS
+- đi và nhìn quanh;
+- đặt/inspect vài đồ cá nhân;
+- nghe Lan hướng dẫn;
+- thử quạt/ổ điện;
+- tương tác với Nam khi ông sửa lỗi;
+- mở điện thoại xem tin gia đình/số dư;
+- optional inspect góc sửa đồ.
+
+## REQUIRED EVENTS
+1. Bắc nhận phòng.
+2. Lan giải thích sinh hoạt.
+3. Lỗi điện nhỏ xảy ra.
+4. Nam giúp xử lý bình thường.
+5. C27 được ghi như People note, không như evidence.
+6. Bắc nhìn thấy áp lực tiền đủ để đặt motive.
+
+## OPTIONAL EVENTS
+- Inspect các vật đời thường.
+- C28 ở góc sửa đồ.
+- Hàng xóm nền.
+- Một mẩu hội thoại Lan–Nam chứng minh họ quen lâu và bình thường.
+
+## CLUES
+- **Mandatory/progression:** C27 ở mức biography.
+- **Optional:** C28.
+- **Red herring:** không.
+- **True-ending:** không; C27/C28 không được count D.
+- **Delayed-value:** C27, C28, C29.
+- **Noise:** phần lớn vật trong trọ.
+
+## NPC INFORMATION
+**Lan**
+- Biết: Nam sống quanh đây lâu, nghề cũ chung chung, Bắc là người thuê mới.
+- Nội dung nói: điện nước, cổng, sinh hoạt, chuyện Nam biết sửa đồ.
+- Giấu: không plot secret.
+
+**Nam**
+- Biết: Bắc là sinh viên mới ở trọ.
+- Nội dung nói: chuyện sửa điện, sinh hoạt, vài fact nghề cũ vô hại.
+- Giấu: toàn bộ command role.
+- Không được biết: E22/Bắc worker, vì chưa xảy ra.
+
+## BACKSTAGE EVENTS
+E19 đã xảy ra D−1.  
+Khải audit Tân Lộ.  
+Huyền giữ review.  
+Vũ xử lý vụ Phúc.  
+Không ai chờ Bắc xuất hiện.
+
+## STATE CHANGES
+- BARC giữ N0.
+- People entries: Lan, Nam.
+- C27_SEEN = true.
+- C28_SEEN optional.
+
+## BRANCHES
+Không route ending.
+Optional C28 chỉ ảnh hưởng recontextualization, không khóa gì.
+
+## FAILURE / CONSEQUENCE
+Không có fail. Nếu player bỏ inspect, game vẫn tiến.
+
+## AUDIO ATMOSPHERE
+Âm ngõ sáng, xe xa, tiếng chổi, cửa sắt, quạt/điện lạch cạch, giọng người ở trọ. Không nhạc ominous riêng cho Nam.
+
+## CINEMATIC NOTES
+First-person gần như toàn bộ.
+Có thể dùng 2–3 giây authored camera khi Bắc đặt vali xuống và lần đầu nhìn căn phòng.
+Không linger vào C28.
+
+## TRANSITION OUT
+Điện thoại báo giờ học → player rời ngõ → travel card/ngắn sang trường.
+
+## REPLAY VALUE
+Player biết Nam là command core nhưng thấy rõ:
+- ông chưa hề chọn Bắc;
+- việc giúp Bắc là thật;
+- C27/C28 đã tồn tại nhưng không đủ buộc tội.
+
+---
+
+# S02 — BUỔI HỌC ĐẦU / NHỊP SINH VIÊN
+
+## VỊ TRÍ TRONG STORY
+Opening / social baseline.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+HUB A — trường: hành lang, lớp, khu chung.
+
+## TIME / STATE
+D0, 09:00–11:15.  
+E21 chuẩn bị hình thành.
+
+## CHARACTERS PRESENT
+Bắc, Nguyễn Ngọc Linh, Lê Gia Minh, sinh viên nền.
+
+## PLAYER ENTRY CONDITION
+S01 hoàn tất.
+
+## PRIMARY OBJECTIVE
+Tìm lớp, ổn định buổi học, làm quen bạn học, tính chuyện kiếm thêm tiền.
+
+## NARRATIVE PURPOSE
+- Neo trường vào đời sống.
+- Establish Linh là nguồn đáng tin về fact nhưng không biết mystery.
+- Establish Minh là bạn thật, không phải plant.
+- Đưa Tân Lộ vào thế giới dưới dạng employer bình thường.
+
+## PLAYER ACTIONS
+- tìm phòng;
+- chọn/chuyển chỗ;
+- inspect lịch học/ảnh bài giảng;
+- nói chuyện Linh/Minh;
+- dùng phone;
+- optional xem chat/job history.
+
+## REQUIRED EVENTS
+1. Linh và Minh được giới thiệu.
+2. Bắc có một beat tiền/chi phí.
+3. C01 xuất hiện.
+4. Tân Lộ được frame như công ty logistics hợp pháp.
+
+## OPTIONAL EVENTS
+- C07 qua chat cũ/trao đổi.
+- Các job part-time khác.
+- Meme/deadline/đời sống sinh viên.
+
+## CLUES
+- **Mandatory:** C01.
+- **Optional:** C07.
+- **Red herring:** chưa.
+- **True-ending:** không.
+- **Delayed-value:** C07.
+- **Noise:** nhiều job/quán/việc học không liên quan.
+
+## NPC INFORMATION
+**Linh**
+- Biết: chuyện lớp, Bắc thiếu tiền ở mức bạn bè nếu Bắc nói.
+- Nói: fact đời thường, phân biệt biết/đoán.
+- Giấu: không plot secret.
+
+**Minh**
+- Biết: Tân Lộ có kênh part-time thật.
+- Nói: đã từng/biết người nhận ca bình thường.
+- Giấu: không gì ở thời điểm này.
+- Không biết: core crime, Nam, Hùng/Khải thật.
+
+## BACKSTAGE EVENTS
+Khải tiếp tục audit.  
+Tuấn chỉ biết nhóm job ưu tiên ở mức vận hành.  
+Hùng tin reclassification có thể đi qua hệ thống thường.
+
+## STATE CHANGES
+- Trust baseline Linh high.
+- Trust baseline Minh fairly high.
+- C01 seen; C07 optional.
+- Tân Lộ added to notebook as employer, không phải suspect.
+
+## BRANCHES
+Không route lock.
+
+## FAILURE / CONSEQUENCE
+Không.
+
+## AUDIO ATMOSPHERE
+Tiếng lớp, hành lang, ghế kéo, thông báo trường, xe ngoài cổng. Không tension music.
+
+## CINEMATIC NOTES
+Không cần cinematic; player control là ưu tiên.
+
+## TRANSITION OUT
+Tan lớp/ra khu ăn trưa; S03 bắt đầu ngay trong cùng HUB A.
+
+## REPLAY VALUE
+Minh giới thiệu job vẫn rõ ràng là hành động giúp bạn bình thường, bảo vệ fairness của betrayal sau này.
+
+---
+
+## CHAPTER 2 — MỘT CA NGẮN
+
+# S03 — MỘT CA NGẮN
+
+## VỊ TRÍ TRONG STORY
+Inciting incident.
+
+## ESTIMATED PLAY TIME
+~4 phút.
+
+## LOCATION
+HUB A — quán/khu sinh viên + phone UI.
+
+## TIME / STATE
+D0, 11:15–12:20.  
+E21 → E22.
+
+## CHARACTERS PRESENT
+Bắc, Minh; nhân viên hỗ trợ Tân Lộ qua app nếu cần.
+
+## PLAYER ENTRY CONDITION
+S02 hoàn tất và beat tiền đã established.
+
+## PRIMARY OBJECTIVE
+Quyết định nhận ca Tân Lộ và đến điểm lấy hàng.
+
+## NARRATIVE PURPOSE
+Kéo Bắc vào sự cố vì tiền và timing, không vì định mệnh.
+
+## PLAYER ACTIONS
+- xem assignment;
+- kiểm tra thời gian/lịch;
+- xem số dư;
+- accept job;
+- optional đọc field chi tiết.
+
+## REQUIRED EVENTS
+1. Minh gửi/nhắc ca.
+2. Player thấy reward và khung giờ hợp lý.
+3. Job vào pool bình thường.
+4. Bắc accept.
+5. C02 xuất hiện ở mức raw field.
+
+## OPTIONAL EVENTS
+- So sánh với ca cũ của Minh.
+- Một lựa chọn “để sau/nhận” chỉ thay nhịp vài chục giây; story reconverge nếu player muốn tiếp tục main route.
+
+## CLUES
+- **Mandatory:** C01, C02 seed.
+- **Optional:** đọc kỹ C02 ngay.
+- **Red herring:** không.
+- **True-ending:** C02 hỗ trợ hiểu R1 nhưng không là slot độc lập.
+- **Delayed-value:** C02.
+
+## NPC INFORMATION
+**Minh**
+- Biết: job bình thường, trả khá.
+- Nói: thông tin ca và kinh nghiệm công việc.
+- Giấu: không.
+
+## BACKSTAGE EVENTS
+Job E19 đã bị Hùng hạ xuống luồng thường từ D−1. Không ai chỉ định Bắc.
+
+## STATE CHANGES
+- JOB_ACCEPTED = true.
+- JOB_E22_SEEN = true.
+- BARC vẫn N0.
+
+## BRANCHES
+Nếu player muốn bỏ job, game cho một beat xác nhận practical consequence và quay lại lựa chọn; đây chưa phải Neutral Ending G0 vì story chưa tới curiosity gate.
+
+## FAILURE / CONSEQUENCE
+Không fail vì đọc thiếu field.
+
+## AUDIO ATMOSPHERE
+Không khí trưa, quán ăn, phone vibration, tiếng đường phố.
+
+## CINEMATIC NOTES
+Không “zoom bí ẩn” vào assignment.
+
+## TRANSITION OUT
+First-time travel tới Tân Lộ; dùng short city montage/time card để establish khoảng cách.
+
+## REPLAY VALUE
+Player hiểu ca không phải bait được tạo cho Bắc; Hùng chỉ tạo điều kiện để hệ thống thường chọn bất kỳ worker phù hợp.
+
+---
+
+# S04 — GIAO XONG NHƯNG HƠI LỆCH
+
+## VỊ TRÍ TRONG STORY
+First anomaly.
+
+## ESTIMATED PLAY TIME
+~6 phút.
+
+## LOCATION
+SITE C — Tân Lộ → điểm nhận y tế/hành chính liên quan Minh Trạch.
+
+## TIME / STATE
+D0, 12:30–14:10.  
+E22.
+
+## CHARACTERS PRESENT
+Bắc, Tuấn hoặc điều phối dưới Tuấn, nhân viên Tân Lộ vô tội, nhân viên đầu nhận vô tội.
+
+## PLAYER ENTRY CONDITION
+JOB_ACCEPTED.
+
+## PRIMARY OBJECTIVE
+Nhận gói, giao đúng địa điểm, lấy proof-of-handover.
+
+## NARRATIVE PURPOSE
+Cho player chạm mystery lần đầu nhưng chưa có crime proof.
+
+## PLAYER ACTIONS
+- đi tới quầy;
+- nhận item;
+- inspect label nếu muốn;
+- theo authored travel transition;
+- scan/bàn giao;
+- ký/xác nhận;
+- inspect receipt;
+- xử lý một mismatch nhỏ ở đầu nhận.
+
+## REQUIRED EVENTS
+1. Tân Lộ hiện như business thật.
+2. C02 được thể hiện trong assignment.
+3. Bàn giao hoàn tất.
+4. Scan/confirmation có mismatch classification nhỏ nhưng được xử lý bình thường.
+5. E22_COMPLETE.
+
+## OPTIONAL EVENTS
+- C03 receipt/account family.
+- C04 routing layer.
+- C06 background job noise.
+- Quan sát Tuấn bận xử lý nhiều việc thường.
+
+## CLUES
+- **Mandatory:** C02.
+- **Optional:** C03, C04.
+- **Red herring:** Tuấn có thể bắt đầu trông đáng chú ý chỉ vì vị trí.
+- **True-ending:** C03 hữu ích cho X nhưng không mandatory; C04 không bắt buộc.
+- **Delayed-value:** C02/C03/C04.
+- **Noise:** C06.
+
+## NPC INFORMATION
+**Tuấn**
+- Biết: đơn thuộc nhóm y tế/ưu tiên và quy trình vận hành.
+- Nói: hướng dẫn worker, không giải thích core.
+- Giấu: mức anh từng làm ngơ với ngoại lệ doanh nghiệp.
+- Không biết: organ network, Nam.
+
+**Nhân viên đầu nhận**
+- Biết: procedure tại điểm nhận.
+- Nói: classification hơi khác cách thường thấy.
+- Giấu: không.
+
+## BACKSTAGE EVENTS
+E22 hoàn tất → E23 bắt đầu.  
+Khải phát hiện job nhạy cảm đã đi qua pool thường.
+
+## STATE CHANGES
+- E22_COMPLETE = true.
+- C03_SAVED optional.
+- C04_SEEN optional.
+- BARC sẽ chuyển N1 ở hậu trường sau audit, nhưng player không biết.
+
+## BRANCHES
+Không branch immediate.
+
+## FAILURE / CONSEQUENCE
+Nếu player không inspect C03/C04, mất delayed-value route đó; game không nhắc lại giả tạo.
+
+## AUDIO ATMOSPHERE
+Kho vận thật: xe kéo, scanner, điện thoại, tiếng máy in; đầu nhận y tế sạch, busy, không horror.
+
+## CINEMATIC NOTES
+Travel giữa Tân Lộ và đầu nhận dùng short montage, không lái xe tự do.
+Không quay gói như “MacGuffin tội phạm”.
+
+## TRANSITION OUT
+Job complete → reward pending → player tự do rời về quán/trọ → S05.
+
+## REPLAY VALUE
+Những thứ “lỗi kho” ban đầu hiện rõ là sản phẩm của E19 nhưng không hề nói ra crime.
+
+---
+
+# S05 — ĂN TỐI, ĐỢI TIỀN, VỀ TRỌ
+
+## VỊ TRÍ TRONG STORY
+First breather.
+
+## ESTIMATED PLAY TIME
+~4 phút.
+
+## LOCATION
+Quán gần trường/ngõ + HUB B.
+
+## TIME / STATE
+D0, 14:30–18:00.  
+E23 → E25 ở hậu trường.
+
+## CHARACTERS PRESENT
+Bắc, Lan, Nam, Linh qua chat/call, NPC quán.
+
+## PLAYER ENTRY CONDITION
+E22_COMPLETE.
+
+## PRIMARY OBJECTIVE
+Ăn, về trọ, chờ thanh toán, xử lý việc học/sinh hoạt.
+
+## NARRATIVE PURPOSE
+Cố tình cắt mystery; đồng thời tạo replay tension vì Nam đã biết worker E22 là Bắc.
+
+## PLAYER ACTIONS
+- mua/ăn đồ;
+- trả lời Linh;
+- xem bài;
+- kiểm tra payment;
+- về phòng;
+- optional tương tác Nam/Lan.
+
+## REQUIRED EVENTS
+1. Payment còn pending.
+2. Một beat đời thường với Lan hoặc Linh.
+3. Nam xuất hiện ngắn và bình thường.
+4. Không có clue lớn.
+
+## OPTIONAL EVENTS
+- Nam trả đồ đã sửa/giúp việc nhỏ.
+- C29 được reinforce.
+- Noise items ở phòng.
+
+## CLUES
+- **Mandatory:** không.
+- **Optional:** không critical.
+- **Red herring:** không.
+- **True-ending:** không.
+- **Delayed-value:** C29 characterization.
+- **Noise:** nhiều.
+
+## NPC INFORMATION
+**Nam**
+- Biết hậu trường: Bắc chính là worker E22, N1.
+- Nói: chỉ chuyện đời thường.
+- Giấu: việc đã biết E22 liên quan Bắc.
+- Không được hỏi trúng clue.
+
+**Lan/Linh**
+- Không biết plot.
+
+## BACKSTAGE EVENTS
+E23: Khải chất vấn Hùng.  
+E24: Nam nhận ra worker là Bắc.  
+E25: Nam chọn quan sát.
+
+## STATE CHANGES
+- BARC: N0 → N1 ở organization knowledge.
+- Player-facing state không thông báo.
+- C29 reinforced.
+
+## BRANCHES
+Không.
+
+## FAILURE / CONSEQUENCE
+Không.
+
+## AUDIO ATMOSPHERE
+Quán ăn, xe ngoài ngõ, TV/radio xa, hành lang trọ. Nhạc nhẹ/không nhạc.
+
+## CINEMATIC NOTES
+Có thể dùng match cut từ receipt pending → điện thoại trên bàn trọ để nhấn đời thường tiếp diễn.
+
+## TRANSITION OUT
+Notification/call audit từ Tân Lộ → S06.
+
+## REPLAY VALUE
+Một trong các scene replay mạnh nhất: Nam biết Bắc là worker nhưng không biết Bắc hiểu gì, nên việc ông không “ra tay” là logic chứ không phải plot armor.
+
+---
+
+# ACT II — TÒ MÒ CÓ GIÁ
+
+## CHAPTER 3 — JOB BỊ AUDIT
+
+# S06 — JOB BỊ AUDIT
+
+## VỊ TRÍ TRONG STORY
+Second anomaly.
+
+## ESTIMATED PLAY TIME
+~4 phút.
+
+## LOCATION
+HUB B phòng Bắc + phone; có thể optional short return/voice call với Tân Lộ.
+
+## TIME / STATE
+D0, 18:00–20:00.
+
+## CHARACTERS PRESENT
+Bắc, Tuấn qua call/chat; Minh có thể nhắn.
+
+## PLAYER ENTRY CONDITION
+S05 complete.
+
+## PRIMARY OBJECTIVE
+Trả lời audit để lấy tiền và tránh bị quy lỗi.
+
+## NARRATIVE PURPOSE
+Biến “hơi lạ” thành câu hỏi thực tế: tại sao job bình thường bị soi kỹ vậy?
+
+## PLAYER ACTIONS
+- mở audit message;
+- đối chiếu assignment;
+- trả lời factual prompts;
+- optional hỏi Tuấn;
+- xem payment status.
+
+## REQUIRED EVENTS
+1. Audit nhắm đúng E22.
+2. Tuấn yêu cầu đúng quy trình, không tự liên hệ khách.
+3. Bắc nhận ra mức quan tâm của công ty cao hơn mong đợi.
+
+## OPTIONAL EVENTS
+- C05 nếu hỏi sâu.
+- So lại C02.
+
+## CLUES
+- **Mandatory:** audit state.
+- **Optional:** C05.
+- **Red herring:** C05 hỗ trợ nghi Tuấn.
+- **True-ending:** không.
+- **Delayed-value:** C05 về sau được recontextualize.
+
+## NPC INFORMATION
+**Tuấn**
+- Biết: job đang bị internal review; worker phải giữ quy trình.
+- Nói: fact vận hành.
+- Giấu: anh sợ bị làm scapegoat và từng làm ngơ ngoại lệ.
+- Không biết core crime.
+
+## BACKSTAGE EVENTS
+Khải/Hùng đánh giá breach.  
+Nam vẫn cho rằng curiosity chưa được chứng minh.
+
+## STATE CHANGES
+- TUAN_SUSPICION_SEEDED.
+- BARC giữ N1 trừ khi player bắt đầu đào sâu.
+
+## BRANCHES
+Không ending lock.
+
+## FAILURE / CONSEQUENCE
+Player trả lời “sai tone” không game-over; chỉ nội dung fact/source mới quan trọng.
+
+## AUDIO ATMOSPHERE
+Phòng trọ tối dần; quạt, tiếng ngõ; phone call khô, không nhạc thriller quá mạnh.
+
+## CINEMATIC NOTES
+Không cần cutscene.
+
+## TRANSITION OUT
+Audit đóng → player chủ động quyết định có kiểm tra thêm không → S07.
+
+## REPLAY VALUE
+Tuấn trông đáng ngờ vì đúng lý do nghề nghiệp, không vì game cố đánh lạc hướng bằng giả fact.
+
+---
+
+# S07 — BẮC CHỈ MUỐN BIẾT MÌNH ĐANG BỊ DÍNH VÀO CÁI GÌ
+
+## VỊ TRÍ TRONG STORY
+Point of curiosity / early branch gate.
+
+## ESTIMATED PLAY TIME
+~5 phút, gồm micro-dream 30–40 giây nếu dùng.
+
+## LOCATION
+HUB B — phòng Bắc; phone/laptop.
+
+## TIME / STATE
+D0, 20:00–23:00.  
+E26/E29/E30 conditional.
+
+## CHARACTERS PRESENT
+Bắc; Minh qua chat/call; Linh optional đời thường.
+
+## PLAYER ENTRY CONDITION
+Audit E22 đã rõ.
+
+## PRIMARY OBJECTIVE
+Kiểm tra mình có làm sai gì không và có bị công ty đẩy trách nhiệm không.
+
+## NARRATIVE PURPOSE
+Chuyển curiosity thành player agency.
+Đặt Neutral route và betrayal seed.
+
+## PLAYER ACTIONS
+- so assignment với job cũ;
+- hỏi Minh;
+- chọn mức thông tin chia sẻ;
+- đọc C02/C03/C04 nếu đã lưu;
+- dùng laptop/notebook;
+- chọn “thôi, không dính nữa” hoặc tiếp tục.
+
+## REQUIRED EVENTS
+1. C07 hoặc equivalent chứng minh Minh từng dùng kênh bình thường.
+2. Player được một lựa chọn rõ về mức đào sâu.
+3. Nếu tiếp tục, Bắc tạo ít nhất một hành vi vượt worker bình thường.
+4. Save/day transition.
+
+## OPTIONAL EVENTS
+- Overshare screenshot/theory cho Minh.
+- Linh nhắn chuyện học.
+- Micro-dream transition.
+
+## CLUES
+- **Mandatory:** C07 ở mức fair correction nếu Minh later leaks.
+- **Optional:** C35/C36 chỉ tồn tại nếu player tạo điều kiện.
+- **Red herring:** Minh có thể bị hiểu là plant nếu player bỏ qua C07.
+- **True-ending:** không.
+- **Delayed-value:** C07; C35 nếu leak.
+- **Noise:** chat học tập.
+
+## NPC INFORMATION
+**Minh**
+- Biết: job channel, những gì Bắc tự nói cho cậu.
+- Nói: muốn dập chuyện, có thể đề nghị hỏi “người phụ trách”.
+- Giấu: nếu đã liên hệ Tân Lộ, có thể giảm nhẹ mức đã nói.
+- Không biết network.
+
+**Linh**
+- Chỉ neo đời sống, không đưa theory plot.
+
+## BACKSTAGE EVENTS
+E27 Huyền giữ review.  
+E28 Vũ kiểm chứng Phúc.  
+Nếu player đào: E29 rồi E30.  
+Nếu overshare: E26.
+
+## STATE CHANGES
+- Nếu đào: BARC N1 → N2 observable.
+- MINH_LEAK possible.
+- Nếu bỏ sớm đúng điều kiện: arm G0 Neutral.
+
+## BRANCHES
+- **G0 Neutral** nếu player chủ động dừng ở N1, không leak, không chạm cell thứ hai.
+- Continue main route nếu chọn kiểm tra.
+- Overshare mở causal possibility G2 later, chưa auto-lock.
+
+## FAILURE / CONSEQUENCE
+Không có “sai câu thoại = bad ending”.
+Leak chỉ thành route xấu nếu nó thực sự làm alternate/source cuối gãy.
+
+## AUDIO ATMOSPHERE
+Đêm trọ, xe thưa, tiếng phòng bên, laptop fan.
+Micro-dream dùng scan beep/tiếng giấy/âm môi trường đã nghe, không jumpscare.
+
+## CINEMATIC NOTES
+Dream nếu dùng: abstract, 30–40 giây, không new info.
+Kết bằng alarm/ánh sáng sáng D+1.
+
+## TRANSITION OUT
+D0 → D+1.  
+Nếu continue: S08.  
+Nếu G0: short epilogue “Một Ca Làm Thêm”.
+
+## REPLAY VALUE
+Player hiểu chính việc mình chọn đào sâu mới biến Bắc từ accidental exposure thành risk; Nam không “định sẵn” cuộc đối đầu.
+
+---
+
+# S08 — JOB KHÔNG “TỰ NHIÊN” LỌT VÀO POOL
+
+## VỊ TRÍ TRONG STORY
+First real connection.
+
+## ESTIMATED PLAY TIME
+~6 phút.
+
+## LOCATION
+SITE C — Tân Lộ, kênh khiếu nại/worker records.
+
+## TIME / STATE
+D+1, 09:00–10:00.  
+E31/E32 bắt đầu.
+
+## CHARACTERS PRESENT
+Bắc, Tuấn, nhân viên vận hành; Đức có thể glimpse.
+
+## PLAYER ENTRY CONDITION
+Player chọn tiếp tục sau S07.
+
+## PRIMARY OBJECTIVE
+Giải quyết payment/audit và xác định job đã bị đổi classification hay không.
+
+## NARRATIVE PURPOSE
+Chuyển mystery từ cảm giác sang fact có chủ ý: R1.
+
+## PLAYER ACTIONS
+- yêu cầu xem lịch sử assignment hợp lệ;
+- so C02/C04 với log;
+- puzzle nhẹ: align “current class” với previous state/timestamp;
+- hỏi authority chain;
+- optional quan sát Đức/C21.
+
+## REQUIRED EVENTS
+1. C17 được mở trên main route hoặc một equivalent recoverable route.
+2. Player thấy reclassification xảy ra trước Bắc.
+3. C20 cho thấy Tuấn không có authority tạo reclassification.
+4. C22 được seed/đặt hướng lên Hùng.
+
+## OPTIONAL EVENTS
+- C21.
+- Gặp Đức sớm.
+- Nếu leak từ S07, một phần access đã khó hơn.
+
+## CLUES
+- **Mandatory:** C17, C20.
+- **Optional:** C21.
+- **Red herring:** Tuấn bắt đầu được correction; Hùng thành suspect hợp lý.
+- **True-ending:** C17 là core slot C; C22 cần được hoàn thiện.
+- **Delayed-value:** payoff C02/C04.
+- **Noise:** records/job bình thường.
+
+## NPC INFORMATION
+**Tuấn**
+- Biết: authority chain trong Tân Lộ.
+- Nói: classification không do mình đổi; quy trình operation.
+- Giấu: mức đã làm ngơ.
+- Không biết mục đích organ network.
+
+**Đức**
+- Nếu xuất hiện: biết Hùng đã sửa dấu và có bất thường leadership-level.
+- Chưa exposition toàn bộ.
+
+## BACKSTAGE EVENTS
+Khải siết access.  
+Đức biết cửa sổ tự bảo hiểm sắp đóng.  
+Ba hệ thống E31 vẫn vận động.
+
+## STATE CHANGES
+- R1_CONFIRMED.
+- C17 acquired/preserved locally.
+- TUAN_CORE_EXONERATED có thể mở nếu player hiểu C20.
+- BARC N2 nếu player tiếp tục visible investigation.
+
+## BRANCHES
+Nếu C17 access bị hạn chế do leak, route recover qua Đức/Vũ vẫn tồn tại nhưng tốn timing.
+
+## FAILURE / CONSEQUENCE
+Sai puzzle không mất clue; hint tăng dần.
+Fixation Tuấn có thể tiêu narrative time và làm source window hẹp.
+
+## AUDIO ATMOSPHERE
+Office business ambience. Khi reveal C17, không sting “villain”; dùng sound focus nhẹ.
+
+## CINEMATIC NOTES
+Không cutscene reveal. Fact phải được player đọc/đối chiếu.
+
+## TRANSITION OUT
+Bắc giờ có source cụ thể đủ để báo → S09.
+
+## REPLAY VALUE
+C17 làm rõ toàn chuỗi E19 nhưng vẫn không nói tội gì đang xảy ra.
+
+---
+
+# ACT III — BA HỘP SỰ THẬT
+
+## CHAPTER 4 — TỪ MỘT JOB TỚI MỘT VỤ VIỆC
+
+# S09 — LẦN ĐẦU BẮC CÓ THỨ ĐỦ CỤ THỂ ĐỂ BÁO
+
+## VỊ TRÍ TRONG STORY
+Police entry.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+POLICE MICRO-SET / phone-to-office transition.
+
+## TIME / STATE
+D+1, ~10:00.  
+E34 mở.
+
+## CHARACTERS PRESENT
+Bắc, Đại úy Nguyễn Minh Vũ. Phúc chưa cần xuất hiện trực tiếp.
+
+## PLAYER ENTRY CONDITION
+Có C17/equivalent source cụ thể.
+
+## PRIMARY OBJECTIVE
+Trình bày fact có nguồn thay vì theory.
+
+## NARRATIVE PURPOSE
+Đưa police vào sớm và có năng lực.
+
+## PLAYER ACTIONS
+- chọn records muốn trình;
+- provenance interaction: “tôi thấy trực tiếp / log công ty / suy đoán”;
+- nghe Vũ đặt câu hỏi timeline;
+- bàn giao/copy source hợp lệ.
+
+## REQUIRED EVENTS
+1. Vũ phân biệt fact với inference.
+2. C10/C11A được mở ở mức cần thiết.
+3. Player biết vụ Phúc có trước Bắc.
+4. Ít nhất một logistics source có thể được police intake.
+
+## OPTIONAL EVENTS
+- Hỏi thêm về Phúc; Vũ giữ boundary.
+- C42 foreshadow qua intake/provenance.
+
+## CLUES
+- **Mandatory:** C10, C11A.
+- **Optional:** C08 chưa bắt buộc ở scene này.
+- **Red herring:** Vũ không xác nhận Tuấn/Huyền chỉ vì chức vụ.
+- **True-ending:** police chronology hỗ trợ A; preservation concept bắt đầu.
+- **Delayed-value:** C11A payoff “crisis predates Bắc”.
+
+## NPC INFORMATION
+**Vũ**
+- Biết: Phúc, coercion indicators, phần hospital story từ Phúc.
+- Nói: chỉ những gì đã verify.
+- Giấu: chi tiết nghiệp vụ/danh tính chưa nên chia.
+- Không biết: Nam, full Tân Lộ network.
+
+## BACKSTAGE EVENTS
+Vũ bắt đầu test bridge logistics ↔ Phúc/Minh Trạch.  
+Organization không tự biết Bắc đã nói gì nếu không có observable consequence.
+
+## STATE CHANGES
+- POLICE_CONTACT = true.
+- Vũ trust tăng theo source quality.
+- Source delivered có trạng thái custody mới.
+
+## BRANCHES
+Player có thể kể theory dài nhưng Vũ chỉ dùng sourced facts.
+Không branch ending trực tiếp.
+
+## FAILURE / CONSEQUENCE
+Nếu player chỉ mang suy đoán, Vũ không mở rộng; main route yêu cầu sourced bridge và fail-forward cho player quay lại source.
+
+## AUDIO ATMOSPHERE
+Không gian cơ quan yên, tiếng giấy/bàn phím/điện thoại. Nhịp bình tĩnh, tạo cảm giác chuyên nghiệp.
+
+## CINEMATIC NOTES
+No police montage heroic. Camera first-person, Vũ hỏi ngắn.
+
+## TRANSITION OUT
+Vũ xác nhận cần kiểm tra Minh Trạch → contextual fast travel S10.
+
+## REPLAY VALUE
+Vũ đã làm đúng từ đầu; replay loại trope “police ngu để plot tồn tại”.
+
+---
+
+# S10 — MINH TRẠCH KHÔNG CHỈ CÓ MỘT LỖI
+
+## VỊ TRÍ TRONG STORY
+Hospital layer / second box.
+
+## ESTIMATED PLAY TIME
+~6 phút.
+
+## LOCATION
+HUB C — Minh Trạch, sảnh + compliance room.
+
+## TIME / STATE
+D+1, 10:00–11:30.  
+E33.
+
+## CHARACTERS PRESENT
+Bắc, Vũ, Hoàng Huyền, Lâm Thảo; Khoa có thể bề mặt.
+
+## PLAYER ENTRY CONDITION
+Police bridge S09 mở hospital verification.
+
+## PRIMARY OBJECTIVE
+Xác minh liệu Minh Trạch có pattern thật hay chỉ là một mismatch đơn lẻ.
+
+## NARRATIVE PURPOSE
+Tạo independent box B và red herring Huyền hợp lý.
+
+## PLAYER ACTIONS
+- đi qua bệnh viện bình thường;
+- nghe Huyền đặt boundary access;
+- inspect version/scope history nếu được chia;
+- puzzle nhẹ: compare creation timestamp vs later scope;
+- optional talk Thảo trong phạm vi hợp lý.
+
+## REQUIRED EVENTS
+1. C11: Huyền đã mở review nhiều hồ sơ từ D−12.
+2. Player hiểu review predates E22.
+3. Có dấu quản trị can thiệp sau review.
+4. Hospital vẫn hiện đa số hoạt động bình thường.
+
+## OPTIONAL EVENTS
+- C12.
+- C13 red herring.
+- C14/C15 route Thảo.
+- C16.
+- C16A noise.
+
+## CLUES
+- **Mandatory:** C11.
+- **Optional:** C12, C14, C15, C16.
+- **Red herring:** C13 → Huyền trông như đang che.
+- **True-ending:** B cần C11 + C12 hoặc C15.
+- **Delayed-value:** DV5 / timestamp review.
+- **Noise:** C16A.
+
+## NPC INFORMATION
+**Huyền**
+- Biết: pattern compliance, review history.
+- Nói: fact trong scope.
+- Giấu: không conspiracy; chỉ giữ dữ liệu đúng quy trình.
+- Không biết Nam/Tân Lộ.
+
+**Thảo**
+- Biết: một số case có hoàn cảnh ngoài hồ sơ không sạch.
+- Nói: chỉ phần trực tiếp biết nếu trust/pressure hợp lý.
+- Giấu: mức complicity và self-rationalization.
+- Không biết Nam.
+
+**Khoa**
+- Biết: hospital cell và risk.
+- Nói bề mặt quy trình.
+- Giấu: đã thu hẹp review/báo thiếu.
+
+## BACKSTAGE EVENTS
+Khoa tự bảo vệ.  
+Nam chỉ nhận báo cáo đã lọc qua Khải.  
+E33 window đang hẹp.
+
+## STATE CHANGES
+- B_HOSPITAL_PATTERN possible/proven.
+- HUYEN_FALSE_THEORY can open/correct.
+- Source B flags.
+
+## BRANCHES
+- Nếu C12 miss, C15 là alternate.
+- Nếu cả hai miss và window đóng, G1 Delay risk tăng.
+
+## FAILURE / CONSEQUENCE
+Không hack hồ sơ.
+Player đến quá muộn có thể mất scope access nhưng institutional history không “biến mất”; police route sau game vẫn có thể tiếp tục.
+
+## AUDIO ATMOSPHERE
+Bệnh viện hoạt động thật: loa nhẹ, xe đẩy, điều hòa, footsteps; tension đến từ phòng compliance yên hơn, không horror.
+
+## CINEMATIC NOTES
+Khoa nếu xuất hiện chỉ qua một interruption ngắn/doorway beat, không villain introduction.
+
+## TRANSITION OUT
+Vũ hẹn đối chiếu timeline/source → S11.
+
+## REPLAY VALUE
+Huyền từ “người giữ hồ sơ đáng ngờ” trở thành một trong những người vô tội quan trọng nhất.
+
+---
+
+# S11 — CHUYỆN NÀY CÓ TRƯỚC MÌNH, VÀ LỚN HƠN MỘT JOB
+
+## VỊ TRÍ TRONG STORY
+Midpoint.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+POLICE MICRO-SET hoặc quiet public meeting point gần hospital.
+
+## TIME / STATE
+D+1, 11:30–12:30.  
+E34.
+
+## CHARACTERS PRESENT
+Bắc, Vũ; Phúc optional/controlled.
+
+## PLAYER ENTRY CONDITION
+Có logistics anomaly + hospital pattern.
+
+## PRIMARY OBJECTIVE
+Đặt các nguồn cạnh nhau và xác định chronology.
+
+## NARRATIVE PURPOSE
+Mental-model flip: Bắc bước vào một cleanup đã có trước.
+
+## PLAYER ACTIONS
+- timeline board/notebook authored interaction;
+- xếp ba timestamp theo thứ tự;
+- phân loại direct source / corroboration;
+- optional nghe Phúc xác nhận withdrawal.
+
+## REQUIRED EVENTS
+1. Phúc timeline predates E22.
+2. Huyền review predates E22.
+3. E19/E22 đến sau.
+4. Player có cơ hội hiểu R2.
+5. Notebook giữ facts nhưng không auto-write “network”.
+
+## OPTIONAL EVENTS
+- C08 direct withdrawal.
+- C09 omission/context.
+- C03 payoff nếu đã save.
+
+## CLUES
+- **Mandatory:** C10/C11A + C11 chronology.
+- **Optional:** C08, C09, C03 payoff.
+- **Red herring:** RH5 Phúc có thể trông không hoàn hảo.
+- **True-ending:** A cần C08 + C10; nếu C08 chưa lấy, source window vẫn mở.
+- **Delayed-value:** C03, DV4, DV5 payoff.
+
+## NPC INFORMATION
+**Phúc**
+- Biết: mình đồng ý ban đầu, muốn rút, bị pressure, đã kiểm tra hospital.
+- Nói: chronology trực tiếp.
+- Giấu/omits: phần xấu hổ/tiền ban đầu nếu chưa trust.
+- Không biết Tân Lộ/Nam.
+
+**Vũ**
+- Biết: ba timeline có thể liên quan nhưng chưa được phép tự nhảy tới network nếu bridge thiếu.
+
+## BACKSTAGE EVENTS
+E32–E35 source windows chạy song song.  
+Đức/Yến/Huyền/Thảo không chờ player.
+
+## STATE CHANGES
+- A_COERCION possible.
+- NETWORK_POSSIBLE hypothesis.
+- Bắc tiến gần N3 nhưng chưa auto.
+
+## BRANCHES
+Nếu source A/B thiếu alternate và player trì hoãn, G1 risk.
+Nếu route mạnh, mở S12/S13 với đủ thời gian.
+
+## FAILURE / CONSEQUENCE
+Sai ordering puzzle có hint; không game-over.
+Hiểu sai Phúc chỉ tốn route/timing nếu player bỏ source thật.
+
+## AUDIO ATMOSPHERE
+Tĩnh, tiếng bút/giấy/điện thoại; giảm nhạc để reasoning có trọng lượng.
+
+## CINEMATIC NOTES
+Midpoint không có montage “conspiracy reveal”. Player phải tự thấy ba timestamps.
+
+## TRANSITION OUT
+Vũ cho player quay lại logistics với câu hỏi authority, không với “đáp án” → S12.
+
+## REPLAY VALUE
+Opening được recontextualize: mọi crisis đã chạy trước khi Bắc đặt chân vào.
+
+---
+
+## CHAPTER 5 — SAI NGƯỜI, ĐÚNG DỮ KIỆN
+
+# S12 — TUẤN, RỒI HÙNG: HAI “BOSS” QUÁ HỢP LÝ
+
+## VỊ TRÍ TRONG STORY
+False theory / wrong direction.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+SITE C — Tân Lộ; quầy/office records.
+
+## TIME / STATE
+D+1, ~12:00–13:00.
+
+## CHARACTERS PRESENT
+Bắc, Tuấn, Đức; Hùng gián tiếp/brief appearance.
+
+## PLAYER ENTRY CONDITION
+R1 + hospital timeline đủ để đặt câu hỏi authority.
+
+## PRIMARY OBJECTIVE
+Xác định ai có quyền đổi classification và Tuấn thực sự biết tới đâu.
+
+## NARRATIVE PURPOSE
+Dạy player: access ≠ knowledge; culpable manager ≠ apex.
+
+## PLAYER ACTIONS
+- inspect permission chain;
+- hỏi Tuấn về override;
+- compare procedural behavior;
+- talk Đức nếu route mở;
+- follow Hùng-level approval trail.
+
+## REQUIRED EVENTS
+1. C20 loại Tuấn khỏi quyền reclass.
+2. C22 đặt quyết định ở Hùng-level.
+3. Player thấy Hùng thật sự culpable.
+4. Không có fact nào cho phép dừng ở Hùng như command toàn mạng.
+
+## OPTIONAL EVENTS
+- C21.
+- C18 từ Đức nếu window còn.
+- Brief visual Hùng nhưng không monologue.
+
+## CLUES
+- **Mandatory:** C20, C22.
+- **Optional:** C21, C18.
+- **Red herring:** RH1 Tuấn; RH2 Hùng.
+- **True-ending:** C22 cần cho C; C18 là corroborator.
+- **Delayed-value:** DV6 procedural Tuấn.
+
+## NPC INFORMATION
+**Tuấn**
+- Biết: vận hành, ngoại lệ y tế bề mặt, Hùng là authority trên mình.
+- Nói: chain thực.
+- Giấu: đã làm ngơ.
+- Không biết core.
+
+**Đức**
+- Biết: Hùng sửa dấu/ngoại lệ leadership-level, giữ snapshot.
+- Nói: phần logistics trực tiếp.
+- Giấu: mức mình đã lưu để tự bảo hiểm.
+- Không biết Nam.
+
+**Hùng**
+- Biết: core logistics complicity và breach.
+- Nói nếu xuất hiện: framing business/audit.
+- Giấu: E19 self-protection và relation command.
+- Có thể nghĩ tự cứu bằng cách đẩy trách nhiệm.
+
+## BACKSTAGE EVENTS
+Đức/Yến access sắp đóng.  
+Khải thấy incident ngày càng khó cô lập.
+
+## STATE CHANGES
+- TUAN_CORE_EXONERATED.
+- C_LOGISTICS_LEADERSHIP possible/proven.
+- HUNG_FALSE_APEX can arm if player stops reasoning.
+
+## BRANCHES
+Fixation Tuấn/Hùng có thể làm mất source window → G1/G4 later, không immediate fail.
+
+## FAILURE / CONSEQUENCE
+Không có accusation quiz.
+Player được phép tin sai nhưng world time tiếp tục.
+
+## AUDIO ATMOSPHERE
+Office gấp hơn buổi sáng; máy in, điện thoại, người gọi nhau; access door beep có thể telegraph closure.
+
+## CINEMATIC NOTES
+Hùng nếu seen: framing như lãnh đạo công ty bận, không boss shot.
+
+## TRANSITION OUT
+Source chỉ lên cross-cell risk endpoint → S13.
+
+## REPLAY VALUE
+Player thấy mỗi false boss đều “đúng một phần”; mystery không dựa vào người vô tội giả ác.
+
+---
+
+# S13 — CÙNG MỘT NGƯỜI QUẢN RỦI RO
+
+## VỊ TRÍ TRONG STORY
+Escalation / three-box connection.
+
+## ESTIMATED PLAY TIME
+~6 phút.
+
+## LOCATION
+Multi-source authored sequence: Tân Lộ + police micro-set + Minh Trạch callbacks. Không bắt Bắc chạy toàn bộ bằng chân.
+
+## TIME / STATE
+D+1, 12:30–14:00.  
+E32–E36.
+
+## CHARACTERS PRESENT
+Bắc, Vũ, Đức; Huyền/Thảo via verified source; Yến optional mostly police; Khải direct/indirect.
+
+## PLAYER ENTRY CONDITION
+A/B/C có đủ mảnh để cross-compare.
+
+## PRIMARY OBJECTIVE
+Xác định liệu các scandal có chung risk-management endpoint.
+
+## NARRATIVE PURPOSE
+Đạt R7/R8 và N3 understanding.
+
+## PLAYER ACTIONS
+- review two contact trails;
+- puzzle compare endpoints/timestamps C24/C25;
+- chọn bridge gửi Vũ;
+- optional source Đức/Yến/Thảo;
+- nghe Vũ xác minh phần player không cần tự đi.
+
+## REQUIRED EVENTS
+1. C24 hospital → Khải.
+2. C25 logistics → Khải.
+3. Player được quyền tự nối thành C26.
+4. Vũ chỉ set X_VERIFIED khi relation đủ source.
+5. Hùng/Khoa/Hạnh được giữ là culpable nhưng knowledge-limited.
+
+## OPTIONAL EVENTS
+- C18/C19.
+- C26A Khải behavior.
+- Additional corroborator B/C.
+
+## CLUES
+- **Mandatory:** C24, C25; C26 as inference.
+- **Optional:** C18/C19/C26A.
+- **Red herring:** Khải hoặc Hùng có thể trông như apex.
+- **True-ending:** X requires verified cross-cell relation.
+- **Delayed-value:** prior timestamps become network architecture.
+
+## NPC INFORMATION
+**Khải**
+- Biết: gần toàn network/risk picture.
+- Nói: narrow accurate facts, tránh scope quyền.
+- Giấu: Nam/command flow và cleanup coordination.
+
+**Vũ**
+- Biết tăng theo corroboration.
+- Nói: nguồn nào đã verify, nguồn nào chưa.
+- Không auto-link nếu player chưa đưa bridge.
+
+**Yến**
+- Nếu route dùng: biết financial anomalies only.
+- Không biết Nam/full network.
+
+## BACKSTAGE EVENTS
+E36: Bắc đạt N3 nếu nối đủ.  
+E37: Khải cross-report Bắc; Nam bắt đầu trực tiếp quan tâm nếu observable behavior đủ.
+
+## STATE CHANGES
+- X_CONNECTED / X_VERIFIED possible.
+- N3_UNDERSTANDING = true.
+- KHẢI_LAYER = true.
+- BARC organization awareness có thể lên N3.
+
+## BRANCHES
+- Nếu source đủ: preservation path S15 mạnh.
+- Nếu thiếu B/C alternate: Delay risk.
+- Nếu player dùng unsafe channel: leak consequences S14.
+
+## FAILURE / CONSEQUENCE
+Sai inference không game-over; nhưng theo Khải như “boss cuối” quá lâu có thể làm D window hẹp.
+
+## AUDIO ATMOSPHERE
+Cross-cut sound design giữa office/hospital/police, nhưng không montage giải thích. Tension tăng bằng notification/access sounds.
+
+## CINEMATIC NOTES
+Có thể dùng 10–15 giây transition montage khi Vũ xác minh off-screen, tránh fetch-quest.
+
+## TRANSITION OUT
+Một hoặc nhiều access/source bắt đầu đóng → S14.
+
+## REPLAY VALUE
+Player thấy compartmentalization sụp không phải vì một whistleblower biết tất cả, mà vì các endpoint xác nhận nhau.
+
+---
+
+# ACT IV — HỆ THỐNG PHẢN ỨNG
+
+## CHAPTER 6 — CỬA ĐANG KHÉP
+
+# S14 — HỆ THỐNG BẮT ĐẦU KHÉP CỬA
+
+## VỊ TRÍ TRONG STORY
+Danger escalation.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+Multi-hub state change: phone + Tân Lộ + Minh Trạch status. Player có thể bắt đầu ở transit/police point.
+
+## TIME / STATE
+D+1, 13:30–15:00.  
+E37/E42 possible.
+
+## CHARACTERS PRESENT
+Bắc, Minh, Vũ qua phone; Tuấn/Đức/Huyền tùy source.
+
+## PLAYER ENTRY CONDITION
+N3/cross-cell pressure hoặc cleanup objective đạt threshold.
+
+## PRIMARY OBJECTIVE
+Nhận ra source windows đang đóng và xác định nguyên nhân nếu có leak.
+
+## NARRATIVE PURPOSE
+Biến threat thành bureaucracy có hậu quả, không “đội sát thủ”.
+
+## PLAYER ACTIONS
+- thử access source đã dùng;
+- nhận cancel/lock notifications;
+- confront Minh ở mức thông tin;
+- compare timing leak vs closure;
+- gọi Vũ.
+
+## REQUIRED EVENTS
+1. Ít nhất một C43 access-closure event.
+2. Vũ cảnh báo evidence cần rời khỏi tay Bắc.
+3. Cleanup được thể hiện như process.
+
+## OPTIONAL EVENTS
+- C35/C36/C37 nếu Minh leak.
+- Một source nói rõ “tôi sắp mất access”.
+- Player có thể không biết nguyên nhân exact nếu không giữ trail.
+
+## CLUES
+- **Mandatory:** C43 consequence signal.
+- **Optional:** C35/C36/C37.
+- **Red herring:** RH4 Minh là plant nếu player suy quá.
+- **True-ending:** soft warning cho preservation timing.
+- **Delayed-value:** C07 giải thích Minh không phải member.
+
+## NPC INFORMATION
+**Minh**
+- Biết: chính những gì Bắc đã chia.
+- Nói: “chỉ hỏi người phụ trách” ở mức nội dung.
+- Giấu: lượng chi tiết đã nói.
+- Không biết hậu quả thật cho tới khi quá muộn.
+
+**Vũ**
+- Biết: source closure là risk.
+- Nói: custody/provenance quan trọng hơn Bắc giữ screenshot.
+
+## BACKSTAGE EVENTS
+Khải cắt access.  
+Nam xem report về Bắc ở N3.  
+Managers tự bảo vệ theo cách riêng.
+
+## STATE CHANGES
+- CLEANUP_ACCELERATED conditional.
+- MINH_BETRAYAL_REVEALED conditional.
+- BARC N3.
+- LEAK_PATH = MINH only if causal chain thật sự đủ.
+
+## BRANCHES
+- G2 Wrong Trust chỉ arm nếu leak làm unique/last route mất trước preservation.
+- Không leak vẫn có cleanup closures objective.
+- Continue → S15.
+
+## FAILURE / CONSEQUENCE
+Không auto-bad-ending vì nhắn Minh.
+Nếu source vẫn còn alternate hoặc đã preserve, true route sống.
+
+## AUDIO ATMOSPHERE
+Notifications, line disconnect, access denied beep, urban daytime continuing normally. Không action music liên tục.
+
+## CINEMATIC NOTES
+Có thể dùng one-shot ngắn: cửa access đóng trước mặt/employee badge fail.
+Không chase.
+
+## TRANSITION OUT
+Vũ yêu cầu quyết định custody → S15.
+
+## REPLAY VALUE
+Player thấy “kẻ địch” mạnh nhất của run là timing + information leakage, không phải physical monster.
+
+---
+
+# S15 — TỪ “TÔI BIẾT” SANG “HỌ BIẾT TÔI ĐANG BIẾT”
+
+## VỊ TRÍ TRONG STORY
+Point of no return.
+
+## ESTIMATED PLAY TIME
+~4 phút.
+
+## LOCATION
+POLICE MICRO-SET / secure intake.
+
+## TIME / STATE
+D+1, 14:00–15:30.  
+E38 possible.
+
+## CHARACTERS PRESENT
+Bắc, Vũ; Linh optional 15–20 sec đời thường outside mystery.
+
+## PLAYER ENTRY CONDITION
+N3 understanding + organization observable response.
+
+## PRIMARY OBJECTIVE
+Quyết định evidence nào cần bàn giao/preserve ngay.
+
+## NARRATIVE PURPOSE
+Đổi game từ “thu thập” sang “custody”.
+Khóa logic Avoidance đúng thời điểm.
+
+## PLAYER ACTIONS
+- review sourced items;
+- chọn source có provenance;
+- handover to Vũ;
+- giữ/copy personal notes;
+- có thể chọn abandon.
+
+## REQUIRED EVENTS
+1. Vũ giải thích ở mức chức năng: source cần được tiếp nhận.
+2. C42 preservation event có thể bắt đầu.
+3. Player thấy preservation không đồng nghĩa mất quyền hiểu.
+4. Nếu A/B/C đủ, E38 mở.
+
+## OPTIONAL EVENTS
+- Linh nhắn về lớp/đời sống để nhắc Bắc đang bỏ lại bình thường.
+- Player giữ lại non-critical note.
+
+## CLUES
+- **Mandatory:** C42 as event/gate.
+- **Optional:** không new evidence.
+- **Red herring:** không.
+- **True-ending:** preservation A/B/C.
+- **Delayed-value:** toàn bộ “giữ ảnh = an toàn” bị đảo nghĩa.
+
+## NPC INFORMATION
+**Vũ**
+- Biết: đủ để chuyển investigation nếu A/B/C sourced.
+- Nói: chỉ source/provenance.
+- Giấu: tactical details của police response.
+
+## BACKSTAGE EVENTS
+Khải/Nam chuyển sang protect core nếu E38 observable.
+Các branch bắt đầu close nhanh hơn.
+
+## STATE CHANGES
+- A/B/C_PRESERVED individually.
+- X_VERIFIED if bridge đã đủ.
+- E38 if threshold.
+- ABANDON_AFTER_N3 if player thật sự rời route.
+
+## BRANCHES
+- **Continue preservation:** mở S16.
+- **Abandon after N3:** G3 armed nếu police chưa đủ tự giữ case.
+- **Giữ tất cả một mình:** exposure/cleanup risk tăng nhưng chưa auto-resolve.
+
+## FAILURE / CONSEQUENCE
+Player có thể preserve chưa đủ; route vẫn tiến tới partial ending.
+Không cho UI “true ending unlocked”.
+
+## AUDIO ATMOSPHERE
+Rất ít nhạc; tiếng scan/copy/biên nhận custody tạo motif “giữ được sự thật”.
+
+## CINEMATIC NOTES
+Short close-up authored on receipt/intake stamp only if không quá gamey.
+
+## TRANSITION OUT
+Vũ chuyển câu hỏi sang “ai có quyền làm nhiều branch cùng đổi trạng thái?” → S16.
+
+## REPLAY VALUE
+Player hiểu true ending không thưởng người giữ nhiều collectible nhất, mà người biết lúc nào phải chuyển evidence ra khỏi tay mình.
+
+---
+
+## CHAPTER 7 — AI CÓ QUYỀN?
+
+# S16 — TỪ MANAGER TỚI COMMAND
+
+## VỊ TRÍ TRONG STORY
+Late investigation.
+
+## ESTIMATED PLAY TIME
+~7 phút.
+
+## LOCATION
+Police micro-set + selected manager source + authored records; không cần tour toàn Hà Nội.
+
+## TIME / STATE
+D+1, 15:00–17:00.  
+E38 → command investigation.
+
+## CHARACTERS PRESENT
+Bắc, Vũ, Khải/Hùng hoặc manager source phù hợp; Khoa/Thảo route-dependent.
+
+## PLAYER ENTRY CONDITION
+A+B+C đủ mạnh hoặc đủ để late route tiếp tục.
+
+## PRIMARY OBJECTIVE
+Chứng minh command authority hiện tại, không chỉ tìm người “trông giống boss”.
+
+## NARRATIVE PURPOSE
+Tách relationship evidence khỏi command evidence.
+
+## PLAYER ACTIONS
+- inspect C30 relationship record;
+- compare C31 current contact timing;
+- obtain/verify C32 hoặc C33/C34;
+- reasoning interaction: “history / current contact / decision authority / independent corroboration”;
+- send sources to Vũ.
+
+## REQUIRED EVENTS
+1. C30 chỉ được frame là history.
+2. C31 opens current Khải→Nam contact.
+3. Có route D1.
+4. Có route D2 độc lập.
+5. Game không cho C27/C28/C30 count D.
+
+## OPTIONAL EVENTS
+- C33/C34 alternate.
+- Một manager source rút nếu timing xấu.
+- Additional corroborator.
+
+## CLUES
+- **Mandatory for strong/true:** C31 + C32 canonical, hoặc equivalent D1/D2.
+- **Optional:** C30, C33/C34 depending route.
+- **Red herring:** Khải/Hùng as apex.
+- **True-ending:** D1 + D2.
+- **Delayed-value:** C27/C28/C30 recontextualize but do not prove.
+
+## NPC INFORMATION
+**Hùng**
+- Biết: Nam has authority over his branch.
+- Nói nếu source route mở: đúng phạm vi mình trực tiếp biết.
+- Giấu: own culpability/self-protection.
+
+**Khải**
+- Biết: Nam command, cross-cell risk.
+- Nói: narrow framing.
+- Giấu: scope and decision chain.
+
+**Khoa/Thảo**
+- Chỉ cung cấp branch-specific facts, không biết logistics details vượt canon.
+
+**Vũ**
+- Kiểm tra independence giữa D sources; không nhận “Nam quen Hùng” làm proof.
+
+## BACKSTAGE EVENTS
+Nam/Khải đóng nhánh.  
+Hùng/Khoa/Hạnh tự cứu, không hive mind.
+Cleanup lock đang tiến gần.
+
+## STATE CHANGES
+- COMMAND D1.
+- COMMAND D2.
+- D_PRESERVED nếu chuyển kịp.
+- TRUE_ROUTE_AVAILABLE chỉ derived khi A/B/C/X/D/T đủ.
+
+## BRANCHES
+- D đủ + timing tốt → S17/S18 true-capable.
+- A+B+C safe nhưng D thiếu/late → G4 Cleanup trajectory.
+- Direct confrontation/unsafe handling có thể arm G5.
+
+## FAILURE / CONSEQUENCE
+Nếu C32 mất, C33/C34 là alternate.
+Nếu mọi D corroboration đóng, player có thể hiểu Nam nhưng không chứng minh → G4.
+
+## AUDIO ATMOSPHERE
+Nhịp gấp nhưng cerebral. Phone calls overlap nhẹ, printer/scanner, external traffic.
+
+## CINEMATIC NOTES
+Có thể cross-cut 2–3 authored shots của branch status đổi sau same decision window, nhưng player phải có source trước; cinematic không được tạo proof mới.
+
+## TRANSITION OUT
+Khi D hypothesis/proof gần đủ, story đưa Bắc về HUB B một lần cuối → S17.
+
+## REPLAY VALUE
+Player thấy boss reveal là product của current command records, không phải “ông già có background đáng ngờ”.
+
+---
+
+# S17 — NAM KHÔNG “LỘ MẶT”; PLAYER CHỨNG MINH ÔNG CÓ QUYỀN
+
+## VỊ TRÍ TRONG STORY
+Boss realization / emotional confrontation without required accusation.
+
+## ESTIMATED PLAY TIME
+~5 phút.
+
+## LOCATION
+HUB B — cùng hành lang/góc sinh hoạt S01/S05.
+
+## TIME / STATE
+D+1, ~16:30–18:00.
+
+## CHARACTERS PRESENT
+Bắc, Nam, Lan rất ngắn; Vũ qua phone trước/sau.
+
+## PLAYER ENTRY CONDITION
+Nam hypothesis mạnh; ideally D1/D2 đang được verify hoặc vừa đủ.
+
+## PRIMARY OBJECTIVE
+Đi qua một tương tác đời thường với Nam mà không tự phá custody; hoàn tất proof qua Vũ nếu cần.
+
+## NARRATIVE PURPOSE
+Payoff toàn bộ location reuse và “fair but invisible”.
+
+## PLAYER ACTIONS
+- về phòng/lấy một vật đời thường hoặc đổi đồ;
+- nói chuyện Nam ở mức normal;
+- optional inspect C28 nếu trước đây chưa và access vẫn hợp lý;
+- chọn calm / hỏi vòng / confront;
+- dùng phone gửi D source cho Vũ khi an toàn.
+
+## REQUIRED EVENTS
+1. Recontextualize C27/C29/C30.
+2. Nam cư xử bình thường, không confession.
+3. Nếu D1+D2 đã đủ, NAM_PROVEN state đến từ evidence, không dialogue.
+4. Scene phải cho player cảm giác knowledge asymmetry: hai người có thể đứng cùng chỗ S01 nhưng ý nghĩa đã đảo.
+
+## OPTIONAL EVENTS
+- C28 nếu còn hợp lý.
+- Lan đi ngang nói chuyện đời thường.
+- Nam thể hiện kindness thật một lần cuối, không redemption.
+
+## CLUES
+- **Mandatory:** không clue mới.
+- **Optional:** C28.
+- **Red herring:** history/relationship alone.
+- **True-ending:** chỉ D sources đã có mới count.
+- **Delayed-value:** C27/C28/C29/C30 payoff.
+
+## NPC INFORMATION
+**Nam**
+- Biết tùy BARC: Bắc đã chạm nhiều cell/possibly police bridge.
+- Không biết: exact notebook hoặc source police đã giữ trừ khi observable.
+- Nói: chuyện sinh hoạt/đời thường; có thể framing chung về “đừng dính việc người khác”.
+- Giấu: command role.
+- Không confession/đe dọa lộ liễu.
+
+**Lan**
+- Không biết truth; presence chứng minh khu trọ không phải lair.
+
+## BACKSTAGE EVENTS
+Khải đang đóng source.
+Police đang race preservation.
+Nam cân protect core, không “đấu tay đôi” với Bắc.
+
+## STATE CHANGES
+- NAM_HYPOTHESIS distinct from NAM_PROVEN.
+- Direct LEAK_PATH nếu player thật sự cho Nam biết unique unpreserved source.
+- D_PRESERVED nếu player chuyển evidence đúng cách.
+
+## BRANCHES
+- Calm/preserve → S18.
+- Premature direct exposure làm unique chain gãy → G5 possible.
+- Confront sau khi mọi proof đã preserve không xóa true route.
+
+## FAILURE / CONSEQUENCE
+Không có “bấm nhầm một câu là chết”.
+Causal consequence chỉ khi disclosure làm organization act trước preservation.
+
+## AUDIO ATMOSPHERE
+Âm thanh HUB B gần giống S01: quạt, ngõ, trà, đồ điện. Tension đến từ silence và player knowledge; không villain theme.
+
+## CINEMATIC NOTES
+Cực tiết chế.
+Có thể dùng một shot third-person rất ngắn sau interaction để nhấn khoảng cách hai người, nhưng first-person tốt hơn nếu production muốn giữ intimacy.
+
+## TRANSITION OUT
+Vũ liên lạc: command window đang đóng / cần final preservation → S18.
+
+## REPLAY VALUE
+Đây là payoff location lớn nhất: cùng không gian, cùng con người, fact không đổi; chỉ hiểu biết player đổi.
+
+---
+
+# ACT V — AI GIỮ ĐƯỢC SỰ THẬT TRƯỚC?
+
+## CHAPTER 8 — PRESERVATION
+
+# S18 — AI GIỮ ĐƯỢC SỰ THẬT TRƯỚC?
+
+## VỊ TRÍ TRONG STORY
+Climax + ending resolver.
+
+## ESTIMATED PLAY TIME
+~6 phút main resolution; epilogue 1–2 phút nằm trong budget tùy ending.
+
+## LOCATION
+Police micro-set + phone/records + short consequence montage across Tân Lộ, Minh Trạch, HUB B.
+
+## TIME / STATE
+D+1, ~17:00–20:00.  
+E39–E44.
+
+## CHARACTERS PRESENT
+Bắc, Vũ; Nam/Khải/Hùng/Khoa/Hạnh/Phúc/Huyền/Thảo/Đức/Yến chỉ xuất hiện theo consequence, không gom vào một phòng.
+
+## PLAYER ENTRY CONDITION
+Late resolver threshold reached.
+
+## PRIMARY OBJECTIVE
+Chuyển đúng source còn cần thiết sang custody, không để cleanup thắng race.
+
+## NARRATIVE PURPOSE
+Kiểm tra understanding + provenance + trust + timing.
+Không thêm “clue cuối”.
+
+## PLAYER ACTIONS
+- final evidence review;
+- choose which sourced records/contact trails to preserve;
+- xác nhận source provenance;
+- không cần accusation quiz;
+- observe consequence.
+
+## REQUIRED EVENTS
+1. Resolver đọc state theo causal priority.
+2. C42 success/failure được thể hiện.
+3. Vũ phản ứng có năng lực với evidence đã đủ.
+4. No combat/raid by Bắc.
+5. Ending cinematic phản ánh đúng route cause.
+
+## OPTIONAL EVENTS
+Không có optional clue mới.
+Một số epilogue detail phụ thuộc C28/C29/character routes nhưng không đổi ending logic.
+
+## CLUES
+- **Mandatory:** không new clue.
+- **True-ending gate:** A/B/C preserved + X verified + D1/D2 preserved before cleanup lock.
+- **Timing:** C42/C43.
+- **Red herring:** không.
+
+## NPC INFORMATION
+**Vũ**
+- Biết đúng phần đã corroborate.
+- Nếu threshold đủ, chủ động hành động; không chờ Bắc “thuyết phục”.
+
+**Nam/Khải**
+- Hành động theo risk state: protect core/close branches.
+- Không được omniscient.
+
+**Các source**
+- Chỉ góp phần họ trực tiếp biết.
+
+## BACKSTAGE EVENTS
+- E39 True nếu preservation thắng.
+- E40 Cleanup nếu A+B+C safe nhưng D late.
+- E41 Delay nếu source window hết trước đủ A/B/C.
+- E42 Wrong Trust/Exposure nếu causal leak làm chain gãy.
+- E43/E44 hậu ending.
+
+## STATE CHANGES
+Resolver cuối:
+1. G6 True nếu A/B/C PRESERVED + X_VERIFIED + COMMAND C4 trước CLEANUP_LOCKED.
+2. G3 Avoidance nếu ABANDON_AFTER_N3 và police chưa đủ preservation.
+3. G5 Exposure nếu direct leak là nguyên nhân chain gãy.
+4. G2 Wrong Trust nếu Minh leak là nguyên nhân route cuối mất.
+5. G4 Cleanup nếu A/B/C preserved + X but command chưa đủ khi cleanup lock.
+6. G1 Delay nếu required A/B/C source không còn route.
+G0 đã resolve ở S07.
+
+## BRANCHES
+
+### G6 — NHỮNG MẢNH KHỚP LẠI
+- Police giữ A/B/C/X/D.
+- Core network bị phá ở mức thỏa mãn.
+- Bắc sống và trở lại đời sinh viên.
+- Tân Lộ/Minh Trạch không bị viết thành toàn bộ tội phạm.
+- Epilogue HUB B có subtle old-object detail; không giải thích.
+
+### G4 — DỌN SẠCH
+- A+B+C được giữ.
+- Hùng/Khoa/Hạnh có thể bị xử lý theo proof.
+- Nam/Khải chưa bị nối command đủ mạnh trong game window.
+
+### G1 — QUÁ MUỘN
+- Vũ xử lý phần có proof.
+- Mystery lớn chưa breakthrough trong run.
+- Không cho “phép màu” sau credit.
+
+### G2 — SAI NGƯỜI
+- Minh hiểu hậu quả việc leak.
+- Core source đóng vì trust channel sai.
+- Minh không thành mastermind.
+
+### G5 — BỊ NHÌN THẤY
+- Direct exposure làm chain/source mất trước preservation.
+- Bắc bị cô lập khỏi khả năng tiếp tục, không cần combat ending.
+
+### G3 — QUAY LƯNG QUÁ MUỘN
+- Bắc đã N3 nhưng bỏ contact khi case chưa an toàn.
+- Organization vẫn coi cậu unresolved risk.
+- Consequence tập trung vào isolation/loss of agency, không phô bạo lực.
+
+### G0 — MỘT CA LÀM THÊM
+- Đã resolve ở S07, không chạy S18.
+
+## FAILURE / CONSEQUENCE
+Mọi ending là consequence, không “Mission Failed”.
+Credits/ending screen chỉ sau cinematic ngắn.
+
+## AUDIO ATMOSPHERE
+Climax dựa vào:
+- notification;
+- phone call;
+- paper/scan/custody;
+- city continuing outside;
+- sound motifs từ S04/S14.
+True ending có thể giảm tension và trả lại ambience Hà Nội, không cần anthem thắng trận.
+
+## CINEMATIC NOTES
+Dùng intercut ngắn để cho thấy:
+- record được preserve;
+- access bị khóa;
+- institution tách người liên quan;
+- Nam/Khải phản ứng qua consequence.
+Không mô tả/diễn bạo lực chi tiết.
+Không villain arrest monologue.
+
+## TRANSITION OUT
+Ending screen + epilogue theo route → credits/menu.
+
+## REPLAY VALUE
+Player nhìn lại toàn game và nhận ra:
+- sự thật ở đó từ đầu;
+- mistake không phải “không đoán ra Nam sớm”;
+- difference giữa routes là evidence custody, trust và timing.
+
+---
+
+# 1. ACT / CHAPTER MAP
+
+| ACT | CHAPTER | SCENES | Chức năng |
+|---|---|---|---|
+| ACT I — Đời sống trước khi có vụ án | Ch.1 Người mới | S01–S02 | Bắc, trọ, trường, Nam/Lan/Linh/Minh |
+| ACT I | Ch.2 Một ca ngắn | S03–S05 | Inciting E22, first anomaly, breather |
+| ACT II — Tò mò có giá | Ch.3 Job bị audit | S06–S08 | Audit, curiosity gate, R1 |
+| ACT III — Ba hộp sự thật | Ch.4 Từ một job tới một vụ việc | S09–S11 | Vũ, hospital, midpoint |
+| ACT III | Ch.5 Sai người, đúng dữ kiện | S12–S13 | Tuấn/Hùng false apex, Khải layer |
+| ACT IV — Hệ thống phản ứng | Ch.6 Cửa đang khép | S14–S15 | Cleanup pressure, preservation |
+| ACT IV | Ch.7 Ai có quyền? | S16–S17 | Command proof, Nam payoff |
+| ACT V — Ai giữ được sự thật trước? | Ch.8 Preservation | S18 | Climax + endings |
+
+---
+
+# 2. FULL GAME FLOW TABLE
+
+| Scene | Location | Approx Time | Main Event | Major Clue | Branch | Tension |
+|---|---|---:|---|---|---|---:|
+| S01 | HUB B Trọ | 5m | Bắc chuyển trọ, gặp Nam | C27; C28 opt | — | 1/10 |
+| S02 | HUB A Trường | 5m | Đời sinh viên, gặp Linh/Minh | C01; C07 opt | — | 1/10 |
+| S03 | HUB A | 4m | Nhận ca Tân Lộ | C02 seed | — | 1/10 |
+| S04 | Tân Lộ → đầu nhận | 6m | E22 hoàn tất, mismatch | C02; C03/C04 opt | — | 2/10 |
+| S05 | Quán + HUB B | 4m | Breather; Nam biết Bắc là worker ở hậu trường | C29 char | — | 1–2/10 |
+| S06 | HUB B / phone | 4m | Job bị audit | C05 opt | — | 3/10 |
+| S07 | HUB B | 5m | Curiosity gate / day transition | C07; C35 conditional | G0 / leak seed | 3/10 |
+| S08 | Tân Lộ | 6m | Reclassification được chứng minh | C17, C20, C22 seed | Delay risk | 4/10 |
+| S09 | Police micro-set | 5m | Police entry | C10, C11A | preservation begins | 4/10 |
+| S10 | Minh Trạch | 6m | Hospital pattern | C11 + C12/C15 | Delay risk | 5/10 |
+| S11 | Police/meeting | 5m | Midpoint chronology | C08/C10/C11A | A route | 6/10 |
+| S12 | Tân Lộ | 5m | Tuấn corrected, Hùng false apex | C20/C22; C18 opt | fixation cost | 6/10 |
+| S13 | Multi-source | 6m | A+B+C nối qua Khải | C24/C25/C26 | N3 / X | 7/10 |
+| S14 | Multi-hub/phone | 5m | Access closures | C35–C37 opt; C43 | G2 risk | 8/10 |
+| S15 | Police micro-set | 4m | Point of no return / custody | C42 | G3 / preservation | 8/10 |
+| S16 | Police + manager source | 7m | Current command proof | C31 + C32 or C33/C34 | G4/G5/G6 setup | 8–9/10 |
+| S17 | HUB B Trọ | 5m | Nam recontextualized | no new magic clue | exposure risk | 9/10 |
+| S18 | Police + consequence montage | 6m | Preservation vs cleanup | C42 gate | G1–G6 | 10/10 |
+
+**Focused main-route total: 93 phút.**
+
+Notes:
+- Strong/True route có thể lên ~98–105 phút vì inspect/source corroboration.
+- Neutral G0 ngắn hơn đáng kể vì kết thúc ở S07.
+- Không cộng thêm thời gian dream ngoài S07.
+- Không cộng “đi bộ filler”; first-arrival travel đã nằm trong scene budgets.
+
+---
+
+# 3. CLUE DENSITY MAP
+
+## Low clue / breathing
+- S01: 1 biography seed + optional object.
+- S02: employer/social seed.
+- S05: intentionally no major clue.
+- S06: one behavioral red herring.
+- S17: no new proof, only recontextualization.
+
+## Medium clue
+- S03, S04, S07, S09, S11, S14, S15.
+
+## High clue / reasoning
+- S08: R1.
+- S10: B.
+- S12: C + innocent suspect correction.
+- S13: X / Khải.
+- S16: D.
+- S18: no new evidence but high state density.
+
+Rule: không thêm clue lớn vào S05/S17 chỉ vì production thấy “thiếu gameplay”.
+
+---
+
+# 4. CHARACTER SCREEN-TIME PLAN
+
+## Bắc
+100% playable perspective trừ short authored transitions.
+
+## Nam
+- S01: meaningful normal introduction.
+- S05: brief normal reinforcement.
+- S17: major payoff.
+- S18: consequence only.
+Không cần xuất hiện dày để “nhắc boss”.
+
+## Lan
+- S01 strong.
+- S05 brief.
+- S17 cameo.
+- true epilogue.
+Giữ hoàn toàn đời thường.
+
+## Linh
+- S02 strong.
+- S05/S07/S15 short remote beats.
+Không biến thành investigation sidekick.
+
+## Minh
+- S02/S03 normal.
+- S07 trust decision.
+- S14 betrayal payoff nếu conditional.
+Không xuất hiện như villain.
+
+## Vũ
+- S09 entry.
+- S10–S11 verify.
+- S13–S18 tăng agency theo evidence.
+Sau E38 phải chủ động hơn Bắc về police work.
+
+## Tuấn
+- S04, S06, S08, S12.
+Arc: normal gatekeeper → suspicious → authority correction → still morally gray.
+
+## Đức/Yến/Huyền/Thảo
+Dùng như source windows, không ai phải có full subplot trong 90 phút.
+
+## Khải/Hùng/Khoa/Hạnh
+Screen time tiết chế.
+Họ quan trọng vì causal role, không cần mỗi người một “boss scene”.
+
+---
+
+# 5. LOCATION REUSE AUDIT
+
+## HUB B
+S01 → S05 → S07 → S17 → epilogue.
+
+Đây là reuse quan trọng nhất và phải được ưu tiên production quality.
+
+Pass condition:
+- geometry recognizable;
+- lighting/time-of-day thay;
+- props không tự đổi vô cớ;
+- emotional meaning đổi vì context.
+
+## HUB A
+S02/S03 + optional Linh callbacks.
+Không kéo conspiracy vào trường.
+
+## Tân Lộ
+S04/S08/S12 và state closures S14.
+Dùng cùng shell, mở dần office/access area thay vì làm map mới.
+
+## Minh Trạch
+S10 + callbacks S13/S14.
+Một institution bình thường, không dungeon.
+
+## Police micro-set
+S09/S11/S15/S18.
+Rất production-efficient; value đến từ changing evidence state.
+
+**Audit: PASS.** Không cần fifth major player map.
+
+---
+
+# 6. FAST TRAVEL AUDIT
+
+Fast travel được mở sau khi player đã tới location ít nhất một lần.
+
+Production rule:
+- hub-to-hub transition = 5–15 giây authored;
+- arrival card có time-of-day;
+- scene progression có thể advance objective time;
+- player không tự farm travel để phá timeline;
+- S13+ ưu tiên phone/police verification để tránh fetch-quest.
+
+**Audit: PASS.**
+
+---
+
+# 7. PUZZLE RHYTHM AUDIT
+
+Puzzle-like interactions:
+
+1. S08 — compare classification history.
+2. S10 — compare review creation/scope versions.
+3. S11 — timeline ordering.
+4. S13 — match cross-cell endpoints/timing.
+5. S15 — evidence provenance/custody choice.
+6. S16 — distinguish relationship vs command + corroboration.
+
+Khoảng cách giữa puzzle đủ có traversal/dialogue/breather.
+
+Không dùng puzzle trong:
+- S01/S02/S05;
+- S14 danger beat;
+- S17 emotional payoff;
+- S18 như “final code”.
+
+**Audit: PASS.**
+
+---
+
+# 8. DREAM FUNCTION AUDIT
+
+Một dream duy nhất ở S07 là đủ.
+
+Nó:
+- đánh dấu D0→D+1;
+- phản ánh anxiety;
+- remix fact đã thấy.
+
+Nó không:
+- tạo clue;
+- giải mystery;
+- foreshadow boss bằng imagery gian lận;
+- làm player không biết reality nào thật.
+
+Nếu playtest thấy dream thừa, cut hoàn toàn không ảnh hưởng story state.
+
+**Audit: PASS / OPTIONAL IMPLEMENTATION.**
+
+---
+
+# 9. CINEMATIC DENSITY AUDIT
+
+Cinematic đáng làm:
+- S03/S04 first travel/arrival.
+- S07 micro-dream optional.
+- S13 verification montage rất ngắn.
+- S14 one access-closure beat.
+- S18 consequence montage.
+
+Cinematic không nên làm:
+- monologue ở S11;
+- boss reveal cutscene ở S17;
+- raid playable/cinematic dài ở S18.
+
+Target:
+- phần lớn run vẫn là player-controlled first-person.
+- không quá ~8–10 phút authored non-interactive tổng cộng.
+
+**Audit: PASS.**
+
+---
+
+# 10. PACING AUDIT
+
+## Opening
+S01–S05 ≈ 24 phút.
+Mystery có incident nhưng tone vẫn đời thường/operational.
+Đạt yêu cầu opening đủ bình thường.
+
+## Curiosity
+S06–S08 ≈ 15 phút.
+Player tự chọn bước từ audit issue sang chứng minh anomaly.
+
+## Investigation build
+S09–S13 ≈ 27 phút.
+Tăng theo A/B/C/X; có false theory ở giữa để không thành exposition conveyor belt.
+
+## Escalation/command
+S14–S17 ≈ 21 phút.
+Threat tăng qua access + custody + command, không qua combat.
+
+## Climax
+S18 ≈ 6 phút.
+Ngắn, consequence-focused.
+
+Total ≈ 93 phút.
+
+**Audit: PASS.**
+
+---
+
+# 11. REPETITION AUDIT
+
+Potential repetition:
+- nhiều scene đọc record;
+- nhiều NPC “không biết đủ”;
+- nhiều access closure.
+
+Mitigation:
+- S08 = workplace classification;
+- S10 = institutional review;
+- S11 = chronology reasoning;
+- S13 = relationship graph;
+- S15 = custody decision;
+- S16 = authority/corroboration.
+
+Mỗi interaction có cognitive verb khác nhau:
+**compare → verify → order → connect → preserve → prove.**
+
+**Audit: PASS nếu UI/interaction không dùng cùng một panel copy-paste cho mọi scene.**
+
+---
+
+# 12. EXPOSITION AUDIT
+
+Không NPC nào được kể toàn vụ.
+
+- Vũ: procedure + verified facts.
+- Phúc: source/coercion chronology.
+- Huyền: hospital pattern.
+- Thảo: insider hospital acknowledgment.
+- Tuấn: operation/authority boundary.
+- Đức: logistics irregularity.
+- Yến: financial pattern.
+- Khải: narrow risk facts.
+- Hùng/Khoa/Hạnh: branch-specific.
+- Nam: không confession.
+
+Player hiểu network vì nguồn độc lập xác nhận nhau.
+
+**Audit: PASS.**
+
+---
+
+# 13. PRODUCTION FEASIBILITY AUDIT
+
+## Core environment count
+1. HUB A school micro-hub.
+2. HUB B boarding house.
+3. Tân Lộ operational site.
+4. Minh Trạch hospital micro-hub.
+5. Police micro-set.
+6. A few transition/exterior cards.
+
+Không cần:
+- full Hanoi;
+- full hospital;
+- full police station;
+- full secret base;
+- free-drive vehicles.
+
+## Core systemic requirements
+- dialogue/phone authored flow;
+- notebook facts/sources;
+- inspect;
+- scene state manager;
+- source-window state;
+- evidence custody state;
+- conditional access closures;
+- fast travel/time transition;
+- ending resolver.
+
+## High-cost content to avoid
+- large crowds;
+- bespoke cinematic for every clue;
+- complex stealth AI;
+- combat;
+- full-city simulation;
+- unique map per source.
+
+## Production risk
+Cao nhất:
+1. branching state QA;
+2. making causal closures readable without UI timer;
+3. making record interactions legible and not repetitive;
+4. ensuring Vũ reacts correctly to actual evidence state.
+
+Mitigation:
+- data-driven clue/source state;
+- automated resolver tests;
+- scene-specific state fixtures;
+- playtest matrix for G0–G6;
+- provenance logs in debug build.
+
+**Audit: FEASIBLE for a focused narrative game if environment scope is kept disciplined.**
+
+---
+
+# 14. ENDING QA MATRIX
+
+| Route | Must test | Must NOT happen |
+|---|---|---|
+| G0 Neutral | player stops at S07 N1 | organization suddenly attacks |
+| G1 Delay | last alternate A/B/C window closes | Vũ magically fills missing proof |
+| G2 Wrong Trust | Minh leak causally closes last route | Minh revealed as secret member |
+| G3 Avoidance | abandon after N3 before case safe | trigger from early N1 exit |
+| G4 Cleanup | A+B+C safe, D late | game pretends police has nothing |
+| G5 Exposure | direct disclosure breaks unpreserved chain | one harmless confront line instant-fails |
+| G6 True | A+B+C+X+D1+D2 preserved in time | require C28/all optional clues |
+
+---
+
+# 15. FINAL STAGE 7 LOCKS
+
+Stage 8 / Full Production Script được phép:
+- viết full dialogue;
+- viết stage direction;
+- chia interaction beats;
+- ghi exact authored phone UI copy;
+- ghi cinematic shot intent;
+- ghi NPC barks;
+- ghi fail-forward response;
+- ghi implementation hooks.
+
+Stage 8 không được:
+- đổi causal order;
+- thêm boss confession;
+- thêm magic file;
+- biến Minh thành member;
+- biến Tuấn thành core criminal;
+- cho Huyền biết network trước evidence;
+- cho Nam omniscient;
+- để Vũ trì trệ sau threshold;
+- biến S18 thành combat raid;
+- thêm clue lớn vào S05 chỉ vì sợ “ít gameplay”;
+- bắt player vào secret base để true ending;
+- cho dream cung cấp fact;
+- để fast travel phá source-window logic.
+
+---
+
+# 16. HANDOFF SUMMARY
+
+Production spine:
+
+**S01–S05: player sống trước khi player điều tra.  
+S06–S08: một vấn đề công việc trở thành fact có chủ ý.  
+S09–S11: police + hospital chứng minh crisis có trước Bắc.  
+S12–S13: false apex bị sửa; three-box network hình thành.  
+S14–S15: system reacts; custody trở thành gameplay.  
+S16–S17: relationship được tách khỏi command; Nam được chứng minh chứ không “lộ mặt”.  
+S18: preservation thắng hoặc thua cleanup theo causal state.**
+
+Target focused runtime: **~93 phút**.
+
+**END — CHAPTER / SCENE BREAKDOWN / STAGE 7**
