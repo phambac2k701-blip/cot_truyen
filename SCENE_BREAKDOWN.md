@@ -1600,7 +1600,7 @@ Player thấy mỗi false boss đều “đúng một phần”; mystery không 
 - **MICRO EVENTS:** Phone callback; bàn giấy lật, âm phòng nhỏ hơn hành lang.
 - **SIGNATURE / SET-PIECE EVENT:** S13_TWO_DESKS: player nối hai hồ sơ từ hai cơ sở trong không gian chung, phản hồi của Vũ giới hạn vào source đã thấy.
 - **NPC ROUTINE:** Vũ kiểm provenance, Khải chỉ biết report đã nhận; Nam chỉ sau forward thực.
-- **WORLD STATE CHANGES:** X_VERIFIED raw source, X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion.
+- **WORLD STATE CHANGES:** X_VERIFIED chỉ khi raw risk source đủ/authenticated (hoặc late X_COMMAND ở S16), X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion.
 - **OPTIONAL MISSED DETAIL:** Khải false apex theory; không chặn custody.
 - **RETURN / PAYOFF:** S16 X_COMMAND có thể hoàn chỉnh X nếu Khải remit còn thiếu.
 - **FAIL-FORWARD:** Sai inference không time/route penalty; raw source vẫn được kiểm.

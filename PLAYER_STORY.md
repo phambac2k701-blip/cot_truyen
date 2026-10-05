@@ -951,7 +951,7 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 
 **SIGNATURE:** S13_TWO_DESKS: player nối hai hồ sơ từ hai cơ sở trong không gian chung, phản hồi của Vũ giới hạn vào source đã thấy. Micro events: Phone callback; bàn giấy lật, âm phòng nhỏ hơn hành lang.
 
-**PERSISTENCE / RETURN:** X_VERIFIED raw source, X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion. Optional: Khải false apex theory; không chặn custody. Return payoff: S16 X_COMMAND có thể hoàn chỉnh X nếu Khải remit còn thiếu.
+**PERSISTENCE / RETURN:** X_VERIFIED chỉ khi raw risk source đủ/authenticated (hoặc late X_COMMAND ở S16), X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion. Optional: Khải false apex theory; không chặn custody. Return payoff: S16 X_COMMAND có thể hoàn chỉnh X nếu Khải remit còn thiếu.
 
 **FAIL-FORWARD / EXIT:** Sai inference không time/route penalty; raw source vẫn được kiểm. Callback/compare13:35–14:00, S14 notice.
 

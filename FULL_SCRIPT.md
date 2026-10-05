@@ -45,6 +45,15 @@ Không dùng cold open về tội phạm. Game bắt đầu ở đời sống c�
 
 # S01 — PHÒNG TRỌ MỚI
 
+## P5 EVENT PLAYABLE OVERLAY — S01 (current authority for presentation)
+
+[AUTO] D0 07:30, Bắc nhận phòng trọ; Lan đang kiểm điện và đưa chìa. [ENV] Hành lang có tiếng quạt, ổ điện chập chờn trong phòng Bắc, góc Nam sửa đồ nằm trong tầm nhìn nhưng không được đóng khung đáng ngờ. [AUDIO] Tiếng quạt ngừng rồi chạy; điện thoại báo số dư/tiền trọ.
+[PLAYER] Đèn bàn chớp khi Bắc cắm ổ kéo; tiếng Lan gọi Nam từ hành lang. [INTERACT] Player đặt vali, thử công tắc/ổ, mở cửa cho Nam; có thể liếc card cũ C28 hoặc đọc hợp đồng thuê.
+[DISCOVERY] Lỗi điện là việc thật; Nam giúp đúng nghề. C27 chỉ background; C28 optional không chứng minh current command. [NPC] Lan kiểm công tơ; Nam tiếp tục sửa món khác nếu Bắc chưa ra.
+[WORLD CHANGE] Ổ chuyển FAULT→WORKING do Nam xử lý; đồ cũ vẫn ở đó, không tự xuất hiện. [STATE] S01_SOCKET_WORKING; C27_OBSERVED; optional C28_SEEN
+[TIME] S01 ordinary core65m once; travel25m after exit; reading/retries0. [DEV] C28 seen changes only later reinspection; Nam knowledge unchanged Save/load: socket FAULT/WORKING, Nam route stage, key, optional C28; never duplicate repair. Event ID `S01_POWER_REPAIR`; graph and exact implementation in EVENT_IMPLEMENTATION_SPEC.md. Existing dialogue/objects below remain, while these interactions take priority where presentation differs.
+
+
 ## SCENE HEADER
 
 - **Scene ID:** S01
@@ -488,6 +497,15 @@ Bắc ra khỏi ngõ.
 
 # S02 — BUỔI HỌC ĐẦU / NHỊP SINH VIÊN
 
+## P5 EVENT PLAYABLE OVERLAY — S02 (current authority for presentation)
+
+[AUTO] S01 rời trọ; tới trường 09:00. [ENV] Bảng phòng học, ghế có ổ hỏng, file bài giảng và bảng thông báo việc làm trong một ngày bình thường. [AUDIO] Ổ cạnh ghế tắt; điện thoại rung bởi deadline lớp.
+[PLAYER] Linh chỉ chỗ ngồi có ổ điện; thông báo chi phí sáng màn hình, Minh đưa link công việc. [INTERACT] Player tìm lớp, đổi chỗ, chụp bài hoặc nhận file; tự mở listing khi cần tiền.
+[DISCOVERY] Linh phân biệt thấy với đoán qua bài tập; Minh từng nhận ca thường C07 nếu hỏi/xem lịch sử được phép. [NPC] Linh học, Minh đi ngang rồi nhắn link; không nhân vật nào biết crime.
+[WORLD CHANGE] Thông báo chi phí nằm lại trong phone; lớp tan và bảng việc vẫn có. [STATE] S02_CLASS_DONE; optional C07_SEEN; C01_LISTING_AVAILABLE
+[TIME] class/meal135m once; reading/retries0. [DEV] No C07 still S07 comparison via assignment fields Save/load: class beat, listing visibility, optional C07. Event ID `S02_CLASS_ROUTINE`; graph and exact implementation in EVENT_IMPLEMENTATION_SPEC.md. Existing dialogue/objects below remain, while these interactions take priority where presentation differs.
+
+
 ## SCENE HEADER
 
 - **Scene ID:** S02
@@ -876,6 +894,15 @@ S03 bắt đầu trong cùng HUB A, không loading scene cứng nếu production
 
 # S03 — MỘT CA NGẮN
 
+## P5 EVENT PLAYABLE OVERLAY — S03 (current authority for presentation)
+
+[AUTO] S02 11:15, Bắc ở khu ăn sinh viên. [ENV] Nhiều listing bình thường; ca TL-2604-117 có tiền nhỉnh hơn vì khung giờ và proof-of-handover. [AUDIO] Màn hình số dư; app báo hạn nhận ca.
+[PLAYER] Minh chuyển link đúng lúc Bắc xem số dư; phone rung cạnh hóa đơn bữa ăn. [INTERACT] Player so giờ học/tiền/đầu việc, chấp nhận ca hoặc do dự; không ai gọi chọn riêng Bắc.
+[DISCOVERY] C02 là assignment và nhóm khách y tế, chỉ bề mặt công việc. [NPC] Minh trở lại việc riêng, không theo player điều tra.
+[WORLD CHANGE] Assignment vào lịch sử; trạng thái job ACCEPTED một lần. [STATE] JOB_ACCEPTED; C02_OBSERVED; job original snapshot
+[TIME] accept group34m once; travel35m + check-in6m; reading/retries0. [DEV] Initial decline offers one return within window; no selected-target narrative Save/load: accept confirmation/cost once and original job listing. Event ID `S03_JOB_ACCEPT`; graph and exact implementation in EVENT_IMPLEMENTATION_SPEC.md. Existing dialogue/objects below remain, while these interactions take priority where presentation differs.
+
+
 ## SCENE HEADER
 
 - **Scene ID:** S03
@@ -1136,6 +1163,15 @@ Scene kết ở thời điểm Bắc bước vào khu điều phối, trả cont
 ---
 
 # S04 — GIAO XONG NHƯNG HƠI LỆCH
+
+## P5 EVENT PLAYABLE OVERLAY — S04 (current authority for presentation)
+
+[AUTO] Tân Lộ check-in12:24; pickup12:30 rồi tới đầu nhận. [ENV] Quầy dispatch với nhiều gói thật, máy quét, printer, nhân viên bận; pouch kín đi qua luồng thường. [AUDIO] Máy quét beep hai nhịp; printer kéo giấy; xe đẩy đi ngang.
+[PLAYER] Scanner báo mismatch nhẹ, nhãn routing có mép dán lại, giấy proof-of-handover ló khỏi khay. [INTERACT] Player nhận pouch, giữ nguyên niêm, giao và xem lịch sử/biên nhận sau scan; có thể nhìn C04 nếu nhãn thực sự lộ.
+[DISCOVERY] C03 đầu nhận/account family; mismatch không phải bằng chứng crime, C04 chỉ từ vật/ảnh nhìn rõ nhãn. [NPC] Tuấn phân ca, đầu nhận xác minh, không ai giải thích conspiracy.
+[WORLD CHANGE] Job DELIVERED, C03 original13:52 lưu lịch sử; later observed_at khi player mở lại, không rewrite source time. [STATE] JOB_DELIVERED; C03 original_at13:52; optional C04_OBSERVED
+[TIME] pickup24m/travel30m/handover28m/close18m once; reading/retries0. [DEV] Seal-only photo does not grant label fact; later history inspect preserves original_at13:52 Save/load: scanner resolved, delivery status, original/observed times; no duplicate C03. Event ID `S04_SCAN_MISMATCH`; graph and exact implementation in EVENT_IMPLEMENTATION_SPEC.md. Existing dialogue/objects below remain, while these interactions take priority where presentation differs.
+
 
 ## SCENE HEADER
 
@@ -1528,6 +1564,15 @@ Transition tới khu ăn/ngõ trong S05; không suspense sting.
 ---
 
 # S05 — ĂN TỐI, ĐỢI TIỀN, VỀ TRỌ
+
+## P5 EVENT PLAYABLE OVERLAY — S05 (current authority for presentation)
+
+[AUTO] S04 đóng ca, bữa ăn gần đầu nhận14:30; trở về trọ18:05. [ENV] Quán ăn và phòng trọ sinh hoạt bình thường; thanh toán job còn PENDING. [AUDIO] Âm quán ăn thay bằng tiếng ngõ; quạt phòng chạy; phone không báo tiền.
+[PLAYER] Phone đợi tiền và tin Linh; Nam trả món đồ điện hoặc Lan nhắc chỗ để đồ. [INTERACT] Player chọn bữa rẻ, xem bài, đi về; có thể nhận món Nam sửa và đặt lại.
+[DISCOVERY] Nam tử tế trong chuyện nhỏ C29; khoản pending chưa phải dấu tội phạm. [NPC] Nam sửa đồ, Lan làm việc nhà, không chất vấn Tân Lộ.
+[WORLD CHANGE] Vật đã sửa chuyển về phòng Bắc, payment PENDING; không tăng BARC. [STATE] PAYMENT_PENDING; S05_ORDINARY_BEAT_DONE
+[TIME] meal/move20m + ordinary180m + home travel35m + room beat2m once; reading/retries0. [DEV] Optional C28 revisit adds raw same-company name only Save/load: meal/travel/room beat once, returned plug, audit queued. Event ID `S05_ORDINARY_RETURN`; graph and exact implementation in EVENT_IMPLEMENTATION_SPEC.md. Existing dialogue/objects below remain, while these interactions take priority where presentation differs.
+
 
 ## SCENE HEADER
 
@@ -1974,8 +2019,1065 @@ Màn hình không fade sang thriller. Player vẫn ở phòng. S06 bắt đầu 
 
 ---
 
-# STAGE 8 CONTINUATION ANCHOR
+# ACT II–IV — COMPLETE TAGGED GAME SCRIPT (S06–S18)
 
-Phần hoàn chỉnh hiện tại kết thúc tại **S05**, đúng cuối ACT I.
+The event ID in each scene is shared exactly with EVENT_IMPLEMENTATION_SPEC.md. [AUTO] commits authored steps; [PLAYER]/[INTERACT] never infer a source from UI dwell. Police custody, organization reports and Bắc inference have separate writes. Dialogue is scoped; muting it must leave each action and discovery playable.
 
-Lượt Stage 8 kế tiếp phải bắt đầu tại **S06 — JOB BỊ AUDIT**, giữ nguyên schema và không viết lại S01–S05 trừ khi continuity audit ở phần sau buộc phải sửa một fact cụ thể.
+# S06 — AUDIT FORM
+
+## SCENE HEADER
+
+Location: HUB B/phòng Bắc. Entry: S05_ORDINARY_BEAT_DONE at18:07. Shared event ID `S06_AUDIT_FORM`. Scene graph: `S06_ENTER → S06_MICRO → S06_AUDIT_FORM → S06_EXIT`; optional/conditional branches are defined in the event spec. Objective time: S06 core15m once; explicit wait98m to20:00 once.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Trong phòng, job app bất ngờ yêu cầu đối lại thời gian/đầu nhận, payment giữ chờ.
+[AUDIO] Tin payment đổi trạng thái; tiếng khu trọ tiếp tục ngoài cửa.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] Audit18:07 sau S05 ordinary beat.
+
+## PLAYER FLOW
+
+[ENV] Phone rung hai lần; form hỏi field mà player vừa thấy scanner xử lý.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player mở history, so biên nhận, trả lời chỉ phần trực tiếp thấy; có thể gọi Tuấn theo option có cost.
+[DISCOVERY] Audit hướng tới routing; Tuấn phòng thủ trong giới hạn vận hành, không thú nhận hoặc đọc notebook.
+[AUTO] Form xác nhận sau S06 15m; explicit chờ kết quả tới20:00 hiển thị trước commit.
+[NPC] Tuấn đang xử lý audit khác; chỉ phản hồi câu hỏi có trong work ticket.
+[WORLD CHANGE] Payment HOLD, audit receipt; phone giữ original job history.
+[STATE] `AUDIT_FORM_REPLIED; PAYMENT_HOLD; AUDIT_WAIT_COMMITTED` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] S06 core15m once; explicit wait98m to20:00 once. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S06_AUDIT_FORM` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] TUẤN: “Tôi chỉ đối thông tin bàn giao. Đừng tự liên hệ điểm nhận.” / BẮC: “Tôi gửi lại phần tôi trực tiếp thấy.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: If S04 mismatch seen: shorter Bắc reaction; otherwise neutral question. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF player đã nhìn mismatch S04: BẮC “Lại đúng cái mã đó.” ELSE: BẮC “Vì sao hỏi lại ca đã xong?” Không nhánh nào tự tạo LEAK.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Họ hỏi lại đúng ô lúc máy quét báo lệch.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[PHONE] **18:07 · Tân Lộ Worker** — Ca TL-2604-117 / Xác minh thông tin bàn giao. Thời gian nhận: 12:30. Biên nhận đầu nhận: 13:52. Thanh toán: CHỜ ĐỐI SOÁT. “Không tự liên hệ điểm nhận.” [DOCUMENT] Các ô Bắc từng trực tiếp xác nhận sáng/chiều hôm đó được gắn “người khai: Bắc”; hệ thống không tự thêm nội dung pouch.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] phone audit form, C03 history. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S06_AUDIT_FORM: player đối chiếu record thay cho nghe NPC kể toàn bộ lỗi.
+[DISCOVERY] audit field mismatch; no new proof
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Tin payment đổi trạng thái; tiếng khu trọ tiếp tục ngoài cửa.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] If S04 mismatch seen: shorter Bắc reaction; otherwise neutral question
+[STATE] Police: none. BARC: none from private form.
+[WORLD CHANGE] Payment HOLD, audit receipt; phone giữ original job history.
+
+## CLUE HANDLING
+
+[DOCUMENT] “Xác minh ca TL-2604-117: giờ nhận, đầu nhận, mã phân loại; thanh toán chờ đối soát.”
+[DISCOVERY] audit field mismatch; no new proof
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Trả lời tối thiểu vẫn mở S07; không gây LEAK tự động.
+[AUTO] Đã xem form và chọn explicit wait tới20:00.
+[STATE] Next: `S07_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: form answer, phone notification and wait charged once. No duplicate clue, NPC, source receipt, time cost or door state. S07 curiosity bắt đầu từ bất nhất cụ thể.
+
+---
+
+# S07 — COMPARE AND CHOOSE
+
+## SCENE HEADER
+
+Location: HUB B/phòng Bắc. Entry: AUDIT_WAIT_COMMITTED at20:00. Shared event ID `S07_COMPARE_AND_CHOOSE`. Scene graph: `S07_ENTER → S07_MICRO → S07_COMPARE_AND_CHOOSE → S07_EXIT`; optional/conditional branches are defined in the event spec. Objective time: compare/UI0; contact group20m, extra company call5m if chosen; explicit sleep to08:30.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Phòng yên, lịch sử ca Minh C07 và TL-2604-117 hiện trong app; hành lang vẫn sống.
+[AUDIO] Tin nhắn rung; đèn hành lang tắt theo giờ.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] 20:00, job audit đang chờ; lựa chọn early exit còn mở ở N1.
+
+## PLAYER FLOW
+
+[ENV] Hai dòng assignment có nhãn khác nhau; Minh nhắn hỏi đã nhận tiền chưa.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player đặt hai record cạnh nhau; hỏi Minh chung hoặc gửi exact screenshot/theory. Confirm stop nếu muốn G0.
+[DISCOVERY] Khác biệt ca không chứng minh crime; disclosure ledger chỉ ghi phần Bắc thật sự gửi.
+[AUTO] Nếu Minh hỏi hộ company, E26 chỉ sau actual message/report receipt; phone gửi không đồng nghĩa Khải/Nam biết ngay.
+[NPC] Minh trả lời theo thứ được hỏi; Lan khóa cổng, Nam không có magic awareness.
+[WORLD CHANGE] Disclosure payload hoặc NONE, BARC theo report thật; G0 chỉ nếu early stop đủ điều kiện.
+[STATE] `optional MINH_DISCLOSURE payload/receipt; EARLY_STOP or D1_CONTINUE` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] compare/UI0; contact group20m, extra company call5m if chosen; explicit sleep to08:30. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S07_COMPARE_AND_CHOOSE` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] MINH: “Tôi hỏi hộ chuyện tiền được, nhưng gửi đúng cái cần hỏi thôi.” / BẮC: “Để tôi xem nó khác ca thường ở đâu.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: General question leaks no source; exact screenshot only if player sends; early G0 if N1/no cross-cell. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF gửi câu chung: MINH “Tôi hỏi chuyện tiền thôi.” IF gửi screenshot đủ chi tiết: MINH “Tôi chuyển nguyên phần cậu gửi.” Chỉ receiver-side report có timestamp mới có thể tăng BARC.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Ca trước của Minh không có trường này.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[PHONE] **20:00 · Ca đã làm** — TL-2604-117: y tế/ưu tiên trong assignment, Standard trong worker pool. Ca cũ của Minh: Standard từ đầu (chỉ nếu C07 seen). [PHONE] Tin gửi Minh lưu chính xác câu/ảnh đã chọn; general question không đính kèm screenshot.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] two-record viewer, message composer, exit choice. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S07_COMPARE_AND_CHOOSE: thao tác so ca rồi chọn kênh tin trước day transition.
+[DISCOVERY] C07 comparison ordinary, no case proof
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Tin nhắn rung; đèn hành lang tắt theo giờ.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] General question leaks no source; exact screenshot only if player sends; early G0 if N1/no cross-cell
+[STATE] Police: none. BARC: only after actual Minh→company→Khải received report with exact payload; no auto N3.
+[WORLD CHANGE] Disclosure payload hoặc NONE, BARC theo report thật; G0 chỉ nếu early stop đủ điều kiện.
+
+## CLUE HANDLING
+
+[DOCUMENT] Normal shift vs TL-2604-117 fields; sent text persisted literally
+[DISCOVERY] C07 comparison ordinary, no case proof
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Không so vẫn có audit cụ thể dẫn tới S08; early stop là lựa chọn rõ.
+[AUTO] Continue và explicit ngủ/chờ tới D+1 08:30, hoặc G0.
+[STATE] Next: `S08_ENTER or G0`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: exact message/receipt ledger, G0 choice or D+1 transition once. No duplicate clue, NPC, source receipt, time cost or door state. S14 nếu có leak, timestamp report khớp cửa đóng, không auto betrayal.
+
+---
+
+# S08 — PRINT COMPARE
+
+## SCENE HEADER
+
+Location: Tân Lộ/dispatch. Entry: D+1 arrival09:00, payment ticket. Shared event ID `S08_PRINT_COMPARE`. Scene graph: `S08_ENTER → S08_MICRO → S08_PRINT_COMPARE → S08_EXIT`; optional/conditional branches are defined in the event spec. Objective time: core35m once; optional C18 direct10m once; travel30m already charged.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Máy printer và terminal dispatch mở cùng job; Đức cầm bản snapshot cá nhân; notice đóng worker access11:00.
+[AUDIO] Printer feed; badge beep; worker app quyền truy cập đổi màu ở giờ đóng.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] D+1 09:00 Tân Lộ; xử lý payment/incident hợp lệ.
+
+## PLAYER FLOW
+
+[ENV] Printer trả một bản Internal/Priority cũ trong khi app hiển thị Standard; Đức chú ý Bắc nhìn thấy.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player so bản in C17 với assignment, hỏi quyền classification; 09:35 có thể nhận C18 copy từ Đức trong10m hoặc giữ contact/deadline đưa Vũ.
+[DISCOVERY] E19 reclassification D−1 bởi tầng trên Tuấn; không suy từ pattern rằng Đức biết organ crime.
+[AUTO] Warning09:25 trước closure; Đức offer copy thực tế từ09:30, không chờ scene S12.
+[NPC] Đức tránh lộ danh tính nhưng giữ private phone copy; Tuấn vận hành không tự reclassify.
+[WORLD CHANGE] C17 observed, C18 local receipt09:45 nếu chọn; notice và contact tồn tại đến11:00.
+[STATE] `C17_OBSERVED; WARN_WORKER_0925; optional C18_LOCAL_RECEIVED09:45 and contact/deadline` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] core35m once; optional C18 direct10m once; travel30m already charged. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S08_PRINT_COMPARE` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] ĐỨC: “Tôi chỉ giữ phần vận hành. Nếu cần đối chiếu, làm trước mười một giờ.” / BẮC: “Ai đổi luồng này?”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Declining copy retains bounded contact for Vũ; actual 11:00 closure cannot erase private copy. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF nhận C18: ĐỨC “Tôi cho cậu phần tôi giữ, đừng gọi nó là bản hệ thống.” ELSE: ĐỨC “Ghi lại cách liên lạc và hạn này cho người có thẩm quyền.” Cả hai có đường cứu trong window.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Hai phiên bản của cùng một ca.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **TL-2604-117 · Revision D−1**: Internal / Priority → Standard; quyền đổi ở tầng trên điều phối. [PHONE] **09:25 · Notice** — worker history đóng11:00; Đức có thể tiếp nhận tới11:00; finance tới12:30. Bản C18 nếu lấy: “Nguồn: điện thoại cá nhân Đức; received_at09:45”; không biến thành company export.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] printer output, version compare, Đức phone-copy offer, finance lead card. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S08_PRINT_COMPARE: player tự đặt bản Internal và Standard song song trong khoảng cửa còn mở.
+[DISCOVERY] C17 reclassification; C18 independent operations if original snapshot copied
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Printer feed; badge beep; worker app quyền truy cập đổi màu ở giờ đóng.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Declining copy retains bounded contact for Vũ; actual 11:00 closure cannot erase private copy
+[STATE] Police: none until S09 actual share. BARC: no report merely from reading.
+[WORLD CHANGE] C17 observed, C18 local receipt09:45 nếu chọn; notice và contact tồn tại đến11:00.
+
+## CLUE HANDLING
+
+[DOCUMENT] Internal/Priority old vs Standard new; worker access11:00 and finance12:30 notice
+[DISCOVERY] C17 reclassification; C18 independent operations if original snapshot copied
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Không nhận C18 vẫn có scoped contact và C19 alternate; local lock không erase copy.
+[AUTO] Core09:35, optional copy09:45; explicit hẹn S09 10:00.
+[STATE] Next: `S09_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: printer print-once, C17 observed, warning receipt, C18 copy/custodian/time independently. No duplicate clue, NPC, source receipt, time cost or door state. S09 Vũ bắt đầu requests từ actual group/contact, S12 verify retained copies.
+
+---
+
+# S09 — SCOPED INTAKE
+
+## SCENE HEADER
+
+Location: Tân Lộ/phone police. Entry: C17 source available; appointment10:00. Shared event ID `S09_SCOPED_INTAKE`. Scene graph: `S09_ENTER → S09_MICRO → S09_SCOPED_INTAKE → S09_EXIT`; optional/conditional branches are defined in the event spec. Objective time: call15m once, genuinely new lead5m each, then travel30m.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Bắc đứng ở Tân Lộ; trên phone có assignment, receipt và bản in; Vũ ở đầu dây trong micro-set.
+[AUDIO] Phone ring; message acknowledgment; tín hiệu office nền.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S08 C17/source lead và lịch hẹn phone Vũ 10:00.
+
+## PLAYER FLOW
+
+[ENV] Tin hẹn từ Vũ và trường đầu nhận Minh Trạch khiến cuộc gọi có mục tiêu.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player chọn gửi original record/contact/group/deadline và phân loại thấy hay suy; optional disclose lead mới có 5m cost.
+[DISCOVERY] Vũ đã có vụ Phúc A=2 từ E28; anh hỏi raw scope, không kể toàn vụ; request B/C khởi từ actual payload.
+[AUTO] C17/group payload receipt10:15; Vũ contact Đức10:25/receipt10:35 nếu đủ contact và tự request hospital review khi group có.
+[NPC] Vũ làm việc song song, không đợi Bắc đi từng nơi; Nam không nghe private call.
+[WORLD CHANGE] Police custody mới chỉ cho actual received/authenticated sources; warnings hospital11:30/finance12:30.
+[STATE] `POLICE_GROUP_RECEIPT10:15; conditional C18 request/contact/receipt/auth; optional C19 lead` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] call15m once, genuinely new lead5m each, then travel30m. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S09_SCOPED_INTAKE` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] VŨ: “Cái nào cậu tận mắt thấy? Cái nào là bản ghi? Phần nào là suy đoán?” / BẮC: “Tôi gửi cả mốc thời gian gốc.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Late q uses OT §0.1 q-relative schedule, no baseline backdate; queued request not CASE=2. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF source address đủ trong payload: VŨ “Tôi liên hệ nguồn này.” ELSE: VŨ “Tôi cần cách liên hệ và phạm vi bản gốc.” Chỉ disclosure mới5m, không click lại yêu cầu cũ.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Mình phải gửi cái đã thấy, kèm nguồn gốc.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[PHONE] **10:15 · Đã tiếp nhận:** assignment + receipt + routing revision + đầu nhận/nhóm hồ sơ. **Đã yêu cầu:** archive/original, group review. Chỉ hiển thị “đã nhận” cho C18/C19 khi collector thực nhận; “đang yêu cầu” không là preserved.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] phone source selector, attachment provenance, receipt status. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S09_SCOPED_INTAKE: player gửi source có timestamp và thấy police receipt tách khỏi queued query.
+[DISCOVERY] C17/group bridge; C18/C19 only after actual originals/auth
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Phone ring; message acknowledgment; tín hiệu office nền.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Late q uses OT §0.1 q-relative schedule, no baseline backdate; queued request not CASE=2
+[STATE] Police: A=2 already E28; C17 group10:15; C18 contact10:25/receipt10:35/auth10:45 if disclosed; C19 contact10:40/receipt10:50/auth11:00 if bounded lead. BARC: phone to Vũ secure, no organization report.
+[WORLD CHANGE] Police custody mới chỉ cho actual received/authenticated sources; warnings hospital11:30/finance12:30.
+
+## CLUE HANDLING
+
+[DOCUMENT] Police receipt lists each original custodian, record time and transmitted fields
+[DISCOVERY] C17/group bridge; C18/C19 only after actual originals/auth
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Chậm disclosure dùng q-relative receipts, không backdate; police A vẫn an toàn.
+[AUTO] Cuộc gọi15m hoàn tất, travel hospital30m tới10:50/10:55.
+[STATE] Next: `S10_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: request, receipt and authentication separately; police A persists. No duplicate clue, NPC, source receipt, time cost or door state. S10 review và S12 C22 matched từ đúng request sáng.
+
+---
+
+# S10 — FORM VERSION
+
+## SCENE HEADER
+
+Location: Minh Trạch/quầy review. Entry: actual group-specific police request; arrive10:50 or10:55. Shared event ID `S10_FORM_VERSION`. Scene graph: `S10_ENTER → S10_MICRO → S10_FORM_VERSION → S10_EXIT`; optional/conditional branches are defined in the event spec. Objective time: core20m once; optional Thảo10m once.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Quầy Huyền có khay form hai version; hành lang công khai, không vào phòng hạn chế.
+[AUDIO] Hành lang bớt tiếng khi cửa khép; máy in và bánh xe đẩy.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S09 xong; hospital arrival10:50/10:55, notice review11:30.
+
+## PLAYER FLOW
+
+[ENV] Printer nhả bản scope thu hẹp, version cũ còn ở khay được phép xem khi Vũ đã request đúng nhóm.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player so consent và review tại quầy theo quyền cho phép; có thể hỏi Thảo về phần bà trực tiếp xử lý nếu C12 thiếu.
+[DISCOVERY] C11 discrepancy về money/withdrawal; C12 receipt Khoa biết và vẫn giữ consent, hoặc C15 firsthand cùng case. Huyền không tự biết cả mạng.
+[AUTO] Vũ nhận originals11:10, authenticate11:20 nếu actual request; optional Thảo10m tới11:20/11:25.
+[NPC] Huyền tiếp bệnh án hợp pháp; Thảo chỉ có mặt trong window, Khoa ở cell riêng.
+[WORLD CHANGE] Document version/scope hiển thị; police B chỉ tăng sau original fact/authentication; local11:30 không erase receipt.
+[STATE] `C11/C12 observed only if viewed; police B=2 only after11:10 receipt/11:20 auth; optional C15 receipt11:20/11:25` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] core20m once; optional Thảo10m once. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S10_FORM_VERSION` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] HUYỀN: “Tôi ghi cái không khớp. Phạm vi kết luận thì có người duyệt.” / THẢO: “Tôi chỉ xác nhận phần hồ sơ mình xử lý.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: C12 missing fact may use C15; one branch enough, no forced illegal access. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF C12 đầy đủ: HUYỀN “Bản cũ và bản duyệt đều ở đây.” ELSE IF Thảo accessible: THẢO “Tôi biết phần tiền bên ngoài và yêu cầu rút trong ca mình xử lý.” Không trao lời về Nam.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Bản review cũ ghi rộng hơn bản đang dùng.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **Review D−12:** tiền/đề nghị rút ↔ consent đang ghi tự nguyện; version/scope cũ và version bị thu hẹp. [PHONE] Receipt C11/C12 chỉ khi Vũ nhận original11:10; “xác thực” sau kiểm11:20. Nếu Thảo route, chỉ đúng case/field bà làm.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] two-version consent/review UI, request receipt, optional Thảo. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S10_FORM_VERSION: player tự đối chiếu hai version; nhân viên chỉ phản ứng đúng phần đã hỏi.
+[DISCOVERY] C11 + C12 or C15 with paid/withdrawal knowing assistance
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Hành lang bớt tiếng khi cửa khép; máy in và bánh xe đẩy.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] C12 missing fact may use C15; one branch enough, no forced illegal access
+[STATE] Police: C11/C12 original receipt11:10, authenticate11:20 if request; C15 alternative scoped testimony receipt11:20/11:25. BARC: only observed report to Khải with actual sender/payload/receipt.
+[WORLD CHANGE] Document version/scope hiển thị; police B chỉ tăng sau original fact/authentication; local11:30 không erase receipt.
+
+## CLUE HANDLING
+
+[DOCUMENT] Review D−12, money/withdrawal fields, consent and scope/version history
+[DISCOVERY] C11 + C12 or C15 with paid/withdrawal knowing assistance
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Không gặp Thảo khi C12 đủ vẫn sống; nếu source cuối mất, warning đã có và G1 sau closure.
+[AUTO] Core11:10/11:15, optional11:20/11:25; S11 quiet point11:30.
+[STATE] Next: `S11_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: document version, optional testimony, separate source/access/custody. No duplicate clue, NPC, source receipt, time cost or door state. S11 thời điểm review D−12 đặt bên cạnh Phúc/job.
+
+---
+
+# S11 — TIME COMPARE
+
+## SCENE HEADER
+
+Location: hospital quiet point/phone. Entry: S10 complete, appointment11:30. Shared event ID `S11_TIME_COMPARE`. Scene graph: `S11_ENTER → S11_MICRO → S11_TIME_COMPARE → S11_EXIT`; optional/conditional branches are defined in the event spec. Objective time: compare30m once, travel30m after; retries0.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Ba timeline cards là raw timestamps: Phúc, Huyền, E19 job; điện thoại của Bắc đặt cạnh police scoped summary.
+[AUDIO] Âm bút gạch thời gian; phone hạ âm khi mở document.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S10 trong hospital area, quiet point11:30.
+
+## PLAYER FLOW
+
+[ENV] Tin Vũ chứa một timeline field mới; ngày D−12 nổi khác với D−1 của job.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player kéo/đặt đúng thứ tự ba bản gốc; có thể xem exact A content ở mức Vũ cho phép, không giao lại A.
+[DISCOVERY] Vụ Phúc/review có trước Bắc; C03 client family đổi nghĩa khi so provenance, không phải nguyên nhân crime.
+[AUTO] Vũ nhận ý kiến qua phone; A đã custody E28 không phụ thuộc player drag đúng.
+[NPC] Vũ tiếp tục professional match, Phúc chỉ biết chuyện mình.
+[WORLD CHANGE] Private inference nếu đúng mới ghi; CASE không bị hạ vì xếp sai.
+[STATE] `optional PRIVATE_PREEXISTING_CASE_INFERRED; no new A custody` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] compare30m once, travel30m after; retries0. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S11_TIME_COMPARE` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] VŨ: “Giữ riêng thời điểm của nguồn và thời điểm cậu đọc nó.” / BẮC: “Review này mở trước khi tôi nhận ca.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Wrong ordering offers replay without cost; no quiz lock. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF private order correct: BẮC “Việc này diễn ra trước ngày tôi nhận ca.” ELSE: VŨ “Xem lại ngày của nguồn, không phải ngày điện thoại tải về.” Không trừ thời gian.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Review có trước cả ca của mình.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **Ba mốc gốc:** Phúc muốn rút và trình báo trước D0; Huyền mở review D−12; E19 đổi luồng D−1. [PHONE] C03 lịch sử giao13:52 D0, ngày Bắc xem lại là dòng observed_at riêng.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] three timestamp cards, C03 history. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S11_TIME_COMPARE: player tự xếp nguồn theo time, một inference về vị trí Bắc trong cleanup.
+[DISCOVERY] Phúc withdraw/request, Huyền review D−12, E19 D−1
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Âm bút gạch thời gian; phone hạ âm khi mở document.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Wrong ordering offers replay without cost; no quiz lock
+[STATE] Police: A=2 immutable; no re-delivery required. BARC: private comparison0.
+[WORLD CHANGE] Private inference nếu đúng mới ghi; CASE không bị hạ vì xếp sai.
+
+## CLUE HANDLING
+
+[DOCUMENT] Three provenance/time cards, no unearned crime narration
+[DISCOVERY] Phúc withdraw/request, Huyền review D−12, E19 D−1
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Sai xếp vẫn có raw records để xem lại miễn phí; progression không đòi quiz.
+[AUTO] Compare/wait tới12:00; travel Tân Lộ30m tới12:30.
+[STATE] Next: `S12_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: card layout/private inference only; custody unchanged. No duplicate clue, NPC, source receipt, time cost or door state. S12 false apex có thể được bác bằng thứ tự E19/assignment.
+
+---
+
+# S12 — FALSE APEX SWAP
+
+## SCENE HEADER
+
+Location: Tân Lộ/dispatch terminal. Entry: retained packets, return12:30. Shared event ID `S12_FALSE_APEX_SWAP`. Scene graph: `S12_ENTER → S12_MICRO → S12_FALSE_APEX_SWAP → S12_EXIT`; optional/conditional branches are defined in the event spec. Objective time: retained verification30m once; extra repeat Tuấn visit15m or Hùng wait30m only explicit warning card.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Cùng dispatch terminal nay hiển thị audit trail; C17, C20, C21 và C22 đã được request/received theo lịch, không source mới từ worker lock.
+[AUDIO] Máy quét lặp đúng âm S04; hình ca thường song song ca 117.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S11 và retained police packets; Tân Lộ12:30.
+
+## PLAYER FLOW
+
+[ENV] Tuấn đi qua bảng phân công như hôm qua; timestamp override nằm trước ca anh trực.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player mở fast recap hai field C20/C22 thay vì làm lại interrogation; có thể xem C21 routine từ job thường.
+[DISCOVERY] Tuấn không reclassify E19; C22 Hùng đã nhận purpose và approve, nhưng statement Hùng một mình chưa chứng minh Nam.
+[AUTO] Police C22 packet receipt13:00; content match không trước14:55 và retained C18/C19 verification13:55.
+[NPC] Tuấn xử lý ca khác, không bất ngờ biết Bắc nghi ai; Hùng không cần monologue.
+[WORLD CHANGE] TUAN_NOT_RECLASSIFIER riêng TUAN_CORE_SCOPE_VERIFIED; Hùng culpable knowledge chỉ từ verified C22.
+[STATE] `TUAN_NOT_RECLASSIFIER; optional TUAN_CORE_SCOPE_VERIFIED; C22 observed; C=2 only after full match14:55` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] retained verification30m once; extra repeat Tuấn visit15m or Hùng wait30m only explicit warning card. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S12_FALSE_APEX_SWAP` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] BẮC: “Luồng này đổi trước ca anh Tuấn.” / VŨ: “Quyền đổi và biết nội dung là hai câu hỏi khác.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: C20 already seen→fast recap; otherwise full inspect; no repeated Tuấn interrogatory gate. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF C20 seen: VŨ “Chúng ta đã loại quyền sửa luồng của Tuấn; xem mốc approve này.” ELSE: VŨ “Mở lịch sử quyền trước.” Hùng vẫn culpable, không gọi là boss từ chức danh.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Anh Tuấn nhận việc sau khi luồng đã bị đổi.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **Authority log:** E19 đổi trước khi Tuấn nhận ca; Hùng approve override sau khi đã nhận purpose trả tiền cho người hiến. [PHONE] “C22 original received13:00; corroboration pending” cho tới match/auth thật14:55.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] audit trail, permission log, ordinary job comparator. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S12_FALSE_APEX_SWAP: cùng quầy S04, player tự lật audit trail, nghi ngờ đổi từ Tuấn sang Hùng bằng evidence.
+[DISCOVERY] C20 correction; C22 Hùng purpose-known approval + C18/C19 execution
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Máy quét lặp đúng âm S04; hình ca thường song song ca 117.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] C20 already seen→fast recap; otherwise full inspect; no repeated Tuấn interrogatory gate
+[STATE] Police: C22/C25 packet receipt13:00; operational match13:55; C full fact auth14:55. BARC: private false apex theory0.
+[WORLD CHANGE] TUAN_NOT_RECLASSIFIER riêng TUAN_CORE_SCOPE_VERIFIED; Hùng culpable knowledge chỉ từ verified C22.
+
+## CLUE HANDLING
+
+[DOCUMENT] Override timestamp before Tuấn, Hùng approval and paid-organ purpose
+[DISCOVERY] C20 correction; C22 Hùng purpose-known approval + C18/C19 execution
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Nếu đã thấy C20, dùng recap ngắn; nếu chưa, phiên bản full inspect vẫn cho cùng fact.
+[AUTO] Retained verification tới13:00, travel hospital area13:30/micro-set13:35.
+[STATE] Next: `S13_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: fast/full viewed and independent Tuấn scope flags, C22 source receipt/auth. No duplicate clue, NPC, source receipt, time cost or door state. S16 Hùng D1 chỉ khi firsthand actual statement, không suy từ title.
+
+---
+
+# S13 — TWO DESKS
+
+## SCENE HEADER
+
+Location: hospital-area police micro-set. Entry: S12 packets and travel13:00→13:35. Shared event ID `S13_TWO_DESKS`. Scene graph: `S13_ENTER → S13_MICRO → S13_TWO_DESKS → S13_EXIT`; optional/conditional branches are defined in the event spec. Objective time: compare/callback25m once; retry private inference0.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Hai request/response packets hospital/logistics với endpoint Khải có thể đặt cạnh nhau; paper custody tags khác private notebook.
+[AUDIO] Phone callback; bàn giấy lật, âm phòng nhỏ hơn hành lang.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S12 source receipts đã có; police micro-set13:35.
+
+## PLAYER FLOW
+
+[ENV] Hai thẻ escalation có cùng người nhận nhưng scope khác, điện thoại Vũ báo callback.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player so current case, endpoint, role và response; có thể chọn giả thuyết sai về Khải mà vẫn giao raw packets cho Vũ.
+[DISCOVERY] X_RISK chỉ khi request/response/auth current Phúc crisis matched; same account/transaction không đủ; N3_UNDERSTANDING private conditional.
+[AUTO] Vũ verify C18/C19 match13:55, C content14:55 nếu actual packets complete; X police không đợi player suy đúng.
+[NPC] Vũ kiểm provenance, Khải chỉ biết report đã nhận; Nam chỉ sau forward thực.
+[WORLD CHANGE] X_VERIFIED raw source, X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion.
+[STATE] `conditional X_RISK_VERIFIED; optional X_PLAYER_CONNECTED/N3_UNDERSTANDING` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] compare/callback25m once; retry private inference0. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S13_TWO_DESKS` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] VŨ: “Hai bản này phải nói cùng một việc đang xử lý, không chỉ cùng tên khách.” / BẮC: “Tôi cần xem người nhận trả lời gì.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Wrong/private Khải apex suspicion never blocks sourced police verification; incomplete raw scope leaves X false until alternative S16. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF X_PLAYER_CONNECTED correct: BẮC “Hai bên cùng gửi chuyện Phúc tới Khải để xử lý rủi ro.” ELSE: VŨ “Tôi sẽ so bản gốc và scope; suy đoán của cậu không thay nguồn.” Police X vẫn theo raw.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Cùng một đầu mối rủi ro, nếu hai request thật sự nói cùng vụ.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **Hospital request:** case Phúc / risk scope / Khải endpoint. **Logistics request:** cùng case/current breach / request-response scope / endpoint xác thực. Nếu chỉ cùng account, UI ghi “liên quan giao dịch”; không render “same risk authority.”
+
+[PHONE] Vũ gửi acknowledgment riêng cho từng packet sau authentication; một packet chưa xác thực ghi PENDING, không hiện X.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] two risk packets, provenance tags, notebook inference. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S13_TWO_DESKS: player nối hai hồ sơ từ hai cơ sở trong không gian chung, phản hồi của Vũ giới hạn vào source đã thấy.
+[DISCOVERY] X_RISK only same Khải endpoint, scoped request/response and Phúc crisis
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Phone callback; bàn giấy lật, âm phòng nhỏ hơn hành lang.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Wrong/private Khải apex suspicion never blocks sourced police verification; incomplete raw scope leaves X false until alternative S16
+[STATE] Police: C18/C19 match13:55; C content14:55 if actual complete; X independent of private inference. BARC: no N3 from scene/private answer.
+[WORLD CHANGE] X_VERIFIED raw source, X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion.
+
+## CLUE HANDLING
+
+[DOCUMENT] C24/C25 current incident requests, replies, recipient/source identities
+[DISCOVERY] X_RISK only same Khải endpoint, scoped request/response and Phúc crisis
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Sai inference không time/route penalty; raw source vẫn được kiểm.
+[AUTO] Callback/compare13:35–14:00, S14 notice.
+[STATE] Next: `S14_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: raw source verification and private inference separately. No duplicate clue, NPC, source receipt, time cost or door state. S16 X_COMMAND có thể hoàn chỉnh X nếu Khải remit còn thiếu.
+
+---
+
+# S14 — RETURN CHANGED
+
+## SCENE HEADER
+
+Location: multi-hub/phone. Entry: S13 ends14:00; earlier local closures already happened. Shared event ID `S14_RETURN_CHANGED`. Scene graph: `S14_ENTER → S14_MICRO → S14_RETURN_CHANGED → S14_EXIT`; optional/conditional branches are defined in the event spec. Objective time: notice/action group20m once; optional deliberate waits separately as OT §0.1.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Một worker screen khóa, quầy hospital đổi biển quyền, tin hẹn biến mất theo closure đã xảy ra ở 11:00/11:30/12:30.
+[AUDIO] Badge denied; phone vibration; đèn quầy off khi hết ca, không supernatural.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S13 callback hoặc clock tới14:00; notices từ morning đã nhận.
+
+## PLAYER FLOW
+
+[ENV] Player trở lại cùng điện thoại/hành lang, thấy trạng thái vật khác lần trước; nếu Minh đã hỏi hộ, timestamp report có thể so.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player kiểm what actually closed, hỏi Minh phần cậu nói, chuyển ngay retained source còn thiếu cho Vũ hoặc chọn delay có card.
+[DISCOVERY] Cửa access/willingness đóng riêng; copies ở phone Đức/police không biến mất. BARC chỉ từ actual received reports.
+[AUTO] Global command notice14:00 trước deadline17:00; acceleration chỉ nếu report, fresh warning và feasible save plan OT §0.1.
+[NPC] Minh giảm nhẹ đúng payload đã gửi; Khải xử lý report thật, Lan/Nam không biết private note.
+[WORLD CHANGE] Actual access states và warning receipts; no baseline BARC=N3, no deletion of custody.
+[STATE] `WARN_GLOBAL_1400; access variant changes; conditional fresh acceleration warning W` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] notice/action group20m once; optional deliberate waits separately as OT §0.1. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S14_RETURN_CHANGED` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] MINH: “Tôi chỉ hỏi bên điều phối cái cậu gửi.” / BẮC: “Cậu đã gửi phần nào?”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Leak timing shown only if actual report; no report route has ordinary closure. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF MINH_DISCLOSURE exists: MINH “Tôi chỉ chuyển đúng ảnh cậu gửi.” ELSE: MINH “Tôi không hỏi thêm bên đó.” Khải/Nam chỉ biết report nhận được.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Bản họ đã nhận thì vẫn còn; chỉ cửa truy cập này đóng.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[PHONE] **Worker access:** đã đóng11:00. **Review scope:** thu hẹp11:30. **Finance contact:** đã đóng12:30. **Global command notice:**17:00 baseline. Nếu actual report + feasible warning W, ghi candidate deadline riêng; không thay ba giờ quá khứ.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] worker screen, hospital sign, phone report timestamps. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S14_RETURN_CHANGED: tái thăm các vật quen cho thấy hệ thống khép cửa bằng state thực, không chase.
+[DISCOVERY] C43 actual loss of access, no evidence deletion
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Badge denied; phone vibration; đèn quầy off khi hết ca, không supernatural.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Leak timing shown only if actual report; no report route has ordinary closure
+[STATE] Police: all earlier police receipts persist. BARC: N3 only if actual two-cell reports received, not baseline scene.
+[WORLD CHANGE] Actual access states và warning receipts; no baseline BARC=N3, no deletion of custody.
+
+## CLUE HANDLING
+
+[DOCUMENT] Local11:00/11:30/12:30 and global17:00 notices; acceleration conditional feasible
+[DISCOVERY] C43 actual loss of access, no evidence deletion
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Local locks không chặn professional copies; player vẫn chuyển nguồn đã giữ.
+[AUTO] 20m authored notices/action group tới14:20.
+[STATE] Next: `S15_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: access variants, report/warning receipts, no rollback of source copies. No duplicate clue, NPC, source receipt, time cost or door state. S18 causal attribution dùng earliest last-path loss, không dùng cảm giác phản bội.
+
+---
+
+# S15 — CUSTODY DESK
+
+## SCENE HEADER
+
+Location: police micro-set/evidence tray. Entry: S14 notices,14:20. Shared event ID `S15_CUSTODY_DESK`. Scene graph: `S15_ENTER → S15_MICRO → S15_CUSTODY_DESK → S15_EXIT`; optional/conditional branches are defined in the event spec. Objective time: coordination/intake40m once; wait20m only explicit delayed appointment.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Bàn nhận evidence có khay source với provenance và pending authentication; không bảng suspects.
+[AUDIO] Scan giấy, phone receipt, tem ngày/giờ; city outside continues.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S14 notices xong14:20, Vũ đang intake/coordinate.
+
+## PLAYER FLOW
+
+[ENV] Một item giữ riêng trên phone Bắc đối chiếu được với khay police; dấu received chưa phải verified.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player chọn gửi bản gốc/custodian/contact và scope, có thể giữ lại, delay20m hoặc abandon khi actual N3 report.
+[DISCOVERY] A đã Vũ giữ từ E28; B/C/X tăng chỉ sau receipt + independent checks; private N3 understanding không quyết định threshold.
+[AUTO] E38 actual baseline14:55 khi đủ raw/auth, không auto từ scene completion; custody-first cho command requests S16.
+[NPC] Vũ tự request đủ scope đã biết, không đợi một accusation quiz.
+[WORLD CHANGE] Actual custody monotonic, E38 if threshold; ABANDON_AFTER_N3 only on explicit choice + received reports.
+[STATE] `actual B/C/X source custody; E38_THRESHOLD only when exact required raw sources auth; optional ABANDON_AFTER_N3` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] coordination/intake40m once; wait20m only explicit delayed appointment. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S15_CUSTODY_DESK` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] VŨ: “Phần tôi đã giữ thì còn. Phần chưa xác thực, cậu cho tôi đúng nguồn gốc.” / BẮC: “Tôi đưa ngay.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Can submit without private Khải inference; keeping source delays only by explicit action. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF player giữ bản: VŨ “Phần chưa ở hồ sơ thì chưa thể coi đã giữ.” IF giao: VŨ “Tôi ghi nguồn gốc và đối soát.” IF abandon without actual N3 report: không G3.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Bản trong điện thoại mình chưa phải hồ sơ đã giữ.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **Khay Vũ:** A: PRESERVED từ E28. B/C: QUEUED, RECEIVED hoặc AUTHENTICATED theo từng source thực. [PHONE] “Nguồn đã nhận” có custodian/received_at; E38 chỉ bật khi required content/auth đủ.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] phone originals, evidence tray, source provenance receipt. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S15_CUSTODY_DESK: thao tác phân nguồn gốc cụ thể thay cho lời thuyết phục Vũ.
+[DISCOVERY] C42 custody receipt, not magic clue
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Scan giấy, phone receipt, tem ngày/giờ; city outside continues.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Can submit without private Khải inference; keeping source delays only by explicit action
+[STATE] Police: E38 baseline14:55 only if raw sources complete; actual late inputs shift. BARC: N3 report required for abandonment; custody action alone not leak.
+[WORLD CHANGE] Actual custody monotonic, E38 if threshold; ABANDON_AFTER_N3 only on explicit choice + received reports.
+
+## CLUE HANDLING
+
+[DOCUMENT] Individual source receipts with status QUEUED/RECEIVED/AUTHENTICATED
+[DISCOVERY] C42 custody receipt, not magic clue
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Thử lại provenance không cost; missing source thật đóng thì G1/G2/G5 theo cause.
+[AUTO] Intake/coordination tới15:00; S16 chỉ theo actual E38 hoặc partial path.
+[STATE] Next: `S16_ENTER if E38, else partial path/S18 when terminal`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: atomic receipts and E38, no duplicate source after load. No duplicate clue, NPC, source receipt, time cost or door state. S16 professional collection chạy sau actual E38.
+
+---
+
+# S16 — THREE ORIGINS
+
+## SCENE HEADER
+
+Location: police source desks/phone. Entry: actual E38=t0. Shared event ID `S16_THREE_ORIGINS`. Scene graph: `S16_ENTER → S16_MICRO → S16_THREE_ORIGINS → S16_EXIT`; optional/conditional branches are defined in the event spec. Objective time: professional requests t0+5/+10/+15, receipts+25/+40 or45/+55, full auth+75; presentation to16:25 baseline.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Ba station nguồn: manager, original institution reply, broker annex; bản gốc L/H issue trước intake, không future record ở E28.
+[AUDIO] Điện thoại báo receipt, printer annex nhả trang, bút ký custodial seal.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] Actual E38=t0 (baseline14:55), police mở source requests sau đó.
+
+## PLAYER FLOW
+
+[ENV] Một stamp decision trên reply cho branch kia không giống statement manager; broker receipt có cùng directive scope.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player xem ba nguồn Vũ được phép hiển thị, so quyết định khác nhau và annex cùng case; không tự đi ép Hạnh/Nam.
+[DISCOVERY] C32H+C33_AUTH hoặc C32K+C34_AUTH và C10_SOURCE_LINK exact D2. Original receiver-side Nam reply phải verify; X_COMMAND có thể sinh từ raw facts này.
+[AUTO] Request t0+5/+10/+15; receipts +25/+40 or45/+55; authentication/full match +75 baseline16:10, chỉ khi nguồn hợp tác và window mở.
+[NPC] Vũ intake chuyên nghiệp; manager chỉ branch mình, broker chỉ received directive, Nam không đọc scene completion.
+[WORLD CHANGE] COMMAND C3/C4 chỉ từ raw verified/preserved; X normalize trước resolver; unavailable route có manager alternate.
+[STATE] `D1/D2/source-annex actual receipts/auth; X_COMMAND normalized; COMMAND C3/C4 if timely` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] professional requests t0+5/+10/+15, receipts+25/+40 or45/+55, full auth+75; presentation to16:25 baseline. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S16_THREE_ORIGINS` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] VŨ: “Lời quản lý là một nguồn. Quyết định ở nhánh kia phải có bản gốc riêng.” / BẮC: “Còn nhánh môi giới có làm theo cùng lệnh không?”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: Hùng lost→Khoa+logistics original; both managers lost→no C4; broker annex missing→no full D. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF Hùng available: VŨ “Lời ông Hùng về quyết định kho cần bản gốc bệnh viện cho quyết định kia.” ELSE IF Khoa available: VŨ “Đi từ lời ông Khoa và bản gốc Tân Lộ.” IF neither: không thoại tự chế D1.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Một quyết định bên kho, một bên viện. Ai nhận lệnh ở nguồn môi giới?” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **L13:20 / executed13:25**: logistics decision. **H13:45 / executed13:50**: hospital decision khác. Original receiver-side Nam reply phải có author endpoint/content; broker annex có request/forward/receipt match D2 case/scope. Receipt15:20/15:35–40/15:50 và final match16:10 chỉ trên baseline t0=14:55.
+
+[PHONE] Vũ gửi trạng thái ba request: manager, other-branch original, broker annex; các giờ nhận hiển thị độc lập.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] three original packets and compare UI, C31 contact lead. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S16_THREE_ORIGINS: player đối chiếu manager firsthand, reply phía branch kia và source execution mà không trộn một forward làm ba chứng cứ.
+[DISCOVERY] C32H+C33_AUTH or C32K+C34_AUTH, plus C10_SOURCE_LINK exact D2
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Điện thoại báo receipt, printer annex nhả trang, bút ký custodial seal.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] Hùng lost→Khoa+logistics original; both managers lost→no C4; broker annex missing→no full D
+[STATE] Police: manager firsthand; original Nam receiver-side reply other branch; broker original request/forward/receipt; exact case/source/decision match. BARC: no automatic Nam knowledge from intake; only actual report receipt.
+[WORLD CHANGE] COMMAND C3/C4 chỉ từ raw verified/preserved; X normalize trước resolver; unavailable route có manager alternate.
+
+## CLUE HANDLING
+
+[DOCUMENT] L13:20/execution13:25 and H13:45/execution13:50 distinct; annex forward/receipt only as matched scope
+[DISCOVERY] C32H+C33_AUTH or C32K+C34_AUTH, plus C10_SOURCE_LINK exact D2
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Mất Hùng dùng Khoa+logistics original; mất cả managers không record-only magic D1.
+[AUTO] Actual D verified nếu đủ; scene presentation tới16:25, no forced extra travel.
+[STATE] Next: `S17_ENTER optional or S18_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: each request/receipt/auth/result stage and selected manager route, no duplicated manager or future annex. No duplicate clue, NPC, source receipt, time cost or door state. S17 Nam recontextualized, S18 consequence đúng source.
+
+---
+
+# S17 — ROOM JAM
+
+## SCENE HEADER
+
+Location: HUB B/phòng Nam optional. Entry: S16 result or command hypothesis; return choice16:25→17:00. Shared event ID `S17_ROOM_JAM`. Scene graph: `S17_ENTER → S17_MICRO → S17_ROOM_JAM → S17_EXIT`; optional/conditional branches are defined in the event spec. Objective time: return travel35m + ordinary contact15m; no invisible inspect cost; police return35m if chosen.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Hành lang S01 và góc sửa đồ vẫn thường; cửa phòng Nam chỉ mở với lý do đời thường được Lan/Nam mời hoặc trả món đồ.
+[AUDIO] Static radio, bước chân ngoài cửa, đèn buzz; môi trường phản hồi nhẹ nhưng có nguồn vật lý.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] Sau S16; optional về trọ16:25→17:00 hoặc bypass tới police/consequence.
+
+## PLAYER FLOW
+
+[ENV] Radio rít nhẹ, một ổ điện lỗi làm chốt cửa kẹt; từ bàn có sổ ghi các mảnh “K. báo lại”, “MT giữ nguyên”, “117”.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Nếu chọn vào, player thử tay nắm, gõ/gọi, xem đồ hợp lệ; giữ control, có thể rời khi chốt được Lan xử lý từ ngoài. Không bắt đọc sổ.
+[DISCOVERY] Fragments là context/hypothesis, không Nam-boss proof; command chỉ từ S16 professional sources.
+[AUTO] Door jam do chốt cũ/điện, Lan nghe tiếng gõ hoặc chốt tự reset sau mechanic beat; không ba clue mở phép. Nam chỉ biết xáo trộn nếu trực tiếp thấy dấu cụ thể.
+[NPC] Lan đi cầu thang rồi hỗ trợ; Nam về theo lịch, không telepathy; có thể không gặp.
+[WORLD CHANGE] Door JAMMED→RELEASED vì latch reset/Lan; disturbed object flag chỉ nếu player thật sự chuyển vật và Nam nhìn thấy.
+[STATE] `S17_ENTERED; door JAMMED then RELEASED by latch/Lan; optional NOTEBOOK_PAGES_SEEN/disturbance; observed report only if Nam sees` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] return travel35m + ordinary contact15m; no invisible inspect cost; police return35m if chosen. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S17_ROOM_JAM` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] LAN (ngoài cửa): “Chốt kẹt thôi, đợi cô một chút.” / NAM (nếu gặp): “Ổ điện lại có chuyện à?”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: bypass directly S18; direct confront only if player selects and source actually vulnerable. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF player knock: LAN “Chốt này kẹt, cô ở ngoài.” IF Nam thấy vật bị đổi chỗ: NAM “Cậu đã xem bàn tôi à?” ELSE Nam không hỏi đúng sổ. Không kéo camera cưỡng ép.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Mấy mảnh ghi chú này chưa nói ai đã ra lệnh.” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] Sổ: “K. báo lại — chưa đóng.” / “MT giữ nguyên tới xác nhận.” / “117 không nên xuống luồng thường.” [PHONE] Nếu dùng gọi Lan, “Chốt kẹt, cô qua giúp” là nội dung Bắc gửi; Nam không nhận tin này trừ khi có actual relay.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] door handle/knock, notebook, drawer if legitimate, radio/light. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S17_ROOM_JAM: 1–3 phút khám phá có lối thoát causal, player giữ quyền điều khiển; optional unsafe confrontation riêng.
+[DISCOVERY] notebook fragments only hypothesis, no C4/true gate
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Static radio, bước chân ngoài cửa, đèn buzz; môi trường phản hồi nhẹ nhưng có nguồn vật lý.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] bypass directly S18; direct confront only if player selects and source actually vulnerable
+[STATE] Police: no new proof; S16 custody persists on bypass. BARC: only exact observable disturbance/confrontation and actual report, not read flag.
+[WORLD CHANGE] Door JAMMED→RELEASED vì latch reset/Lan; disturbed object flag chỉ nếu player thật sự chuyển vật và Nam nhìn thấy.
+
+## CLUE HANDLING
+
+[DOCUMENT] “K. báo lại — chưa đóng”; “MT giữ nguyên tới xác nhận”; “117 không nên xuống luồng thường.”
+[DISCOVERY] notebook fragments only hypothesis, no C4/true gate
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Bỏ về trọ vẫn tới S18; nếu door jam, gõ/gọi hoặc chờ authored release không tốn missing-source window bất ngờ.
+[AUTO] Door released, optional conversation xong; đi police35m nếu cần, hoặc direct S18.
+[STATE] Next: `S18_ENTER`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: event stage, door state, pages, NPC marker, disturbance/actual witness; reload never re-jams after release. No duplicate clue, NPC, source receipt, time cost or door state. Epilogue vật cũ S01; encounter thay sắc thái theo knowledge, không thêm gate True.
+
+---
+
+# S18 — TWO TRAYS
+
+## SCENE HEADER
+
+Location: police micro-set/consequence. Entry: S16 or S17 return/bypass, actual terminal condition. Shared event ID `S18_TWO_TRAYS`. Scene graph: `S18_ENTER → S18_MICRO → S18_TWO_TRAYS → S18_EXIT`; optional/conditional branches are defined in the event spec. Objective time: no new source time; consequences after actual timeline, no invented final timer.
+
+## OPENING STAGE DIRECTION
+
+[ENV] Police evidence tray và phone status đặt cạnh nhau, exterior Hà Nội vẫn tiếp tục; không gói clue mới.
+[AUDIO] Printer seal, phone ngừng rung, ambience ngõ trở lại ở epilogue.
+[CAMERA] First-person control stays with player; only a glance toward the authored sound/changed object may be suggested. No forced accusation shot.
+[AUTO] S16 actual command result hoặc S17 return/bypass; terminal only after real closure/committed exit.
+
+## PLAYER FLOW
+
+[ENV] Một custody receipt hoặc warned source closure cuối hiện rõ trước khi player xác nhận bước tiếp.
+[PLAYER] Free to approach, inspect, step away or repeat the zero-cost read. No objective arrow if sound/light/prop already lures.
+[INTERACT] Player review provenance/source paths, chuyển item còn thiếu nếu window open; xác nhận exit hoặc nhìn timeline consequence.
+[DISCOVERY] Outcome do CASE/X/COMMAND + earliest DECISIVE_LOSS/abandon, không suspect selection.
+[AUTO] Resolver P4 xử lý receipts trước closure; G6/G3/G5/G2/G4/G1 exhaustive. A/B/C police held stay held ở mọi cinematic.
+[NPC] Vũ hành động trên proof thực; Nam/Khải chỉ phản ứng reports/custody họ có thể biết.
+[WORLD CHANGE] Ending ID and locked snapshot persisted once; no magically refreshed records.
+[STATE] `ENDING_ID, TERMINAL_SNAPSHOT once` — only after the corresponding actual observation, receipt, authentication or action; no scene-completion shortcut.
+[TIME] no new source time; consequences after actual timeline, no invented final timer. UI reading/private retry0; each committed authored group charges once.
+[DEV] Sequence `S18_TWO_TRAYS` is idempotent; parent/child state and restoration in spec.
+
+## DIALOGUE
+
+[NPC] VŨ (đủ nguồn): “Phần này đã có nơi giữ rồi.” / VŨ (thiếu): “Tôi tiếp tục phần đã xác thực. Đường còn lại cần nguồn thật.”
+[CHOICE] Player can ask a bounded source question, remain silent, or take the actual branch: P4 order G6→G3→G5/G2 by earliest decisive cause→G4 ABCX→G1 all remaining; if saving path remains, continue. NPC reacts only to disclosed/witnessed payload and its own access.
+[NPC] IF G1 ABC=2/X=false: VŨ “Ba phần này đã ở hồ sơ. Quan hệ điều phối chung vẫn thiếu nguồn.” IF G4: VŨ “Các nhánh đã giữ; quyền Nam ra lệnh chưa kịp chứng minh.” G2/G5 dùng đúng earliest source loss.
+[DEV] Không nhắc lại dài dòng field player vừa tự xem.
+
+## INNER MONOLOGUE
+
+[PLAYER] Chỉ nếu đã nhìn đúng field: BẮC: “Thứ nào đã có nguồn giữ, thứ nào đã đóng đường cuối?” Nếu chưa quan sát thì im lặng. Không set police/BARC.
+
+## PHONE CONTENT
+
+[DOCUMENT] **Hồ sơ đã giữ:** hiển thị A/B/C/X/D từng mục theo actual receipts; **đường vừa đóng:** slot, thời điểm, nguồn, warning và cause từ DECISIVE_LOSS. Không có nút “chọn trùm”. Ending screen chỉ sau consequence.
+
+[PHONE] Bản tin sau ending chỉ phản ánh phần hồ sơ đã giữ và thông tin public hợp lệ; không tiết lộ toàn tri.
+
+## INSPECTABLE OBJECTS
+
+[INTERACT] custody tray, warning/source-path viewer, confirm exit. Each interaction exposes its defined raw field; inaccessible variants show a truthful access message. Optional inspect cannot invent an original document.
+
+## PUZZLE / PLAYABLE DISCOVERY
+
+[PLAYER] S18_TWO_TRAYS: cùng bố cục police tray và screen closure, nội dung/sound đổi theo phần thật đã giữ và nguyên nhân mất.
+[DISCOVERY] C42/C43 only existing receipts/closures
+[DEV] Failed comparison leaves raw sources reviewable; a wrong private conclusion does not erase police custody or consume window time.
+
+## CINEMATIC / MICRO EVENTS
+
+[AUDIO] Printer seal, phone ngừng rung, ambience ngõ trở lại ở epilogue.
+[LIGHT] Only practical light state driven by fixture/room state; no supernatural reaction to a correct deduction.
+[CAMERA] Player retains control through discovery; cut only after an explicit travel/terminal confirmation.
+
+## BRANCH VARIANTS
+
+[CHOICE] P4 order G6→G3→G5/G2 by earliest decisive cause→G4 ABCX→G1 all remaining; if saving path remains, continue
+[STATE] Police: all preserved slots monotonic; no reset in G1/G2/G4/G5. BARC: only historical received reports, no cinematic omniscience.
+[WORLD CHANGE] Ending ID and locked snapshot persisted once; no magically refreshed records.
+
+## CLUE HANDLING
+
+[DOCUMENT] Ending screen displays preserved slots and exact missing proposition, not new evidence
+[DISCOVERY] C42/C43 only existing receipts/closures
+[DEV] Treat original fact, custodial receipt, authentication and player observation as distinct records. C28/history/contact metadata never becomes command by itself.
+
+## SCENE EXIT
+
+[PLAYER] Nếu còn last saving path, không resolve; cho player quay lại nguồn hợp lệ.
+[AUTO] Cinematic ngắn và ending screen sau confirmed terminal state.
+[STATE] Next: `credits`. If a required route remains open, continue rather than force a partial ending.
+
+## CONTINUITY CHECK
+
+[DEV] Save/load: atomic terminal snapshot with ending ID, source/custody/time; reload never replays receipt/ending choice. No duplicate clue, NPC, source receipt, time cost or door state. Mọi seed vật/âm từ S04/S14 được trả lại qua consequence.
+
+---

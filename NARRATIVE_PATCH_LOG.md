@@ -22,7 +22,7 @@
 | P3 | Một authored clock, morning source requests/intakes, pre-loss warning và action costs | OBJECTIVE_TIMELINE, CLUE_GRAPH, PLAYER_STORY, SCENE_BREAKDOWN; FS clock | Lịch khả thi trong travel bounds; last loss có warning và action cứu trước | IN PROGRESS |
 | P4 | Total terminal resolver; decisive loss history; partial transitions | ENDING_LOGIC, CLUE_GRAPH, OBJECTIVE_TIMELINE, PLAYER_STORY, SCENE_BREAKDOWN | ABC=P/X=false; mixed leaks; D-only; weak routes; monotonic custody | COMPLETE — commit recorded below |
 | P5 | Playable event-driven S01–S18; conditional S13/S14, fast recap S12, custody-first/bypass S17 | PLAYER_STORY, SCENE_BREAKDOWN | 18 scene contracts, entry/action/state/exit, no compulsory unsafe encounter | COMPLETE — commit recorded below |
-| P6 | Full production dialogue/action/state S06–S18 cùng 13-section schema | FULL_SCRIPT | S01–S18 mỗi scene đủ schema, branch actions/state có nguyên nhân, no late outlines | PENDING |
+| P6 | Full tagged production script S06–S18 plus event spec | FULL_SCRIPT, EVENT_IMPLEMENTATION_SPEC | 18 event graphs/cards, save/load, state/source checks | COMPLETE — commit recorded below |
 | Validation | T01–T25 có inputs/actions/transitions/results + 17-layer adversarial re-audit | FINAL_NARRATIVE_REAUDIT, validation fixtures nếu cần | Không claim runtime/human playtest khi mới kiểm tài liệu/reference model | PENDING |
 
 ## Pre-flight dependency review
@@ -114,3 +114,9 @@ Chỉ đánh COMPLETE sau khi diff/consistency của phase đã được kiểm 
 - S01–S18 player-facing flows now center on world lure → player action → observed proof → authored NPC/world response. Every SCENE_BREAKDOWN scene has entry, environment, curiosity, action, discovery, automatic/micro/signature events, NPC routine, state, missed detail, return, fail-forward, exit and hooks. 18 primary set-pieces, with secondary beats possible inside S04/S08/S10/S16/S17; no jumpscare quota.
 - S08 raw source morning copy and S09 scoped request preserve P3 offsets. S12 recap avoids repeated Tuấn interrogation. S13 private inference is separate from competent Vũ verification; S14 only actual reports raise BARC. S15 custody precedes optional S17, whose room jam has a physical cause and release; direct S18 bypass remains.
 - P4 X normalization and earliest decisive loss persist; no scene completion grants police proof, boss identity or NPC knowledge. This is production design, not runtime playtest.
+
+### Block 3 — paired game script and event spec
+
+- S01–S05 retain detailed Act I script with a current P5 tagged overlay; S06–S18 now have full 13-section tagged game-script coverage, dialogue/source/UI, branch, timing and continuity rather than outline anchors.
+- EVENT_IMPLEMENTATION_SPEC shares exactly 18 signature IDs with the script and supplies 18 explicit scene graphs plus fully fielded event cards for preconditions, trigger, world/NPC state, actions, custody/knowledge/report/time, save/load, skip/fail-forward, hooks and required assets. Micro and discovery stages are named within each card/graph.
+- Critical source scheduling, X_COMMAND normalization, optional S17 jam/bypass and total S18 resolver have separate literal contracts. Source requests are not receipts, and cinematic/scene completion grants no clue. No Godot runtime code/playtest claimed.
