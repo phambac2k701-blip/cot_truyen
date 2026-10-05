@@ -19,7 +19,7 @@ Quy ước:
 
 - **D0** = ngày Bắc chuyển vào dãy trọ và nhận việc ngắn qua Tân Lộ.
 - **D−n / D+n** = số ngày trước/sau D0.
-- Các giờ trong D0/D+1 khóa **chronology** cho Stage 3; level design có thể xê dịch nhỏ miễn không phá thứ tự, travel buffer hay knowledge flow.
+- Các giờ và costs tại §0.1–0.2 khóa chronology thực thi chung. Mọi đổi schedule phải cập nhật cùng travel, source receipts và warning/closure tables; không tự xê dịch từng scene.
 - Event ghi **chỉ nếu player...** là event có điều kiện, không phải sự thật chắc chắn của mọi run.
 
 Travel budget dùng để audit:
@@ -31,6 +31,8 @@ Travel budget dùng để audit:
 | trọ ↔ Tân Lộ | 25–35 phút |
 | Tân Lộ ↔ Minh Trạch | 25–40 phút |
 | trọ ↔ Minh Trạch | 30–40 phút |
+| trường ↔ Tân Lộ | 35 phút, authored route S03 |
+| hospital area ↔ police micro-set / quiet point | 5 phút, cùng khu |
 
 Game có thể dùng transition/fast travel giữa hub, nhưng **objective chronology vẫn phải dành đủ thời gian cho việc di chuyển**.
 
@@ -46,6 +48,109 @@ Nguyên tắc bằng chứng:
 8. Tri thức Bắc (facts observed + explicit inference), police verification/custody và BARC (report đã nhận) riêng. Report lưu người gửi, exact payload, người nhận, thời điểm nhận; Nam không tự nhận mọi report tới Khải. Cùng report received cho cùng BARC dù private theory khác. Cleanup baseline không tạo awareness về Bắc.
 
 ---
+
+## 0.1. SINGLE AUTHORED CLOCK — lịch thực thi chung
+
+OBJECTIVE_TIME là ngày/phút trong fiction, không phải thời gian người chơi ngồi đọc. Clock chỉ tăng khi commit một event group có cost cố định, một chuyến đi thật, hoặc lựa chọn chờ/hẹn khác được báo trước. Reading, inspect, notebook, phone history, idle, hint, retry puzzle và private hypothesis đều 0 phút thêm. Dialogue dùng fixed cost khi group/checkpoint hoàn tất, không dùng độ dài voice/subtitle hoặc tốc độ đọc. Group có warning trước choice được chia checkpoints cố định: S08 CORE_A25m→09:25 rồi warning đọc0, CORE_B10m→09:35; total35m, từng charged flag riêng. Không ghi warning từ tương lai khi clock chưa tới checkpoint.
+
+Mỗi group/travel/wait có event_id, cost, departure/arrival và charged flag. Save lưu nguyên clock, charged flags, warning/report receipts và source custody; resume/revisit không thu cost lần hai. Load một save trước commit khôi phục toàn state trước event, không giữ evidence tương lai hoặc bỏ qua cost. Reinspect không respawn source. Trước commit show thời gian tới/chờ hoặc departure→arrival; 90 phút gameplay chỉ là play budget, không là fail timer. Events hậu trường được xử lý theo clock này khi một committed group đi qua issued/request/received/auth time của chúng, không theo wall clock.
+
+### Lịch Bắc trên main route
+
+| Time card / event group | Cost cố định | Việc thật và receipt |
+|---|---:|---|
+| D0 S01 07:30→08:35; trọ→trường 08:35→09:00 | 65m +25m | Required ordinary beats rồi explicit departure; không exit vì idle. |
+| S02 09:00→11:15; S03 11:15→11:49 | 135m +34m | Class/meal group rồi job conversation; UI/history không thêm phút. |
+| Trường→Tân Lộ 11:49→12:24; check-in→12:30 | 35m +6m | Cùng arrival 12:24 đã có; đây là travel thật, không teleport. |
+| S04 pickup 12:30→12:54; travel→13:24; handover→13:52; close job→14:10 | 24m +30m +28m +18m | C03 original time13:52; later observed_at riêng. |
+| Nearby meal arrival14:30; S05 ordinary afternoon→17:30; về trọ→18:05; ordinary room beat→18:07 | 10m local move +10m chờ món +180m +35m +2m | Meal/study transition authored; audit18:07 sau beat cuối, không do reading. |
+| S06 audit18:07→18:22; explicit chờ kết quả→20:00 | 15m +98m | Chờ/hẹn hiển thị trước confirm; S07 contact group20m, extra disclosed company call5m nếu chọn; ngủ/chờ sang08:30 D+1 là explicit transition. |
+| D+1 trọ→Tân Lộ08:30→09:00 | 30m | Đúng bound25–35m. |
+| S08 core09:00→09:35; optional C18 direct09:35→09:45 | 35m; +10m | Required notice09:25, actual bounded source/contact từ09:30; copy local received09:45 nếu chọn. |
+| Explicit hẹn S09 lúc10:00; phone intake10:00→10:15 | 25m wait, hoặc15m sau direct copy; +15m | Sourced C17/group payload receipt10:15. Không physical police trip. |
+| New source-address disclosure10:15→10:20; second distinct lead→10:25 nếu cần | +5m mỗi lead mới | Chỉ nếu source address/context chưa có trong payload đầu. Vũ tự collect nguồn đã được nói rõ; không request-checkbox lần hai. |
+| Tân Lộ→Minh Trạch10:20→10:50, hoặc10:25→10:55 | 30m | Hai lead mới vẫn tới10:55; nếu không có lead thêm, explicit hẹn departure10:20 dùng5m wait. |
+| S10 core10:50/10:55→11:10/11:15; optional Thảo→11:20/11:25 | 20m; +10m | Raw C11/C12 police received11:10; C15 actual receipt trước11:30 nếu chọn. |
+| Explicit hẹn S11 lúc11:30; compare→12:00; hospital→Tân Lộ→12:30 | Remaining wait5–20m; +30m +30m | S11 tại quiet point/phone trong hospital area; không chuyến thứ hai tới police. |
+| S12 retained verification12:30→13:00 | 30m | C22 original police receipt13:00; C18/C19 từ morning receipt, không fresh pickup. |
+| Tân Lộ→hospital area13:00→13:30; micro-set→13:35 | 30m +5m | Micro-set Vũ dùng lại ở hospital area, không thêm hub. |
+| S13 compare/callback13:35→14:00; S14 notices14:00→14:20 | 25m +20m | Retained-source verification; private inference đúng/sai không retime reports hoặc police. |
+| S15 sourced intake/coordination14:20→15:00 | 40m | E38 actual baseline14:55 nếu required raw sources đã authenticate; scene completion không grant threshold. |
+| S16 professional requests/receipts và presentation15:00→16:25 | 85m | Baseline full D actual verified/preserved16:10, không chờ hết presentation để custody. |
+| Nếu chọn về trọ sau intake:16:25→17:00; S17 ordinary contact→17:15 | 35m +15m | Đúng hospital↔trọ30–40m. Custody đã có không lùi. Safety/bypass edge thuộc resolver pass sau. |
+| Nếu cần quay police:17:15→17:50; S18 consequence từ17:50 | 35m | Không bắt quay lấy proof đã received; final route đọc actual records. |
+
+Đây là lịch không thêm delay; event mới cộng đúng cost vào clock hiện tại, không snap lùi về time card cũ. Hẹn đã qua không thể nhận bằng retroactive timestamp. Police requests đã có chạy song song độc lập: một chuyến đi/chờ của Bắc không retime hoặc xóa actual police receipt.
+
+### Morning police acquisition, không phải queue = proof
+
+| Source | Actual request / contact | Actual received / verification | Local closure |
+|---|---|---|---|
+| C17 và group bridge | S09 payload10:15; source/archive query10:15 | C17 copy received10:15; original reclassification checked13:00 | Worker-history access11:00; original/archive và police copy còn. |
+| C18 nếu Bắc lấy trực tiếp | Đức09:35→09:45; copy/custodian/time ghi rõ | Bắc local receipt09:45; police receipt10:15, origin/fields checked10:35 | Đức withdrawal of timely willingness11:00, không xóa phone copy. |
+| C18 police route | Actual shared contact/copy/deadline10:15, hoặc genuinely new disclosure10:20; Vũ contacts10:25 | Actual bounded export/testimony received10:35; origin/fields checked10:45; matched C22 at13:55 | Cùng11:00 willingness; queue hoặc source name alone chưa là receipt. |
+| C19 optional finance route | Actual bounded finance lead shared10:15/10:20/10:25; collector contact10:40 sau opening10:30 | Actual finance records received10:50; fields/origin checked11:00; matched C22 at13:55 | Yến quick cooperation/work access12:30; originals không biến mất. |
+| C11+C12 hoặc C15 | New group-specific hospital request10:15, không lặp narrow visit query cũ | C11/C12 originals received11:10, knowledge/assistance checked11:20; C15 receipt11:20/11:25 nếu chosen | Review/Thảo timely channel11:30; bản received không mất khi scope co. |
+| C22, C24, C25 | Vũ queries archive/risk records từ actual group bridge10:15; C22 follow-up12:30 | C24 hospital packet11:10; C22/C25 logistics packet13:00; X context check13:55, C content match hoàn tất14:55 | Local worker locks không xóa institution records hoặc professional copies. |
+
+Các giờ receipt phía trên là baseline actual share đúng slot, không bảo đảm retroactive cho một run đến muộn. Với actual source disclosure q: C18 contact=max(10:25,q+5m), receipt=contact+10m, fields auth=receipt+10m; C19 contact=max(10:40,q+15m), receipt=contact+10m, fields auth=receipt+10m; hospital originals received=max(11:10,q+55m), check+10m. Chỉ nhận trong timely source window mới ghi receipt; deadline equality/after-close không backdate. Institution originals còn để điều tra sau run, không magic deletion. C22/C25 professional packet baseline13:00, delayed genuinely new group query shifts chưa-completed request response by actual delay; completed receipts không shift. E38 dùng actual receipt/auth completeness, không một scene hoặc queued request tự grant.
+
+Nếu S09 đã chứa đủ source contact/copy/deadline, Vũ bắt đầu collection, không chờ một click xin lại. Nếu Bắc còn giữ source address/context, phải thật sự disclose mới có request. B/C/X không tăng vì queue; receipt và authentication là events khác. Một callback S12/S13 có thể verify copy received sớm, không invent acquisition trước deadline.
+
+### Warning trước last-needed-path loss
+
+| Notice actually received | Actor closure / time | Hành động cứu còn khả thi khi cảnh báo |
+|---|---|---|
+| S08 required09:25: worker history11:00, Đức chỉ nhận contact tới11:00, finance tới12:30 | Work access11:00 / Đức willingness11:00 / finance12:30, ba state riêng | Copy C17 now; nhận C18 trực tiếp09:35–09:45 hoặc share contact/copy/deadline tại S09 để actual receipt10:35; share bounded Yến lead để10:50 receipt. |
+| S09 acknowledgment10:15 và S10 entrance10:50/10:55: review/Thảo11:30 | Hospital scope/access và Thảo timely channel11:30 | Vũ tự request raw review/history từ group payload; C11/C12 receipt11:10. Nếu C12 fact thật thiếu, scoped Thảo10m còn hoàn tất11:20/11:25. Không dùng post-lock notice thay warning. |
+| S09 finance acknowledgment trước departure: Yến12:30 | Finance access/cooperation12:30 | Actual new bounded lead cho Vũ; request đủ sớm để contact10:40/receipt10:50. Alternative C18 đã nhận vẫn dùng; một local lock không global-lock case. |
+| S13 callback/S14 entrance14:00: command channels baseline17:00; broker confirms availability only, chưa intake annex | E40 global17:00; local manager/record/broker timely channel cùng command deadline | Hand over any missing raw source now; Vũ tự mở selected manager + other-branch record + broker requests sau actual E38. Full pipeline75m, baseline E38 latest15:40 để completion16:55. |
+| Nếu actual report gây acceleration: fresh deadline notice tới Bắc và Vũ tại W trước consequence | Global deadline=max(16:30, W+145m), chỉ advance nếu <17:00; canonical W14:00→16:30 | Remote sourced intake và toàn bộ remaining authentication tới actual E38 trong40m + professional D pipeline75m +10m buffer còn khả thi, theo feasibility check dưới đây. Nếu actual remainder không đủ trước candidate deadline hoặc W quá muộn, giữ baseline17:00; không retroactive lock. Latest E38 canonical accelerated15:10→completion16:25. |
+| Late broker reminder15:00/actual case contact trước request | Broker willingness/contact closes at known global deadline, private originals vẫn có | Vũ request originals tại E38+15m và receives E38+55m; không Bắc tới gặp Hạnh, không random trust roll. Missing annex remains missing, A không lùi. |
+
+W là actual warning receipt, không thời gian Bắc đọc hết UI. Bound145m gồm remaining notice group tối đa20m + remote missing-source intake/authentication40m tới actual E38 + professional D pipeline75m +10m buffer; không bắt đợi xong một unpriced scene nữa để cứu nguồn.
+
+Advertised40m chỉ áp dụng cho bounded handover còn thực sự khả thi, và gồm ALL remaining steps để đủ actual E38: disclose đúng source/context, actual original/copy receipt, origin/identity/fields checks, exact-content/purpose verification và match/corroboration còn thiếu. Receipt, source name hoặc queue không grant E38; 75m sau E38 chỉ là D collection/authentication, không giấu phần B/C authentication chưa xong. Baseline morning match13:55 và full C content-auth14:55 giữ nguyên; late source không được thừa hưởng những timestamps ấy.
+
+Nếu original acquisition hoặc independent verification còn cần hơn40m, ghi actual remainder R từ lúc saving action có thể bắt đầu tới authentication đủ E38, theo các request/receipt/check thật còn lại; không co steps để vừa40m. Giữ candidate deadline=max(16:30,W+145m), nhưng chỉ accelerate khi có plan thật thỏa W + remaining notice cost (tối đa20m) + R +75m +10m ≤ candidate deadline <17:00. Nếu chưa biết/không đủ remainder, giữ baseline17:00. Saving plan cũng phải còn source willingness/access thật; không restore một source đã đóng. Police work đã chạy vẫn song song, completed receipts/authentication không retime vì Bắc chờ.
+
+Mọi actor event khác muốn đóng last usable path phải thêm warning receipt và saving action còn đủ authored cost trước close; không được tự làm local deadlines sớm hơn bảng vì leak. Leak có thể hạn chế direct C17 scope, nhưng C18/C19/professional reconstruction còn đường thật; nếu muốn đóng đường cuối phải dùng warning gate trên. CLEANUP=LOCKED chỉ tại global E40 command closure, không tại11:00/11:30/12:30. Nếu đã preserve required sources, closure không hạ custody.
+
+### Observable false-apex actions
+
+| Action đã confirm sau notice | Clock cost | Consequence thực |
+|---|---:|---|
+| Quay lại hẹn Tuấn cùng một việc đã được scope-corrected | +15m =5m local move +10m appointment | Arrival card và deadline notice trước commit. Private suspicion/retry0. Không xóa source police đã giữ. |
+| Chờ Hùng rảnh thay vì gửi source còn thiếu cho Vũ | +30m deliberate wait | Show finish time và latest intake15:40 baseline/15:10 accelerated. Saving action là gửi sourced payload ngay; nếu police đã có threshold, case proceeds anyway. |
+| Gửi thông tin đã chọn cho company/Minh qua contact mới | +5m | Chỉ exact disclosed payload vào report ledger; report receipt riêng, không toàn notebook. |
+| Dời cuộc intake mới sang hẹn sau | +20m deliberate delay | Warning trước confirm nếu vượt local/global last path; queued request và existing custody không bị reset. |
+
+Không có cost vì đứng trong UI, suy sai endpoint, vẫn nghi Tuấn/Hùng/Khải, nghe lại thoại hoặc đọc chậm. Những action này chỉ có consequence nếu actual clock/report/source custody tương ứng thay đổi.
+
+## 0.2. CURRENT D RECORDS — issue trước intake, hai quyết định khác nhau
+
+Các decisions sau do baseline crisis review/breach đang xử lý, hoặc actual received escalation reports, không do private E36 success. Nội dung là scoped pause/approve-again đối với cùng nhóm/case đang review, không phải lời thú nhận toàn mạng. L và H là hai request/authorization khác nhau, không copies của một order.
+
+| Original event | Issued / received / execution trong D+1 | Origin/custodian và giới hạn |
+|---|---|---|
+| C24 current risk context | Khoa incident request09:10→Khải response09:20 | Hospital origin: crisis Phúc/review group, actual risk role và scope response; không chỉ call/account. Police receives11:10. |
+| C25 current risk context | Hùng incident request09:15→Khải response09:25 | Logistics origin: breach/same crisis, actual risk role/scope; police receives13:00, compares13:55. |
+| Hạnh bounded source request | Hạnh→Khải13:00: case Phúc, pause case mới/giảm liên hệ/báo lại Phúc đã chia với ai | Broker chỉ giữ phần forward Hạnh thực sự gửi xuống, không biết other-branch bodies hoặc whole network. Chưa police intake annex. |
+| L — logistics current decision | Hùng request qua Khải13:10; original Nam reply authorize13:20; Tân Lộ receipt/execution13:25 | Pause next priority medical handovers cùng group/case, only resume with Nam approve-again. Original receiver-side Nam reply trong bounded approval channel Tân Lộ, forward/request/execution đều retained; operational custodian xác nhận records, không tự biết Nam/crime. Hùng firsthand L làm C32H. L original làm C34_AUTH cho Khoa route. |
+| H — hospital current decision | Khoa request qua Khải13:35; original Nam reply authorize13:45; hospital receipt/execution13:50 | Pause new handling/intake trong review group/case, keep existing case in scoped review, only resume/contact changes with Nam approve-again. Hospital custodian giữ original receiver-side Nam reply, request/forward/execution. Khoa firsthand H làm C32K. H original làm C33_AUTH cho Hùng route. |
+| Source execution of L | Hạnh forward13:30 giữ case request + exact L authorization scope; broker receipt/apply13:32 | Case mới/bàn giao trong scope bị dừng; reduce contact và report disclosure theo bounded directive. L annex match chính C34_AUTH, không được count lại forward làm independent D2. |
+| Source execution of H | Hạnh forward14:00 giữ case request + exact H authorization scope; broker receipt/apply14:05 | Same bounded source responsibilities, gắn exact H decision/request khác L. H annex match chính C33_AUTH. Source giữ cả hai portions nếu thực sự đã nhận; không auto grant phần chưa nhận. |
+
+Vũ authenticate authorship Nam từ original receiver-side reply, exact request/reply/scope/forward/execution và endpoint identity đã kiểm bằng professional contact origins. Display name, Khải tự gõ “Nam duyệt”, metadata hoặc Hạnh kể lại đều không thay original. Hạnh/broker không được cấp knowledge toàn branch kia; full scope được Vũ cross-verify từ distinct institutional originals.
+
+| Police event sau actual E38=t0 | Baseline t0=14:55 | Actual receipt/auth và recovery |
+|---|---|---|
+| Manager own-branch request t0+5m | 15:00 | C32H hoặc C32K direct intake received t0+25m=15:20 nếu willing theo trigger trách nhiệm đã giữ. Vũ tự liên hệ known manager sources; refusal là actual causal event, không quiz/roll. Mất Hùng còn Khoa, không pure record-only D1. |
+| OTHER-branch original request t0+10m | 15:05 | Hospital H received t0+40m=15:35 hoặc logistics L received t0+45m=15:40; identity/content/execution checked by t0+60m=15:55. Hùng pairs H, Khoa pairs L, không own-branch duplicate. |
+| Known broker private-channel annex request t0+15m | 15:10 | Actual original request/authorization-forward/receipt received t0+55m=15:50; match exact chosen D2 + counterpart origin by t0+75m=16:10. C10_SOURCE_LINK first police receipt này, không E28/future record. |
+| Full D custody | 16:10 | Chỉ accepted pair + matching source annex thật được received/authenticate. Presentation có thể tiếp tục tới16:25; custody không chờ scene end. |
+
+Nếu t0 muộn vì required raw sources thật chưa received/authenticate, cộng offsets trên từ actual t0, không backdate. Nếu nguồn đã vào police trước delay của Bắc, Vũ tiếp tục và không chờ một click D-request khác. Baseline latest t0=15:40→16:55; canonical accelerated latest t0=15:10→16:25. Requests queued chưa là records hoặc proof. Không retime L/H creation theo t0 hay private hypotheses.
 
 # 1. OBJECTIVE TIMELINE — HÌNH THÀNH HỆ THỐNG
 
@@ -457,7 +562,7 @@ Nguyên tắc bằng chứng:
 - **Bằng chứng được tạo ra:** Chỉ có decision/risk note nếu Khải ghi; không phải clue quyết định.
 - **Bằng chứng tồn tại ở đâu:** Risk management.
 - **Bằng chứng có thể biến mất lúc nào:** Có thể bị dọn sau crisis.
-- **Event tiếp theo mà nó gây ra:** E26/E27/E28 tùy player; nếu Bắc không điều tra thì tới baseline E31.
+- **Event tiếp theo:** E26/E29 chỉ nếu actual disclosure/contact; E27→E33 và E28→E34 là independent investigation/source lines, không do E25/player curiosity. Nếu không điều tra, baseline E31 vẫn tới.
 
 ## E26 — Minh có thể làm lộ mức tò mò của Bắc
 
@@ -489,7 +594,7 @@ Nguyên tắc bằng chứng:
 - **Bằng chứng được tạo ra:** Version chênh lệch của review, comments/approval trail, case flags.
 - **Bằng chứng tồn tại ở đâu:** Compliance system Minh Trạch.
 - **Bằng chứng có thể biến mất lúc nào:** Quyền truy cập có thể bị thu hẹp D+1; audit trail nền vẫn còn.
-- **Event tiếp theo mà nó gây ra:** E32.
+- **Event tiếp theo mà nó gây ra:** E33 hospital/source window; không E32 logistics.
 
 ## E28 — Vũ hoàn tất A độc lập với Bắc
 
@@ -505,11 +610,11 @@ Nguyên tắc bằng chứng:
 - **Bằng chứng được tạo ra:** C08 originals bổ sung, C10 record so exact content từng fact, hospital-request confirmation và receipt/authentication từng source; copy của một lời khai không được đếm là origin độc lập.
 - **Bằng chứng tồn tại ở đâu:** Originals ở hai custodians; authenticated copies/chronology ở police ngoài quyền xóa network. C10_SOURCE_LINK là future actual intake S16 sau E38, chưa được tạo/nhận tại E28.
 - **Bằng chứng có thể biến mất lúc nào:** Police records không mất trong run và không lùi vì Bắc miss encounter. T07 partial-subset fixture chỉ đặt trước E28, ghi đúng record/fact chưa được nhận.
-- **Event tiếp theo mà nó gây ra:** E33 nếu Bắc tạo bridge; nếu không, baseline E31.
+- **Event tiếp theo:** E34 police comparison khi có new sourced group bridge; không E33 hospital source. E28 custody độc lập với bridge; baseline E31 vẫn tiến.
 
 ## E29 — Bắc có thể chuyển N1 → N2
 
-- **Thời điểm:** D0, 21:00–23:00, chỉ nếu Bắc chủ động đào sâu.
+- **Thời điểm:** D0 tối20:20–23:00, chỉ từ authored contacts/disclosures và actual reports; private reading0.
 - **Địa điểm:** Tùy hành động; không đòi hỏi Nam/Khải ở cùng Bắc.
 - **Những người có mặt:** Bắc và nguồn cậu tiếp cận; Khải chỉ nhận hậu quả/báo cáo.
 - **Chuyện khách quan xảy ra:** Bắc làm nhiều hơn phản ứng bình thường của một worker: hỏi sâu, giữ/so dữ kiện hoặc xuất hiện quanh một nguồn thứ hai.
@@ -562,10 +667,10 @@ Nguyên tắc bằng chứng:
 
 ## E32 — Cửa sổ Đức
 
-- **Thời điểm:** D+1, 09:30–11:00.
+- **Thời điểm:** D+1, 09:30–11:00 timely willingness; offer/request S08 sáng, actual receipt09:45 hoặc police10:35 theo §0.1.
 - **Địa điểm:** Tân Lộ hoặc điểm gặp hợp lý nếu có contact; không yêu cầu Khải xuất hiện trực tiếp.
 - **Những người có mặt:** Đức; Bắc/Vũ chỉ nếu có route tiếp cận.
-- **Chuyện khách quan xảy ra:** Đức biết bị nghi leak và cân nhắc hợp tác để tự bảo vệ. C18 là private export đã tồn tại từ E17 trên điện thoại cá nhân; tiếp cận hợp lệ cho testimony/copy giới hạn, không tạo file mới hoặc cấp knowledge toàn mạng.
+- **Chuyện khách quan xảy ra:** Đức tự bảo vệ bằng bounded private export từ E17. S08 notice09:25 và contact từ09:30 đặt actual offer trước last willingness11:00. Bắc có thể nhận copy/testimony09:35–09:45, hoặc share contact/copy/deadline ở S09 để Vũ tự collect10:25/receive10:35. Không chờ S12/S13 mới tới nguồn đã đóng.
 - **Nguyên nhân:** E17–E18.
 - **Hậu quả:** Logistics có thể trở thành nguồn corroboration độc lập; nếu không, Đức bị tước dần quyền truy cập.
 - **Ai biết chuyện này:** Đức biết phần logistics và nghi liên hệ y tế.
@@ -573,7 +678,7 @@ Nguyên tắc bằng chứng:
 - **Ai hiểu sai:** Đức có thể vẫn nghĩ Hùng là đỉnh.
 - **Bằng chứng được tạo ra:** Testimony giới hạn và receipt của private copy C18 vốn có; authentication so originals/fields vận hành riêng, không coi một screenshot là proof tự xác thực.
 - **Bằng chứng tồn tại ở đâu:** Phía Đức; nếu chuyển hợp pháp thì sang Vũ.
-- **Bằng chứng có thể mất timely access lúc nào:** Cửa tiếp cận E32 là willingness/contact để nhận copy/lời Đức trong run. Thu hẹp leak/buổi review có thể khiến anh ngừng hợp tác; khoảng trưa account công việc có thể khóa. Private copy vẫn ở điện thoại nếu chưa có discovery/seizure event; police copy đã nhận không bị thu hồi. P3 phải chốt warning/request/receipt trước last-route closure, không dùng badge lock để despawn copy.
+- **Bằng chứng có thể mất timely access lúc nào:** Willingness/contact11:00 sau required notice09:25 và actual saving options §0.1. Work account revocation11:00 là access riêng, không xóa phone export. Received copy giữ receipt/provenance và verify later; không police custody từ queue, không despawn vì badge. Local closure này không CLEANUP=LOCKED.
 - **Event tiếp theo mà nó gây ra:** E36.
 
 ## E33 — Cửa sổ Huyền/Thảo
@@ -589,7 +694,7 @@ Nguyên tắc bằng chứng:
 - **Ai hiểu sai:** Huyền vẫn không thể tự suy ra command structure.
 - **Bằng chứng được tạo ra:** Review trail + giải thích chuyên môn + nếu Thảo hợp tác, corroboration về khác biệt giữa hồ sơ và hoàn cảnh.
 - **Bằng chứng tồn tại ở đâu:** Minh Trạch; nếu được cung cấp hợp pháp thì hồ sơ điều tra.
-- **Bằng chứng có thể biến mất lúc nào:** Khoa có thể giới hạn access trong ngày; không thể xóa lịch sử review an toàn.
+- **Bằng chứng có thể mất timely access lúc nào:** Hospital/Thảo channel11:30, cảnh báo10:15 và tại entrance10:50/10:55. Actual group query10:15→C11/C12 originals received11:10; Thảo alternative10m còn receipt11:20/11:25. Local scope closure không xóa received originals/history và không global lock.
 - **Event tiếp theo mà nó gây ra:** E36.
 
 ## E34 — Cửa sổ Phúc/Vũ
@@ -603,7 +708,7 @@ Nguyên tắc bằng chứng:
 - **Ai biết chuyện này:** Vũ chỉ nâng knowledge theo evidence xác minh được.
 - **Ai chỉ biết một phần:** Phúc vẫn không biết Tân Lộ/Nam và không được dùng như nguồn cho các facts đó.
 - **Ai hiểu sai:** Nếu Bắc quy kết Tuấn/Huyền chỉ vì chức vụ, Vũ không coi đó là fact.
-- **Bằng chứng được tạo ra:** Record Bắc cung cấp, chain-of-custody narrative, comparison timeline.
+- **Bằng chứng được tạo ra:** Actual S09 sourced payload received10:15 và request ledger. Một source đã đủ contact/copy/deadline khiến Vũ chủ động collection; C18 actual police receipt10:35, C19 actual receipt10:50 nếu bounded finance lead thật shared. New-address action5m chỉ khi thông tin ấy chưa có, không re-delivery checkbox. A từ E28 giữ nguyên.
 - **Bằng chứng tồn tại ở đâu:** Hồ sơ điều tra.
 - **Bằng chứng có thể biến mất lúc nào:** Sau khi tiếp nhận chính thức, organization không thể xóa.
 - **Event tiếp theo mà nó gây ra:** E36/E38.
@@ -613,7 +718,7 @@ Nguyên tắc bằng chứng:
 - **Thời điểm:** D+1, 10:30–12:30.
 - **Địa điểm:** Tân Lộ.
 - **Những người có mặt:** Yến; Hùng trong cùng company; Bắc không mặc định gặp Yến.
-- **Chuyện khách quan xảy ra:** Yến nhận ra cleanup có thể khiến mình mang dấu chân tài chính. Nếu có trigger phù hợp từ điều tra, cô có thể xác nhận pattern tiền; nếu không, cô tiếp tục im lặng.
+- **Chuyện khách quan xảy ra:** Actual bounded finance lead trong S09 mở professional request, collector contact10:40 sau opening10:30, finance record received10:50. Yến xác nhận đúng nhóm đối soát để không gánh hết trách nhiệm Hùng; không giải nhánh Phúc/Nam. Queue chưa là receipt; S13 chỉ verify/match copy đã nhận với C22.
 - **Nguyên nhân:** E17 và nỗi sợ trách nhiệm.
 - **Hậu quả:** Có thể tạo corroboration tài chính, nhưng không giải nguồn người, bệnh viện hay Nam.
 - **Ai biết chuyện này:** Yến biết số liệu bất thường.
@@ -621,7 +726,7 @@ Nguyên tắc bằng chứng:
 - **Ai hiểu sai:** Yến từng tin im lặng giúp đứng ngoài trách nhiệm.
 - **Bằng chứng được tạo ra:** Đối chiếu/records tài chính vốn đã tồn tại; lời xác nhận nếu hợp tác.
 - **Bằng chứng tồn tại ở đâu:** Tân Lộ; sau đó hồ sơ điều tra nếu được thu thập.
-- **Bằng chứng có thể biến mất lúc nào:** Hùng có thể khóa quyền truy cập trong D+1; nền dữ liệu doanh nghiệp không biến mất hoàn toàn.
+- **Bằng chứng có thể mất timely access lúc nào:** Yến access/cooperation12:30, notice09:25 và S09 source acknowledgment trước departure. Saving action là disclose bounded source/group/contact để10:50 receipt; C18 đã receipt là alternative C thật. Received finance copy và institution originals không biến mất khi account khóa. Không global lock12:30.
 - **Event tiếp theo mà nó gây ra:** E38.
 
 ## E36 — N3_UNDERSTANDING của Bắc: nối đúng facts và current risk context
@@ -658,7 +763,7 @@ Nguyên tắc bằng chứng:
 
 ## E38 — Ngưỡng police corroboration
 
-- **Thời điểm:** D+1, 14:00–16:00.
+- **Thời điểm:** D+1 baseline actual E38=14:55 nếu B/C required raw sources đã authenticate; late run dùng actual t0, không scene-completion hoặc private-inference grant.
 - **Địa điểm:** Cơ quan điều tra và các nguồn xác minh.
 - **Những người có mặt:** Vũ; tùy route có Phúc, Huyền, Đức/Yến/Thảo hoặc record chính thức.
 - **Chuyện khách quan xảy ra:** Vũ giữ A từ E28; khi đủ sourced B/C corroboration, anh mở điều tra nhiều institution và chủ động bảo toàn các nguồn còn thiếu. X_VERIFIED chỉ khi actual current risk/escalation sources Khải endpoint + request/response scope + crisis context đã intake/authenticate, ngoài relation giao dịch ABC. Nếu raw context đủ, Vũ tự verify dù teen inference sai; nếu context chưa nhận, ABC có thể PRESERVED/X=false mà Vũ vẫn xử lý các case đã rõ.
@@ -667,7 +772,7 @@ Nguyên tắc bằng chứng:
 - **Ai biết chuyện này:** Vũ và đội điều tra biết giả thuyết mạng lưới đã có cơ sở.
 - **Ai chỉ biết một phần:** Có thể vẫn chưa đủ proposition D để chứng minh Nam.
 - **Ai hiểu sai:** Sau khi A+B+C đã corroborate, không còn hợp lý để Vũ coi đây chỉ là một môi giới nhỏ.
-- **Bằng chứng được tạo ra:** Hồ sơ tổng hợp xác minh, yêu cầu bảo toàn record ở mức narrative.
+- **Bằng chứng được tạo ra:** Actual threshold/authentication record và proactive professional requests. §0.2 khóa manager requestt0+5m/receipt+25m, other-branch request+10m/receipt+40m hoặc+45m, source-annex request+15m/receipt+55m, full verification+75m. Không chờ Bắc xin lại khi sourced contacts/context đã trong custody.
 - **Bằng chứng tồn tại ở đâu:** Cơ quan điều tra và institutions.
 - **Bằng chứng có thể biến mất lúc nào:** Sau khi được bảo toàn chính thức, organization không thể đơn giản xóa.
 - **Event tiếp theo mà nó gây ra:** E39–E42.
@@ -677,7 +782,7 @@ Nguyên tắc bằng chứng:
 - **Thời điểm:** D+1, khoảng 16:00–20:00; hậu quả pháp lý tiếp tục D+2 trở đi.
 - **Địa điểm:** Nhiều điểm; cảnh sát điều phối, không phải Bắc tự 'đột kích'.
 - **Những người có mặt:** Vũ và lực lượng phù hợp; các nguồn corroboration; Nam/Khải/Hùng/Khoa/Hạnh bị tác động theo evidence.
-- **Chuyện khách quan xảy ra:** Nếu A+B+C đã được bảo toàn và proposition D được corroborate bằng ít nhất hai dấu quan hệ/command độc lập, cảnh sát có đủ cơ sở để hành động lên phần lõi thay vì chỉ bắt tầng thấp. Nam không thể cứu lõi bằng cách hy sinh một manager.
+- **Chuyện khách quan xảy ra:** Nếu A+B+C/X đã bảo toàn và accepted C32H+C33_AUTH hoặc C32K+C34_AUTH trên hai current decisions L/H khác nhau, cộng matching C10_SOURCE_LINK đã received/authenticate trước global deadline, cảnh sát đủ proof scope phần lõi. Bare relations/contact metadata không đủ; Nam không thể chỉ hy sinh manager.
 - **Nguyên nhân:** Bắc tạo bridge đúng lúc + Vũ chuyển bridge đó thành evidence có thể xác minh + organization chưa cleanup xong.
 - **Hậu quả:** Mạng chính bị phá ở mức đủ thỏa mãn; Bắc sống; phần lớn sự thật được làm rõ. Một số mắt xích/chi tiết ngoài phạm vi vẫn có thể chưa hoàn toàn khép.
 - **Ai biết chuyện này:** Vũ biết đủ cấu trúc để hành động; Bắc hiểu phần lớn nhưng không biết mọi chi tiết nghiệp vụ.
@@ -690,13 +795,13 @@ Nguyên tắc bằng chứng:
 
 ## E40 — CLEANUP ROUTE: police có A/B/C nhưng quá muộn với lõi
 
-- **Thời điểm:** D+1 chiều–tối.
+- **Thời điểm:** D+1 global E40 baseline17:00; accelerated deadline=max(16:30, actual warning W+145m) chỉ nếu sớm hơn17:00. Các local closures11:00/11:30/12:30 không E40.
 - **Địa điểm:** Tân Lộ, Minh Trạch và các kênh quản trị.
 - **Những người có mặt:** Nam, Khải, các manager; Vũ ở tuyến điều tra.
-- **Chuyện khách quan xảy ra:** Nếu organization biết Bắc/Vũ đang nối các nhánh trước khi proposition D được bảo toàn, Nam ra lệnh đóng nhánh, cắt quyền truy cập và chấp nhận mất các mắt xích đã lộ. Cảnh sát vẫn xử lý được phần tội phạm thật nhưng lõi command khó chứng minh kịp.
+- **Chuyện khách quan xảy ra:** Baseline crisis đóng timely command channels17:00 dù private Bắc chưa hiểu. Actual received reports có thể làm Khải/Nam advance deadline theo warning rule §0.1; fresh notice phải tới Bắc/Vũ trước close và còn saving action40m intake/authentication đủ E38+75m D collection/authentication. Actual longer remainder phải qua feasibility check §0.1, nếu không giữ baseline17:00; receipt/queue không trigger E38. Không retroactive closure vì leak/private theory. Cảnh sát vẫn giữ/xử lý evidence đã nhận; chỉ phần D còn thiếu bị lỡ finite run window.
 - **Nguyên nhân:** Early exposure hoặc chậm chuyển evidence sang Vũ.
 - **Hậu quả:** Một số người có tội bị xử lý; network mất phần lớn hoạt động hiện tại nhưng Nam/Khải có thể tránh bị buộc vào toàn cấu trúc. Đây là Bad Ending — Cleanup/Partial.
-- **Ai biết chuyện này:** Nam biết N4 risk đang tới; Vũ biết có network nhưng thiếu D chắc.
+- **Ai biết chuyện này:** Nam/Khải biết đúng scope actual received reports; Vũ/Bắc nhận deadline warning. Nếu D đã preserve16:10, access lock17:00 hoặc16:30 không hạ proof; thiếu D phải nêu actual receipt/auth chưa hoàn tất.
 - **Ai chỉ biết một phần:** Bắc có thể hiểu đúng hơn những gì hồ sơ pháp lý kịp chứng minh.
 - **Ai hiểu sai:** Không dùng cảnh sát 'không tin'; vấn đề là preservation/timing.
 - **Bằng chứng được tạo ra:** A/B/C đủ mạnh; D còn suy đoán hoặc chain chưa bảo toàn.
@@ -706,7 +811,7 @@ Nguyên tắc bằng chứng:
 
 ## E41 — DELAY / MISSED EVIDENCE ROUTE
 
-- **Thời điểm:** D+1 chiều–tối.
+- **Thời điểm:** D+1 chiều–tối, sau local last-required-path closure có warning; không tự global lock.
 - **Địa điểm:** Các institution.
 - **Những người có mặt:** Vũ, Bắc và những nguồn còn mở.
 - **Chuyện khách quan xảy ra:** Nếu Bắc bỏ lỡ Đức/Huyền hoặc tới sau khi quyền truy cập bị thu hẹp, police chỉ có một hoặc hai hộp sự thật. Vụ Phúc vẫn tiến nhưng không mở được cấu trúc đủ rộng trong game window.
@@ -1220,12 +1325,12 @@ Không nhân vật nào được cấp knowledge vượt nguồn họ có. Các 
 
 ## C1. D0: Bắc có đủ thời gian trọ → trường → Tân Lộ/job → về trọ không?
 
-- 07:30–09:00 trọ.
-- 09:30–11:30 trường.
-- 12:30–14:10 job.
-- 17:30 trở đi có thể về trọ.
+- S01 trọ07:30–08:35; travel25m→trường09:00.
+- School/meal09:00–11:15; job choice group34m→11:49; travel35m→Tân Lộ12:24/check-in6m→12:30.
+- Job12:30–14:10 gồm actual travel30m12:54→13:24 và handover13:52.
+- Nearby meal arrival14:30; ordinary afternoon tới17:30; travel hospital area→trọ35m tới18:05, last beat2m→audit18:07.
 
-Có buffer 30–90 phút giữa các hub. PASS.
+Fixed departure/arrival cards theo §0.1, không teleport hoặc hidden reading clock. PASS.
 
 ## C2. Nam có teleport từ risk meeting về trọ không?
 
@@ -1239,7 +1344,7 @@ Có. Họ ở hai institution khác nhau và chưa cần gặp nhau. PASS.
 
 **Lỗi tiềm năng phát hiện:** E32–E35 chồng giờ.
 
-**Sửa đã áp dụng:** các event này là **cửa sổ song song**, không yêu cầu Bắc tự gặp tất cả. Một true route chỉ cần Bắc trực tiếp nối một số nguồn; Vũ có thể xác minh/tiếp nhận nguồn khác qua quy trình của mình. Game dùng hub transition nhưng objective truth không buộc protagonist physically visit four places cùng lúc.
+**Sửa đã áp dụng:** shared schedule §0.1 cho S08 morning C18 offer, S09 actual source-led requests, C18 police receipt10:35/C19 receipt10:50, hospital arrival10:50 hoặc10:55 và core+Thảo complete11:20/11:25. Local windows giữ nguyên. S12/S13 verify retained copies. Bắc không physically visit four sources; actual queued/received/authenticated khác nhau.
 
 PASS.
 
@@ -1247,10 +1352,10 @@ PASS.
 
 Có một race hợp lý D+1:
 
-- sáng: access bắt đầu đóng;
-- trưa: Bắc có thể tạo N3;
-- đầu chiều: Khải xác nhận N3/N4;
-- chiều: Vũ có thể đạt preservation threshold.
+- local willingness/access closures11:00/11:30/12:30 sau required warnings, không global lock;
+- baseline current decisions L13:20/H13:45 và broker receipts13:32/14:05 không phụ thuộc private N3;
+- actual E38 baseline14:55 mở proactive collection; full D16:10;
+- global17:00, hoặc actual warned acceleration canonical16:30 vẫn có saving action trước lock.
 
 True/Bad route khác nhau chính ở thứ tự hai event **police preservation** và **cleanup lock**. PASS.
 

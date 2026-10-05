@@ -122,20 +122,11 @@ LEAK_PATH không tự động quyết định ending. Nó chỉ có ý nghĩa n�
 
 ## 1.6. CLEANUP — trạng thái race
 
-Một enum:
+- **BASELINE:** crisis cleanup theo objective timeline, local willingness/access11:00/11:30/12:30 riêng.
+- **ACCELERATED:** actual report làm actor advance a future deadline; requires fresh received warning and feasible saving action. Minh/direct route alone không tự grant lock.
+- **LOCKED:** global E40 command closure at17:00, hoặc deadline=max(16:30,W+145m) nếu sớm hơn17:00 sau actual warningW. Local source closures không enum LOCKED. Evidence đã police received/authenticate không bị hạ khi lock.
 
-- **BASELINE:** cleanup objective vẫn diễn ra theo Stage 3.
-- **ACCELERATED:** organization đã có thêm lý do đẩy nhanh source isolation.
-- **LOCKED:** các cửa command/source quan trọng của run hiện tại đã đóng; police vẫn có thể điều tra lâu dài, nhưng game window không còn đủ để xây phần còn thiếu.
-
-CLEANUP_ACCELERATED có thể đến từ:
-
-- Minh leak;
-- direct exposure;
-- BARC N3/N4;
-- hoặc objective cleanup vốn đã tăng theo timeline.
-
-Không có visible countdown.
+Single OBJECTIVE_TIME và once-charged event ledger tại OT §0.1 áp dụng toàn resolver: UI/reading/retries/private hypotheses0, fixed committed events/travel/waits only; save-load không duplicate cost hoặc giữ future receipt. Deadline/arrival cards là notice, không ticking failure meter. Canonical W14:00→16:30 vẫn để40m missing-source intake gồm ALL remaining authentication đủ actual E38+75m D pipeline+10m buffer; longer actual remainder phải qua OT §0.1 feasibility check hoặc giữ baseline17:00. Receipt/queue không grant E38; W muộn không được retroactively advance lock. Private understanding không tạo acceleration.
 
 ---
 
@@ -239,10 +230,9 @@ DIRECT exposure:
 
 ## 3.5. Cleanup lock
 
-CLEANUP chuyển LOCKED khi:
+CLEANUP chuyển LOCKED chỉ tại global E40 command deadline17:00 hoặc actual warned acceleration=max(16:30,W+145m)<17:00. Local Đức11:00/hospital11:30/Yến12:30 closures thay source access/willingness riêng, không tự enum LOCKED.
 
-- các cửa command/source quan trọng của run hiện tại đã đóng;
-- hoặc objective timeline đã đi qua mốc mà D không còn có thể được corroborate/preserve trong run.
+Warnings/save actions theo OT §0.1/CG §10, và actual late requests/receipts/auth offsets theo OT §0.2. A source request chưa nhận không được dùng như proof; deadlines evaluated bằng authored clock, không wall clock.
 
 Lock không có nghĩa “mọi database bị xóa”.
 
@@ -415,7 +405,7 @@ Bắc hiểu rằng có chuyện nghiêm trọng, nhưng hiểu đến đó sau 
 - player miss source chính;
 - route thay thế cuối cùng cũng đóng;
 - player tới sau access window;
-- hoặc đã dành quá nhiều thời gian cho false theory khiến source không còn usable trong run.
+- hoặc đã confirm một observable extra visit/wait sau notice, với fixed cost làm actual clock qua deadline của source chưa received. Private false theory/reading0 không đóng source.
 
 Không cần leak.
 
@@ -441,8 +431,8 @@ Chỉ khóa khi **đường thay thế cuối cùng cho một required fact cũn
 
 - C43: access bắt đầu đổi.
 - Người từng trả lời nay cần quyền khác.
-- Đức nói rõ mình sắp bị khóa.
-- Huyền báo scope review bị thu hẹp.
+- Đức báo willingness11:00, private copy vẫn còn; S08 saving action trước close, không badge=deletion.
+- Huyền báo11:30 ở S09/S10 trước loss; group request/receipt hoặc Thảo10m vẫn feasible, không chỉ explanation sau khóa.
 - Vũ nhấn mạnh rằng source có giá trị hơn theory.
 
 Không có timer UI.
@@ -1065,18 +1055,17 @@ Player phải tin **đúng phạm vi knowledge**.
 
 ## 11.4. Timing phải đúng
 
-Canonical timing:
+OT §0.1–0.2 là shared fixed schedule; không co giãn một scene riêng hoặc convert reading speed thành objective time.
 
-- D0 tối E28 (20:00–21:30): Vũ hoàn tất A custody/authentication độc lập với Bắc.
-- D+1 sáng: player có thể xem phần A đã được giữ; B/C vẫn theo các source windows riêng.
-- Khoảng 12:00–14:00: player có thể đạt cross-cell understanding N3 qua relation được nguồn support.
-- Khoảng 14:00–16:00: Vũ đạt E38 nếu có đủ B/C và sourced X bổ sung vào A đã giữ.
-- Trong S16 15:00–17:00 sau actual E38 của run và trước E40 closure/lock: Vũ direct intake C32H/C32K, other-branch original record và current C10_SOURCE_LINK từ broker counterpart đã có lead E12/E28; không retroactive E28 future record, không buộc Bắc giao lại nguồn Vũ đã giữ.
-- Trước cleanup lock: accepted pair và source-branch context phải được verify/preserve; bare contact/timestamps không đủ.
+- A authenticated/preserved E28 D020:00–21:30.
+- S08 morning09:00–09:35, required notice09:25, optional C18 local receipt09:45. S09 sourced payload10:15: once actually told contact/copy/deadline, Vũ collect C18 received10:35; actual bounded finance lead→C19 received10:50. Queue chưa receipt, later S12/S13 only verify retained sources.
+- Hospital arrival10:50/10:55, core20m+Thảo10m finishes11:20/11:25 before local11:30; C11/C12 actual police receipt11:10. All local clocks11:00/11:30/12:30 differ from global lock.
+- C22/C25 packet actual receipt13:00, raw current-risk X verify13:55, C required content authentication baseline14:55 triggers actual E38=t0 independently of private N3 success or scene end. Police advances from sources already held, no second request checkbox.
+- Current decisions L: Nam issue13:20/logistics execution13:25; H: Nam issue13:45/hospital execution13:50. Hạnh request13:00 is actually forwarded with L13:30/broker receipt13:32 and H14:00/receipt14:05. These are two distinct original decisions, not retimed by private theory or later police intake. Original receiver-side Nam authorization and identity verification, not display name or villain exposition, establish authorship.
+- After actual t0: manager request+5/receipt+25; OTHER-branch request+10, H receipt+40 or L+45, pair auth+60; broker private annex request+15/receipt+55/final exact-D2 match+75. Baseline t014:55 gives actual manager15:20, other-branch15:35/15:40, annex15:50 and full D16:10, before presentation finishes16:25. Never retroactive E28 annex.
+- Baseline global17:00 allows latest t015:40→16:55. Canonical actual warned acceleration16:30 allows latest t015:10→16:25. Any delay matters only to required sources genuinely still unreceived; police custody/proactive processing already started cannot be retimed by Bắc waiting or traveling.
 
-Không biến các giờ trên thành countdown tuyệt đối ở UI.
-
-Chúng là objective pacing windows, có thể co giãn nhẹ theo scene implementation.
+Warnings/save actions are the OT §0.1 and CG §10 table, mandatory BEFORE loss of the last path. A post-lock S14 explanation is not its earlier warning. Broker availability-only notice14:00 is not annex receipt; actual annex intake remains after E38. Required sourced intake40m/professional pipeline75m are shown before a deliberate wait that would overrun the deadline. Reading/hints/retries do not consume those windows.
 
 ---
 
@@ -1495,7 +1484,7 @@ Production phải giữ ba cơ chế:
 
 ### Một — source windows chồng nhau
 
-Player không thể vô hạn “nói với mọi người, thử mọi option” mà không trả giá timing.
+Retry/hint/reinspect/replay đã charged có cost0. Một cuộc hẹn/visit/contact mới thật có fixed cost hiển thị trước commit; không charge vì thử private interpretation.
 
 Không cần biến game thành timer gắt; chỉ cần event progression có hậu quả.
 
@@ -1507,9 +1496,9 @@ Sở hữu nhiều record không tự bật X_VERIFIED.
 
 Full D chỉ mở khi player đưa sourced relation để Vũ intake manager firsthand, authenticate quyết định khác ở branch khác và verify source-branch context của cùng directive; không mở từ contact/closures pattern.
 
-### Ba — sai interpretation tốn thời gian/thay đổi consequence
+### Ba — observable action có cost/report consequence, private interpretation0
 
-Nếu player tiếp tục observable probing theo Tuấn/Hùng sau scope correction/cảnh báo, hoặc chia source/theory cho Minh, world reacts. Private suspicion không tự tốn window hay tạo penalty.
+Tuấn extra appointment+15m (5m local move+10m talk); chờ Hùng thay vì gửi required source+30m; new company/Minh disclosure+5m; deliberately dời intake+20m. Each cost/finish time and last-path warning precedes confirm. Actual reports chứa exact payload/recipient/receipt; police đã giữ sources vẫn proceed. Private suspicion, wrong endpoint và slow reading0.
 
 Không có accusation quiz để brute-force tất cả tên.
 
@@ -1563,7 +1552,7 @@ Nếu tester có thể tìm ra chỉ bằng việc đọc source, thời gian v�
 
 1. Không thêm ending mới trừ khi nó có causal state khác thực sự.
 2. Không cho một dialogue option đơn lẻ khóa true ngay nếu hậu quả chưa xảy ra.
-3. Mỗi permanent route loss phải có ít nhất một soft warning trước đó.
+3. Mỗi permanent last-needed-path loss có actual warning receipt BEFORE và saving action còn đủ fixed cost; gồm accelerated leak/global lock và late broker annex. Post-loss explanation không thay warning.
 4. Mỗi required fact phải có provenance rõ.
 5. Không dùng death của NPC làm token để tăng stakes nếu objective truth không cần.
 6. Không cho Nam biết notebook/inference riêng của Bắc nếu chưa có observable report.
@@ -1577,7 +1566,7 @@ Nếu tester có thể tìm ra chỉ bằng việc đọc source, thời gian v�
 14. Không cho Avoidance trigger trước N3.
 15. Không cho True Ending yêu cầu tất cả optional clues.
 16. Nếu scene implementation thay timing, phải giữ relative order:
-    source windows → N3 → preservation threshold → command proof → cleanup lock.
+    actual source receipt/authentication → professional E38 → distinct current D intake/authentication → global cleanup lock; private N3 track riêng, local closures không global lock.
 17. Nếu thêm alternate clue cho A/B/C/D, nó phải chứng minh cùng proposition với independence tương đương; không được là shortcut exposition.
 18. Ending screen phải ngắn, có nhãn và mô tả, nhưng cinematic trước đó mới là nơi thể hiện consequence.
 

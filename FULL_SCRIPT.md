@@ -33,6 +33,8 @@ Bản script này được viết sau khi đối chiếu toàn bộ các nguồn
 
 Không dùng cold open về tội phạm. Game bắt đầu ở đời sống của Bắc.
 
+[DEV / CLOCK] OT §0.1–0.2 single OBJECTIVE_TIME: reading/inspect/phone UI/hints/retries/private hypotheses0. Fixed committed groups, real travel và deliberate wait have visible cost/arrival and persistent charged flag; save-load resumes without double charge/future receipts. Fixed montage seconds are presentation, not source deadline cost. The clock never advances because a reader waits on text.
+
 ---
 
 # ACT I — ĐỜI SỐNG TRƯỚC KHI CÓ VỤ ÁN
@@ -47,7 +49,7 @@ Không dùng cold open về tội phạm. Game bắt đầu ở đời sống c�
 
 - **Scene ID:** S01
 - **Location:** HUB B — dãy trọ; phòng Bắc, hành lang, không gian chung, góc sửa đồ của Nam
-- **Time:** D0, 07:30–09:00
+- **Time:** D0,07:30–08:35 core65m, then explicit travel25m→school09:00
 - **Required state:** New Game; BARC = N0; E19 đã xảy ra D−1 nhưng player không biết
 - **Characters:** Bắc, Trần Thị Lan, Vũ Đức Nam, 1–2 hàng xóm nền không tên
 
@@ -448,7 +450,7 @@ Chỉ set C28_SEEN. Nam không phản ứng vì Bắc nhìn thấy một card c�
 
 ## SCENE EXIT
 
-Khi đồng hồ game đạt khoảng 08:35 hoặc player hoàn tất required beats:
+Khi player hoàn tất required ordinary beats và confirm departure: commit S01_CORE once65m07:30→08:35. Reading/inspect/idle không fire exit. [CLOCK CARD] **08:35 → 09:00 — tới trường, 25 phút.** Travel event charged once khi departure commit; các beats đã charged không lặp cost sau save-load.
 
 [PHONE — LỊCH] rung một lần.
 
@@ -845,7 +847,7 @@ Không phạt. S07 sẽ mở lại bằng việc Bắc hỏi trực tiếp khi a
 
 ## SCENE EXIT
 
-Khi player rời khu ăn hoặc mở điện thoại sau 11:10, Minh nói:
+Khi required class/meal group đã hoàn tất và player confirm rời khu ăn, commit S02_CORE once135m09:00→11:15; queued phone/Minh beat chạy từ event completion, không UI idle hoặc mở phone sau elapsed11:10. Reading/phone review0. Minh nói:
 
 **MINH:**  
 Nếu lát có ca nào gần đây tôi gửi. Ông tự xem giờ nhé.
@@ -878,7 +880,7 @@ S03 bắt đầu trong cùng HUB A, không loading scene cứng nếu production
 
 - **Scene ID:** S03
 - **Location:** HUB A — khu ăn/quán sinh viên + phone UI; transition tới Tân Lộ
-- **Time:** D0, 11:15–12:20
+- **Time:** D0, core11:15–11:49; travel35m→12:24/check-in6m→12:30
 - **Required state:** S02 complete; C01 seen; BARC = N0
 - **Characters:** Bắc, Minh; nhân viên hỗ trợ Tân Lộ chỉ qua app nếu cần
 
@@ -966,7 +968,7 @@ Bắc có thể mở app ngân hàng: số dư vẫn khoảng 1.386.000 ₫ tr�
 **BẮC:**  
 Không trùng tiết. Làm xong vẫn về kịp.
 
-Sau 20–30 giây hoặc khi player quay lại card, Minh nói:
+Khi player intentional quay lại card sau hesitation choice, Minh nói; wall-clock20–30 giây không trigger event/clock. Revisit card và đọc ngân hàng0 phút thêm:
 
 **MINH:**  
 Không nhận thì thôi nhé, ca kiểu này lát có người khác lấy.
@@ -1074,7 +1076,7 @@ Không có puzzle.
 
 ### First travel to Tân Lộ
 
-- **Trigger:** Player accept job và bấm “Đi tới điểm nhận”.
+- **Trigger:** Player accept job và confirm “Đi tới điểm nhận”; S03_CORE charged once34m11:15→11:49; visible travel **11:49→12:24,35 phút**, rồi check-in6m→12:30. Phone inspect/hesitation reading0, không hidden acceptance timer.
 - **Camera:** First-person leave khu sinh viên → 6–10 giây authored travel montage: vạch đường, xe buýt/xe máy ngoài cửa kính tùy phương tiện production chọn, biển đường không cần đọc rõ.
 - **Blocking:** Không có NPC plot trong montage.
 - **Animation:** Bắc cất điện thoại, chỉnh ba lô.
@@ -1439,7 +1441,7 @@ Mismatched scan là authored event, không bắt player giải.
 
 ### Travel tới Minh Trạch receiving point
 
-- **Trigger:** pickup complete.
+- **Trigger:** pickup group charged once24m12:30→12:54; confirm travel card **12:54→13:24,30 phút**. Handover group28m→13:52, job-close18m→14:10; label/media reading0 and original handover time remains13:52.
 - **Camera:** 8–12 giây first-person travel montage / transit shots.
 - **Blocking:** Không NPC plot.
 - **Audio:** traffic, app navigation chime nhẹ.
@@ -1530,8 +1532,8 @@ Transition tới khu ăn/ngõ trong S05; không suspense sting.
 ## SCENE HEADER
 
 - **Scene ID:** S05
-- **Location:** quán bình dân / khu gần trường hoặc ngõ → HUB B dãy trọ
-- **Time:** D0, 14:30–18:00
+- **Location:** quán bình dân gần tuyến Minh Trạch→trọ, rồi HUB B dãy trọ; không extra school trip
+- **Time:** D0,14:30–18:07; nearby move10m+meal wait10m from14:10, ordinary afternoon group180m→17:30, return35m→18:05, room beat2m→18:07
 - **Required state:** E22_COMPLETE = true; package no longer with Bắc; payment pending
 - **Characters:** Bắc, Lan, Nam, Linh qua chat; NPC quán/hàng xóm
 - **Backstage state by scene end:** E23 → E24 → E25; BARC organization knowledge N0 → N1
@@ -1876,7 +1878,7 @@ Không được biến việc kiểm tra payment hoặc C28 thành required inte
 
 ### Match cut về trọ
 
-- **Trigger:** Player rời quán/khu ngoài.
+- **Trigger:** Player confirm kết thúc ordinary meal/study afternoon group once180m14:30→17:30, rồi visible travel **17:30→18:05,trọ35 phút**; montage không advance thêm phút từ wall-clock.
 - **Camera:** Điện thoại hiển thị “Đang xử lý” → match cut sang cùng điện thoại đặt trên bàn phòng trọ.
 - **Duration:** 3–5 giây.
 - **Audio:** âm quán crossfade sang tiếng hành lang/quạt.
@@ -1931,7 +1933,7 @@ Bắc có thể đọc notebook ở phòng; không có authored deduction. Nội
 
 ## SCENE EXIT
 
-Sau khi Bắc có ít nhất một hành động bình thường trong phòng — mở laptop, cắm sạc, hoặc trả lời Linh — điện thoại rung lúc 18:07.
+Sau khi Bắc đã arrive18:05 và commit một ordinary room beat — mở laptop, cắm sạc, hoặc trả lời Linh — charge S05_ROOM once2m→18:07, display time card và queued audit notification. Reading/inspect trước/sau beat không advance clock, repeated beat/save-load không thêm cost.
 
 [PHONE] Audit notification hiện như trên.
 
@@ -1968,7 +1970,7 @@ Màn hình không fade sang thriller. Player vẫn ở phòng. S06 bắt đầu 
 - S05 không thêm major clue.
 - Payment pending vẫn hợp listing ban đầu; audit notification là inciting beat của S06.
 - HUB B geometry/props nối đúng S01: ổ kéo đã quay về phòng, card C28 không tự di chuyển.
-- Objective time kết thúc khoảng 18:00, đúng trước S06 audit window.
+- Objective time ends18:07 via authored room beat, đúng S06 entry; source inspect/UI dwell cannot fire the notification or consume a future window.
 
 ---
 

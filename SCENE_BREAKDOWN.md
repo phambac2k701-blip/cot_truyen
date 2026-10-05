@@ -92,13 +92,24 @@ Không bắt buộc player phải vào trong run 90 phút.
 Nếu dùng ở consequence cinematic, chỉ thể hiện qua exterior/brief authored shots.
 Không biến climax thành raid do Bắc thực hiện.
 
-## 0.3. Fast travel
+## 0.3. Single authored clock / fast travel
 
-- Lần đầu tới một nơi quan trọng: phải có một đoạn travel/arrival đủ để location có cảm giác địa lý.
-- Sau khi route đã được established: cho phép chuyển hub bằng điện thoại/bản đồ/điểm đón xe.
-- Fast travel là time compression có authored arrival; không teleport vô nghĩa.
-- Travel không dùng như đồng hồ trừng phạt từng phút. Time windows đóng theo scene progression + player decisions.
-- Trong S13–S18, khi Vũ đã tham gia mạnh, một phần xác minh diễn ra off-screen qua police để Bắc không phải chạy tới mọi source.
+OBJECTIVE_TIME/costs tại OT §0.1–0.2 là source duy nhất. UI/reading/inspect/private hypotheses/hints/retries0. Fixed dialogue groups khi commit, real travel và deliberate wait có visible cost/arrival; charged flags/clock/actual receipts persist save-load, không charge revisit lần hai. Load pre-event restores entire pre-event state, không giữ future evidence. A 5–15 second montage không phải objective travel cost. Cross-hub departures/arrivals dùng fixed bounds; local actual visit5–15m, không per footstep. No automatic exit from wall-clock idle.
+
+| Main-route card | Fixed event/travel |
+|---|---|
+| S08 morning09:00–09:35 | Trọ→Tân Lộ30m; CORE_A25m→09:25 warning/read0, CORE_B10m→09:35; optional C18 copy10m→09:45 |
+| S09 phone10:00–10:15 | Explicit wait to appointment; intake15m; truly new source lead5m each, max departure10:25 |
+| S10 arrive10:50/55 | Travel30m; core20m, Thảo alternative10m→11:20/25 before local11:30 |
+| S11 11:30–12:00; S12 12:30–13:00 | Explicit wait then compare30m; hospital→Tân Lộ30m; retained verify30m |
+| S13 13:35–14:00 | Tân Lộ→hospital area30m+local micro-set5m; compare25m |
+| S14 14:00–14:20; S15 14:20–15:00 | Notices20m, sourced intake/coordination40m; E38 baseline actual14:55 from source authentication |
+| S16 15:00–16:25 | Professional requests/receipt offsets OT §0.2; full D actual16:10, group85m does not defer custody |
+| Optional S17 after intake | Hospital-area→trọ35m to17:00, ordinary group15m; if return police35m to17:50, without required re-delivery |
+
+Local willingness11:00/hospital11:30/finance12:30 are separate from global E40 LOCKED17:00. Actual accelerated report requires fresh warningW; global=max(16:30,W+145m) only if earlier17:00, canonical14:00 warning→16:30. Each last-needed-path warning must precede close with actual saving action still feasible: missing-source remote intake gồm ALL remaining authentication đủ actual E38 trong40m + professional D75m +buffer10m. Longer actual remainder phải qua OT §0.1 feasibility check hoặc giữ baseline17:00; receipt/queue không grant E38. Read time never consumes this opportunity. Police already holding source contacts/context collects proactively; a late personal scene cannot retime completed receipts. S08/S09/S10 warnings precede local losses; S14 is reinforcement/global notice, not the first warning after morning sources expired.
+
+---
 
 ## 0.4. Puzzle policy
 
@@ -154,14 +165,9 @@ Chase/physical danger nếu có chỉ là scripted beat ngắn ở late route x�
 
 Không scene nào game-over vì player suy luận sai một lần.
 
-Sai lầm tạo:
-- tốn narrative time;
-- access đóng;
-- source rút;
-- leak path;
-- route ending khác.
+Private mistake/retry0. Actual new visits/waits/disclosures có fixed cost/report và có thể khiến source chưa received mất timely access sau prior warning. Source withdrawals, leaks và route consequences phải ghi causal event; không tự penalty từ interpretation.
 
-Permanent route loss chỉ xảy ra sau soft warning và causal consequence.
+Permanent last-needed-path loss chỉ xảy ra sau actual warning receipt BEFORE, saving action đủ authored cost và causal closure; gồm accelerated cleanup/broker channel.
 
 ---
 
@@ -183,9 +189,8 @@ Opening / normal life. Production entry point của game.
 HUB B — dãy trọ; phòng Bắc, hành lang, không gian chung, góc sửa đồ Nam.
 
 ## TIME / STATE
-D0, 07:30–09:00.  
-BARC: N0.  
-E20.
+D0, 07:30–08:35; fixed core65m rồi travel25m→09:00.
+
 
 ## CHARACTERS PRESENT
 Bắc, Trần Thị Lan, Vũ Đức Nam, 1–2 NPC nền không cần tên riêng.
@@ -398,8 +403,8 @@ Inciting incident.
 HUB A — quán/khu sinh viên + phone UI.
 
 ## TIME / STATE
-D0, 11:15–12:20.  
-E21 → E22.
+D0, 11:15–11:49 core34m; travel35m→12:24, check-in6m→12:30.
+
 
 ## CHARACTERS PRESENT
 Bắc, Minh; nhân viên hỗ trợ Tân Lộ qua app nếu cần.
@@ -582,11 +587,11 @@ First breather.
 ~4 phút.
 
 ## LOCATION
-Quán gần trường/ngõ + HUB B.
+Quán bình dân gần tuyến Minh Trạch→trọ + HUB B; không extra school trip.
 
 ## TIME / STATE
-D0, 14:30–18:00.  
-E23 → E25 ở hậu trường.
+D0, 14:30–18:07; ordinary afternoon group180m, về trọ35m, last room beat2m.
+
 
 ## CHARACTERS PRESENT
 Bắc, Lan, Nam, Linh qua chat/call, NPC quán.
@@ -683,7 +688,8 @@ Second anomaly.
 HUB B phòng Bắc + phone; có thể optional short return/voice call với Tân Lộ.
 
 ## TIME / STATE
-D0, 18:00–20:00.
+D0, 18:07–18:22 audit15m; explicit wait kết quả98m→20:00.
+
 
 ## CHARACTERS PRESENT
 Bắc, Tuấn qua call/chat; Minh có thể nhắn.
@@ -767,8 +773,8 @@ Point of curiosity / early branch gate.
 HUB B — phòng Bắc; phone/laptop.
 
 ## TIME / STATE
-D0, 20:00–23:00.  
-E26/E29/E30 conditional.
+D0, từ20:00; contact group20m, genuinely new disclosure5m; explicit sleep/wait tới08:30 D+1, không private reading timer.
+
 
 ## CHARACTERS PRESENT
 Bắc; Minh qua chat/call; Linh optional đời thường.
@@ -870,11 +876,11 @@ First real connection.
 SITE C — Tân Lộ, kênh khiếu nại/worker records.
 
 ## TIME / STATE
-D+1, 09:00–10:00.  
-E31/E32 bắt đầu.
+D+1, 09:00–09:35 core35m; optional direct C18 copy10m→09:45; explicit hẹn police10:00.
+
 
 ## CHARACTERS PRESENT
-Bắc, Tuấn, nhân viên vận hành; Đức có thể glimpse.
+Bắc, Tuấn, nhân viên vận hành; Đức actual morning limited source offer/contact.
 
 ## PLAYER ENTRY CONDITION
 Player chọn tiếp tục sau S07.
@@ -897,10 +903,11 @@ Chuyển mystery từ cảm giác sang fact có chủ ý: R1.
 2. Player thấy reclassification xảy ra trước Bắc.
 3. C20 cho thấy Tuấn không có authority tạo reclassification.
 4. C22 được seed/đặt hướng lên Hùng.
+5. Required notice09:25: worker/Đức11:00, finance12:30; actual Đức offer/contact từ09:30. Có copy10m→receipt09:45 hoặc actual contact/copy/deadline cho police collection10:35; bounded Yến lead cho10:50 actual receipt. Warning trước lựa chọn tiết kiệm hoặc deliberately delay.
 
 ## OPTIONAL EVENTS
 - C21.
-- Gặp Đức sớm.
+- Actual C18 direct copy09:35–09:45 (10m), hoặc retain source address/contact để share S09; không late pickup after11:00.
 - Nếu leak từ S07, một phần access đã khó hơn.
 
 ## CLUES
@@ -938,7 +945,7 @@ Nếu C17 access bị hạn chế do leak, route recover qua Đức/Vũ vẫn t�
 
 ## FAILURE / CONSEQUENCE
 Sai puzzle không mất clue; hint tăng dần.
-Fixation Tuấn có thể tiêu narrative time và làm source window hẹp.
+Wrong inference/reading/hint0. Confirm extra Tuấn appointment+15m (5m move+10m talk) hoặc Hùng wait+30m mới tăng clock, với cost/finish/deadline notice và saving source-share action trước confirm. Existing police custody không lùi.
 
 ## AUDIO ATMOSPHERE
 Office business ambience. Khi reveal C17, không sting “villain”; dùng sound focus nhẹ.
@@ -967,11 +974,11 @@ Police entry.
 ~5 phút.
 
 ## LOCATION
-POLICE MICRO-SET / phone-to-office transition.
+Phone appointment tại Tân Lộ; existing police micro-set only later, không morning physical police trip.
 
 ## TIME / STATE
-D+1, ~10:00.  
-E34 mở.
+D+1, 10:00–10:15 phone intake15m; new source disclosures5m each nếu cần, depart10:20/10:25.
+
 
 ## CHARACTERS PRESENT
 Bắc, Đại úy Nguyễn Minh Vũ. Phúc chưa cần xuất hiện trực tiếp.
@@ -995,11 +1002,14 @@ Trình bày fact có nguồn thay vì theory.
 1. Vũ phân biệt fact với inference.
 2. C10/C11A được mở ở mức cần thiết.
 3. Player được xem phần hồ sơ hợp lệ: A đã authenticate/preserve E28, không chờ cậu giao lại chronology.
-4. Ít nhất một logistics source có thể được police intake.
+4. Actual C17/group payload received10:15. Enough C18 contact/copy/deadline in this payload khiến Vũ tự contact10:25/receive10:35; không đợi second request click.
+5. Chỉ genuinely new missing source address/context có disclosure5m; bounded Yến lead actual contact10:40/receipt10:50. Query hospital group10:15→originals11:10; prior narrow visit confirmation vẫn riêng.
+6. Source acknowledgments nêu hospital11:30/finance12:30 trước departure; queue≠received≠auth.
+7. q-late formulas OT §0.1 apply actual contact/receipt/check times; no retroactive10:35/10:50 from a late query. Once collection started, personal travel/delay không retime it.
 
 ## OPTIONAL EVENTS
 - Hỏi thêm về Phúc; Vũ giữ boundary.
-- C42 foreshadow qua intake/provenance.
+- C42 foreshadow qua intake/provenance; genuinely new source disclosure5m, không re-delivery nguồn đã trong payload.
 
 ## CLUES
 - **Mandatory:** C10, C11A.
@@ -1058,8 +1068,8 @@ Hospital layer / second box.
 HUB C — Minh Trạch, sảnh + compliance room.
 
 ## TIME / STATE
-D+1, 10:00–11:30.  
-E33.
+D+1, arrive10:50/10:55; core20m→11:10/11:15, Thảo alternative10m→11:20/11:25 before11:30.
+
 
 ## CHARACTERS PRESENT
 Bắc, Vũ, Hoàng Huyền, Lâm Thảo; Khoa có thể bề mặt.
@@ -1085,6 +1095,7 @@ Tạo independent box B và red herring Huyền hợp lý.
 2. Player hiểu review predates E22.
 3. Có dấu quản trị can thiệp sau review.
 4. Hospital vẫn hiện đa số hoạt động bình thường.
+5. Required entrance notice10:50/10:55 nêu channel11:30 trước core20m/Thảo10m. Actual police C11/C12 receipt11:10, checked11:20; selected Thảo receipt11:20/11:25 còn feasible. Received copies survive local scope lock.
 
 ## OPTIONAL EVENTS
 - C12.
@@ -1163,8 +1174,8 @@ Midpoint.
 POLICE MICRO-SET hoặc quiet public meeting point gần hospital.
 
 ## TIME / STATE
-D+1, 11:30–12:30.  
-E34.
+D+1, 11:30–12:00 compare30m; no second police trip; travel Tân Lộ30m→12:30.
+
 
 ## CHARACTERS PRESENT
 Bắc, Vũ; Phúc optional/controlled.
@@ -1258,7 +1269,8 @@ False theory / wrong direction.
 SITE C — Tân Lộ; quầy/office records.
 
 ## TIME / STATE
-D+1, ~12:00–13:00.
+D+1, 12:30–13:00 retained verification30m; extras fixed warned cost, no fresh morning source pickup.
+
 
 ## CHARACTERS PRESENT
 Bắc, Tuấn, Đức; Hùng gián tiếp/brief appearance.
@@ -1276,7 +1288,7 @@ Dạy player: access ≠ knowledge; culpable manager ≠ apex.
 - inspect permission chain;
 - hỏi Tuấn về override;
 - compare procedural behavior;
-- talk Đức nếu route mở;
+- review morning received C18/testimony hoặc limited callback, không fresh copy sau willingness11:00;
 - follow Hùng-level approval trail.
 
 ## REQUIRED EVENTS
@@ -1287,7 +1299,7 @@ Dạy player: access ≠ knowledge; culpable manager ≠ apex.
 
 ## OPTIONAL EVENTS
 - C21.
-- C18 từ Đức nếu window còn.
+- C18/C19 retained morning copy verification; actual receipt09:45/10:35 hoặc10:50 phải đã ghi.
 - Brief visual Hùng nhưng không monologue.
 
 ## CLUES
@@ -1317,7 +1329,8 @@ Dạy player: access ≠ knowledge; culpable manager ≠ apex.
 - Có thể nghĩ tự cứu bằng cách đẩy trách nhiệm.
 
 ## BACKSTAGE EVENTS
-Đức/Yến access sắp đóng.  
+Đức willingness11:00/Yến access12:30 đã đóng; private/received copies còn và source verification dùng actual custody.
+
 Khải thấy incident ngày càng khó cô lập.
 
 ## STATE CHANGES
@@ -1326,11 +1339,11 @@ Khải thấy incident ngày càng khó cô lập.
 - HUNG_FALSE_APEX can arm if player stops reasoning.
 
 ## BRANCHES
-Fixation Tuấn/Hùng có thể làm mất source window → G1/G4 later, không immediate fail.
+Observable extra Tuấn visit+15m, Hùng wait+30m hoặc dời new intake+20m có visible finish/deadline warning. Private false apex/retry0; chỉ source thật chưa received có thể lỡ, existing police processing không retime.
 
 ## FAILURE / CONSEQUENCE
 Không có accusation quiz.
-Player được phép tin sai nhưng world time tiếp tục.
+Player được phép tin sai/đọc chậm mà clock không tăng; committed dialogue/travel/wait mới tăng đúng fixed cost.
 
 ## AUDIO ATMOSPHERE
 Office gấp hơn buổi sáng; máy in, điện thoại, người gọi nhau; access door beep có thể telegraph closure.
@@ -1355,11 +1368,11 @@ Escalation / three-box connection.
 ~6 phút.
 
 ## LOCATION
-Multi-source authored sequence: Tân Lộ + police micro-set + Minh Trạch callbacks. Không bắt Bắc chạy toàn bộ bằng chân.
+Existing police micro-set trong hospital area, sau Tân Lộ→area30m +local move5m; retained-source callbacks, không source tour mới.
 
 ## TIME / STATE
-D+1, 12:30–14:00.  
-E32–E36.
+D+1, 13:35–14:00 compare/callback25m; preceding travel30m+5m local.
+
 
 ## CHARACTERS PRESENT
 Bắc, Vũ, Đức; Huyền/Thảo via verified source; Yến optional mostly police; Khải direct/indirect.
@@ -1377,7 +1390,7 @@ Xác định liệu các scandal có chung risk-management endpoint.
 - review two contact trails;
 - puzzle compare endpoints/timestamps C24/C25;
 - chọn bridge gửi Vũ;
-- optional source Đức/Yến/Thảo;
+- optional retained-source Đức/Yến/Thảo verification từ actual morning receipt; không new acquisition sau local closure;
 - nghe Vũ xác minh phần player không cần tự đi.
 
 ## REQUIRED EVENTS
@@ -1431,7 +1444,7 @@ E37: chỉ actual received reports đủ mới nâng BARC; Nam chỉ nhận exac
 - Nếu player dùng unsafe channel: leak consequences S14.
 
 ## FAILURE / CONSEQUENCE
-Sai inference không game-over; nhưng theo Khải như “boss cuối” quá lâu có thể làm D window hẹp.
+Inference/retry0. Chỉ actual extra appointment/visit/wait sau visible cost/deadline warning mới advance clock; police raw-custody verification vẫn chủ động dù private theory sai.
 
 ## AUDIO ATMOSPHERE
 Cross-cut sound design giữa office/hospital/police, nhưng không montage giải thích. Tension tăng bằng notification/access sounds.
@@ -1463,8 +1476,8 @@ Danger escalation.
 Multi-hub state change: phone + Tân Lộ + Minh Trạch status. Player có thể bắt đầu ở transit/police point.
 
 ## TIME / STATE
-D+1, 13:30–15:00.  
-E37/E42 possible.
+D+1, 14:00–14:20 notices20m; global warning14:00, local pre-loss notices already delivered.
+
 
 ## CHARACTERS PRESENT
 Bắc, Minh, Vũ qua phone; Tuấn/Đức/Huyền tùy source.
@@ -1487,8 +1500,9 @@ Biến threat thành bureaucracy có hậu quả, không “đội sát thủ”
 
 ## REQUIRED EVENTS
 1. Ít nhất một C43 access-closure event.
-2. Vũ cảnh báo evidence cần rời khỏi tay Bắc.
-3. Cleanup được thể hiện như process.
+2. Required global notice14:00: baseline command deadline17:00, availability-only broker notice, actual missing-source intake saving action; không annex receipt trước E38. Fresh acceleration warningW phải để40m intake/authentication đủ actual E38+75m D pipeline+10m buffer trước max(16:30,W+145m)<17:00. Nếu actual remainder dài hơn, OT §0.1 feasibility check bắt buộc hoặc giữ baseline17:00; queue/receipt chưa authenticated không grant E38.
+3. Local pre-loss notices S08/S09/S10 đã xảy ra; S14 morning-lock explanation không được dùng thay prior warning.
+4. Cleanup được thể hiện như process; local willingness/access closure không global CLEANUP=LOCKED.
 
 ## OPTIONAL EVENTS
 - C35/C36/C37 nếu Minh leak.
@@ -1499,7 +1513,7 @@ Biến threat thành bureaucracy có hậu quả, không “đội sát thủ”
 - **Mandatory:** C43 consequence signal.
 - **Optional:** C35/C36/C37.
 - **Red herring:** RH4 Minh là plant nếu player suy quá.
-- **True-ending:** soft warning cho preservation timing.
+- **True-ending:** reinforce existing local warnings và global14:00 notice; saving action vẫn feasible trước global lock17:00/canonical acceleration16:30.
 - **Delayed-value:** C07 giải thích Minh không phải member.
 
 ## NPC INFORMATION
@@ -1560,8 +1574,8 @@ Point of no return.
 POLICE MICRO-SET / secure intake.
 
 ## TIME / STATE
-D+1, 14:00–15:30.  
-E38 possible.
+D+1, 14:20–15:00 sourced intake/coordination40m; E38 actual baseline14:55 if source authentication sufficient, not scene award.
+
 
 ## CHARACTERS PRESENT
 Bắc, Vũ; Linh optional 15–20 sec đời thường outside mystery.
@@ -1653,8 +1667,8 @@ Late investigation.
 Police micro-set + selected manager source + authored records; không cần tour toàn Hà Nội.
 
 ## TIME / STATE
-D+1, 15:00–17:00.  
-E38 → command investigation.
+D+1, 15:00–16:25 presentation/group85m; full D actual baseline16:10, professional offsets from actual E38.
+
 
 ## CHARACTERS PRESENT
 Bắc, Vũ, Khải/Hùng hoặc manager source phù hợp; Khoa/Thảo route-dependent.
@@ -1678,9 +1692,10 @@ Tách relationship evidence khỏi command evidence.
 ## REQUIRED EVENTS
 1. C30 chỉ được frame là history.
 2. C31 opens current Khải→Nam contact.
-3. Có route D1.
-4. Có route D2 độc lập.
-5. Game không cho C27/C28/C30 count D.
+3. Current L issue13:20/execution13:25 và H issue13:45/execution13:50 theo OT §0.2, khác request/decision. Hùng firsthand L pairs hospital H; Khoa firsthand H pairs logistics L.
+4. Sau actual E38=t0, professional manager request+5/receipt+25, OTHER-branch originals+10/receipt+40 hoặc+45, broker request+15/receipt+55/final match+75. Baseline actual15:20/15:35–40/15:50/16:10; receiver-side Nam originals authenticate, no display-name inference. Source annex matches exact selected D2, not independent duplicate proof.
+5. Availability warning14:00/reminder15:00 và actual saving intake trước known global deadline; queued request không custody. Vũ tự collect once sourced context held, không second click.
+6. Game không cho C27/C28/C30 count D.
 
 ## OPTIONAL EVENTS
 - C33/C34 alternate.
@@ -1688,7 +1703,7 @@ Tách relationship evidence khỏi command evidence.
 - Additional corroborator.
 
 ## CLUES
-- **Mandatory for strong/true:** C31 + C32 canonical, hoặc equivalent D1/D2.
+- **Mandatory for strong/true:** accepted manager own-branch + authenticated distinct OTHER-branch record + matched late source-annex actual receipts, theo OT §0.2/P1 contract. C31 chỉ identity/contact lead.
 - **Optional:** C30, C33/C34 depending route.
 - **Red herring:** Khải/Hùng as apex.
 - **True-ending:** D1 + D2.
@@ -1714,7 +1729,7 @@ Tách relationship evidence khỏi command evidence.
 ## BACKSTAGE EVENTS
 Nam/Khải đóng nhánh.  
 Hùng/Khoa/Hạnh tự cứu, không hive mind.
-Cleanup lock đang tiến gần.
+Global baseline17:00/canonical warned16:30, không các local closures. Requests/receipts/auth từ OT §0.2; full custody16:10 trước group end16:25.
 
 ## STATE CHANGES
 - COMMAND D1.
@@ -1757,7 +1772,8 @@ Boss realization / emotional confrontation without required accusation.
 HUB B — cùng hành lang/góc sinh hoạt S01/S05.
 
 ## TIME / STATE
-D+1, ~16:30–18:00.
+D+1, optional after D intake: travel35m16:25→17:00, ordinary contact15m→17:15; custody held survives global lock.
+
 
 ## CHARACTERS PRESENT
 Bắc, Nam, Lan rất ngắn; Vũ qua phone trước/sau.
@@ -1857,8 +1873,8 @@ Climax + ending resolver.
 Police micro-set + phone/records + short consequence montage across Tân Lộ, Minh Trạch, HUB B.
 
 ## TIME / STATE
-D+1, ~17:00–20:00.  
-E39–E44.
+D+1, consequence from17:50 if return police35m after S17; remote/safe branch reads custody already held, no required proof re-delivery.
+
 
 ## CHARACTERS PRESENT
 Bắc, Vũ; Nam/Khải/Hùng/Khoa/Hạnh/Phúc/Huyền/Thảo/Đức/Yến chỉ xuất hiện theo consequence, không gom vào một phòng.
@@ -2025,7 +2041,7 @@ Player nhìn lại toàn game và nhận ra:
 | S09 | Police micro-set | 5m | Police entry | C10, C11A | preservation begins | 4/10 |
 | S10 | Minh Trạch | 6m | Hospital pattern | C11 + C12/C15 | Delay risk | 5/10 |
 | S11 | Police/meeting | 5m | Midpoint chronology | C08/C10/C11A | A route | 6/10 |
-| S12 | Tân Lộ | 5m | Tuấn corrected, Hùng false apex | C20/C22; C18 opt | fixation cost | 6/10 |
+| S12 | Tân Lộ | 5m | Tuấn corrected, Hùng false apex | C20/C22; C18 opt | extra visit15m / wait30m after notice; private0 | 6/10 |
 | S13 | Multi-source | 6m | A+B+C nối qua Khải | C24/C25/C26 | N3 / X | 7/10 |
 | S14 | Multi-hub/phone | 5m | Access closures | C35–C37 opt; C43 | G2 risk | 8/10 |
 | S15 | Police micro-set | 4m | Point of no return / custody | C42 | G3 / preservation | 8/10 |
@@ -2156,8 +2172,8 @@ Fast travel được mở sau khi player đã tới location ít nhất một l�
 Production rule:
 - hub-to-hub transition = 5–15 giây authored;
 - arrival card có time-of-day;
-- scene progression có thể advance objective time;
-- player không tự farm travel để phá timeline;
+- only committed fixed-cost event groups/travel/deliberate waits advance objective clock once; reading/inspect/retries0;
+- actual extra trip has visible departure/arrival cost; revisit inspection0 and charged trip/group not double-billed on save-load;
 - S13+ ưu tiên phone/police verification để tránh fetch-quest.
 
 **Audit: PASS.**

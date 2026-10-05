@@ -18,8 +18,8 @@
 | Phase | Deliverable / interface cho phase sau | Files | Verification | Status |
 |---|---|---|---|---|
 | P0–P1 | Mapping canon→truth→proof→source→scene→ending; A/B/C/X/D1/D2 payload/provenance và accepted alternatives cùng nghĩa | BACKSTAGE, CLUE_GRAPH, ENDING_LOGIC | Full diff + independent canon/proof review; hai MEDIUM của review đã sửa; X được làm rõ ngoài transaction relation | COMPLETE — GitHub 82333dc |
-| P2 | Tách observed/inferred/police-custody/BARC/source-existence/access/willingness/copy | CHARACTER_WEB, OBJECTIVE_TIMELINE, CLUE_GRAPH, ENDING_LOGIC; matching scene hooks và FS Act I lifecycle | Full diff; same report/different thought; E28 A preserved; retained copy không mất do account lock | VERIFIED — phase commit |
-| P3 | Một authored clock, morning source requests/intakes, pre-loss warning và action costs | OBJECTIVE_TIMELINE, CLUE_GRAPH, PLAYER_STORY, SCENE_BREAKDOWN; FS clock | Lịch khả thi trong travel bounds; last loss có warning và action cứu trước | PENDING |
+| P2 | Tách observed/inferred/police-custody/BARC/source-existence/access/willingness/copy | CHARACTER_WEB, OBJECTIVE_TIMELINE, CLUE_GRAPH, ENDING_LOGIC; matching scene hooks và FS Act I lifecycle | Full diff; same report/different thought; E28 A preserved; retained copy không mất do account lock | COMPLETE — GitHub 79c5f9a |
+| P3 | Một authored clock, morning source requests/intakes, pre-loss warning và action costs | OBJECTIVE_TIMELINE, CLUE_GRAPH, PLAYER_STORY, SCENE_BREAKDOWN; FS clock | Lịch khả thi trong travel bounds; last loss có warning và action cứu trước | IN PROGRESS |
 | P4 | Total terminal resolver; decisive loss history; partial transitions | ENDING_LOGIC, PLAYER_STORY, SCENE_BREAKDOWN | ABC=P/X=false; mixed leaks; D-only; weak routes; monotonic custody | PENDING |
 | P5 | Presentation theo contract P0–P4; conditional S13/S14, fast recap S12, custody-first/bypass S17 | PLAYER_STORY, SCENE_BREAKDOWN | Scene entry/action/state/exit nhất quán; no compulsory unsafe encounter | PENDING |
 | P6 | Full production dialogue/action/state S06–S18 cùng 13-section schema | FULL_SCRIPT | S01–S18 mỗi scene đủ schema, branch actions/state có nguyên nhân, no late outlines | PENDING |
@@ -75,6 +75,7 @@ Chỉ đánh COMPLETE sau khi diff/consistency của phase đã được kiểm 
 
 ### P2 — knowledge, custody và lifecycle đã đồng bộ
 
+- Commit local `53c7cab551743d6241874d596e928e94d8fc2189`; GitHub [79c5f9a](https://github.com/phambac2k701-blip/cot_truyen/commit/79c5f9a4f1815478614b04012a556bb861f26d22). Đối chiếu từng blob và toàn tree `15f2f102837c2e9807d7153a72cea3ff5aba2435`; main cập nhật fast-forward, kiểm lại ref/tree thành công.
 - H05: E12 giữ đúng subset; E28 nhận/xác thực exact content từ hai original custodians, CASE.A=2 trước S09. S09/S11/S15 chỉ mở observation và intake nguồn mới, không đòi giao lại hoặc reset hồ sơ cảnh sát.
 - H06/H07: S13 không award understanding/Khải certainty vì scene completion; đủ retained raw risk context thì Vũ vẫn verify X khi private inference sai. E37 và Nam chỉ biết reports có payload/recipient/receipt thật. S14 baseline giữ prior BARC; S15 không bị chặn bởi private N3.
 - H08: permission correction chỉ TUAN_NOT_RECLASSIFIER; professional TUAN_CORE_SCOPE_VERIFIED là kết luận trong case, không blanket innocence hoặc quiz.
@@ -83,3 +84,20 @@ Chỉ đánh COMPLETE sau khi diff/consistency của phase đã được kiểm 
 - M12/L02: Vũ đã hỏi hẹp về lần Phúc tới hospital trước D0, nhận response cá nhân đúng scope; thiếu group/routing bridge cụ thể chứ không ngừng điều tra. Dấu leak là thông tin dư tại Tuấn/company khớp phần Bắc chỉ chia Minh.
 - Root đã đọc diff và các delta cuối; reviewer độc lập bắt các gate private-N3 còn sót ở S15 cùng wording Vũ S13. Đã thay các gate đó bằng actual source/custody/report conditions. Không động MASTER, BACKSTAGE đã khóa, hai DOCX hoặc historical audit; cả năm nguồn được đối chiếu byte-for-byte.
 - Reserved: actual morning requests/receipts, authored clock/warnings/local-vs-global lock thuộc P3; decisive-loss resolver/partial edges P4; scene presentation P5; dialogue/state production P6. Chưa claim final test PASS.
+
+### Handoff ruling P4 — không giữ điều kiện vòng D/X
+
+- Witness mới: A/B/C đã preserve; thiếu riêng role Khải ở logistics nên X cũ=false; Hùng firsthand current L + hospital current H original + broker annex match H có thể chứng minh Nam hiện tại điều phối cả ba nhánh trong cùng crime case. EL §1.4 chấp nhận COMMAND pair, nhưng §11.1 còn đòi “X đã sourced” trước khi chấp nhận chính payload đủ mạnh để chứng minh quan hệ. Đây là một gate vòng, không phải thiếu evidence.
+- **Ruling:** X có một nghĩa: authenticated current common coordination của các cell gắn cùng crime/case, vượt mere transaction association. C24/C25 shared-risk Khải là profile sớm; stronger late all-three Nam coordination là profile tương đương khi actual manager/other-branch authorization/execution/broker facts cùng scope đã xác thực. Không auto-X từ COMMAND enum, clue ID, lawful authority, cùng từ khóa hoặc private hypothesis.
+- Missing riêng Khải remit vẫn có thể để KHẢI_LAYER=false; không thêm core proof gate ngoài proposition cần chứng minh. Accepted D được kiểm độc lập, sau đó professional raw-source X normalization trước resolver. Nếu chỉ ABC và không có stronger relation facts thì X vẫn false và partial phải rõ.
+- Cost nếu ruling sai: rework đúng predicate/context của X và các consumers; không đổi identity Nam, crime truth hoặc thêm twist. P4 phải đồng bộ BS/CG/EL/CW/OT/PS/SB và có negative fixtures unlinked lawful authority/mismatched case/group. Ruling này là handoff, chưa ghi implementation COMPLETE.
+
+### P3 — clock, morning acquisition và warnings đã kiểm
+
+- Sáu source files được patch thật: OT/CG/EL clock/PS/SB và minimal Act I clock. Writer freeze, root đọc toàn delta và reviewer độc lập đọc diff cùng các context cần thiết. Phase commit/publication được ghi sau khi tạo và đối chiếu tree.
+- H04: actual C18 offer/copy/contact từ S08; local receipt09:45 hoặc professional receipt10:35. C19 bounded lead từ S09, actual contact10:40/receipt10:50. Late new queries dùng actual offsets; S12/S13 chỉ verify retained sources, không backdate pickup sau cửa sáng.
+- M03/M08/M09: single authored clock; reading/inspect/notebook/hint/retry/private hypotheses0. Dialogue/travel/deliberate wait có fixed cost, card trước confirm, charge once và save state đầy đủ. Sai interpretation riêng không tăng BARC, không tốn window.
+- Required warning checkpoints:09:25 trước worker/Đức11:00; hospital notices trước11:30; finance notice trước12:30. Các local closures tách global17:00. Acceleration chỉ khi actual report và fresh warning W để còn saving action; canonical W14:00→16:30.
+- Narrow review fix: advertised40m gồm toàn remaining authentication đủ actual E38, không queue=proof. Nếu remainder R dài hơn/không biết, candidate max(16:30,W+145m) chỉ được advance khi notice+R+75m D+10m buffer thực sự vừa và nguồn còn mở; nếu không, baseline17:00. Không nén professional checks để vừa deadline.
+- Current original decisions L13:20/execution13:25 và H13:45/execution13:50 đã tồn tại trước E38, khác request/origin. Late broker police annex receipt15:50, full exact-D2 matching16:10 trên baseline t0=14:55; không future record ở E28. Source existence, receipt và authentication riêng.
+- L01 pointers đã đồng bộ. Review LOW meal location S05 và S16 exact baseline group đã sửa. Fresh diff-check không lỗi; source schedules giữ nguyên sau narrow fixes. MASTER, crime truth, CW, historical audit và raw DOCX không bị P3 mutation. Đây là scoped source verification; full runtime, blind win rate và T01–T25 final chưa được claim.

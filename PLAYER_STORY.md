@@ -40,6 +40,10 @@ Player-facing principle:
 
 ---
 
+## 0.1. Authored clock và source deadlines
+
+OBJECTIVE_TIMELINE §0.1–0.2 là shared schedule: reading/inspect/phone UI/private hypotheses/hints/retries0; fixed committed dialogue groups, travel và deliberate wait mới tăng clock. Cost/finish or departure→arrival card trước confirm, charge once và persist clock/flags/receipts qua save-load. Play budget90m không fail timer. Source request≠receipt≠authentication; police đã có source/contact/context tự collect, không chờ request checkbox lần hai. Local11:00/11:30/12:30 không global CLEANUP lock17:00; fresh actual acceleration warning W đặt deadline=max(16:30,W+145m) chỉ nếu sớm hơn17:00 và còn saving action.
+
 # 1. NHỊP TỔNG THỂ
 
 Một run tập trung nhắm khoảng **90 phút ± 15 phút**.
@@ -62,7 +66,7 @@ Khoảng đầu game phải có đủ không gian để người chơi biết B�
 
 ## S01 — PHÒNG TRỌ MỚI
 **Budget:** ~5 phút  
-**Objective time:** D0, 07:30–09:00  
+**Objective time:** D0,07:30–08:35 core65m; departure travel25m tới trường09:00
 **Hub:** Dãy trọ
 
 ### Player-facing flow
@@ -203,7 +207,7 @@ Bắc nhận một thông báo chi phí hoặc tự tính số tiền còn lại
 
 ## S03 — MỘT CA NGẮN
 **Budget:** ~4 phút  
-**Objective time:** D0, khoảng 11:15–12:20
+**Objective time:** D0,11:15–11:49 core34m; travel35m tớiTân Lộ12:24/check-in6m tới12:30
 
 ### Player-facing flow
 
@@ -345,7 +349,7 @@ Bắc giao xong. Không mở gói. Không có tài liệu “bằng chứng tộ
 
 ## S05 — ĂN TỐI, ĐỢI TIỀN, VỀ TRỌ
 **Budget:** ~5 phút  
-**Objective time:** D0, 14:30–18:00
+**Objective time:** D0,14:30–18:07; ordinary afternoon180m→17:30, return35m→18:05, room beat2m→audit18:07
 
 ### Player-facing flow
 
@@ -548,12 +552,12 @@ Sau đó game cho một khoảng yên: Bắc ngồi trong phòng, nghe hành lan
 
 ## S08 — JOB KHÔNG “TỰ NHIÊN” LỌT VÀO POOL
 **Budget:** ~6 phút  
-**Objective time:** D+1, 09:00–10:00  
+**Objective time:** D+1,09:00–09:35 core35m (checkpoint09:25 notice); optional copy10m tới09:45, explicit police appointment10:00
 **Hub:** Tân Lộ / kênh xử lý khiếu nại worker
 
 ### Player-facing flow
 
-Sáng hôm sau, Bắc quay lại Tân Lộ chủ yếu để giải quyết payment/incident và bảo vệ mình khỏi bị quy lỗi.
+Sáng hôm sau Bắc đi trọ→Tân Lộ08:30–09:00 (30m), S08 core09:00–09:35 (35m) để xử lý payment/incident. Required notice09:25 nêu worker access/Đức willingness11:00 và finance12:30. Từ09:30 Đức thật sự offer copy giới hạn và contact; action nhận copy09:35–09:45 cost10m cho actual local receipt09:45, hoặc giữ đúng contact/copy/deadline để Vũ collect ở S09. Một bounded finance contact/group lead tới Yến được offer, không cho Bắc biết dòng tiền/Nam trước source. Không đợi S12/S13 mới đưa người chơi tới C18.
 
 Qua một interaction hợp lệ với lịch sử assignment hoặc người vận hành, Bắc có thể thấy:
 
@@ -601,13 +605,13 @@ Mystery chuyển từ “cảm giác lạ” sang “có một hành động có
 
 - Tuấn.
 - Nhân viên vận hành.
-- Có thể glimpse Đức, chưa biến thành exposition source.
+- Đức source/contact giới hạn sáng; C18 direct receipt optional10m. Yến là bounded finance lead để police verify, không exposition toàn mạng.
 
 ### State có thể thay đổi
 
 - R1_CONFIRMED = true nếu C17.
 - TUAN_FALSE_THEORY có thể tăng hoặc bắt đầu sụp tùy player đọc C20.
-- Bắc ở N2 nếu tiếp tục.
+- BARC chỉ actual received reports; source copy/request không tự đổi private understanding hoặc awareness.
 
 ### Mức căng thẳng
 
@@ -636,7 +640,7 @@ Sau C17, Bắc không chỉ có “linh cảm”. Cậu có:
 - một reclassification có chủ ý trước khi cậu nhận việc;
 - một đầu nhận thuộc chuỗi dịch vụ y tế.
 
-Bắc có thể gọi/đến trình báo ở mức rất cụ thể: cậu lo mình đã bị dùng cho một job bị đổi classification và đang bị audit sau khi hoàn tất.
+Main route dùng phone appointment10:00–10:15 tại Tân Lộ (15m), sau explicit wait tới10:00; không thêm morning police trip. Actual payload/group records received10:15. Nếu payload đã nêu Đức có copy/contact/deadline, Vũ contacts10:25 và receives10:35 tự động theo sourced request, không thêm xin lại. Chỉ một source address/context chưa shared mới có disclosure5m ở10:15–10:20; optional bounded Yến lead5m (hoặc second new lead tới10:25) cho collector10:40/actual receipt10:50. Queue chưa PRESERVED. Actual late source disclosures dùng q-relative receipt formulas OT §0.1, không fixed baseline10:35/10:50 nếu query chưa có lúc đó; police requests/receipts đã started vẫn độc lập với personal delay. Vũ acknowledge local hospital11:30 và finance12:30 trước departure; khi actual group bridge đủ anh tự request C11/C12 originals, receipt11:10, không chờ Bắc tới bệnh viện.
 
 Thông tin được chuyển tới Vũ vì tên/đầu nhận Minh Trạch chạm một vụ việc anh đã xác minh từ trước. Vũ không kể ngay vụ Phúc. Anh chỉ hỏi:
 
@@ -682,7 +686,7 @@ Nếu source hợp lệ, Vũ nhận/copy phần cần thiết và dặn Bắc kh
 ### State có thể thay đổi
 
 - POLICE_CONTACT = true.
-- Một phần source logistics có thể chuyển trạng thái “handed to police”.
+- Actual source receipts: C17 payload10:15; C18 direct-copy handover10:15 hoặc police export10:35; finance10:50 nếu bounded lead actual shared. Verification riêng, không grant custody từ source-request checkbox.
 - Vũ trust tăng theo source quality, không theo charm.
 
 ### Mức căng thẳng
@@ -692,7 +696,7 @@ Nếu source hợp lệ, Vũ nhận/copy phần cần thiết và dặn Bắc kh
 ### Hậu trường đang xảy ra đồng thời
 
 - E34 mở cửa.
-- Vũ bắt đầu kiểm tra xem bridge của Bắc có chạm hồ sơ Phúc không.
+- Vũ tiếp tục independent A case và targeted group query/parallel source collection từ payload đã received; không chậm vì Bắc miss một action xin lại.
 - Organization chưa biết chính xác Bắc đã nói gì với police trừ khi có observable consequence.
 
 ---
@@ -701,12 +705,12 @@ Nếu source hợp lệ, Vũ nhận/copy phần cần thiết và dặn Bắc kh
 
 ## S10 — MINH TRẠCH KHÔNG CHỈ CÓ MỘT LỖI
 **Budget:** ~7 phút  
-**Objective time:** D+1, 10:00–11:30  
+**Objective time:** D+1, arrive10:50/10:55; core20m và optional Thảo10m finish11:20/11:25 before11:30
 **Hub:** Minh Trạch / tuyến xác minh hợp lệ
 
 ### Player-facing flow
 
-Vũ dùng bridge đúng để kiểm tra phía Minh Trạch. Bắc không hack hồ sơ và không tự xông vào khu hạn chế.
+Travel Tân Lộ→Minh Trạch30m: arrive10:50 hoặc10:55 sau tối đa hai genuinely new lead disclosures. S10 core20m tới11:10/11:15, optional Thảo10m tới11:20/11:25. Vũ đã request group review10:15 và nhận raw C11/C12 originals11:10; Bắc không hack/xông vào khu hạn chế. Required entrance notice11:30 trước lựa chọn core/Thảo; C12 knowledge+assistance được received thì không mất bởi scope lock, nếu fact còn thiếu thì Thảo alternative còn10m thật.
 
 Huyền xuất hiện đầu tiên như một người khô và giữ quy trình. Nếu Bắc tự hỏi lung tung, bà không chia dữ liệu. Điều này có thể làm bà trông đáng ngờ.
 
@@ -780,7 +784,7 @@ Nếu route tốt, player có thể thấy version/scope history hoặc gặp Th
 
 ## S11 — “CHUYỆN NÀY CÓ TRƯỚC MÌNH, VÀ LỚN HƠN MỘT JOB”
 **Budget:** ~6 phút  
-**Objective time:** D+1, khoảng 11:30–12:30
+**Objective time:** D+1, 11:30–12:00 (30m compare tại hospital-area quiet point/phone); explicit wait tới11:30 nếu sớm, rồi travel Tân Lộ30m tới12:30
 
 ### Player-facing flow
 
@@ -857,7 +861,7 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 
 ## S12 — TUẤN, RỒI HÙNG: HAI “BOSS” QUÁ HỢP LÝ
 **Budget:** ~5 phút  
-**Objective time:** D+1, khoảng 12:00–13:00
+**Objective time:** D+1, 12:30–13:00 (30m retained verification); extra visits/waits cộng fixed cost đã show
 
 ### Player-facing flow
 
@@ -886,7 +890,7 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 
 - Cho player nghi sai hợp lý mà không game-cheat.
 - Dạy distinction: access ≠ knowledge; culpable manager ≠ ultimate command.
-- Tạo cost nếu player bị fixation.
+- Cost chỉ cho observable extra visit/wait sau notice: Tuấn appointment15m hoặc chờ Hùng30m; private fixation/reading/retry0.
 
 ### Player biết trước đoạn
 
@@ -903,7 +907,7 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 ### Clue khả dụng
 
 - C20, C21, C22.
-- C18 hoặc lời giới hạn knowledge từ Đức nếu route đó mở.
+- C18/C19 bản đã received buổi sáng và limited callback/provenance; không fresh C18 pickup sau willingness11:00. C22 original packet received police13:00, match/auth riêng.
 
 ### Clue missable
 
@@ -913,14 +917,14 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 ### NPC tham gia
 
 - Tuấn.
-- Đức có thể trở thành source.
+- Đức chỉ retained-copy/earlier testimony hoặc callback đúng scope; late conversation không invent morning receipt.
 - Hùng có thể xuất hiện gián tiếp hoặc rất ngắn; không monologue.
 
 ### State có thể thay đổi
 
 - TUAN_NOT_RECLASSIFIER từ actual C20; TUAN_CORE_SCOPE_VERIFIED chỉ khi Vũ so assignment/permissions, câu hỏi chưa được giải đáp và lời Tuấn giới hạn, nghĩa không có cơ sở xếp anh vào core trong hồ sơ này. Permission chain hoặc private innocence answer không cấp blanket exoneration.
 - C_LOGISTICS_LEADERSHIP = true nếu C17 + corroborator + C22.
-- Nếu player fixation Tuấn: timing penalty / source access closures.
+- Confirm quay lại hẹn Tuấn cùng việc+15m (5m move+10m appointment), hoặc chờ Hùng+30m, sau visible finish/deadline notice. Reread/incorrect hypothesis0; police copies và processing đã có không retime. Missing-source saving action là gửi đúng payload cho Vũ trước wait.
 
 ### Mức căng thẳng
 
@@ -928,8 +932,8 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 
 ### Hậu trường đang xảy ra đồng thời
 
-- Đức sắp mất access.
-- Yến cân nhắc tự bảo vệ.
+- Đức willingness11:00/Yến access12:30 đã đóng ở late S12, private export/originals vẫn có; retained receipts verify được.
+- Police actual morning collections chạy độc lập với private theories Bắc.
 - Khải nhận nhiều báo cáo hơn về incident.
 - Nếu Minh đã leak, cleanup chạy nhanh hơn.
 
@@ -939,7 +943,7 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 
 ## S13 — CÙNG MỘT NGƯỜI QUẢN RỦI RO
 **Budget:** ~7 phút  
-**Objective time:** D+1, 12:30–14:00
+**Objective time:** D+1, 13:35–14:00 (25m compare/callback), sau30m Tân Lộ→hospital area +5m local micro-set
 
 ### Player-facing flow
 
@@ -950,9 +954,9 @@ Một strong route chỉ cần Bắc trực tiếp mở đủ bridge; Vũ có th
 Hai nhánh có thể song song:
 
 **Logistics route**
-- Đức xác nhận các ngoại lệ y tế không phải một lỗi đơn.
-- C18 private export đã tồn tại ở điện thoại Đức từ E17; actual receipt/testimony và authentication riêng, chỉ tiếp nhận nếu willingness/contact còn mở. Account lock không tạo/xóa copy.
-- Yến có thể được Vũ xác minh như corroborator tài chính C19.
+- Retained C18 actual local receipt09:45/police10:35 và limited earlier testimony; fields check10:45/match C22 at13:55. Không late pickup khi willingness11:00 đã đóng.
+- Retained C19 actual10:50 receipt nếu new finance lead thật shared; verification/match13:55 không invent pre12:30 acquisition.
+- C22/C25 actual police packet13:00; account lock không xóa private/police copies.
 
 **Hospital route**
 - Huyền + C12 hoặc Thảo C15 củng cố B.
@@ -991,8 +995,8 @@ Player có thể tự nối C24 + C25:
 
 ### Clue missable
 
-- Đức window C18.
-- Yến C19.
+- C18/C19 missing morning actual receipts vẫn thiếu; S13 chỉ retained verification.
+- Callback riêng không backdate một request thành receipt.
 - Một nửa C24/C25 có thể miss; main story vẫn tiến nhưng command layer yếu.
 
 ### NPC tham gia
@@ -1026,7 +1030,7 @@ Player có thể tự nối C24 + C25:
 
 ## S14 — HỆ THỐNG BẮT ĐẦU KHÉP CỬA
 **Budget:** ~5 phút  
-**Objective time:** D+1, khoảng 13:30–15:00
+**Objective time:** D+1, 14:00–14:20 (20m status/notice); extra committed actions cộng đúng cost
 
 ### Player-facing flow
 
@@ -1091,7 +1095,7 @@ Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc
 
 ### Hậu trường đang xảy ra đồng thời
 
-- E37 chỉ nếu reports đủ, ghi payload/recipient/received_at.
+- E37 chỉ nếu reports đủ, ghi payload/recipient/received_at. S14 reinforcement không thay pre-loss notices S08/S09/S10; required global notice14:00 nêu17:00, late broker availability-only và actual saving intake. Nếu acceleration, fresh warningW trước global=max(16:30,W+145m)<17:00; canonicalW14:00→16:30.
 - Nam chỉ xem phần actual Khải forward tới ông; baseline closures không tự sinh report Bắc/N3.
 - Khải vẫn có thể co access theo baseline crisis, giữ prior BARC nếu không nhận dấu mới.
 - Nam vẫn ưu tiên giảm dấu hơn là tạo một vụ việc công khai mới.
@@ -1102,7 +1106,7 @@ Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc
 
 ## S15 — TỪ “TÔI BIẾT” SANG “HỌ BIẾT TÔI ĐANG BIẾT”
 **Budget:** ~4 phút  
-**Objective time:** D+1, khoảng 14:00–15:30
+**Objective time:** D+1, 14:20–15:00 (40m actual sourced intake/coordination); E38 actual baseline14:55 nếu source threshold đã authenticate, không chờ scene end
 
 ### Player-facing flow
 
@@ -1173,7 +1177,7 @@ Player có ba kiểu lựa chọn:
 
 ## S16 — TỪ MANAGER TỚI COMMAND
 **Budget:** ~7 phút  
-**Objective time:** D+1, 15:00–17:00
+**Objective time:** D+1, 15:00–16:25 presentation/group85m; full D actual baseline16:10, professional offsets từ actual E38
 
 ### Player-facing flow
 
@@ -1194,10 +1198,9 @@ C30 xác nhận Nam có quan hệ kinh doanh cũ với Hùng/Tân Lộ. Đây v�
 
 C31 xuất hiện khi current crisis contact cho thấy Khải báo/trao đổi với Nam sau các mốc cross-cell quan trọng.
 
-C32 hoặc C33/C34 phải tạo independent corroboration:
+Current records có issue trước intake theo OT §0.2: L logistics Nam issue13:20/execution13:25 và H hospital Nam issue13:45/execution13:50 là hai decisions khác nhau. Broker giữ actual forwarded case request13:00 cùng L13:30/receipt13:32 và H14:00/receipt14:05. Hùng firsthand L pairs hospital H original C33_AUTH; Khoa firsthand H pairs logistics L original C34_AUTH, cùng source-annex match exact chosen D2. Original receiver-side Nam reply/authorship phải verify, contact metadata không đủ.
 
-- manager-level source xác nhận pause/cleanup toàn nhánh cần Nam approve/định hướng; hoặc
-- institutional records cho thấy nhiều branch đổi trạng thái theo cùng decision window đi qua Khải → Nam.
+Sau actual E38=t0, Vũ tự request known manager+5m (baseline15:00), other-branch originals+10m (15:05), broker annex+15m (15:10). Manager actual receipt+25m=15:20; other-branch+40m/+45m=15:35/15:40; annex+55m=15:50; final exact origin/content/scope match+75m=16:10. Source availability warning14:00/late reminder15:00 trước deadline; không intake future annex ởE28 hoặc chờ Bắc xin lại. Missing actual cooperation/originals không được grant từ queue.
 
 ### Mục đích narrative
 
@@ -1228,7 +1231,7 @@ C32 hoặc C33/C34 phải tạo independent corroboration:
 
 - C31 context có thể khó preserve nếu cleanup đi trước.
 - C32 source có thể rút.
-- Route thay thế C33+C34 giữ fairness.
+- Recovery C32K+C34_AUTH nếu Hùng unavailable, cùng matching late source annex. Timely professional requests/receipts giữ fairness; không record-only D1.
 
 ### NPC tham gia
 
@@ -1261,7 +1264,7 @@ C32 hoặc C33/C34 phải tạo independent corroboration:
 
 ## S17 — NAM KHÔNG “LỘ MẶT”; PLAYER CHỨNG MINH ÔNG CÓ QUYỀN
 **Budget:** ~5 phút  
-**Objective time:** D+1, khoảng 16:30–18:00
+**Objective time:** D+1,optional post-intake travel35m→17:00, ordinary contact15m→17:15; professional custody already held is not retimed
 
 ### Player-facing flow
 
