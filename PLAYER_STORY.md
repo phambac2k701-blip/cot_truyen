@@ -1194,7 +1194,7 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 
 - **C30**.
 - **C31**.
-- **C32** hoặc **C33/C34**.
+- D1 C32H + D2 C33_AUTH hoặc D1 C32K + D2 C34_AUTH, cùng C10_SOURCE_LINK verified/preserved khớp directive D2; C31 chỉ là lead.
 - C27/C28 chỉ recontextualize, không score D.
 
 ### Clue missable
@@ -1215,7 +1215,7 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 
 - D1 current command.
 - D2 independent corroboration.
-- Nếu A+B+C đã police-preserved và D đủ: TRUE_ROUTE_AVAILABLE.
+- Nếu A+B+C và X đã police-verified/preserved, full D/source annex được preserve trước lock: TRUE_ROUTE_AVAILABLE.
 - Nếu D thiếu: CLEANUP_PARTIAL_ROUTE.
 
 ### Mức căng thẳng
@@ -1263,19 +1263,19 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 
 ### Player có thể biết sau đoạn
 
-- **R9 hoàn chỉnh:** Nam là command core.
+- Nếu S16 đã preserve accepted D package, R9 hoàn chỉnh; nếu chưa, chỉ có hypothesis/context, không thêm proof ở đây.
 - Sự tử tế đầu game và trách nhiệm đạo đức của Nam cùng tồn tại.
 
 ### Clue khả dụng
 
-- C27–C34 theo route.
+- C27–C30 recontextualization theo những gì player thật sự đã thấy; D records chỉ từ S16 custody.
 - C28 vẫn optional.
 - Không thêm “boss file”.
 
 ### Clue missable
 
 - C28.
-- Một trong C32/C33 có thể miss nếu source đóng; cần route thay thế để D2.
+- Một manager route có thể mất; chỉ pair manager + original ở branch kia và annex khớp mới cứu được full D. S17 không cấp nguồn thay thế.
 
 ### NPC tham gia
 
@@ -1286,7 +1286,7 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 ### State có thể thay đổi
 
 - NAM_HYPOTHESIS ≠ NAM_PROVEN.
-- NAM_PROVEN chỉ khi D1+D2.
+- NAM_PROVEN chỉ khi accepted D1 + D2 khác decision/origin và C10_SOURCE_LINK khớp; S17 không tự cấp proof.
 - Exposure risk tăng nếu player confrontation trước preservation.
 
 ### Mức căng thẳng
@@ -1413,14 +1413,12 @@ Kết quả:
 
 ---
 
-## G2 — S07/S14: chia quá nhiều cho Minh hoặc sai đầu mối trước preservation
+## G2 — Minh gây mất đường cuối trước preservation
 ### Bad — SAI NGƯỜI
 
 Điều kiện:
 
-- C35 leak đủ chi tiết.
-- Organization biết sớm các nhánh Bắc đang chạm.
-- Source access bị đóng trước khi Vũ preserve.
+- Actual Minh disclosure/report là `DECISIVE_LOSS.cause=MINH` đầu tiên đóng last feasible path của một required slot (kể cả D-only); một tin nhắn vô hại không đủ.
 
 Kết quả:
 
@@ -1435,9 +1433,9 @@ Kết quả:
 
 Điều kiện:
 
-- Bắc đã bị cross-report xác nhận N3.
-- Chưa đưa đủ source ra khỏi tay mình.
-- Player cố quay về sinh hoạt bình thường và bỏ mọi contact.
+- Organization đã nhận cross-cell reports xác nhận BARC N3.
+- Police chưa tự đủ source để hoàn tất phần thiếu.
+- Player explicit abandon mọi contact lúc vẫn còn đường cần cứu; custody đầy đủ đã có không thể bị abandon xóa.
 
 Kết quả:
 
@@ -1447,14 +1445,14 @@ Kết quả:
 
 ---
 
-## G4 — A+B+C đủ nhưng D chưa được preserve
+## G4 — A+B+C/X đủ nhưng D chưa được preserve đúng hạn
 ### Bad/Partial — DỌN SẠCH
 
 Điều kiện:
 
-- Police hiểu network nhiều cell.
+- A+B+C=2 và X=true đã police-preserved/verified tại terminal.
 - Hùng/Khoa/Hạnh có thể bị xử lý theo phần đã chứng minh.
-- Current command Nam chưa đủ D1+D2 hoặc tới quá muộn.
+- Current command Nam chưa có accepted D1+D2+matched annex hoặc tới quá muộn; không có earlier decisive MINH/DIRECT loss.
 
 Kết quả:
 
@@ -1465,13 +1463,12 @@ Kết quả:
 
 ---
 
-## G5 — Player tự confront / giữ evidence một mình ở N3–N4
+## G5 — Direct exposure gây mất đường cuối
 ### Bad — BỊ NHÌN THẤY
 
 Điều kiện:
 
-- Bắc để organization biết chính xác mình có gì trước khi source được preserve.
-- Hoặc player đi vào một cuộc hẹn/đối đầu không an toàn thay vì đưa evidence sang Vũ.
+- `DECISIVE_LOSS.cause=DIRECT` là first irreversible last-path loss của required slot (kể cả D-only). Confront sau khi full custody đã an toàn không đạt điều kiện này.
 
 Kết quả:
 
@@ -1481,7 +1478,7 @@ Kết quả:
 
 ---
 
-## G6 — A+B+C+D + T đúng timing
+## G6 — A+B+C+X+D + T đúng timing
 ### TRUE ENDING — NHỮNG MẢNH KHỚP LẠI
 
 Điều kiện:
@@ -1490,7 +1487,7 @@ Kết quả:
 - Slot B1 đủ.
 - Slot C1 đủ.
 - X được Vũ verify.
-- D1 + D2 đủ.
+- Accepted D1 + D2 là hai quyết định hiện tại khác nhau, cộng C10_SOURCE_LINK đã verify/preserve khớp D2.
 - C42 xảy ra trước cleanup lock.
 - Không cần C28.
 - Không cần mọi optional clue.
@@ -1538,7 +1535,7 @@ Nó không phủ định việc main network đã bị phá và không phải ho
 → access khép, Minh betrayal có thể nở hậu quả  
 → Bắc phải đưa evidence ra khỏi tay mình  
 → late investigation chuyển từ managers sang command  
-→ C31 + C32/C33/C34 chứng minh Nam có quyền hiện tại  
+→ C32H+C33_AUTH hoặc C32K+C34_AUTH, cùng C10_SOURCE_LINK khớp, chứng minh quyền hiện tại của Nam
 → scene khu trọ đổi nghĩa nhưng Nam không monologue  
 → climax là preservation vs cleanup  
 → ending phản ánh understanding + trust + timing.**
@@ -1665,7 +1662,7 @@ Khải chỉ trở thành cross-cell inference sau C24+C25; Hùng/Khoa/Hạnh kh
 C27/C28/C29/C30 chỉ cho plausibility/recontextualization.
 
 D chỉ được chứng minh bằng current command:
-C31 + C32 hoặc C33/C34.
+C31 chỉ dẫn tới identity/contact. Full D cần C32H+C33_AUTH hoặc C32K+C34_AUTH trên hai quyết định hiện tại khác nhau, cộng C10_SOURCE_LINK verified/preserved khớp D2.
 
 Không có villain monologue.
 

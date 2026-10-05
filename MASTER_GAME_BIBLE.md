@@ -2,7 +2,7 @@
 
 > **Status:** Canonical source of truth trước giai đoạn viết cốt truyện chi tiết  
 > **Repository:** phambac2k701-blip/cot_truyen  
-> **Primary sources:** idea.docx + bổ sung.docx  
+> **Historical source snapshot:** idea.docx + bổ sung.docx in Git history; no production dependency
 > **Canon date:** 2026-10-04  
 > **Purpose:** Tập hợp, chuẩn hóa và bảo toàn toàn bộ ý tưởng đã được chốt; loại bỏ lặp, mâu thuẫn do brainstorm; phân biệt rõ phần đã canon với phần được giao cho designer tự hoàn thiện.
 
@@ -10,9 +10,9 @@
 
 # 0. CÁCH DÙNG TÀI LIỆU NÀY
 
-Đây là **source of truth chính** của dự án ở giai đoạn tiền kỳ. Hai file idea.docx và bổ sung.docx được giữ lại như nguồn brainstorm thô, nhưng từ thời điểm tài liệu này tồn tại, mọi AI/designer/writer tham gia dự án phải đọc file này trước.
+Đây là **source of truth chính** của dự án ở giai đoạn tiền kỳ. Hai file brainstorm thô `idea.docx` và `bổ sung.docx` đã được hấp thụ vào canon và xóa khỏi main; Git history vẫn giữ snapshot nguồn. Mọi AI/designer/writer tham gia dự án đọc file này trước.
 
-Nếu một câu trong file nguồn mâu thuẫn với file master này, **file master được ưu tiên**.
+Nếu một câu trong snapshot brainstorm lịch sử mâu thuẫn với file master này, **file master được ưu tiên**. Không cần khôi phục DOCX để triển khai production.
 
 Nếu chính file master có nhiều mức độ chắc chắn khác nhau, dùng thứ tự ưu tiên:
 

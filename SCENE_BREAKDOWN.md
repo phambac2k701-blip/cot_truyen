@@ -1989,7 +1989,7 @@ Tách relationship evidence khỏi command evidence.
 ## PLAYER ACTIONS
 - inspect C30 relationship record;
 - compare C31 current contact timing;
-- obtain/verify C32 hoặc C33/C34;
+- obtain/verify C32H+C33_AUTH hoặc C32K+C34_AUTH trên hai current decisions khác nhau, cùng C10_SOURCE_LINK verified/preserved khớp D2;
 - reasoning interaction: “history / current contact / decision authority / independent corroboration”;
 - send sources to Vũ.
 
@@ -2002,7 +2002,7 @@ Tách relationship evidence khỏi command evidence.
 6. Game không cho C27/C28/C30 count D.
 
 ## OPTIONAL EVENTS
-- C33/C34 alternate.
+- C32K+C34_AUTH thay C32H+C33_AUTH khi Hùng unavailable; annex vẫn phải khớp D2 đã chọn.
 - Một manager source rút nếu timing xấu.
 - Additional corroborator.
 
@@ -2115,12 +2115,12 @@ Payoff toàn bộ location reuse và “fair but invisible”.
 - nói chuyện Nam ở mức normal;
 - optional inspect C28 nếu trước đây chưa và access vẫn hợp lý;
 - chọn calm / hỏi vòng / confront;
-- dùng phone gửi D source cho Vũ khi an toàn.
+- xem phone custody receipts đã nhận ở S16; source D cần được police thu qua S16 professional channel trước lock.
 
 ## REQUIRED EVENTS
 1. Recontextualize C27/C29/C30.
 2. Nam cư xử bình thường, không confession.
-3. Nếu D1+D2 đã đủ, NAM_PROVEN state đến từ evidence, không dialogue.
+3. Nếu accepted D1+D2 và matched C10_SOURCE_LINK đã đủ từ S16, NAM_PROVEN state đến từ evidence, không dialogue.
 4. Scene phải cho player cảm giác knowledge asymmetry: hai người có thể đứng cùng chỗ S01 nhưng ý nghĩa đã đảo.
 
 ## OPTIONAL EVENTS
@@ -2154,7 +2154,7 @@ Nam cân protect core, không “đấu tay đôi” với Bắc.
 ## STATE CHANGES
 - NAM_HYPOTHESIS distinct from NAM_PROVEN.
 - Direct LEAK_PATH nếu player thật sự cho Nam biết unique unpreserved source.
-- D_PRESERVED nếu player chuyển evidence đúng cách.
+- Không ghi D_PRESERVED mới tại S17; custody của S16 giữ nguyên.
 
 ## BRANCHES
 - Calm/preserve → S18.
@@ -2381,13 +2381,13 @@ Player nhìn lại toàn game và nhận ra:
 | S08 | Tân Lộ | 6m | Reclassification được chứng minh | C17, C20, C22 seed | Delay risk | 4/10 |
 | S09 | Police micro-set | 5m | Police entry | C10, C11A | preservation begins | 4/10 |
 | S10 | Minh Trạch | 6m | Hospital pattern | C11 + C12/C15 | Delay risk | 5/10 |
-| S11 | Police/meeting | 5m | Midpoint chronology | C08/C10/C11A | A route | 6/10 |
+| S11 | Hospital-area quiet point/phone | 5m | Midpoint chronology | C08/C10/C11A | A route | 6/10 |
 | S12 | Tân Lộ | 5m | Tuấn corrected, Hùng false apex | C20/C22; C18 opt | extra visit15m / wait30m after notice; private0 | 6/10 |
 | S13 | Multi-source | 6m | A+B+C nối qua Khải | C24/C25/C26 | N3 / X | 7/10 |
 | S14 | Multi-hub/phone | 5m | Access closures | C35–C37 opt; C43 | G2 risk | 8/10 |
 | S15 | Police micro-set | 4m | Point of no return / custody | C42 | G3 / preservation | 8/10 |
-| S16 | Police + manager source | 7m | Current command proof | C31 + C32 or C33/C34 | G4/G5/G6 setup | 8–9/10 |
-| S17 | HUB B Trọ | 5m | Nam recontextualized | no new magic clue | exposure risk | 9/10 |
+| S16 | Police + manager source | 7m | Current command proof | C32H+C33_AUTH or C32K+C34_AUTH + matched C10_SOURCE_LINK | G4/G5/G6 setup | 8–9/10 |
+| S17 optional | HUB B Trọ | 5m | Nam recontextualized | no new magic clue | optional exposure risk | 9/10 |
 | S18 | Police + consequence montage | 6m | Preservation vs cleanup | C42 gate | G1–G6 | 10/10 |
 
 **Focused main-route total: 93 phút.**
@@ -2723,7 +2723,7 @@ Mitigation:
 | G3 Avoidance | abandon after N3 before case safe | trigger from early N1 exit |
 | G4 Cleanup | A+B+C safe, D late | game pretends police has nothing |
 | G5 Exposure | direct disclosure breaks unpreserved chain | one harmless confront line instant-fails |
-| G6 True | A+B+C+X+D1+D2 preserved in time | require C28/all optional clues |
+| G6 True | A+B+C+X+accepted D1/D2+matched C10_SOURCE_LINK preserved in time | require C28/all optional clues |
 
 ---
 

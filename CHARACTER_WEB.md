@@ -21,7 +21,7 @@ Thứ tự ưu tiên:
 1. CANON / LOCKED trong MASTER_GAME_BIBLE.md.
 2. Các sự thật khách quan đã chốt trong BACKSTAGE_CRIME_TRUTH.md.
 3. Các quyết định mới trong tài liệu này ở những vùng đã được DESIGN AUTHORITY / DELEGATED.
-4. idea.docx và bổ sung.docx chỉ còn giá trị nguồn brainstorm khi không mâu thuẫn với các tài liệu mới hơn.
+4. Snapshot `idea.docx` và `bổ sung.docx` chỉ còn trong Git history như nguồn brainstorm; production không phụ thuộc chúng.
 
 Tài liệu này không retcon Stage 1.
 

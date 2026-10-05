@@ -1,23 +1,24 @@
 # FULL PRODUCTION SCRIPT
 
-> **Status:** STORY DESIGN — STAGE 8 / IN PROGRESS  
-> **Completed in this revision:** ACT I — S01 đến S05  
+> **Status:** STORY DESIGN — S01–S18 production script complete for narrative handoff; runtime validation pending
+> **Coverage:** S01–S18, conditional routes and G0–G6
 > **Repository:** phambac2k701-blip/cot_truyen  
 > **Setting:** Hà Nội, 2026  
 > **Production rule:** triển khai trực tiếp từ SCENE_BREAKDOWN.md; không thay objective truth, clue graph, character knowledge hoặc ending logic.
 
 ## CANON PIN
 
-Bản script này được viết sau khi đối chiếu toàn bộ các nguồn Stage 0–7:
+Bản script này dùng các nguồn canon/production hiện hành dưới đây. Các blob SHA của snapshot Stage 0–7 cũ không phải version pin cho main hiện tại:
 
-- MASTER_GAME_BIBLE.md — c54f045db49e1523edf304165d2a8af09f5a45b2
-- BACKSTAGE_CRIME_TRUTH.md — be6d0e99a961945849543db13212c4f23c60a60b
-- CHARACTER_WEB.md — ce95ed982f7f45955c347b1e5b9499f9bd984bab
-- OBJECTIVE_TIMELINE.md — ac7736c732fe36e5774d31a6630d39811eeb3ee8
-- CLUE_GRAPH.md — 34f662d29487248a1c869ae180c2f83a7fb51e13
-- PLAYER_STORY.md — 4e4dd484522d893ede0906ab11831f89fa12e081
-- ENDING_LOGIC.md — 1bef4a82b6b9a0f6c7d47fe637773caf8783685c
-- SCENE_BREAKDOWN.md — 5181bf635732db6c7571370a2f88371ebe55ffc6
+- MASTER_GAME_BIBLE.md — canon
+- BACKSTAGE_CRIME_TRUTH.md — objective case truth
+- CHARACTER_WEB.md — scoped knowledge
+- OBJECTIVE_TIMELINE.md — clock, source and custody
+- CLUE_GRAPH.md — provenance and proof
+- PLAYER_STORY.md — player-facing flow
+- ENDING_LOGIC.md — state and resolver
+- SCENE_BREAKDOWN.md — scene contracts
+- EVENT_IMPLEMENTATION_SPEC.md — event/state implementation contract
 
 ## SCRIPT NOTATION
 
