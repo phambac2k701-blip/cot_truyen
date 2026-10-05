@@ -1234,3 +1234,7 @@ Không nằm ở:
 - combat.
 
 **END — CLUE ARCHITECTURE / CLUE GRAPH / STAGE 4**
+
+### P4 resolver normalization — source facts before gates
+
+X has two accepted raw-source profiles: C24+C25/C26 authenticated Khải current shared-risk scope **or** same-case C32H+C33_AUTH / C32K+C34_AUTH with distinct decisions, original receiver-side Nam reply, execution and original C10_SOURCE_LINK matching that D2 directive. The latter proves current three-cell coordination without a prior Khải remit on one branch. Authenticate D raw facts first; normalize X_COMMAND next; then derive C3/C4. Never demand X to accept its own source inputs. No X from same account/transaction/keyword, a lawful unrelated consultant, clue ID, private theory, display name or duplicate forward. Missing C10_SOURCE_LINK prevents full D and X_COMMAND, though X_RISK can independently remain true. ABC custody remains unchanged by either result. Terminal ABC=2/X=false maps G1; ABCX=2 with D-only ordinary expiry maps G4; a decisive last D path leak maps G2/G5 by immutable cause.

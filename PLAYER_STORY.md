@@ -1968,3 +1968,7 @@ Nhưng không được:
 - bỏ các breather đời thường và biến 20 phút đầu thành foreshadow liên tục.
 
 **END — PLAYER-FACING STORY / STAGE 5**
+
+### P4 handoff into the playable climax
+
+At S16 police may authenticate a D1/D2/source-annex package in the same current case even if Khải risk remit is incomplete; this raw package itself establishes X_COMMAND before C4 is evaluated. Bắc sees the sourced scope Vũ may disclose, not an automatic notebook revelation. At S18 distinguish an **ongoing** weak route from a terminal one: A+B, A+C, B+C and ABC/X=false can still collect alternatives while windows remain open. At final lock they map G1 with exact preserved slots visible; ABCX with missing D maps G4; a documented earliest irreversible D-only MINH/DIRECT loss maps G2/G5. A later harmless attempt changes reaction, not outcome. C42 never retracts already received A/B/C.

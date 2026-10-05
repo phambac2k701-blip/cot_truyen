@@ -1408,3 +1408,7 @@ Khi chia opening/chapter/scene sau này, mỗi scene phải trả lời được
 6. nếu scene bị bỏ khỏi game, causality khách quan có còn đúng không.
 
 **END — OBJECTIVE TIMELINE / STAGE 3**
+
+### P4 causal terminal ordering
+
+At each authored receipt/closure, process original police receipt/authentication first by `(OBJECTIVE_TIME, event_sequence)`, normalize X_RISK/X_COMMAND from raw sources, then test whether a warning-backed closure removes the **last** feasible path of A/B/C/X/D. Persist one earliest `DECISIVE_LOSS` with slot, before/after source paths, direct/Minh/baseline/ordinary cause and warning. Later harmless attempts cannot overwrite it. E28 A=2 and all later police custody remain monotonic. D-only loss has the same historical attribution even when ABCX are safe. A local source closure with an alternate still open records loss of access only. No earlier deadline is created by this section; OT §0.1 warning/feasibility remains binding.

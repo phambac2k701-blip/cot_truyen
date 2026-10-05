@@ -2430,3 +2430,7 @@ S18: preservation thắng hoặc thua cleanup theo causal state.**
 Target focused runtime: **~93 phút**.
 
 **END — CHAPTER / SCENE BREAKDOWN / STAGE 7**
+
+### P4 S16/S18 state contract
+
+S16 intake order: original receiver-side D2 reply, distinct D1 manager decision, execution and same-case broker annex authentication → normalize X_COMMAND (or independently X_RISK from C24/C25) → calculate C3/C4 from actual custody. A D source is never rejected because X was false before intake. S18 reads immutable earliest DECISIVE_LOSS only after real closure; two-slot partial states continue while a saving path exists. On terminal lock ABC=2/X=false is G1; ABCX=2/D-only ordinary loss is G4; decisive MINH or DIRECT loss of last D path is G2 or G5. Show preserved case records and source-specific consequences; a later harmless disclosure cannot change the culprit. Save/load persists event sequence, warning receipt, source paths, DECISIVE_LOSS and all custody flags atomically.

@@ -86,8 +86,12 @@ Boolean:
 
 X không tự bật chỉ vì player sở hữu nhiều clue.
 
-Nó bật khi nguồn chứng minh hospital và logistics cùng escalates crisis Phúc tới một đầu mối có vai trò quản trị rủi ro hiện tại: C24+C25/C26 được Vũ verify đúng Khải endpoint, scope request/response và crisis context, hoặc reconstruction tương đương có cùng fact/provenance. Quan hệ cùng giao dịch mà A/B/C đã chứng minh chưa tự xác nhận common risk authority. C03/same group/account là transaction bridge lead, không auto X. ABC=PRESERVED/X=false hợp lệ nếu raw risk context chưa được nhận/xác thực; cảnh sát vẫn xử lý các case đã giữ. Nếu đầy đủ raw risk sources/context đã vào custody, Vũ verify độc lập dù private inference Bắc sai; player understanding riêng. Để full D bao trùm cả ba nhánh theo BACKSTAGE §53.D, còn phải verify/preserve C10_SOURCE_LINK tại §11.1, không dùng X hai institution tự cấp quyền Nam ở môi giới.
+X có hai profile tương đương về **common current coordination**, đều cần raw source có provenance đã vào custody:
 
+- `X_RISK`: C24+C25/C26 xác thực cùng Khải endpoint, request/response scope và current Phúc crisis context từ hospital và logistics.
+- `X_COMMAND`: D1 firsthand manager về một quyết định hiện tại, D2 original receiver-side Nam authorization cho quyết định **khác** tại branch kia kèm execution, cộng C10_SOURCE_LINK original broker request/forward/receipt match đúng D2 directive, tất cả trong cùng case. Profile này chứng minh coordinated current authority trên ba cell dù thiếu riêng Khải remit ở logistics.
+
+Authenticate raw sources trước, normalize X từ hai profile, rồi derive COMMAND và ending. Không dùng X làm gate để tiếp nhận chính D1/D2/annex đủ mạnh sinh ra X: điều đó tạo vòng. Không cấp X từ enum COMMAND, clue ID, lawful consultant/authority không gắn current crisis, same transaction/account/keyword, display name hoặc private theory. Một order forward hai lần vẫn chỉ có một origin. ABC=2/X=false là state hợp lệ khi cả hai profile chưa đủ; police vẫn xử lý A/B/C đã giữ. Vũ verify raw sources đầy đủ độc lập với Bắc hiểu sai; `X_PLAYER_CONNECTED` riêng.
 ---
 
 ## 1.4. COMMAND — mức chứng minh Nam
@@ -114,7 +118,7 @@ Một enum:
 - **MINH:** leak đi qua Minh vì Bắc chia quá nhiều trước preservation.
 - **DIRECT:** Bắc tự confront Nam/Khải, đi cuộc hẹn không an toàn, hoặc để organization biết chính xác evidence đang nằm ở đâu.
 
-Nếu cả hai xảy ra, DIRECT có ưu tiên khi xác định nguyên nhân thất bại.
+LEAK_PATH là disclosure ledger có thể chứa cả MINH và DIRECT với timestamp, exact payload, recipient và receipt. Không có DIRECT-priority cho nguyên nhân kết thúc. `DECISIVE_LOSS` là record immutable của lần đầu một event đóng **đường cuối còn khả thi** cho một required slot trước preservation: `{at, sequence, slot: A|B|C|X|D, before_paths, after_paths, cause: MINH|DIRECT|BASELINE|ORDINARY_EXPIRY, warning_receipt, feasible_save_action}`. Tie dùng authored sequence; chỉ set khi after_paths rỗng và không có source police đã preserve có thể đáp ứng slot. Một event đóng hai slots cùng lúc dùng một cause/event. DIRECT/MINH attempt về sau vô hại không overwrite record. D-only loss được ghi như A/B/C loss; local closure không xóa custody đã có.
 
 LEAK_PATH không tự động quyết định ending. Nó chỉ có ý nghĩa nếu leak **thực sự làm source đóng hoặc làm chain evidence gãy**.
 
@@ -265,35 +269,40 @@ Nếu player chủ động kết thúc curiosity ở S07 khi:
 
 ---
 
-## 4.2. Late resolver
+## 4.2. Late resolver — total terminal function
 
-Sau N2/N3, resolver theo thứ tự:
+Chỉ resolve khi player xác nhận kết thúc/bỏ cuộc, hoặc warned last path/global deadline thật sự đóng. Nếu còn saving path, gameplay tiếp tục. Trước resolver: áp mọi receipt/authentication hoàn tất theo authored `OBJECTIVE_TIME` và sequence (custody receipt trước closure sau đó); derive `X_RISK`/`X_COMMAND` từ raw police sources; derive C3/C4; đọc `DECISIVE_LOSS`. CASE custody chỉ đi 0→1→2 và không lùi.
 
-1. Nếu A/B/C đều PRESERVED + X_VERIFIED + COMMAND C4 trước CLEANUP LOCKED  
-   → **G6 TRUE — NHỮNG MẢNH KHỚP LẠI.**
+1. A/B/C đều 2, X=true, C4 preserved **trước** lock → **G6**; leak/lock sau đó không revoke.
+2. Abandon explicit sau actual N3 report khi police chưa tự hoàn tất đường thiếu → **G3**. Full G6 custody thắng G3.
+3. `DECISIVE_LOSS.cause=DIRECT` → **G5**; cause `MINH` → **G2**, kể cả mất riêng D khi ABCX an toàn. Earliest irreversible last-path loss thắng later harmless attempt của loại kia.
+4. Mọi terminal còn lại với A/B/C=2 và X=true nhưng D/C4 thiếu hoặc muộn → **G4**. D-only baseline/ordinary expiry thuộc đây.
+5. Mọi terminal còn lại → **G1**, gồm ABC=2/X=false; A+B, A+C, B+C weak/partial, một hoặc không slot preserved, và X-only expiry không có decisive leak. Cinematic hiển thị đúng police custody hiện có, không nói các case được bảo toàn đã biến mất.
 
-2. Nếu ABANDON_AFTER_N3 = TRUE và police chưa đủ preservation để tự giữ case  
-   → **G3 AVOIDANCE — QUAY LƯNG QUÁ MUỘN.**
+Đây là partition đầy đủ cho late terminal states. Trước closure, hai slot hoặc ABC/X=false là **ongoing**, không auto G1; source alternative có thể nâng 1→2, X hoặc D. `CLEANUP=LOCKED` không xóa records; C3 đã corroborate không lùi khi nguồn ở custody, C4 chỉ tới sau đủ source D được preserve đúng hạn. G0 chỉ ở early exit S07.
 
-3. Nếu LEAK_PATH = DIRECT và direct exposure là nguyên nhân làm source/chain gãy trước preservation  
-   → **G5 EXPOSURE — BỊ NHÌN THẤY.**
+### Resolver fixtures (terminal unless marked ongoing)
 
-4. Nếu LEAK_PATH = MINH và leak qua Minh là nguyên nhân làm một slot cần thiết mất route cuối trước preservation  
-   → **G2 WRONG TRUST — SAI NGƯỜI.**
+| State / event order | Expected | Custody and cause |
+|---|---|---|
+| ABC=2, X=false, no D, lock | G1 | A/B/C retained; missing sourced coordination stated, never G4 or G6. |
+| ABC=2, X=true, C4 before lock, later DIRECT/MINH | G6 | Full custody immutable. |
+| ABC=2, X=true, D-only ordinary expiry | G4 | A/B/C/X safe; Nam authority unproven in time. |
+| ABC=2, X=true, D-only DIRECT last-path loss | G5 | Loss record D/DIRECT; preserved slots stay safe. |
+| ABC=2, X=true, D-only MINH last-path loss | G2 | Loss record D/MINH. |
+| MINH closes last B at t1, DIRECT attempt at t2 | G2 | First irreversible loss t1; later exposure harmless to classification. |
+| DIRECT closes last D at t1, MINH attempt at t2 | G5 | First irreversible loss t1. |
+| MINH report at t1, alternate C18/C19 open, eventual ordinary expiry | G1 or G4 by ABCX | MINH never decisive; retained police slots unchanged. |
+| A+B=2, C=1, X=false, final path closes | G1 | Police keeps A/B, C assembled only. |
+| A+C=2, B=0; B+C=2, A=0 in isolated fixture | G1 | Police keeps respective two; baseline real run starts A=2 after E28. |
+| A+B=2, C source alternate open | ongoing | Do not finish just because route weak now. |
+| ABC=2, X_RISK absent, full same-case D originals+manager+source annex | G6 if C4 timely | X_COMMAND computed from raw sources before resolver. |
+| ABC=2, same transaction/account/keyword or C03 only, no risk/command profile | G1 at lock | No X. |
+| ABC=2, lawful consultant authorized unrelated case, mismatched case/group, or only forwarded display-name Nam | G1 at lock | No X_COMMAND and no accepted D2. |
+| ABC=2, one D decision duplicated across two custodians, or annex missing original scope match | G4 if X_RISK true; else G1 | No C4; forwarded copy is not independent D1/D2. |
+| N3 report received, explicit abandon before police can finish, partial ABC | G3 | No private N3 shortcut. |
 
-5. Nếu A/B/C đều PRESERVED + X_VERIFIED nhưng COMMAND chưa đạt C4 khi CLEANUP = LOCKED  
-   → **G4 CLEANUP — DỌN SẠCH.**
-
-6. Nếu một hoặc nhiều A/B/C không thể đạt PRESERVED vì cửa source cuối cùng đã đóng, và thất bại không chủ yếu do Wrong Trust/Exposure  
-   → **G1 DELAY — QUÁ MUỘN.**
-
-Điểm quan trọng:
-
-- Một Minh leak sau khi A/B/C đã được preserve không tự ép G2.
-- Một confrontation sau khi toàn bộ A/B/C+D đã được preserve không xóa True Ending.
-- Một player biết Nam là boss nhưng không chứng minh command vẫn không đạt True.
-- Một player không biết Nam từ đầu vẫn có thể đạt True nếu late evidence được nối đúng.
-
+For any fixture with `A=0` after baseline E28, supply an explicit alternate-world missing exact receipt/authentication; never simulate that state by erasing E28 custody. Validate each event against OT warning and feasible action before a last path closes.
 ---
 
 # 5. G0 — NEUTRAL ENDING: MỘT CA LÀM THÊM
@@ -400,7 +409,7 @@ Bắc hiểu rằng có chuyện nghiêm trọng, nhưng hiểu đến đó sau 
 
 ## Điều kiện cần
 
-Ít nhất một trong A/B/C không thể đạt PRESERVED vì:
+Tại terminal, không đạt đồng thời A/B/C=2 và X=true, và không có decisive MINH/DIRECT loss hoặc qualified G3. Có thể A/B/C đã được giữ đủ nhưng cả hai sourced X profiles vẫn thiếu. Với missing A/B/C, nguyên nhân có thể là:
 
 - player miss source chính;
 - route thay thế cuối cùng cũng đóng;
@@ -501,7 +510,7 @@ Minh không phải member. Chính vì Minh là người bình thường, hành �
 
 ## Điều kiện cần
 
-- LEAK_PATH = MINH.
+- `DECISIVE_LOSS.cause=MINH`, là earliest irreversible last-required-path loss; có thể thiếu riêng D trong khi ABCX đã giữ.
 - Leak xảy ra trước preservation đủ.
 - Leak chứa đủ chi tiết để Tân Lộ/risk layer biết Bắc đang chạm nhánh nào.
 - Sau leak, ít nhất một required source route đóng sớm.
@@ -800,7 +809,7 @@ Bắc tự làm cho họ biết.
 
 ## Điều kiện cần
 
-- LEAK_PATH = DIRECT.
+- `DECISIVE_LOSS.cause=DIRECT`, là earliest irreversible last-required-path loss; có thể thiếu riêng D trong khi ABCX đã giữ.
 - Bắc đã ở N3 hoặc gần N4.
 - Player confront Nam/Khải hoặc đi một interaction không an toàn trước khi source độc nhất được preserve.
 - Direct exposure cho organization biết đủ cụ thể về source/evidence.
@@ -977,7 +986,7 @@ Vũ thu bản gốc qua institution intake và đối chiếu endpoint identity 
 
 D1 phải là manager firsthand về một quyết định hiện tại; D2 là record **một quyết định hiện tại khác ở branch khác**, origin có trước intake. Hai copies cùng một forwarded Nam order không được count hai nguồn dù khác custodian. C10_SOURCE_LINK đối chiếu việc thực hiện ở nhánh môi giới với đúng directive D2, không được count lại chính forward đó làm một independent command proof.
 
-Accepted full D: **(C32H + C33_AUTH) hoặc (C32K + C34_AUTH)**, với source-branch context C10_SOURCE_LINK đã verify/preserve và X đã sourced. Mất Hùng còn Khoa + authenticated TL record; không có pure C33+C34 recovery, không có C31+C32 route, không có manager đứng một mình. Mất cả hai manager routes thì D1 chưa đủ.
+Accepted full D: **(C32H + C33_AUTH) hoặc (C32K + C34_AUTH)**, với source-branch context C10_SOURCE_LINK đã verify/preserve. Authenticate bộ raw D trước khi normalize X; chính bộ này có thể lập X_COMMAND, không đòi X_RISK có trước. Mất Hùng còn Khoa + authenticated TL record; không có pure C33+C34 recovery, không có C31+C32 route, không có manager đứng một mình. Mất cả hai manager routes thì D1 chưa đủ.
 
 ---
 
@@ -1539,10 +1548,10 @@ Nếu tester có thể tìm ra chỉ bằng việc đọc source, thời gian v�
 | Ending | Player hiểu mystery | Police giữ A/B/C | Nam proven | Failure core |
 |---|---|---:|---:|---|
 | Một ca làm thêm | rất ít | không | không | player không bước vào |
-| Quá muộn | một phần/khá nhiều | thiếu | không/không đủ | timing/missed source |
+| Quá muộn | một phần/khá nhiều | có thể đủ ABC nhưng thiếu X | không/không đủ | missing proof/coordination, ordinary expiry |
 | Sai người | khá nhiều | thiếu do leak | không/không đủ | trust channel |
 | Quay lưng quá muộn | nhiều | chưa đủ | có thể nghi | withdrawal after N3 |
-| Dọn sạch | rất nhiều | có | chưa preserve đủ | command proof too late |
+| Dọn sạch | có thể nhiều | có, X verified | chưa preserve đủ | D command proof too late; D-only ordinary loss |
 | Bị nhìn thấy | nhiều/có thể rất nhiều | thiếu do direct exposure | có thể nghi đúng | operational exposure |
 | Những mảnh khớp lại | gần toàn bộ core | có | có, preserved | corroboration thắng cleanup |
 
