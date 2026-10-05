@@ -21,7 +21,7 @@
 | P2 | Tách observed/inferred/police-custody/BARC/source-existence/access/willingness/copy | CHARACTER_WEB, OBJECTIVE_TIMELINE, CLUE_GRAPH, ENDING_LOGIC; matching scene hooks và FS Act I lifecycle | Full diff; same report/different thought; E28 A preserved; retained copy không mất do account lock | COMPLETE — GitHub 79c5f9a |
 | P3 | Một authored clock, morning source requests/intakes, pre-loss warning và action costs | OBJECTIVE_TIMELINE, CLUE_GRAPH, PLAYER_STORY, SCENE_BREAKDOWN; FS clock | Lịch khả thi trong travel bounds; last loss có warning và action cứu trước | IN PROGRESS |
 | P4 | Total terminal resolver; decisive loss history; partial transitions | ENDING_LOGIC, CLUE_GRAPH, OBJECTIVE_TIMELINE, PLAYER_STORY, SCENE_BREAKDOWN | ABC=P/X=false; mixed leaks; D-only; weak routes; monotonic custody | COMPLETE — commit recorded below |
-| P5 | Presentation theo contract P0–P4; conditional S13/S14, fast recap S12, custody-first/bypass S17 | PLAYER_STORY, SCENE_BREAKDOWN | Scene entry/action/state/exit nhất quán; no compulsory unsafe encounter | PENDING |
+| P5 | Playable event-driven S01–S18; conditional S13/S14, fast recap S12, custody-first/bypass S17 | PLAYER_STORY, SCENE_BREAKDOWN | 18 scene contracts, entry/action/state/exit, no compulsory unsafe encounter | COMPLETE — commit recorded below |
 | P6 | Full production dialogue/action/state S06–S18 cùng 13-section schema | FULL_SCRIPT | S01–S18 mỗi scene đủ schema, branch actions/state có nguyên nhân, no late outlines | PENDING |
 | Validation | T01–T25 có inputs/actions/transitions/results + 17-layer adversarial re-audit | FINAL_NARRATIVE_REAUDIT, validation fixtures nếu cần | Không claim runtime/human playtest khi mới kiểm tài liệu/reference model | PENDING |
 
@@ -108,3 +108,9 @@ Chỉ đánh COMPLETE sau khi diff/consistency của phase đã được kiểm 
 - Total terminal order: timely full custody G6; qualified N3 abandonment G3; immutable earliest irreversible last-path DIRECT G5 / MINH G2; ABCX safe but D late G4; all remaining terminal partials including ABC safe/X false G1. While alternatives remain, the run remains ongoing.
 - DECISIVE_LOSS persists event time/sequence, required slot, source paths before/after, cause, warning receipt and feasible saving action; later harmless attempts cannot change it. CASE custody stays monotonic. Resolver fixtures in ENDING_LOGIC cover partial A+B/A+C/B+C, D-only, mixed leaks, circular X and negative matching.
 - P0–P3 canon/clock/provenance remain authority; no re-audit or runtime claims here.
+
+### P5 — playable presentation
+
+- S01–S18 player-facing flows now center on world lure → player action → observed proof → authored NPC/world response. Every SCENE_BREAKDOWN scene has entry, environment, curiosity, action, discovery, automatic/micro/signature events, NPC routine, state, missed detail, return, fail-forward, exit and hooks. 18 primary set-pieces, with secondary beats possible inside S04/S08/S10/S16/S17; no jumpscare quota.
+- S08 raw source morning copy and S09 scoped request preserve P3 offsets. S12 recap avoids repeated Tuấn interrogation. S13 private inference is separate from competent Vũ verification; S14 only actual reports raise BARC. S15 custody precedes optional S17, whose room jam has a physical cause and release; direct S18 bypass remains.
+- P4 X normalization and earliest decisive loss persist; no scene completion grants police proof, boss identity or NPC knowledge. This is production design, not runtime playtest.

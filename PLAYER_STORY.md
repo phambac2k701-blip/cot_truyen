@@ -69,15 +69,19 @@ Khoảng đầu game phải có đủ không gian để người chơi biết B�
 **Objective time:** D0,07:30–08:35 core65m; departure travel25m tới trường09:00
 **Hub:** Dãy trọ
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Bắc kéo vali và vài thùng đồ vào dãy trọ. Bà Lan hướng dẫn tiền điện, khóa cổng, chỗ phơi đồ, giờ giấc và một vài chuyện nhỏ của khu trọ.
+**ENTRY / WORLD:** D0 07:30, Bắc nhận phòng trọ; Lan đang kiểm điện và đưa chìa. Hành lang có tiếng quạt, ổ điện chập chờn trong phòng Bắc, góc Nam sửa đồ nằm trong tầm nhìn nhưng không được đóng khung đáng ngờ.
 
-Phòng Bắc có một lỗi điện nhỏ hoặc quạt/ổ cắm hoạt động chập chờn. Nam xuất hiện vì nghe bà Lan gọi hoặc vì đang sửa đồ gần đó. Ông xử lý việc nhỏ rất bình thường, không hỏi điều gì kỳ lạ và không được quay như một nhân vật đáng ngờ.
+**CURIOSITY → ACTION:** Đèn bàn chớp khi Bắc cắm ổ kéo; tiếng Lan gọi Nam từ hành lang. Player đặt vali, thử công tắc/ổ, mở cửa cho Nam; có thể liếc card cũ C28 hoặc đọc hợp đồng thuê.
 
-Người chơi được tự do nhìn quanh một khoảng ngắn: bàn học, đồ điện tử, hành lang, khu sửa đồ của Nam ở khoảng cách hợp lý. Phần lớn đồ vật là noise đời thường.
+**DISCOVERY → RESPONSE:** Lỗi điện là việc thật; Nam giúp đúng nghề. C27 chỉ background; C28 optional không chứng minh current command. Lan đưa chìa sau khi Bắc nhận phòng; Nam tới vì lời Lan gọi, sửa ổ và về góc đồ. NPC: Lan kiểm công tơ; Nam tiếp tục sửa món khác nếu Bắc chưa ra.
 
-Bắc nhận tin nhắn từ gia đình hoặc kiểm tra số dư. Không biến thành melodrama; chỉ đủ để thấy tiền đang là áp lực thực.
+**SIGNATURE:** S01_POWER_REPAIR: player giữ góc nhìn và thử điện trước/sau sửa, không cắt sang exposition. Micro events: Tiếng quạt ngừng rồi chạy; điện thoại báo số dư/tiền trọ.
+
+**PERSISTENCE / RETURN:** Ổ chuyển FAULT→WORKING do Nam xử lý; đồ cũ vẫn ở đó, không tự xuất hiện. Optional: C28/card Tân Lộ cũ và một cử chỉ tử tế C29. Return payoff: Khi S17 recontextualizes Nam, vật cũ vẫn chỉ là quan hệ nghề nghiệp.
+
+**FAIL-FORWARD / EXIT:** Không xem card vẫn tới lớp; thao tác thử ổ có hint không tốn thời gian. Đồ được đặt, điện ổn, player xác nhận rời trọ 08:35.
 
 ### Mục đích narrative
 
@@ -143,13 +147,19 @@ Bắc nhận tin nhắn từ gia đình hoặc kiểm tra số dư. Không biế
 **Objective time:** D0, 09:00–11:15  
 **Hub:** Trường và khu lân cận
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Bắc đi học, tìm phòng, ngồi lớp, gặp Linh và Minh. Scene có đủ chuyện nhỏ: đổi chỗ vì ổ cắm, ảnh bài giảng, deadline, chuyện ăn trưa, meme, sinh viên hỏi mượn sạc.
+**ENTRY / WORLD:** S01 rời trọ; tới trường 09:00. Bảng phòng học, ghế có ổ hỏng, file bài giảng và bảng thông báo việc làm trong một ngày bình thường.
 
-Linh được thiết lập là người phân biệt khá rõ “biết” với “đoán”. Minh dễ gần hơn, biết nhiều kênh việc làm part-time.
+**CURIOSITY → ACTION:** Linh chỉ chỗ ngồi có ổ điện; thông báo chi phí sáng màn hình, Minh đưa link công việc. Player tìm lớp, đổi chỗ, chụp bài hoặc nhận file; tự mở listing khi cần tiền.
 
-Bắc nhận một thông báo chi phí hoặc tự tính số tiền còn lại. Áp lực tiền dẫn tự nhiên sang câu chuyện việc làm, không phải plot prompt.
+**DISCOVERY → RESPONSE:** Linh phân biệt thấy với đoán qua bài tập; Minh từng nhận ca thường C07 nếu hỏi/xem lịch sử được phép. Giờ học và bữa trưa tiến theo nhóm hành động đã định, không vì đọc UI lâu. NPC: Linh học, Minh đi ngang rồi nhắn link; không nhân vật nào biết crime.
+
+**SIGNATURE:** S02_CLASS_ROUTINE: player tìm đúng phòng và chỗ học trong sinh hoạt đang diễn ra, áp lực tiền hiện qua thao tác điện thoại. Micro events: Ổ cạnh ghế tắt; điện thoại rung bởi deadline lớp.
+
+**PERSISTENCE / RETURN:** Thông báo chi phí nằm lại trong phone; lớp tan và bảng việc vẫn có. Optional: C07 lịch sử ca cũ, không là chứng cứ mạng lưới. Return payoff: S07 so ca bình thường với assignment mới.
+
+**FAIL-FORWARD / EXIT:** Bỏ qua mọi thoại tùy chọn vẫn có link và lý do xem việc. Lớp/bữa trưa kết thúc 11:15; listing có thể mở.
 
 ### Mục đích narrative
 
@@ -209,13 +219,19 @@ Bắc nhận một thông báo chi phí hoặc tự tính số tiền còn lại
 **Budget:** ~4 phút  
 **Objective time:** D0,11:15–11:49 core34m; travel35m tớiTân Lộ12:24/check-in6m tới12:30
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Trong lúc ăn trưa/đứng ở khu sinh viên, Minh gửi cho Bắc một ca ngắn của Tân Lộ. Việc trả cao hơn một ca lặt vặt thông thường một chút nhưng không tới mức đáng ngờ, lý do là cần giao đúng khung giờ và có proof-of-handover.
+**ENTRY / WORLD:** S02 11:15, Bắc ở khu ăn sinh viên. Nhiều listing bình thường; ca TL-2604-117 có tiền nhỉnh hơn vì khung giờ và proof-of-handover.
 
-Bắc có thể từ chối ban đầu, xem ví/số dư, rồi nhận vì ca không đụng lịch học và đủ tiền cho vài chi phí trước mắt.
+**CURIOSITY → ACTION:** Minh chuyển link đúng lúc Bắc xem số dư; phone rung cạnh hóa đơn bữa ăn. Player so giờ học/tiền/đầu việc, chấp nhận ca hoặc do dự; không ai gọi chọn riêng Bắc.
 
-Không ai gọi riêng Bắc. Không có “người bí ẩn chọn cậu”. Bắc vào pool như một cộng tác viên mới.
+**DISCOVERY → RESPONSE:** C02 là assignment và nhóm khách y tế, chỉ bề mặt công việc. Nhận ca phát assignment; xác nhận di chuyển tính authored 34m nhóm và 35m tới Tân Lộ. NPC: Minh trở lại việc riêng, không theo player điều tra.
+
+**SIGNATURE:** S03_JOB_ACCEPT: quyết định được đặt trong ngân sách và lịch học có thể xem, không lời độc thoại lý giải. Micro events: Màn hình số dư; app báo hạn nhận ca.
+
+**PERSISTENCE / RETURN:** Assignment vào lịch sử; trạng thái job ACCEPTED một lần. Optional: C07 đối chiếu ca cũ nếu đã xem. Return payoff: S07/S08 so lịch sử với routing của ca này.
+
+**FAIL-FORWARD / EXIT:** Đã từ chối ban đầu vẫn có một lần nhận lại trong window; không rơi vào bế tắc. Job accepted; đi Tân Lộ theo travel card tới12:24.
 
 ### Mục đích narrative
 
@@ -275,21 +291,19 @@ Phúc → Huyền → Khoa → cleanup → audit → Hùng tự cứu → reclas
 **Objective time:** D0, 12:30–14:10  
 **Hub:** Tân Lộ → điểm nhận y tế/hành chính liên quan Minh Trạch
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Bắc tới Tân Lộ nhận gói. Không gian công ty phải trông thật: nhân viên bận, nhiều job bình thường, tài xế, hàng thương mại, hồ sơ doanh nghiệp.
+**ENTRY / WORLD:** Tân Lộ check-in12:24; pickup12:30 rồi tới đầu nhận. Quầy dispatch với nhiều gói thật, máy quét, printer, nhân viên bận; pouch kín đi qua luồng thường.
 
-Tuấn xuất hiện ngắn ở vai trò điều phối, không phải người trực tiếp “giao bí mật”. Cậu nhận một gói/túi hồ sơ kín, chỉ có routing bên ngoài.
+**CURIOSITY → ACTION:** Scanner báo mismatch nhẹ, nhãn routing có mép dán lại, giấy proof-of-handover ló khỏi khay. Player nhận pouch, giữ nguyên niêm, giao và xem lịch sử/biên nhận sau scan; có thể nhìn C04 nếu nhãn thực sự lộ.
 
-Trong lúc nhận hoặc bàn giao, người chơi có thể thấy:
+**DISCOVERY → RESPONSE:** C03 đầu nhận/account family; mismatch không phải bằng chứng crime, C04 chỉ từ vật/ảnh nhìn rõ nhãn. Nhân viên xử lý mã hợp lệ theo quy trình; Tuấn đi qua kiểm công việc khác, không chọn Bắc. NPC: Tuấn phân ca, đầu nhận xác minh, không ai giải thích conspiracy.
 
-- assignment có trường “y tế/ưu tiên” dù nằm trong pool cộng tác viên;
-- lớp routing ngoài có dấu đã đổi/dán lại;
-- proof-of-handover dùng một account/client family liên quan Minh Trạch.
+**SIGNATURE:** S04_SCAN_MISMATCH: player tự đưa gói vào scanner và thấy hai trường không khớp rồi nhân viên sửa bằng thao tác thường. Micro events: Máy quét beep hai nhịp; printer kéo giấy; xe đẩy đi ngang.
 
-Ở đầu nhận, một thao tác scan hoặc xác nhận có một lỗi nhỏ: mã job hợp lệ nhưng nhóm phân loại không giống cách điểm nhận thường thấy ở cộng tác viên. Nhân viên xử lý được bằng quy trình bình thường và không coi đó là scandal.
+**PERSISTENCE / RETURN:** Job DELIVERED, C03 original13:52 lưu lịch sử; later observed_at khi player mở lại, không rewrite source time. Optional: Dấu routing C04 và tiếng đầu nhận hỏi mã. Return payoff: S06 audit và S08 reclassification giải nghĩa mismatch.
 
-Bắc giao xong. Không mở gói. Không có tài liệu “bằng chứng tội phạm” rơi ra.
+**FAIL-FORWARD / EXIT:** Không inspect nhãn vẫn có biên nhận/history và audit. Proof-of-handover hoàn tất 13:52; đóng ca14:10.
 
 ### Mục đích narrative
 
@@ -351,15 +365,19 @@ Bắc giao xong. Không mở gói. Không có tài liệu “bằng chứng tộ
 **Budget:** ~5 phút  
 **Objective time:** D0,14:30–18:07; ordinary afternoon180m→17:30, return35m→18:05, room beat2m→audit18:07
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Game cố tình rời mystery.
+**ENTRY / WORLD:** S04 đóng ca, bữa ăn gần đầu nhận14:30; trở về trọ18:05. Quán ăn và phòng trọ sinh hoạt bình thường; thanh toán job còn PENDING.
 
-Bắc có thể ăn một bữa rẻ, trả lời tin nhắn Linh, xem bài học, mua đồ lặt vặt hoặc về trọ. Một đoạn hài nhẹ có thể đến từ việc Bắc tính từng khoản chi hoặc bị Lan nhắc đồ để sai chỗ.
+**CURIOSITY → ACTION:** Phone đợi tiền và tin Linh; Nam trả món đồ điện hoặc Lan nhắc chỗ để đồ. Player chọn bữa rẻ, xem bài, đi về; có thể nhận món Nam sửa và đặt lại.
 
-Khoản thanh toán ca làm vẫn ở trạng thái đang xử lý; điều này chưa phải “clue đỏ”.
+**DISCOVERY → RESPONSE:** Nam tử tế trong chuyện nhỏ C29; khoản pending chưa phải dấu tội phạm. Bữa/việc học cho tới17:30 rồi travel về trọ; audit đến sau ordinary beat18:07. NPC: Nam sửa đồ, Lan làm việc nhà, không chất vấn Tân Lộ.
 
-Nam có thể xuất hiện lần hai trong một việc rất nhỏ: trả Bắc món đồ đã sửa, nhắc một chi tiết sinh hoạt hoặc giúp Lan. Ông không hỏi Tân Lộ và không lộ mình đã biết gì.
+**SIGNATURE:** S05_ORDINARY_RETURN: một đoạn thở do player điều khiển, căn phòng cũ thay âm và vị trí vật để tạo cảm giác sống. Micro events: Âm quán ăn thay bằng tiếng ngõ; quạt phòng chạy; phone không báo tiền.
+
+**PERSISTENCE / RETURN:** Vật đã sửa chuyển về phòng Bắc, payment PENDING; không tăng BARC. Optional: Một câu nói đời thường của Nam/Lan. Return payoff: S17 cùng hành lang đổi nghĩa bằng hiểu biết player, không cần biến Nam thành quái.
+
+**FAIL-FORWARD / EXIT:** Bỏ qua chuyện phụ không ảnh hưởng audit. Ordinary room beat xong 18:07, S06 notification.
 
 ### Mục đích narrative
 
@@ -417,15 +435,19 @@ Nam có thể xuất hiện lần hai trong một việc rất nhỏ: trả Bắ
 **Budget:** ~4 phút  
 **Objective time:** D0, khoảng 18:00–20:00
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Tân Lộ gửi thông báo hoặc Tuấn gọi để xác nhận lại một số bước: thời gian nhận gói, người bàn giao, proof-of-handover, lý do một field không khớp. Khoản thanh toán có thể tạm chờ xác minh.
+**ENTRY / WORLD:** Audit18:07 sau S05 ordinary beat. Trong phòng, job app bất ngờ yêu cầu đối lại thời gian/đầu nhận, payment giữ chờ.
 
-Tuấn phòng thủ hơn mức Bắc mong đợi nhưng vẫn nói theo kiểu quản lý vận hành: đúng quy trình, đừng tự liên hệ khách hàng thêm, chờ công ty xử lý.
+**CURIOSITY → ACTION:** Phone rung hai lần; form hỏi field mà player vừa thấy scanner xử lý. Player mở history, so biên nhận, trả lời chỉ phần trực tiếp thấy; có thể gọi Tuấn theo option có cost.
 
-Điều này tạo một câu hỏi rất đời thường:
+**DISCOVERY → RESPONSE:** Audit hướng tới routing; Tuấn phòng thủ trong giới hạn vận hành, không thú nhận hoặc đọc notebook. Form xác nhận sau S06 15m; explicit chờ kết quả tới20:00 hiển thị trước commit. NPC: Tuấn đang xử lý audit khác; chỉ phản hồi câu hỏi có trong work ticket.
 
-**Nếu chỉ là một ca giao hồ sơ bình thường, tại sao cả công ty lại rà kỹ như vậy?**
+**SIGNATURE:** S06_AUDIT_FORM: player đối chiếu record thay cho nghe NPC kể toàn bộ lỗi. Micro events: Tin payment đổi trạng thái; tiếng khu trọ tiếp tục ngoài cửa.
+
+**PERSISTENCE / RETURN:** Payment HOLD, audit receipt; phone giữ original job history. Optional: Một field scan bất thường đã quan sát ở S04. Return payoff: S07 curiosity bắt đầu từ bất nhất cụ thể.
+
+**FAIL-FORWARD / EXIT:** Trả lời tối thiểu vẫn mở S07; không gây LEAK tự động. Đã xem form và chọn explicit wait tới20:00.
 
 ### Mục đích narrative
 
@@ -477,25 +499,19 @@ Tuấn phòng thủ hơn mức Bắc mong đợi nhưng vẫn nói theo kiểu q
 **Budget:** ~5 phút  
 **Objective time:** D0, 20:00–23:00
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Động cơ kiểm tra đầu tiên không phải anh hùng hay phá án.
+**ENTRY / WORLD:** 20:00, job audit đang chờ; lựa chọn early exit còn mở ở N1. Phòng yên, lịch sử ca Minh C07 và TL-2604-117 hiện trong app; hành lang vẫn sống.
 
-Bắc muốn:
+**CURIOSITY → ACTION:** Hai dòng assignment có nhãn khác nhau; Minh nhắn hỏi đã nhận tiền chưa. Player đặt hai record cạnh nhau; hỏi Minh chung hoặc gửi exact screenshot/theory. Confirm stop nếu muốn G0.
 
-1. biết vì sao tiền bị giữ;
-2. biết mình có làm sai gì không;
-3. tránh bị công ty đổ trách nhiệm;
-4. hiểu tại sao một job bình thường lại bị rà.
+**DISCOVERY → RESPONSE:** Khác biệt ca không chứng minh crime; disclosure ledger chỉ ghi phần Bắc thật sự gửi. Nếu Minh hỏi hộ company, E26 chỉ sau actual message/report receipt; phone gửi không đồng nghĩa Khải/Nam biết ngay. NPC: Minh trả lời theo thứ được hỏi; Lan khóa cổng, Nam không có magic awareness.
 
-Player có thể so assignment với lịch sử ca bình thường Minh từng nhận. C07 cho thấy Minh thật sự chỉ là sinh viên từng kiếm việc qua Tân Lộ.
+**SIGNATURE:** S07_COMPARE_AND_CHOOSE: thao tác so ca rồi chọn kênh tin trước day transition. Micro events: Tin nhắn rung; đèn hành lang tắt theo giờ.
 
-Bắc có thể hỏi Minh ít hoặc nhiều.
+**PERSISTENCE / RETURN:** Disclosure payload hoặc NONE, BARC theo report thật; G0 chỉ nếu early stop đủ điều kiện. Optional: C07 không bắt buộc, so tối thiểu từ field job app. Return payoff: S14 nếu có leak, timestamp report khớp cửa đóng, không auto betrayal.
 
-- Hỏi chung: không tạo leak đáng kể.
-- Gửi screenshot/giả thuyết chi tiết và nhờ Minh hỏi công ty: có thể kích E26/C35.
-
-Sau đó game cho một khoảng yên: Bắc ngồi trong phòng, nghe hành lang, xem bài học còn dang dở, có thể nhìn lại notebook. Đây là điểm save/day transition tự nhiên.
+**FAIL-FORWARD / EXIT:** Không so vẫn có audit cụ thể dẫn tới S08; early stop là lựa chọn rõ. Continue và explicit ngủ/chờ tới D+1 08:30, hoặc G0.
 
 ### Mục đích narrative
 
@@ -555,21 +571,19 @@ Sau đó game cho một khoảng yên: Bắc ngồi trong phòng, nghe hành lan
 **Objective time:** D+1,09:00–09:35 core35m (checkpoint09:25 notice); optional copy10m tới09:45, explicit police appointment10:00
 **Hub:** Tân Lộ / kênh xử lý khiếu nại worker
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Sáng hôm sau Bắc đi trọ→Tân Lộ08:30–09:00 (30m), S08 core09:00–09:35 (35m) để xử lý payment/incident. Required notice09:25 nêu worker access/Đức willingness11:00 và finance12:30. Từ09:30 Đức thật sự offer copy giới hạn và contact; action nhận copy09:35–09:45 cost10m cho actual local receipt09:45, hoặc giữ đúng contact/copy/deadline để Vũ collect ở S09. Một bounded finance contact/group lead tới Yến được offer, không cho Bắc biết dòng tiền/Nam trước source. Không đợi S12/S13 mới đưa người chơi tới C18.
+**ENTRY / WORLD:** D+1 09:00 Tân Lộ; xử lý payment/incident hợp lệ. Máy printer và terminal dispatch mở cùng job; Đức cầm bản snapshot cá nhân; notice đóng worker access11:00.
 
-Qua một interaction hợp lệ với lịch sử assignment hoặc người vận hành, Bắc có thể thấy:
+**CURIOSITY → ACTION:** Printer trả một bản Internal/Priority cũ trong khi app hiển thị Standard; Đức chú ý Bắc nhìn thấy. Player so bản in C17 với assignment, hỏi quyền classification; 09:35 có thể nhận C18 copy từ Đức trong10m hoặc giữ contact/deadline đưa Vũ.
 
-- job từng ở một luồng hạn chế;
-- classification được đổi D−1;
-- quyền thay classification nằm cao hơn phần xử lý thông thường của Tuấn.
+**DISCOVERY → RESPONSE:** E19 reclassification D−1 bởi tầng trên Tuấn; không suy từ pattern rằng Đức biết organ crime. Warning09:25 trước closure; Đức offer copy thực tế từ09:30, không chờ scene S12. NPC: Đức tránh lộ danh tính nhưng giữ private phone copy; Tuấn vận hành không tự reclassify.
 
-Đây là lần đầu player có thể **chứng minh** hai sự việc tưởng rời nhau thực ra cùng một nguyên nhân:
+**SIGNATURE:** S08_PRINT_COMPARE: player tự đặt bản Internal và Standard song song trong khoảng cửa còn mở. Micro events: Printer feed; badge beep; worker app quyền truy cập đổi màu ở giờ đóng.
 
-**dấu routing lạ ở gói + audit sau giao hàng** không phải hai lỗi ngẫu nhiên; job đã được cố ý hạ xuống luồng thường.
+**PERSISTENCE / RETURN:** C17 observed, C18 local receipt09:45 nếu chọn; notice và contact tồn tại đến11:00. Optional: Bounded finance lead Yến; alternate police route nếu không nhận trực tiếp. Return payoff: S09 Vũ bắt đầu requests từ actual group/contact, S12 verify retained copies.
 
-Player vẫn chưa biết tại sao.
+**FAIL-FORWARD / EXIT:** Không nhận C18 vẫn có scoped contact và C19 alternate; local lock không erase copy. Core09:35, optional copy09:45; explicit hẹn S09 10:00.
 
 ### Mục đích narrative
 
@@ -631,24 +645,19 @@ Mystery chuyển từ “cảm giác lạ” sang “có một hành động có
 **Budget:** ~5 phút  
 **Objective time:** D+1, khoảng 10:00
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Sau C17, Bắc không chỉ có “linh cảm”. Cậu có:
+**ENTRY / WORLD:** S08 C17/source lead và lịch hẹn phone Vũ 10:00. Bắc đứng ở Tân Lộ; trên phone có assignment, receipt và bản in; Vũ ở đầu dây trong micro-set.
 
-- một assignment cụ thể;
-- proof-of-handover;
-- một reclassification có chủ ý trước khi cậu nhận việc;
-- một đầu nhận thuộc chuỗi dịch vụ y tế.
+**CURIOSITY → ACTION:** Tin hẹn từ Vũ và trường đầu nhận Minh Trạch khiến cuộc gọi có mục tiêu. Player chọn gửi original record/contact/group/deadline và phân loại thấy hay suy; optional disclose lead mới có 5m cost.
 
-Main route dùng phone appointment10:00–10:15 tại Tân Lộ (15m), sau explicit wait tới10:00; không thêm morning police trip. Actual payload/group records received10:15. Nếu payload đã nêu Đức có copy/contact/deadline, Vũ contacts10:25 và receives10:35 tự động theo sourced request, không thêm xin lại. Chỉ một source address/context chưa shared mới có disclosure5m ở10:15–10:20; optional bounded Yến lead5m (hoặc second new lead tới10:25) cho collector10:40/actual receipt10:50. Queue chưa PRESERVED. Actual late source disclosures dùng q-relative receipt formulas OT §0.1, không fixed baseline10:35/10:50 nếu query chưa có lúc đó; police requests/receipts đã started vẫn độc lập với personal delay. Vũ acknowledge local hospital11:30 và finance12:30 trước departure; khi actual group bridge đủ anh tự request C11/C12 originals, receipt11:10, không chờ Bắc tới bệnh viện.
+**DISCOVERY → RESPONSE:** Vũ đã có vụ Phúc A=2 từ E28; anh hỏi raw scope, không kể toàn vụ; request B/C khởi từ actual payload. C17/group payload receipt10:15; Vũ contact Đức10:25/receipt10:35 nếu đủ contact và tự request hospital review khi group có. NPC: Vũ làm việc song song, không đợi Bắc đi từng nơi; Nam không nghe private call.
 
-Thông tin được chuyển tới Vũ vì tên/đầu nhận Minh Trạch chạm một vụ việc anh đã xác minh từ trước. Vũ không kể ngay vụ Phúc. Anh chỉ hỏi:
+**SIGNATURE:** S09_SCOPED_INTAKE: player gửi source có timestamp và thấy police receipt tách khỏi queued query. Micro events: Phone ring; message acknowledgment; tín hiệu office nền.
 
-- cái gì Bắc trực tiếp thấy;
-- cái gì có record;
-- cái gì là suy đoán.
+**PERSISTENCE / RETURN:** Police custody mới chỉ cho actual received/authenticated sources; warnings hospital11:30/finance12:30. Optional: C18/C19 scoped leads có thể gửi trong kênh hợp lệ. Return payoff: S10 review và S12 C22 matched từ đúng request sáng.
 
-Nếu source hợp lệ, Vũ nhận/copy phần cần thiết và dặn Bắc không tự biến mình thành người thực thi.
+**FAIL-FORWARD / EXIT:** Chậm disclosure dùng q-relative receipts, không backdate; police A vẫn an toàn. Cuộc gọi15m hoàn tất, travel hospital30m tới10:50/10:55.
 
 ### Mục đích narrative
 
@@ -708,19 +717,19 @@ Nếu source hợp lệ, Vũ nhận/copy phần cần thiết và dặn Bắc kh
 **Objective time:** D+1, arrive10:50/10:55; core20m và optional Thảo10m finish11:20/11:25 before11:30
 **Hub:** Minh Trạch / tuyến xác minh hợp lệ
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Travel Tân Lộ→Minh Trạch30m: arrive10:50 hoặc10:55 sau tối đa hai genuinely new lead disclosures. S10 core20m tới11:10/11:15, optional Thảo10m tới11:20/11:25. Vũ đã request group review10:15 và nhận raw C11/C12 originals11:10; Bắc không hack/xông vào khu hạn chế. Required entrance notice11:30 trước lựa chọn core/Thảo; C12 knowledge+assistance được received thì không mất bởi scope lock, nếu fact còn thiếu thì Thảo alternative còn10m thật.
+**ENTRY / WORLD:** S09 xong; hospital arrival10:50/10:55, notice review11:30. Quầy Huyền có khay form hai version; hành lang công khai, không vào phòng hạn chế.
 
-Huyền xuất hiện đầu tiên như một người khô và giữ quy trình. Nếu Bắc tự hỏi lung tung, bà không chia dữ liệu. Điều này có thể làm bà trông đáng ngờ.
+**CURIOSITY → ACTION:** Printer nhả bản scope thu hẹp, version cũ còn ở khay được phép xem khi Vũ đã request đúng nhóm. Player so consent và review tại quầy theo quyền cho phép; có thể hỏi Thảo về phần bà trực tiếp xử lý nếu C12 thiếu.
 
-Khi Vũ hoặc một lý do nghiệp vụ hợp lệ đặt đúng câu hỏi, Huyền xác nhận:
+**DISCOVERY → RESPONSE:** C11 discrepancy về money/withdrawal; C12 receipt Khoa biết và vẫn giữ consent, hoặc C15 firsthand cùng case. Huyền không tự biết cả mạng. Vũ nhận originals11:10, authenticate11:20 nếu actual request; optional Thảo10m tới11:20/11:25. NPC: Huyền tiếp bệnh án hợp pháp; Thảo chỉ có mặt trong window, Khoa ở cell riêng.
 
-- review đã mở từ D−12;
-- không chỉ một hồ sơ có anomaly;
-- scope từng rộng hơn mức hiện tại.
+**SIGNATURE:** S10_FORM_VERSION: player tự đối chiếu hai version; nhân viên chỉ phản ứng đúng phần đã hỏi. Micro events: Hành lang bớt tiếng khi cửa khép; máy in và bánh xe đẩy.
 
-Nếu route tốt, player có thể thấy version/scope history hoặc gặp Thảo trong phạm vi hợp lý. Thảo không kể conspiracy; bà chỉ có thể xác nhận rằng một số hồ sơ không phản ánh đầy đủ hoàn cảnh bên ngoài.
+**PERSISTENCE / RETURN:** Document version/scope hiển thị; police B chỉ tăng sau original fact/authentication; local11:30 không erase receipt. Optional: C15 alternative; C14 framing chỉ hỗ trợ suspicion. Return payoff: S11 thời điểm review D−12 đặt bên cạnh Phúc/job.
+
+**FAIL-FORWARD / EXIT:** Không gặp Thảo khi C12 đủ vẫn sống; nếu source cuối mất, warning đã có và G1 sau closure. Core11:10/11:15, optional11:20/11:25; S11 quiet point11:30.
 
 ### Mục đích narrative
 
@@ -786,23 +795,19 @@ Nếu route tốt, player có thể thấy version/scope history hoặc gặp Th
 **Budget:** ~6 phút  
 **Objective time:** D+1, 11:30–12:00 (30m compare tại hospital-area quiet point/phone); explicit wait tới11:30 nếu sớm, rồi travel Tân Lộ30m tới12:30
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Vũ đối chiếu những gì Bắc mang tới với timeline đã có.
+**ENTRY / WORLD:** S10 trong hospital area, quiet point11:30. Ba timeline cards là raw timestamps: Phúc, Huyền, E19 job; điện thoại của Bắc đặt cạnh police scoped summary.
 
-Player lần đầu được đặt cạnh ba timestamp quan trọng:
+**CURIOSITY → ACTION:** Tin Vũ chứa một timeline field mới; ngày D−12 nổi khác với D−1 của job. Player kéo/đặt đúng thứ tự ba bản gốc; có thể xem exact A content ở mức Vũ cho phép, không giao lại A.
 
-1. Phúc muốn rút / trình báo trước D0.
-2. Huyền mở review D−12.
-3. Job của Bắc bị reclassify D−1 rồi mới tới tay cậu.
+**DISCOVERY → RESPONSE:** Vụ Phúc/review có trước Bắc; C03 client family đổi nghĩa khi so provenance, không phải nguyên nhân crime. Vũ nhận ý kiến qua phone; A đã custody E28 không phụ thuộc player drag đúng. NPC: Vũ tiếp tục professional match, Phúc chỉ biết chuyện mình.
 
-Nếu C03 còn tồn tại, account/client family trên receipt giờ đổi nghĩa khi so với phạm vi review.
+**SIGNATURE:** S11_TIME_COMPARE: player tự xếp nguồn theo time, một inference về vị trí Bắc trong cleanup. Micro events: Âm bút gạch thời gian; phone hạ âm khi mở document.
 
-Nếu route Phúc đủ mạnh, C08 cho thấy withdrawal có trước pressure. Phúc không biến thành người kể toàn conspiracy; anh chỉ củng cố source A.
+**PERSISTENCE / RETURN:** Private inference nếu đúng mới ghi; CASE không bị hạ vì xếp sai. Optional: C09 hỗ trợ chronology, không là gate A. Return payoff: S12 false apex có thể được bác bằng thứ tự E19/assignment.
 
-Khoảnh khắc midpoint không phải một cutscene “đây là đường dây buôn nội tạng” từ miệng NPC. Nó là lúc player có thể hiểu:
-
-**Bắc không gây ra vụ này. Cậu đã bước vào giữa một cleanup có sẵn.**
+**FAIL-FORWARD / EXIT:** Sai xếp vẫn có raw records để xem lại miễn phí; progression không đòi quiz. Compare/wait tới12:00; travel Tân Lộ30m tới12:30.
 
 ### Mục đích narrative
 
@@ -863,28 +868,19 @@ Mental model đổi từ “job bẩn/công ty gian lận” sang “nhiều h�
 **Budget:** ~5 phút  
 **Objective time:** D+1, 12:30–13:00 (30m retained verification); extra visits/waits cộng fixed cost đã show
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Ở thời điểm này player có rất nhiều lý do nghi Tuấn:
+**ENTRY / WORLD:** S11 và retained police packets; Tân Lộ12:30. Cùng dispatch terminal nay hiển thị audit trail; C17, C20, C21 và C22 đã được request/received theo lịch, không source mới từ worker lock.
 
-- quản lý điều phối;
-- job đi qua bộ phận anh;
-- biết đơn y tế ưu tiên;
-- phòng thủ;
-- Minh có thể liên hệ phía anh.
+**CURIOSITY → ACTION:** Tuấn đi qua bảng phân công như hôm qua; timestamp override nằm trước ca anh trực. Player mở fast recap hai field C20/C22 thay vì làm lại interrogation; có thể xem C21 routine từ job thường.
 
-Nếu player chỉ nhìn chức vụ và thái độ, Tuấn là đáp án rất hấp dẫn.
+**DISCOVERY → RESPONSE:** Tuấn không reclassify E19; C22 Hùng đã nhận purpose và approve, nhưng statement Hùng một mình chưa chứng minh Nam. Police C22 packet receipt13:00; content match không trước14:55 và retained C18/C19 verification13:55. NPC: Tuấn xử lý ca khác, không bất ngờ biết Bắc nghi ai; Hùng không cần monologue.
 
-Nhưng C20 cho thấy classification bị thay trước tầng xử lý của Tuấn. C21 cho thấy anh procedural cả ở việc không liên quan. C22 đưa quyền override lên Hùng.
+**SIGNATURE:** S12_FALSE_APEX_SWAP: cùng quầy S04, player tự lật audit trail, nghi ngờ đổi từ Tuấn sang Hùng bằng evidence. Micro events: Máy quét lặp đúng âm S04; hình ca thường song song ca 117.
 
-Ngay khi Tuấn được “giải oan về core crime”, Hùng trở thành false apex thứ hai:
+**PERSISTENCE / RETURN:** TUAN_NOT_RECLASSIFIER riêng TUAN_CORE_SCOPE_VERIFIED; Hùng culpable knowledge chỉ từ verified C22. Optional: C21 hành vi nhất quán; optional conversation không gate. Return payoff: S16 Hùng D1 chỉ khi firsthand actual statement, không suy từ title.
 
-- founder Tân Lộ;
-- biết hoạt động phi pháp;
-- chính ông hạ luồng;
-- có động cơ che audit.
-
-Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là điều làm false theory nguy hiểm: Hùng thật sự có tội.
+**FAIL-FORWARD / EXIT:** Nếu đã thấy C20, dùng recap ngắn; nếu chưa, phiên bản full inspect vẫn cho cùng fact. Retained verification tới13:00, travel hospital area13:30/micro-set13:35.
 
 ### Mục đích narrative
 
@@ -945,30 +941,19 @@ Player có thể dừng ở Hùng và vẫn đúng một phần. Đây là đi�
 **Budget:** ~7 phút  
 **Objective time:** D+1, 13:35–14:00 (25m compare/callback), sau30m Tân Lộ→hospital area +5m local micro-set
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Player không cần tự chạy gặp tất cả nguồn.
+**ENTRY / WORLD:** S12 source receipts đã có; police micro-set13:35. Hai request/response packets hospital/logistics với endpoint Khải có thể đặt cạnh nhau; paper custody tags khác private notebook.
 
-Một strong route chỉ cần Bắc trực tiếp mở đủ bridge; Vũ có thể xác minh phần khác.
+**CURIOSITY → ACTION:** Hai thẻ escalation có cùng người nhận nhưng scope khác, điện thoại Vũ báo callback. Player so current case, endpoint, role và response; có thể chọn giả thuyết sai về Khải mà vẫn giao raw packets cho Vũ.
 
-Hai nhánh có thể song song:
+**DISCOVERY → RESPONSE:** X_RISK chỉ khi request/response/auth current Phúc crisis matched; same account/transaction không đủ; N3_UNDERSTANDING private conditional. Vũ verify C18/C19 match13:55, C content14:55 nếu actual packets complete; X police không đợi player suy đúng. NPC: Vũ kiểm provenance, Khải chỉ biết report đã nhận; Nam chỉ sau forward thực.
 
-**Logistics route**
-- Retained C18 actual local receipt09:45/police10:35 và limited earlier testimony; fields check10:45/match C22 at13:55. Không late pickup khi willingness11:00 đã đóng.
-- Retained C19 actual10:50 receipt nếu new finance lead thật shared; verification/match13:55 không invent pre12:30 acquisition.
-- C22/C25 actual police packet13:00; account lock không xóa private/police copies.
+**SIGNATURE:** S13_TWO_DESKS: player nối hai hồ sơ từ hai cơ sở trong không gian chung, phản hồi của Vũ giới hạn vào source đã thấy. Micro events: Phone callback; bàn giấy lật, âm phòng nhỏ hơn hành lang.
 
-**Hospital route**
-- Huyền + C12 hoặc Thảo C15 củng cố B.
-- C24 cần actual Khoa→Khải incident request/response, endpoint, current role/scope và crisis Phúc context; timing intervention chỉ lead.
+**PERSISTENCE / RETURN:** X_VERIFIED raw source, X_PLAYER_CONNECTED private tách; no auto N3/BARC on completion. Optional: Khải false apex theory; không chặn custody. Return payoff: S16 X_COMMAND có thể hoàn chỉnh X nếu Khải remit còn thiếu.
 
-C25 từ original logistics incident/escalation request và response cùng crisis, có scope/role Khải được giao. Same transaction/account ABC hay call timestamp đơn lẻ không chứng minh common current risk authority.
-
-Player có thể tự nối C24 + C25:
-
-**Khải đang đứng ở giao điểm của hai scandal tưởng độc lập.**
-
-Điều này không tự chứng minh organ network; A+B+C vẫn phải tồn tại độc lập.
+**FAIL-FORWARD / EXIT:** Sai inference không time/route penalty; raw source vẫn được kiểm. Callback/compare13:35–14:00, S14 notice.
 
 ### Mục đích narrative
 
@@ -1032,23 +1017,19 @@ Player có thể tự nối C24 + C25:
 **Budget:** ~5 phút  
 **Objective time:** D+1, 14:00–14:20 (20m status/notice); extra committed actions cộng đúng cost
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Danger không bắt đầu bằng một đội người đuổi Bắc.
+**ENTRY / WORLD:** S13 callback hoặc clock tới14:00; notices từ morning đã nhận. Một worker screen khóa, quầy hospital đổi biển quyền, tin hẹn biến mất theo closure đã xảy ra ở 11:00/11:30/12:30.
 
-Nó bắt đầu bằng bureaucracy đổi trạng thái:
+**CURIOSITY → ACTION:** Player trở lại cùng điện thoại/hành lang, thấy trạng thái vật khác lần trước; nếu Minh đã hỏi hộ, timestamp report có thể so. Player kiểm what actually closed, hỏi Minh phần cậu nói, chuyển ngay retained source còn thiếu cho Vũ hoặc chọn delay có card.
 
-- tài khoản worker bị khóa;
-- Đức mất quyền truy cập;
-- một source không còn trả lời;
-- review bị thu hẹp;
-- Tân Lộ yêu cầu Bắc không tự liên hệ khách hàng;
-- một cuộc hẹn bị hủy;
-- hồ sơ trước đó xem được giờ cần quyền khác.
+**DISCOVERY → RESPONSE:** Cửa access/willingness đóng riêng; copies ở phone Đức/police không biến mất. BARC chỉ từ actual received reports. Global command notice14:00 trước deadline17:00; acceleration chỉ nếu report, fresh warning và feasible save plan OT §0.1. NPC: Minh giảm nhẹ đúng payload đã gửi; Khải xử lý report thật, Lan/Nam không biết private note.
 
-Nếu Minh leak đã xảy ra, player có thể nhận ra timing của việc các cửa đóng bám sát lần Minh “hỏi hộ”. C35–C37 biến betrayal thành hậu quả thật.
+**SIGNATURE:** S14_RETURN_CHANGED: tái thăm các vật quen cho thấy hệ thống khép cửa bằng state thực, không chase. Micro events: Badge denied; phone vibration; đèn quầy off khi hết ca, không supernatural.
 
-Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc đã nói và rõ ràng chính cậu cũng không hiểu chuyện đã lớn tới đâu.
+**PERSISTENCE / RETURN:** Actual access states và warning receipts; no baseline BARC=N3, no deletion of custody. Optional: C35–C37 conditional leak trace, không tạo proof giả. Return payoff: S18 causal attribution dùng earliest last-path loss, không dùng cảm giác phản bội.
+
+**FAIL-FORWARD / EXIT:** Local locks không chặn professional copies; player vẫn chuyển nguồn đã giữ. 20m authored notices/action group tới14:20.
 
 ### Mục đích narrative
 
@@ -1108,21 +1089,19 @@ Minh không lộ thành phản diện. Khi bị hỏi, cậu giảm nhẹ việc
 **Budget:** ~4 phút  
 **Objective time:** D+1, 14:20–15:00 (40m actual sourced intake/coordination); E38 actual baseline14:55 nếu source threshold đã authenticate, không chờ scene end
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Point of no return không phải lúc Bắc nhận E22.
+**ENTRY / WORLD:** S14 notices xong14:20, Vũ đang intake/coordinate. Bàn nhận evidence có khay source với provenance và pending authentication; không bảng suspects.
 
-S15 mở từ sourced case/intake hiện tại và raw sources/context cần receipt, verification hoặc preservation. Bắc có thể đưa nguồn dù chưa nối đúng network; Vũ tiếp nhận và verify phần đủ nguồn độc lập với N3_UNDERSTANDING.
+**CURIOSITY → ACTION:** Một item giữ riêng trên phone Bắc đối chiếu được với khay police; dấu received chưa phải verified. Player chọn gửi bản gốc/custodian/contact và scope, có thể giữ lại, delay20m hoặc abandon khi actual N3 report.
 
-Nguy cơ không thể đơn giản quay về đời thường được kiểm riêng: actual received cross-cell reports đã đưa BARC≥N3 và police preservation còn thiếu. Private understanding không mở/đóng police intake hoặc thay report tới organization.
+**DISCOVERY → RESPONSE:** A đã Vũ giữ từ E28; B/C/X tăng chỉ sau receipt + independent checks; private N3 understanding không quyết định threshold. E38 actual baseline14:55 khi đủ raw/auth, không auto từ scene completion; custody-first cho command requests S16. NPC: Vũ tự request đủ scope đã biết, không đợi một accusation quiz.
 
-Vũ nói rõ ở mức chức năng: nếu Bắc có source, lúc này giữ tất cả một mình là rủi ro; evidence cần được tiếp nhận đúng cách.
+**SIGNATURE:** S15_CUSTODY_DESK: thao tác phân nguồn gốc cụ thể thay cho lời thuyết phục Vũ. Micro events: Scan giấy, phone receipt, tem ngày/giờ; city outside continues.
 
-Player có ba kiểu lựa chọn:
+**PERSISTENCE / RETURN:** Actual custody monotonic, E38 if threshold; ABANDON_AFTER_N3 only on explicit choice + received reports. Optional: Không cần private correct Khải/true boss inference. Return payoff: S16 professional collection chạy sau actual E38.
 
-- **đưa source đủ mạnh cho Vũ** → mở preservation route;
-- **giữ lại vì muốn tự tìm boss trước** → tăng cleanup/exposure risk;
-- **cố bỏ hết khi BARC≥N3 và police chưa đủ preservation** → mở Avoidance route vì received cross-cell reports đã khiến organization coi Bắc là unresolved risk; private N3_UNDERSTANDING một mình không đủ.
+**FAIL-FORWARD / EXIT:** Thử lại provenance không cost; missing source thật đóng thì G1/G2/G5 theo cause. Intake/coordination tới15:00; S16 chỉ theo actual E38 hoặc partial path.
 
 ### Mục đích narrative
 
@@ -1179,28 +1158,19 @@ Player có ba kiểu lựa chọn:
 **Budget:** ~7 phút  
 **Objective time:** D+1, 15:00–16:25 presentation/group85m; full D actual baseline16:10, professional offsets từ actual E38
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Sau khi A+B+C đủ mạnh, Vũ chủ động hơn. Bắc không phải tự chạy đi lấy hết mọi hồ sơ.
+**ENTRY / WORLD:** Actual E38=t0 (baseline14:55), police mở source requests sau đó. Ba station nguồn: manager, original institution reply, broker annex; bản gốc L/H issue trước intake, không future record ở E28.
 
-Investigation late game tập trung vào một câu hỏi mới:
+**CURIOSITY → ACTION:** Một stamp decision trên reply cho branch kia không giống statement manager; broker receipt có cùng directive scope. Player xem ba nguồn Vũ được phép hiển thị, so quyết định khác nhau và annex cùng case; không tự đi ép Hạnh/Nam.
 
-**Ai có quyền khiến nhiều nhánh cùng đổi trạng thái?**
+**DISCOVERY → RESPONSE:** C32H+C33_AUTH hoặc C32K+C34_AUTH và C10_SOURCE_LINK exact D2. Original receiver-side Nam reply phải verify; X_COMMAND có thể sinh từ raw facts này. Request t0+5/+10/+15; receipts +25/+40 or45/+55; authentication/full match +75 baseline16:10, chỉ khi nguồn hợp tác và window mở. NPC: Vũ intake chuyên nghiệp; manager chỉ branch mình, broker chỉ received directive, Nam không đọc scene completion.
 
-Player nhìn lại:
+**SIGNATURE:** S16_THREE_ORIGINS: player đối chiếu manager firsthand, reply phía branch kia và source execution mà không trộn một forward làm ba chứng cứ. Micro events: Điện thoại báo receipt, printer annex nhả trang, bút ký custodial seal.
 
-- Hạnh giải thích source/coercion nhưng không biết full hospital/logistics.
-- Khoa giải thích hospital cell nhưng không biết dispatch sự cố.
-- Hùng giải thích logistics nhưng không biết review chi tiết.
-- Khải biết nhiều cell và quản risk, nhưng cần chứng minh ai ở trên hắn có quyền decision.
+**PERSISTENCE / RETURN:** COMMAND C3/C4 chỉ từ raw verified/preserved; X normalize trước resolver; unavailable route có manager alternate. Optional: C31 contact chỉ lead, C30 history không gate. Return payoff: S17 Nam recontextualized, S18 consequence đúng source.
 
-C30 xác nhận Nam có quan hệ kinh doanh cũ với Hùng/Tân Lộ. Đây vẫn chỉ là relationship.
-
-C31 xuất hiện khi current crisis contact cho thấy Khải báo/trao đổi với Nam sau các mốc cross-cell quan trọng.
-
-Current records có issue trước intake theo OT §0.2: L logistics Nam issue13:20/execution13:25 và H hospital Nam issue13:45/execution13:50 là hai decisions khác nhau. Broker giữ actual forwarded case request13:00 cùng L13:30/receipt13:32 và H14:00/receipt14:05. Hùng firsthand L pairs hospital H original C33_AUTH; Khoa firsthand H pairs logistics L original C34_AUTH, cùng source-annex match exact chosen D2. Original receiver-side Nam reply/authorship phải verify, contact metadata không đủ.
-
-Sau actual E38=t0, Vũ tự request known manager+5m (baseline15:00), other-branch originals+10m (15:05), broker annex+15m (15:10). Manager actual receipt+25m=15:20; other-branch+40m/+45m=15:35/15:40; annex+55m=15:50; final exact origin/content/scope match+75m=16:10. Source availability warning14:00/late reminder15:00 trước deadline; không intake future annex ởE28 hoặc chờ Bắc xin lại. Missing actual cooperation/originals không được grant từ queue.
+**FAIL-FORWARD / EXIT:** Mất Hùng dùng Khoa+logistics original; mất cả managers không record-only magic D1. Actual D verified nếu đủ; scene presentation tới16:25, no forced extra travel.
 
 ### Mục đích narrative
 
@@ -1266,51 +1236,19 @@ Sau actual E38=t0, Vũ tự request known manager+5m (baseline15:00), other-bran
 **Budget:** ~5 phút  
 **Objective time:** D+1,optional post-intake travel35m→17:00, ordinary contact15m→17:15; professional custody already held is not retimed
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Boss realization phải xảy ra trong hai lớp.
+**ENTRY / WORLD:** Sau S16; optional về trọ16:25→17:00 hoặc bypass tới police/consequence. Hành lang S01 và góc sửa đồ vẫn thường; cửa phòng Nam chỉ mở với lý do đời thường được Lan/Nam mời hoặc trả món đồ.
 
-### Lớp 1 — recontextualization
+**CURIOSITY → ACTION:** Radio rít nhẹ, một ổ điện lỗi làm chốt cửa kẹt; từ bàn có sổ ghi các mảnh “K. báo lại”, “MT giữ nguyên”, “117”. Nếu chọn vào, player thử tay nắm, gõ/gọi, xem đồ hợp lệ; giữ control, có thể rời khi chốt được Lan xử lý từ ngoài. Không bắt đọc sổ.
 
-Player nhìn lại các fact đầu game:
+**DISCOVERY → RESPONSE:** Fragments là context/hypothesis, không Nam-boss proof; command chỉ từ S16 professional sources. Door jam do chốt cũ/điện, Lan nghe tiếng gõ hoặc chốt tự reset sau mechanic beat; không ba clue mở phép. Nam chỉ biết xáo trộn nếu trực tiếp thấy dấu cụ thể. NPC: Lan đi cầu thang rồi hỗ trợ; Nam về theo lịch, không telepathy; có thể không gặp.
 
-- Nam từng làm kho vận + dịch vụ/thiết bị y tế: C27.
-- Optional: vật cũ liên hệ Tân Lộ: C28.
-- Nam thực sự tử tế: C29.
-- Quan hệ Nam–Hùng có lịch sử: C30.
+**SIGNATURE:** S17_ROOM_JAM: 1–3 phút khám phá có lối thoát causal, player giữ quyền điều khiển; optional unsafe confrontation riêng. Micro events: Static radio, bước chân ngoài cửa, đèn buzz; môi trường phản hồi nhẹ nhưng có nguồn vật lý.
 
-Những fact này làm Nam trở thành một hypothesis hợp lý.
+**PERSISTENCE / RETURN:** Door JAMMED→RELEASED vì latch reset/Lan; disturbed object flag chỉ nếu player thật sự chuyển vật và Nam nhìn thấy. Optional: Notebook fragments/C28; toàn bộ S17 có thể bỏ qua nếu custody đã an toàn. Return payoff: Epilogue vật cũ S01; encounter thay sắc thái theo knowledge, không thêm gate True.
 
-**Nhưng chưa đủ kết luận.**
-
-### Lớp 2 — proof
-
-- C31 cho thấy Khải báo Nam trong current crisis.
-- C32 hoặc C33/C34 cho thấy các thay đổi cross-cell hiện tại chịu decision authority của Nam.
-
-Đây mới là **R9 / Proposition D**.
-
-Game không hiện màn “Chọn thủ phạm: NAM”.
-Notebook không tự viết “Boss”.
-
-Bắc có thể hiểu trước khi một NPC nói tên chức năng của Nam.
-
-### Scene tại khu trọ
-
-Một scene ngắn ở khu trọ được phép xảy ra sau khi Bắc đã gần hoặc vừa hiểu D.
-
-Nam vẫn cư xử bình thường. Không villain monologue. Không đe dọa lộ liễu. Không hỏi đúng clue Bắc vừa lấy nếu ông chưa có report.
-
-Căng thẳng đến từ việc player biết:
-
-- Nam đã gặp Bắc trước mọi chuyện.
-- Sau E24, Nam biết Bắc là worker.
-- Bây giờ Nam có thể biết Bắc đã chạm nhiều cell.
-- Hai người vẫn đứng trong cùng không gian từng rất bình thường.
-
-Nếu player tiết lộ quá nhiều hoặc đối đầu trực tiếp trước preservation, Exposure/Cleanup risk tăng.
-
-Nếu player giữ calm và đưa D qua Vũ, true route sống.
+**FAIL-FORWARD / EXIT:** Bỏ về trọ vẫn tới S18; nếu door jam, gõ/gọi hoặc chờ authored release không tốn missing-source window bất ngờ. Door released, optional conversation xong; đi police35m nếu cần, hoặc direct S18.
 
 ### Mục đích narrative
 
@@ -1369,38 +1307,19 @@ Nếu player giữ calm và đưa D qua Vũ, true route sống.
 **Budget:** ~6 phút  
 **Objective time:** D+1, khoảng 17:00–20:00
 
-### Player-facing flow
+### Player-facing flow — playable sequence
 
-Climax không phải Bắc đánh thắng tổ chức.
+**ENTRY / WORLD:** S16 actual command result hoặc S17 return/bypass; terminal only after real closure/committed exit. Police evidence tray và phone status đặt cạnh nhau, exterior Hà Nội vẫn tiếp tục; không gói clue mới.
 
-Nó là cuộc đua giữa:
+**CURIOSITY → ACTION:** Một custody receipt hoặc warned source closure cuối hiện rõ trước khi player xác nhận bước tiếp. Player review provenance/source paths, chuyển item còn thiếu nếu window open; xác nhận exit hoặc nhìn timeline consequence.
 
-**corroboration + preservation**  
-và  
-**cleanup + source isolation**.
+**DISCOVERY → RESPONSE:** Outcome do CASE/X/COMMAND + earliest DECISIVE_LOSS/abandon, không suspect selection. Resolver P4 xử lý receipts trước closure; G6/G3/G5/G2/G4/G1 exhaustive. A/B/C police held stay held ở mọi cinematic. NPC: Vũ hành động trên proof thực; Nam/Khải chỉ phản ứng reports/custody họ có thể biết.
 
-Player phải quyết định trên những gì mình thực sự hiểu:
+**SIGNATURE:** S18_TWO_TRAYS: cùng bố cục police tray và screen closure, nội dung/sound đổi theo phần thật đã giữ và nguyên nhân mất. Micro events: Printer seal, phone ngừng rung, ambience ngõ trở lại ở epilogue.
 
-- source nào là fact trực tiếp;
-- source nào chỉ là relationship;
-- cái gì phải đưa Vũ ngay;
-- ai không nên được báo thêm;
-- có dừng ở Hùng/Khải hay đi tới command proof Nam.
+**PERSISTENCE / RETURN:** Ending ID and locked snapshot persisted once; no magically refreshed records. Optional: Optional old object epilogue không đổi proof. Return payoff: Mọi seed vật/âm từ S04/S14 được trả lại qua consequence.
 
-Trong true route:
-
-1. A được preserve: withdrawal trước pressure + police chronology.
-2. B được preserve: Huyền review + C12 hoặc C15.
-3. C được preserve: C17 + corroborator + C22.
-4. X được xác minh: các box không độc lập.
-5. D1 + D2 đủ: Nam có current command, không chỉ quan hệ cũ.
-6. C42 xảy ra trước cleanup lock.
-
-Vũ và lực lượng phù hợp chuyển sang hành động phần lõi. Game chỉ cần thể hiện hậu quả ở mức narrative: records được bảo toàn, các đầu mối bị giữ trong quy trình điều tra phù hợp, các institution hợp pháp tách người/cell liên quan khỏi phần bình thường.
-
-Bắc không tự đột kích.
-
-Trong route xấu/partial, cùng một climax cho kết quả khác vì source đã đóng, evidence chưa rời tay Bắc, hoặc player dừng ở sai tầng.
+**FAIL-FORWARD / EXIT:** Nếu còn last saving path, không resolve; cho player quay lại nguồn hợp lệ. Cinematic ngắn và ending screen sau confirmed terminal state.
 
 ### Mục đích narrative
 
