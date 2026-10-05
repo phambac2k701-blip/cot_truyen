@@ -19,7 +19,7 @@
 |---|---|---|---|---|
 | P0–P1 | Mapping canon→truth→proof→source→scene→ending; A/B/C/X/D1/D2 payload/provenance và accepted alternatives cùng nghĩa | BACKSTAGE, CLUE_GRAPH, ENDING_LOGIC | Full diff + independent canon/proof review; hai MEDIUM của review đã sửa; X được làm rõ ngoài transaction relation | COMPLETE — GitHub 82333dc |
 | P2 | Tách observed/inferred/police-custody/BARC/source-existence/access/willingness/copy | CHARACTER_WEB, OBJECTIVE_TIMELINE, CLUE_GRAPH, ENDING_LOGIC; matching scene hooks và FS Act I lifecycle | Full diff; same report/different thought; E28 A preserved; retained copy không mất do account lock | COMPLETE — GitHub 79c5f9a |
-| P3 | Một authored clock, morning source requests/intakes, pre-loss warning và action costs | OBJECTIVE_TIMELINE, CLUE_GRAPH, PLAYER_STORY, SCENE_BREAKDOWN; FS clock | Lịch khả thi trong travel bounds; last loss có warning và action cứu trước | IN PROGRESS |
+| P3 | Một authored clock, morning source requests/intakes, pre-loss warning và action costs | OBJECTIVE_TIMELINE, CLUE_GRAPH, PLAYER_STORY, SCENE_BREAKDOWN; FS clock | Lịch khả thi trong travel bounds; last loss có warning và action cứu trước | COMPLETE — c69c668 |
 | P4 | Total terminal resolver; decisive loss history; partial transitions | ENDING_LOGIC, CLUE_GRAPH, OBJECTIVE_TIMELINE, PLAYER_STORY, SCENE_BREAKDOWN | ABC=P/X=false; mixed leaks; D-only; weak routes; monotonic custody | COMPLETE — commit recorded below |
 | P5 | Playable event-driven S01–S18; conditional S13/S14, fast recap S12, custody-first/bypass S17 | PLAYER_STORY, SCENE_BREAKDOWN | 18 scene contracts, entry/action/state/exit, no compulsory unsafe encounter | COMPLETE — commit recorded below |
 | P6 | Full tagged production script S06–S18 plus event spec | FULL_SCRIPT, EVENT_IMPLEMENTATION_SPEC | 18 event graphs/cards, save/load, state/source checks | COMPLETE — commit recorded below |
@@ -120,3 +120,11 @@ Chỉ đánh COMPLETE sau khi diff/consistency của phase đã được kiểm 
 - S01–S05 retain detailed Act I script with a current P5 tagged overlay; S06–S18 now have full 13-section tagged game-script coverage, dialogue/source/UI, branch, timing and continuity rather than outline anchors.
 - EVENT_IMPLEMENTATION_SPEC shares exactly 18 signature IDs with the script and supplies 18 explicit scene graphs plus fully fielded event cards for preconditions, trigger, world/NPC state, actions, custody/knowledge/report/time, save/load, skip/fail-forward, hooks and required assets. Micro and discovery stages are named within each card/graph.
 - Critical source scheduling, X_COMMAND normalization, optional S17 jam/bypass and total S18 resolver have separate literal contracts. Source requests are not receipts, and cinematic/scene completion grants no clue. No Godot runtime code/playtest claimed.
+
+### Block 4 — scene asset/audio/animation handoff
+
+- SCENE_ASSET_MANIFEST derives from the paired script/spec: exact event ID per S01–S18, 15 category lines each, global P0/P1/P2 shopping queue, model-to-wrapper reuse map, item register (including phone content and ending UI), exact SFX/ambience families and animation family requirements. No source URL/license or downloaded asset is claimed.
+- S17 physical door release and persistent state, S16 distinct D originals/annex and S18 custody variants are explicitly represented. ASSET_REQUIREMENTS remains the generic category source; no missing major category required a speculative rewrite. ASSET_SOURCES remains an empty tracker until actual verification/acquisition.
+- Stop at this four-commit handoff. T01–T25/final re-audit, runtime Godot implementation, asset download and playtest remain outside this task.
+
+**Local phase commits at this handoff:** P4 `5f6a5dc09c9e262eeb6f41d8605c2110bbe5a8c8`; P5 `8cf7ff1e9502ee176e5094caa33efb6d7ef8a8e1`; paired script/spec `ae02111e7288de8d181d27b69c61866c1cf799c8`. The Block 4 SHA is supplied in the final handoff after commit. Remote main remains `11c5f86` because direct push was rejected by automatic approval review.
